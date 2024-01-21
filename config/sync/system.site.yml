@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: f1d349d3-d718-4426-ab08-c14fbc851181
+name: xacobe.net
+mail: Xacobe.Net@gmail.com
+slogan: 'Desarrollo web'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: es
