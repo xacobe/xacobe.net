@@ -1,0 +1,13 @@
+{%
+  set classes = [
+    'btn',
+    'btn--' ~ color|clean_class,
+  ]
+%}
+
+<a href="{{ href}}" target="{{ target|default('_blank')}}" {{ attributes.addClass(classes) }} title="{{ text }}">
+  {{ text }}
+  {% if icon is not empty %}
+    {{ source(componentMetadata.path ~ '/img/' ~ icon ~ '.svg') }}
+  {% endif %}
+</a>

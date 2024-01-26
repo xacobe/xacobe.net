@@ -1,0 +1,16 @@
+.btn {
+  padding-inline: 2rem;
+  padding-block: .8rem;
+  border: solid 2.4px;
+}
+.btn--primary {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+.btn--primary:hover,
+.btn--primary:focus {
+  color: black;
+  background-color: white;
+  border-color: red;
+}
