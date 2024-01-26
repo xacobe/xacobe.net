@@ -1,0 +1,28 @@
+.my-banner {
+  max-width: 1200px;
+  position: relative;
+  color: white;
+  width: 80%;
+  background-size: cover;
+  background: black;
+  padding: 2em;
+}
+
+.my-banner--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-banner--header h3 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.my-banner--body > * {
+  margin-bottom: 0;
+}
+
+.my-banner--body > :first-child {
+  margin-top: 1em;
+}

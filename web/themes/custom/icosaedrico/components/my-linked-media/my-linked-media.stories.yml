@@ -1,0 +1,6 @@
+title: Single Directory Components/Examples/LinkedMedia
+stories:
+  - name: 1. Default
+    args:
+      image: /sites/default/files/crema-catalana-umami.jpg
+      href: https://www.example.org

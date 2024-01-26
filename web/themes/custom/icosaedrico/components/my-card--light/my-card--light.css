@@ -1,0 +1,9 @@
+[data-component-id].my-card {
+  background-color: #f1f1f1;
+  color: #252525;
+  border-color: #fafafa;
+}
+
+[data-component-id].my-card .my-card__header {
+  border-bottom-color: #fafafa;
+}

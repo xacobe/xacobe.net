@@ -1,0 +1,8 @@
+<div {{ attributes.addClass('my-card') }}>
+  <h2 class="my-card__header">{{ header }}</h2>
+  <div class="my-card__body">
+    {% block card_body %}
+      Default contents for a card
+    {% endblock %}
+  </div>
+</div>

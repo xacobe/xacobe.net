@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Call to Action
+description: Call to action link.
+props:
+  type: object
+  required:
+    - text
+  properties:
+    text:
+      type: string
+      title: Title
+      description: The title for the cta
+      examples:
+        - Press
+        - Submit now
+    href:
+      # Since we want to enforce the URI format we cannot use `|default('')` in
+      # the embedding template (since '' is not a valid URI). In this case we
+      # need to manually allow NULL.
+      type:
+        - string
+        - 'null'
+      title: URL
+      format: uri
+    target:
+      type: string
+      title: Target
+      enum:
+        - ''
+        - _blank

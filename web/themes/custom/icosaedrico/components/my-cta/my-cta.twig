@@ -1,0 +1,11 @@
+{% if target is not empty %}
+  {% set attributes = attributes.setAttribute('target', target) %}
+{% endif %}
+<a
+  {{ attributes.addClass('my-cta') }}
+  {% if href is not empty %}
+    href="{{ href }}"
+  {% endif %}
+>
+  {{ text }}
+</a>

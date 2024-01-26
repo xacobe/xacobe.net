@@ -1,0 +1,22 @@
+uuid: 6bb96864-59c1-4a76-a0d9-a0faf364560d
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - icosaedrico
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: icosaedrico_help
+theme: icosaedrico
+region: content
+weight: -4
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

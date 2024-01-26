@@ -1,0 +1,22 @@
+uuid: 9636faa7-30c6-405b-ab18-d87082809dae
+langcode: en
+status: true
+dependencies:
+  theme:
+    - icosaedrico
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: icosaedrico_primary_local_tasks
+theme: icosaedrico
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

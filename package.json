@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "name": "xacobe.net",
+  "description": "Drupal version of xacobe.net",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33"
+  }
+}

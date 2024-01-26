@@ -1,0 +1,4 @@
+<button {{ attributes.addClass(['my-button', 'button']) }}>
+  {{ text }}
+  {{ source(componentMetadata.path ~ '/img/' ~ iconType|default('power') ~ '.svg') }}
+</button>

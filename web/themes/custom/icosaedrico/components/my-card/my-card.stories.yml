@@ -1,0 +1,8 @@
+title: Single Directory Components/Examples/Card
+stories:
+  - name: 1. Default
+    args:
+      header: I am a header!
+      card_body: |
+        <p>I am the <em>card</em> contents.</p>
+        {% include 'sdc_examples:my-button' with { text: 'Learn more', iconType: 'external' } %}
