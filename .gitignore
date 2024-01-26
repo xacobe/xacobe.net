@@ -65,5 +65,8 @@
 /.editorconfig
 /.gitattributes
 
-# DDEC
-.ddev
+# DDEV
+/.ddev
+
+# Node modules
+/node_modules
