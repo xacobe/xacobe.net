@@ -1,6 +1,0 @@
-title: Single Directory Components/Examples/Markee
-stories:
-  - name: 1. Default
-    args:
-      text: This is my title
-      scrollAmount: 7
