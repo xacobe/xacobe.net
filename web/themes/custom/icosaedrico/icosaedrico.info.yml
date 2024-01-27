@@ -2,6 +2,7 @@ name: Icosaédrico
 type: theme
 description: 20 caras
 core_version_requirement: ^8 || ^9 || ^10
+logo: logo.png
 # Defines the base theme
 base theme: stable9
 # Defines libraries group in which we can add CSS/JS.

@@ -5,12 +5,14 @@
 }
 .btn--primary {
   color: white;
+  fill: white;
   background-color: black;
   border-color: black;
 }
 .btn--primary:hover,
 .btn--primary:focus {
   color: black;
+  fill: currentColor;
   background-color: white;
   border-color: red;
 }

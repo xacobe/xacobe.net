@@ -70,3 +70,6 @@
 
 # Node modules
 /node_modules
+
+# Backups
+/backups

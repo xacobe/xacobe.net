@@ -80,15 +80,14 @@
 
 
    {% embed 'icosaedrico:button' with {
-  color: 'primary',
-  href: 'https://www.ejemplo.com'
-} %}
-  {% block button_content %}
-    Haz clic aquí
+     text: 'Ver más',
+     color: 'primary',
+     href: 'https://www.xacobe.net',
+     target: '_blank'
+   } %}
+  {% block button %}
   {% endblock %}
 {% endembed %}
-
-
 
   {% if display_submitted %}
     <footer>
@@ -103,15 +102,4 @@
   <div{{ content_attributes }}>
     {{ content }}
   </div>
-  {% embed 'icosaedrico:chip' with {
-  color: 'primary',
-  dismissable: true
-} %}
-
-  {% block chip_content %}
-    Type: <span>{{ node.bundle() }}</span>
-  {% endblock %}
-
-{% endembed %}
-
 </article>
