@@ -1,0 +1,12 @@
+.tab__item a {
+  opacity: .8;
+  display: flex;
+  border-bottom: solid .2rem #ccc;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+}
+.tab__item a.is-active {
+  font-weight: bold;
+  opacity: 1;
+  border-bottom: solid .2rem red;
+}

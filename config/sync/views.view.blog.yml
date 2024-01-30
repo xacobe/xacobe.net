@@ -105,8 +105,12 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
-        options: {  }
+        type: time
+        options:
+          results_lifespan: 21600
+          results_lifespan_custom: 0
+          output_lifespan: 21600
+          output_lifespan_custom: 0
       empty: {  }
       sorts:
         created:
@@ -201,6 +205,32 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  blog_page:
+    id: blog_page
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+      path: blog
+      menu:
+        type: normal
+        title: Blog
+        weight: -49
+        menu_name: main
+        parent: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   feed_1:
     id: feed_1
     display_title: Feed
@@ -223,28 +253,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  page_1:
-    id: page_1
-    display_title: Page
-    display_plugin: page
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: blog
-      menu:
-        type: normal
-        title: Blog
-        menu_name: main
-        parent: ''
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

@@ -1,6 +1,6 @@
 uuid: fc15c825-65c0-441a-a033-82163051b4b7
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.account
@@ -13,7 +13,7 @@ _core:
 id: icosaedrico_account_menu
 theme: icosaedrico
 region: header
-weight: -5
+weight: -3
 provider: null
 plugin: 'system_menu_block:account'
 settings:

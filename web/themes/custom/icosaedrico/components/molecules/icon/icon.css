@@ -1,0 +1,6 @@
+.icon svg {
+  display: inline-block;
+}
+.icon--sm {
+  width: 2.5rem;
+}

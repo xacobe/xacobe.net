@@ -1,0 +1,15 @@
+.branding {}
+
+.branding__title {
+  font-family: 'Lobster', sans-serif;
+  font-size: 2.8rem;
+}
+.branding__title--suffix  {
+  color: orange;
+}
+.branding__logo {}
+.branding__slogan {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
