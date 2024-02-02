@@ -1,0 +1,19 @@
+uuid: ddb2ad87-1f20-4eb9-b0c2-e95ba4f636bf
+langcode: es
+status: true
+dependencies:
+  module:
+    - metatag
+    - user
+id: user.user.metatag
+field_name: metatag
+entity_type: user
+bundle: user
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

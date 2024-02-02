@@ -1,5 +1,5 @@
 uuid: d01c6a15-7409-4b87-ae4a-8211d9964291
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
@@ -9,6 +9,7 @@ dependencies:
     - node.type.article
   module:
     - layout_builder
+    - layout_discovery
     - text
     - user
 third_party_settings:

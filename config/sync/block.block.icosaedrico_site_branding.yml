@@ -11,7 +11,7 @@ _core:
 id: icosaedrico_site_branding
 theme: icosaedrico
 region: header
-weight: -7
+weight: -5
 provider: null
 plugin: system_branding_block
 settings:

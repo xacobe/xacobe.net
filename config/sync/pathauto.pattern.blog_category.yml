@@ -1,0 +1,34 @@
+uuid: d099b427-347c-4510-baf3-9a3d28f53e1c
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - taxonomy
+id: blog_category
+label: 'Blog category'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/blog/[term:name]'
+selection_criteria:
+  ff4c9a7f-efcd-439e-92df-a6be1ad1e101:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: ff4c9a7f-efcd-439e-92df-a6be1ad1e101
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      tags: tags
+  2a8b8742-1506-4ddd-abb0-0a9db6757183:
+    id: language
+    negate: false
+    uuid: 2a8b8742-1506-4ddd-abb0-0a9db6757183
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    langcodes:
+      en: en
+      es: es
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language
