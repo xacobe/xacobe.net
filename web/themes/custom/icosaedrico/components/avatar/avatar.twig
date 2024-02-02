@@ -1,0 +1,9 @@
+<article {{ attributes }}>
+  {# Keep the outer article whenever possible it is a nice way to ensure the presence of "attributes" #}
+  {{ user_name }}
+  {% block user %}
+    {% if user_picture_url %}
+      <img src="{{ user_picture_url }}" alt="{{ user_name }}'s picture" />
+    {% endif %}
+  {% endblock %}
+</article>

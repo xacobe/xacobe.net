@@ -1,0 +1,12 @@
+{% set classes = [
+  "icon--" ~ size,
+  "icon flex",
+  "flex-col",
+  "items-center",
+  "mx-6"
+] %}
+
+<div class="{{ classes|join(' ') }}">
+    {% include active_theme_path() ~ '/img/icons/' ~ name ~ '.svg' %}
+  <div class="icon__title"> {{ text }}</div>
+</div>

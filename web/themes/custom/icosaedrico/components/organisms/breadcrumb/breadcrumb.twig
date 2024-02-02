@@ -1,0 +1,18 @@
+{% block breadcrumb_block %}
+  {% if breadcrumb %}
+    <nav {{ attributes }} role="navigation" aria-labelledby="system-breadcrumb">
+      <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
+      <ol class="flex">
+        {% for item in breadcrumb %}
+          <li>
+            {% if item.url %}
+              <a class="px-8 py-2 me-6 odd:bg-gray-100" href="{{ item.url }}">{{ item.text }}</a>
+            {% else %}
+              {{ item.text }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+    </nav>
+  {% endif %}
+{% endblock %}

@@ -8,7 +8,7 @@
  *   Only method names starting with "get", "has", or "is" and a few common
  *   methods such as "id", "label", and "bundle" are available. For example:
  *   - node.getCreatedTime() will return the node creation timestamp.
- *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *   - node.hasField("field_example") returns TRUE if the node bundle includes
  *     field_example. (This does not indicate the presence of a value in this
  *     field.)
  *   - node.isPublished() will return whether the node is published or not.
@@ -18,7 +18,7 @@
  * - label: (optional) The title of the node.
  * - content: All node items. Use {{ content }} to print them all,
  *   or print a subset such as {{ content.field_example }}. Use
- *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   {{ content|without("field_example") }} to temporarily suppress the printing
  *   of a given child element.
  * - author_picture: The node author user entity, rendered using the "compact"
  *   view mode.
@@ -54,8 +54,8 @@
  * - title_suffix: Additional output populated by modules, intended to be
  *   displayed after the main title tag that appears in the template.
  * - view_mode: View mode; for example, "teaser" or "full".
- * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
- * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - teaser: Flag for the teaser state. Will be true if view_mode is "teaser".
+ * - page: Flag for the full page state. Will be true if view_mode is "full".
  * - readmore: Flag for more state. Will be true if the teaser content of the
  *   node cannot hold the main body content.
  * - logged_in: Flag for authenticated user status. Will be true when the
@@ -67,39 +67,37 @@
  *
  */
 #}
-<article{{ attributes }}>
-
-  {{ title_prefix }}
-  {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
+<article {{ attributes }}>
+  {% if display_submitted %}
+    <header>
+      {{ title_prefix }}
+      {% if label and not page %}
+        <h2 class="text-xl py-4 mt-2 pb-8" {{ title_attributes }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+      {% endif %}
+      {{ title_suffix }}
+      <div {{ author_attributes }}>
+        <div class="text-sm black-300">
+          {{ date }}
+        </div>
+      </div>
+    </header>
   {% endif %}
-  {{ title_suffix }}
 
-
-
-   {% embed 'icosaedrico:button' with {
-     text: 'Ver más',
-     color: 'primary',
-     href: 'https://www.xacobe.net',
-     target: '_blank'
+  {# {% embed "icosaedrico:button" with {
+     text: "Ver más",
+     color: "primary",
+     href: "https://www.xacobe.net",
+     target: "_blank"
    } %}
   {% block button %}
   {% endblock %}
-{% endembed %}
+{% endembed %} #}
 
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
-  <div{{ content_attributes }}>
-    {{ content }}
-  </div>
+  <div {{ content_attributes }}>{{ content }}</div>
+  <div class="flex flex-col max-w-max	 ms-auto">
+            {% if not teaser %}
+              {{ author_picture }}
+            {% endif %}
+          {{ metadata }}
+          </div>
 </article>

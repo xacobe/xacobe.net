@@ -1,0 +1,11 @@
+body {
+  font-size: 16px;
+}
+
+main {
+  font-size: 1.25rem;
+}
+
+.container-text {
+  max-width: 80ch;
+}
