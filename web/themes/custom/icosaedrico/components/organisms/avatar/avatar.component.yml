@@ -9,6 +9,14 @@ props:
       title: User name
       # @todo Add examples here.
       examples: []
+    user_picture_width:
+      type: string
+      title: Picture width
+      examples: ['64'] # Ejemplo de ancho de imagen
+    user_picture_height:
+      type: string
+      title: Picture height
+      examples: ['64'] # Ejemplo de altura de imagen
 slots:
   user:
-    picture: User pictured
+    picture: User picture

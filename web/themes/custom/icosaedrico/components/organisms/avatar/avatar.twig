@@ -1,0 +1,14 @@
+{% set classes = [
+  "capitalize",
+  "mt-2",
+  "text-center"
+] %}
+
+<footer class="capitalize mt-2 text-center">
+  {% block user %}
+    {% if user_picture_url %}
+      <img src="{{ user_picture_url }}" width="{{ user_picture_width|default('72') }}" height="{{ user_picture_height|default('72') }}" alt="{{ user_name }}'s picture" />
+    {% endif %}
+  {% endblock %}
+  {{ user_name }}
+</footer>

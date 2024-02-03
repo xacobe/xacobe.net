@@ -18,15 +18,20 @@
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/cl_devel": "^2.0@beta",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
+        "drupal/devel": "^5.1",
         "drupal/metatag": "^2.0",
         "drupal/pathauto": "^1.12",
         "drupal/redirect": "^1.9",
         "drupal/sdc_examples": "1.x-dev@dev",
+        "drupal/sdc_styleguide": "^1.0@beta",
         "drupal/svg_image": "^3.0",
-        "drupal/token": "^1.13"
+        "drupal/token": "^1.13",
+        "drupal/tracer": "^1.0",
+        "drupal/webprofiler": "^10.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -103,7 +108,7 @@
         }
     },
     "require-dev": {
-        "drupal/core-dev": "^10.2",
+        "drupal/core-dev": "^10",
         "drush/drush": "^12.4"
     }
 }

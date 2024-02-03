@@ -17,9 +17,12 @@
  */
 #}
 {% set user_picture_url = file_url(user.user_picture.entity.fileuri) %}
+{% set user_picture_width = user_picture_width|default('72') %}
+{% set user_picture_height = user_picture_height|default('72') %}
 
 {% include "icosaedrico:avatar" with {
   user_name: user.name.value,
-  user_picture_url: user_picture_url
+  user_picture_url: user_picture_url,
+  user_picture_width: user_picture_width,
+  user_picture_height: user_picture_height,
 } %}
-

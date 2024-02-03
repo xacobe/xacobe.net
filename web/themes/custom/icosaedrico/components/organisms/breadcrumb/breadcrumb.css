@@ -1,3 +1,10 @@
-[data-component-id="icosaedrico:breadcrumb"] {
-  /* @todo Add your styles here. */
+.breadcrumb {
+  color: #666;
+}
+.breadcrumb__item {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 0.07rem;
+  text-align: center;
 }

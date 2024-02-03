@@ -72,32 +72,29 @@
     <header>
       {{ title_prefix }}
       {% if label and not page %}
-        <h2 class="text-xl py-4 mt-2 pb-8" {{ title_attributes }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+        <h2 class="text-xl py-4 mt-2 mx-auto pb-8 max-w-prose" {{ title_attributes }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
       {% endif %}
       {{ title_suffix }}
       <div {{ author_attributes }}>
-        <div class="text-sm black-300">
-          {{ date }}
-        </div>
+        <div class="text-sm black-300 py-2 bg-slate-200	ps-4 mb-4">{{ date }}</div>
       </div>
     </header>
   {% endif %}
 
-  {# {% embed "icosaedrico:button" with {
-     text: "Ver más",
-     color: "primary",
-     href: "https://www.xacobe.net",
-     target: "_blank"
-   } %}
-  {% block button %}
-  {% endblock %}
-{% endembed %} #}
+{% if content_attributes|render|trim is not empty %}
+  <div {{ content_attributes }}>
+  {% endif %}
+  {{ content }}
+  {% if content_attributes %}
+    </div>
+  {% endif %}
 
-  <div {{ content_attributes }}>{{ content }}</div>
-  <div class="flex flex-col max-w-max	 ms-auto">
-            {% if not teaser %}
-              {{ author_picture }}
-            {% endif %}
-          {{ metadata }}
-          </div>
+  <footer class="flex flex-col max-w-max ms-auto">
+    {% if not teaser %}
+      {{ author_picture }}
+    {% endif %}
+    {{ metadata }}
+  </footer>
+{{ author_picture }}
 </article>
+
