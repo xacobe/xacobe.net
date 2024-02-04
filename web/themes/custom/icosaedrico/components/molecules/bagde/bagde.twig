@@ -1,0 +1,15 @@
+{% set classes = [
+    "badge",
+    "bg-" ~ color ~ "-500",
+    "text-white",
+    "text-xs",
+    "rounded-full",
+    "px-3", "py-1",
+    "mr-2",
+    "rounded",
+    "leading-none",
+    "items-center",
+    "max-w-max"
+]%}
+ <a href="{{ href }}" class="{{ classes | join(" ")}}">{{ text }}</a>
+
