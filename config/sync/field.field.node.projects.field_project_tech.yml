@@ -1,0 +1,29 @@
+uuid: 2ee8d3e0-d8fb-4a86-bc93-8a7020c691a6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project_tech
+    - node.type.projects
+    - taxonomy.vocabulary.project_tech
+id: node.projects.field_project_tech
+field_name: field_project_tech
+entity_type: node
+bundle: projects
+label: Técnologías
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      project_tech: project_tech
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

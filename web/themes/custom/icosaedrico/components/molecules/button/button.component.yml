@@ -6,8 +6,6 @@ libraryOverrides:
     - core/once
 props:
   type: object
-  required:
-    - text
   properties:
     text:
       type: string
@@ -29,7 +27,7 @@ props:
       description: The target for the button
       examples:
         - _blank
-        - self
+        - _self
     color:
       type: string
       title: Color

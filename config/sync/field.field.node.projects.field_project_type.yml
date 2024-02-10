@@ -1,0 +1,29 @@
+uuid: 70cbf686-505f-4fe7-9f22-7e8aa7a0ab1b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project_type
+    - node.type.projects
+    - taxonomy.vocabulary.tipo_de_proyecto
+id: node.projects.field_project_type
+field_name: field_project_type
+entity_type: node
+bundle: projects
+label: 'Tipo de proyecto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tipo_de_proyecto: tipo_de_proyecto
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

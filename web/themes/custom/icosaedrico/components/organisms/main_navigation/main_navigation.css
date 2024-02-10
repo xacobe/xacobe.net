@@ -1,3 +1,6 @@
-.main-menu {
-  background-color: red;
+.main-navigation__item {
+  border-bottom: solid 2px #ccc;
+}
+.main-navigation__item:has(li > a.active) {
+  border-bottom: solid 2px red;
 }

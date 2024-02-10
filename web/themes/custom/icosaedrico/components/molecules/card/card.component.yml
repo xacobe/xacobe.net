@@ -1,0 +1,29 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Card
+status: stable
+props:
+  type: object
+  properties:
+    card_title:
+      type: string
+      title: Title
+      # @todo Add examples here.
+      examples: []
+    card_tags:
+      type: string
+      title: Tags
+      # @todo Add examples here.
+      examples: []
+    card_url:
+      type: string
+      title: URL
+      # @todo Add examples here.
+      examples: []
+slots:
+  # Content to display in the chip.
+  card_content:
+      title: Card content
+      description: Content of the chip
+  card_media:
+      title: Card media
+      description: Image or video content

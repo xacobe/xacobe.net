@@ -5,8 +5,13 @@ dependencies:
   config:
     - field.field.node.projects.body
     - field.field.node.projects.field_project_images
+    - field.field.node.projects.field_project_status
+    - field.field.node.projects.field_project_tech
+    - field.field.node.projects.field_project_type
+    - field.field.node.projects.field_project_url
     - node.type.projects
   module:
+    - link
     - text
     - user
 id: node.projects.default
@@ -29,6 +34,44 @@ content:
       link: false
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_project_status:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_project_tech:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_project_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_project_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 103
     region: content
   links:
     settings: {  }

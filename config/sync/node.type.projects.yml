@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Proyectos
 type: projects
-description: ''
+description: 'Proyectos personales y trabajos.'
 help: ''
 new_revision: false
 preview_mode: 1

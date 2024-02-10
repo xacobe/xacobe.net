@@ -1,0 +1,16 @@
+uuid: 5acfe298-f828-42e9-aa80-27fe74be3be8
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.project_tech
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.project_tech
+target_entity_type_id: taxonomy_term
+target_bundle: project_tech
+default_langcode: site_default
+language_alterable: false

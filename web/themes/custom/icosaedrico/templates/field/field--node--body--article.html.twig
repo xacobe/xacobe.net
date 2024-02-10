@@ -44,18 +44,18 @@
 
 {% if label_hidden %}
   {% if multiple %}
-    <div{{ attributes.addClass("max-w-prose mx-auto") }}>
+    <div{{ attributes.addClass("max-w-prose mx-auto my-10") }}>
       {% for item in items %}
         <div{{ item.attributes }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass("max-w-prose mx-auto") }}>{{ item.content }}</div>
+      <div{{ attributes.addClass("max-w-prose mx-auto my-10") }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div{{ attributes.addClass("max-w-prose mx-auto") }}>
+  <div{{ attributes.addClass("max-w-prose mx-auto my-10") }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
       <div>

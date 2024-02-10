@@ -11,6 +11,7 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
+  cl_editorial: 0
   config: 0
   config_translation: 0
   contact: 0
@@ -61,9 +62,12 @@ module:
   responsive_image: 0
   rest: 0
   sdc: 0
+  sdc_display: 0
+  sdc_tags: 0
   serialization: 0
   settings_tray: 0
   shortcut: 0
+  storybook: 0
   svg_image: 0
   svg_image_responsive: 0
   system: 0

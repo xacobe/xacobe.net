@@ -6,6 +6,10 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.projects.body
     - field.field.node.projects.field_project_images
+    - field.field.node.projects.field_project_status
+    - field.field.node.projects.field_project_tech
+    - field.field.node.projects.field_project_type
+    - field.field.node.projects.field_project_url
     - node.type.projects
   module:
     - text
@@ -30,4 +34,8 @@ content:
     region: content
 hidden:
   field_project_images: true
+  field_project_status: true
+  field_project_tech: true
+  field_project_type: true
+  field_project_url: true
   langcode: true

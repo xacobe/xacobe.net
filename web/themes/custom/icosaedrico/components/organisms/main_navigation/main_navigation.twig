@@ -27,12 +27,12 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul class="flex" {{ attributes }}>
+      <ul {{ attributes.addClass("main-navigation flex") }}>
     {% else %}
-      <ul {{ attributes }}>
+      <ul {{ attributes.addClass("main-navigation flex") }}>
     {% endif %}
     {% for item in items %}
-      <li class="py-2 px-4" {{ item.attributes }}>
+      <li {{ item.attributes.addClass("main-navigation__item py-2 px-4") }}>
         {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}

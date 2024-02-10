@@ -1,6 +1,6 @@
 '$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
 name: Avatar
-status: stable
+status: experimental
 props:
   type: object
   properties:
@@ -9,6 +9,9 @@ props:
       title: User name
       # @todo Add examples here.
       examples: []
+    user_picture_url:
+      type: string
+      title: URl user picture
     user_picture_width:
       type: string
       title: Picture width

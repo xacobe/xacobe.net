@@ -1,0 +1,8 @@
+uuid: 1adf4901-da94-4cf1-b37e-a329a5aecd49
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipo de proyecto'
+vid: tipo_de_proyecto
+description: 'Para los diferentes tipos de proyectos: personales y de trabajo'
+weight: 0

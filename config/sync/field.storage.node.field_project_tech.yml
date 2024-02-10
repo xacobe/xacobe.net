@@ -1,0 +1,20 @@
+uuid: 5635bae8-1bd8-4b10-ba8d-2b18f4e15ad2
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_project_tech
+field_name: field_project_tech
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

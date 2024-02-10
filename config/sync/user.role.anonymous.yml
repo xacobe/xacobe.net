@@ -8,6 +8,7 @@ dependencies:
     - contact
     - filter
     - media
+    - storybook
     - system
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
@@ -18,5 +19,6 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access site-wide contact form'
+  - 'render storybook stories'
   - 'use text format restricted_html'
   - 'view media'

@@ -2,6 +2,6 @@ global-styling:
   version: 1.x
   css:
     theme:
-      css/base.css: {}
-      css/styles.css: {}
-      css/modules.css: {}
+      css/base/base.css: {}
+      css/modules/modules.css: {}
+      css/output.css: {}

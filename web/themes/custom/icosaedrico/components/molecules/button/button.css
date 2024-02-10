@@ -1,8 +1,6 @@
 .btn {
   display: inline-block;
-  padding-inline: 1rem;
-  padding-block: 0.4rem;
-  border: solid 2.4px;
+  border: solid 1px;
 }
 .btn > svg { display: inherit;}
 .btn--primary {

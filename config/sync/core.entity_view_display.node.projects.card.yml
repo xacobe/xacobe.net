@@ -1,0 +1,115 @@
+uuid: 6198d2f2-b603-47c7-99ca-b5fe3428b32a
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.projects.body
+    - field.field.node.projects.field_project_images
+    - field.field.node.projects.field_project_status
+    - field.field.node.projects.field_project_tech
+    - field.field.node.projects.field_project_type
+    - field.field.node.projects.field_project_url
+    - node.type.projects
+  module:
+    - layout_builder
+    - link
+    - sdc_display
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'icosaedrico:card'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          card_title: ''
+          card_tags: ''
+          card_url: ''
+        slots:
+          card_content:
+            value: ''
+            format: basic_html
+          card_media:
+            value: ''
+            format: basic_html
+      dynamic:
+        props:
+          card_title: title
+          card_tags: field_project_tech
+          card_url: field_project_url
+        slots:
+          card_content:
+            body: body
+            field_project_images: null
+            field_project_tech: null
+            field_project_url: null
+            links: null
+            uid: null
+            title: null
+            created: null
+          card_media:
+            field_project_images: field_project_images
+            body: null
+            field_project_tech: null
+            field_project_url: null
+            links: null
+            uid: null
+            title: null
+            created: null
+id: node.projects.card
+targetEntityType: node
+bundle: projects
+mode: card
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_project_images:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_project_tech:
+    type: entity_reference_label
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_project_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_project_status: true
+  field_project_type: true
+  langcode: true

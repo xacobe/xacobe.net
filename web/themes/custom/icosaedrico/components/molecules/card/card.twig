@@ -1,0 +1,13 @@
+{%
+  set classes = [
+  'card',
+]
+%}
+<div class="{{ classes|join(" ") }}">
+<h3 class="card__title"> {{ card_title }}</h3>
+  {% block card_content %}{% endblock %}
+  {% block card_media %}{% endblock %}
+
+  <p>{{ card_tags }}</p>
+  <a class="card__link" href="{{ card_url|striptags|trim }}">Ver online</a>
+</div>

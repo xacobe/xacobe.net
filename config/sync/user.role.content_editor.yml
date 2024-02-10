@@ -11,6 +11,7 @@ dependencies:
     - file
     - node
     - path
+    - storybook
     - system
     - taxonomy
     - toolbar
@@ -39,6 +40,7 @@ permissions:
   - 'edit own article content'
   - 'edit own page content'
   - 'edit terms in tags'
+  - 'render storybook stories'
   - 'revert all revisions'
   - 'view all revisions'
   - 'view own unpublished content'

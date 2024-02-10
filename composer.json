@@ -19,6 +19,7 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
         "drupal/cl_devel": "^2.0@beta",
+        "drupal/cl_editorial": "^2.0@beta",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
@@ -26,8 +27,10 @@
         "drupal/metatag": "^2.0",
         "drupal/pathauto": "^1.12",
         "drupal/redirect": "^1.9",
-        "drupal/sdc_examples": "1.x-dev@dev",
+        "drupal/sdc_block": "^1.0@beta",
+        "drupal/sdc_display": "^1.0@beta",
         "drupal/sdc_styleguide": "^1.0@beta",
+        "drupal/storybook": "^1.0@alpha",
         "drupal/svg_image": "^3.0",
         "drupal/token": "^1.13",
         "drupal/tracer": "^1.0",
@@ -36,7 +39,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {

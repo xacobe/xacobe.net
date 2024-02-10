@@ -1,0 +1,8 @@
+uuid: fc7c205e-ee49-4192-b71e-4ed6ad50b10d
+langcode: es
+status: true
+dependencies: {  }
+name: Tecnologías
+vid: project_tech
+description: 'Las tecnologías usadas en el proyecto.'
+weight: 0

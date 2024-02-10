@@ -1,0 +1,20 @@
+uuid: 60d483a8-eab5-4c24-8a42-78239845dc15
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_display_name
+  module:
+    - user
+id: user.user.field_display_name
+field_name: field_display_name
+entity_type: user
+bundle: user
+label: 'Nombre visible'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

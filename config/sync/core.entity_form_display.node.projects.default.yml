@@ -5,8 +5,13 @@ dependencies:
   config:
     - field.field.node.projects.body
     - field.field.node.projects.field_project_images
+    - field.field.node.projects.field_project_status
+    - field.field.node.projects.field_project_tech
+    - field.field.node.projects.field_project_type
+    - field.field.node.projects.field_project_url
     - node.type.projects
   module:
+    - link
     - media_library
     - path
     - text
@@ -38,6 +43,37 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+  field_project_status:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_project_tech:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_project_type:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_project_url:
+    type: link_default
+    weight: 10
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 1
@@ -54,6 +90,13 @@ content:
   status:
     type: boolean_checkbox
     weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 14
     region: content
     settings:
       display_label: true
@@ -88,4 +131,3 @@ content:
     third_party_settings: {  }
 hidden:
   promote: true
-  sticky: true

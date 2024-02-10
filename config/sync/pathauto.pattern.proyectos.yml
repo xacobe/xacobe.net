@@ -1,0 +1,33 @@
+uuid: b8174b12-6280-4f73-9bab-d031cf9d0182
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: proyectos
+label: Proyectos
+type: 'canonical_entities:node'
+pattern: '/proyectos/[node:title]'
+selection_criteria:
+  56cea7fc-53e7-46af-a4ff-43b7eef56557:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 56cea7fc-53e7-46af-a4ff-43b7eef56557
+    context_mapping:
+      node: node
+    bundles:
+      projects: projects
+  a4c3a468-4390-4104-a625-ba7838d571b2:
+    id: language
+    negate: false
+    uuid: a4c3a468-4390-4104-a625-ba7838d571b2
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      es: es
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -1,6 +1,6 @@
 '$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
 name: Icon
-status: stable
+status: experimental
 props:
   type: object
   properties:
@@ -10,6 +10,12 @@ props:
     text:
       type: string
       title: Text
+    show_text:
+      type: boolean
+      title: Show text
+    icon_url:
+      type: string
+      title: Link
     size:
       type: string
       title: Size

@@ -3,10 +3,24 @@
   "icon flex",
   "flex-col",
   "items-center",
-  "mx-6"
+  "mx-6",
 ] %}
 
+{% set classes_text = [
+  show_text ?: "sr-only",
+  "icon__title"
+] %}
 <div class="{{ classes|join(' ') }}">
-    {% include active_theme_path() ~ '/img/icons/' ~ name ~ '.svg' %}
-  <div class="icon__title"> {{ text }}</div>
+
+  {% if icon_url is not empty %}
+    <a href="{{ icon_url }}">
+  {% endif %}
+
+  {% include active_theme_path() ~ '/img/icons/' ~ name ~ '.svg' %}
+  <div class="{{ classes_text|join(' ') }}"> {{ text }}</div>
+
+  {% if icon_url is not empty %}
+    </a>
+  {% endif %}
+
 </div>

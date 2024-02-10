@@ -1,0 +1,16 @@
+uuid: 426e16e1-9677-49e0-819e-b084e0578eea
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipo_de_proyecto
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.tipo_de_proyecto
+target_entity_type_id: taxonomy_term
+target_bundle: tipo_de_proyecto
+default_langcode: site_default
+language_alterable: false
