@@ -2,14 +2,19 @@
   display: inline-block;
   border: solid 1px;
 }
-.btn > svg { display: inherit;}
+
+.btn > svg {
+  display: inherit;
+}
+
 .btn--primary {
   color: white;
   fill: white;
   background-color: black;
   border-color: black;
 }
+
 .btn--primary:hover,
 .btn--primary:focus {
-  opacity: .8;
+  opacity: 0.8;
 }

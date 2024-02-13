@@ -641,6 +641,10 @@ video {
   position: relative;
 }
 
+.\!relative {
+  position: relative !important;
+}
+
 .sticky {
   position: sticky;
 }
@@ -651,6 +655,10 @@ video {
 
 .end-1 {
   inset-inline-end: 0.25rem;
+}
+
+.start-1 {
+  inset-inline-start: 0.25rem;
 }
 
 .isolate {
@@ -703,6 +711,10 @@ video {
 
 .clear-none {
   clear: none;
+}
+
+.m-1 {
+  margin: 0.25rem;
 }
 
 .mx-1 {
@@ -858,6 +870,22 @@ video {
   display: none;
 }
 
+.\!hidden {
+  display: none !important;
+}
+
+.h-0 {
+  height: 0px;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
+.h-2 {
+  height: 0.5rem;
+}
+
 .w-\[this-is\\\\\] {
   width: this-is\\;
 }
@@ -868,6 +896,10 @@ video {
 
 .w-\[weird-and-invalid\] {
   width: weird-and-invalid;
+}
+
+.w-1 {
+  width: 0.25rem;
 }
 
 .max-w-max {
@@ -2511,6 +2543,18 @@ video {
 
 .forced-color-adjust-none {
   forced-color-adjust: none;
+}
+
+.\[a-zA-Z0-9\:\\\\-\\\\\._\$\] {
+  a-z-a--z0-9: \\-\\. $;
+}
+
+.\[vite\:css\] {
+  vite: css;
+}
+
+.\[vite\:html\] {
+  vite: html;
 }
 
 @media (min-width: 640px) {
