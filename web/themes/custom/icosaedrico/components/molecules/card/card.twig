@@ -9,5 +9,9 @@
   {% block card_media %}{% endblock %}
 
   <p>{{ card_tags }}</p>
-  <a class="card__link" href="{{ card_url|striptags|trim }}">Ver online</a>
+  {% if card_url is not empty  %}
+    <a class="card__link" href="{{ card_url|striptags|trim }}">{{ card_url_title }}</a>
+  {% endif %}
+
 </div>
+

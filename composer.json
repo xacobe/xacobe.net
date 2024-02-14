@@ -23,7 +23,6 @@
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
-        "drupal/devel": "^5.1",
         "drupal/metatag": "^2.0",
         "drupal/pathauto": "^1.12",
         "drupal/redirect": "^1.9",
@@ -112,6 +111,7 @@
     },
     "require-dev": {
         "drupal/core-dev": "^10",
+        "drupal/devel": "^5.1",
         "drush/drush": "^12.4"
     }
 }
