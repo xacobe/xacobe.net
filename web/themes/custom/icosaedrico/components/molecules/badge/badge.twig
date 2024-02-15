@@ -1,0 +1,15 @@
+{% set classes = [
+    "badge",
+    badge_color ? "badge-" ~ badge_color,
+    badge_outline ? "badge-outline",
+    badge_size ? "badge-" ~ badge_size,
+    badge_text_size ? "badge-" ~ badge_text_size,
+
+]%}
+<a href="{{ href }}" class="{{ classes | join(" ")}}">
+ {{ badge_text }}
+ {% if badge_icon is not empty %}
+    {{ source(componentMetadata.path ~ '/img/' ~ badge_icon ~ '.svg') }}
+  {% endif %}
+</a>
+

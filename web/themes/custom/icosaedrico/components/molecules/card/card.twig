@@ -1,17 +1,16 @@
 {%
   set classes = [
-  'card',
+  'card'
 ]
 %}
 <div class="{{ classes|join(" ") }}">
 <h3 class="card__title"> {{ card_title }}</h3>
-  {% block card_content %}{% endblock %}
   {% block card_media %}{% endblock %}
+  {% block card_content %}{% endblock %}
 
   <p>{{ card_tags }}</p>
   {% if card_url is not empty  %}
     <a class="card__link" href="{{ card_url|striptags|trim }}">{{ card_url_title }}</a>
   {% endif %}
-
 </div>
 

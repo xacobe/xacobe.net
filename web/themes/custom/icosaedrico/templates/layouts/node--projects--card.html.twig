@@ -67,11 +67,36 @@
  *
  */
 #}
-{% embed 'icosaedrico:card' with { card_title: label, card_tags: content.field_project_tech, card_button_url: node.field_project_url[0].uri|default('lol') } %}
+
+{% set tech_tags = [] %}
+{% for item in node.field_project_tech %}
+  {% set tech_tags = tech_tags|merge([item.entity.label]) %}
+{% endfor %}
+
+{% embed 'icosaedrico:card' with {
+  card_title: label,
+  card_button_url: node.field_project_url.0.uri|default('lol')
+} %}
+ {% block card_media %}
+    <img src="{{ content.field_project_images }}" alt="Descripción alternativa">
+  {% endblock %}
+
   {% block card_content %}
+    {% for tech_tag in tech_tags %}
+      {% include 'icosaedrico:badge' with {
+        badge_text: tech_tag,
+        badge_href: card_button_url,
+        badge_target: '_blank',
+        badge_color: 'primary'
+      } only %}
+    {% endfor %}
+    {% include 'icosaedrico:button' with {
+      text: node.field_project_url.0.title|default('Ver más'),
+      href: card_button_url,
+      target: '_blank',
+      icon: 'external'
+    } only %}
     {{ content.body }}
-    {% include 'icosaedrico:button' with { text: node.field_project_url[0].title|default('Ver más'), href: card_button_url, target: '_blank', icon: 'external' } only %}
-    {{ content.field_project_images }}
   {% endblock %}
 {% endembed %}
-{{ dump(content.field_project_images) }}
+

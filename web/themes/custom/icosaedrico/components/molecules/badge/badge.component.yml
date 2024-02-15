@@ -1,0 +1,74 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Bagde
+status: experimental
+props:
+  type: object
+  required:
+    - badge_text
+  properties:
+    badge_text:
+      type: string
+      title: Text
+      examples: []
+    badge_color:
+      type: string
+      title: Color
+      examples:
+        - neutral
+        - primary
+        - secondary
+        - accent
+        - ghost
+        - info
+        - success
+        - warning
+        - error
+      enum:
+        - neutral
+        - primary
+        - secondary
+        - accent
+        - ghost
+        - info
+        - success
+        - warning
+        - error
+    badge_outline:
+      type: boolean
+      title: Outline
+      examples:
+        - true
+        - false
+    badge_size:
+      type: string
+      title: Bagde size
+      examples:
+        - lg
+        - md
+        - sm
+        - xs
+      enum:
+        - lg
+        - md
+        - sm
+        - xs
+    badge_text_size:
+      type: string
+      title: Bagde text size
+      examples:
+        - lg
+        - md
+        - sm
+        - xs
+      enum:
+        - lg
+        - md
+        - sm
+        - xs
+    badge_icon:
+      type: string
+      title: Icon
+      examples: []
+    badge_href:
+      type: string
+      title: Link

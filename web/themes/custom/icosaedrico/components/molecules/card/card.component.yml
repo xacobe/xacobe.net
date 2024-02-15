@@ -9,9 +9,6 @@ props:
       title: Title
       # @todo Add examples here.
       examples: []
-    card_media:
-        title: Card media
-        description: Image (or video content in a future)
     card_tags:
       type: string
       title: Tags
@@ -22,3 +19,6 @@ slots:
   card_content:
       title: Card content
       description: Content of the chip
+  card_media:
+      title: Card media
+      description: Image (or video content in a future)
