@@ -7,15 +7,37 @@ props:
     card_title:
       type: string
       title: Title
-      # @todo Add examples here.
-      examples: []
     card_tags:
       type: string
       title: Tags
-      # @todo Add examples here.
-      examples: []
+    card_classes:
+      type: string
+      title: Card extra classes
+      examples:
+        - glass
+        - bg-primary text-primary-content
+        - bg-neutral text-neutral-content
+    card_image_position:
+      type: string
+      title: Card types
+      examples:
+        - right
+        - left
+        - top (default)
+        - bottom
+        - center
+        - overlay
+      enum:
+        - right
+        - left
+        - top
+        - bottom
+        - center
+        - overlay
+    card_responsive:
+      type: boolean
+      title: Card responsive
 slots:
-  # Content to display in the chip.
   card_content:
       title: Card content
       description: Content of the chip

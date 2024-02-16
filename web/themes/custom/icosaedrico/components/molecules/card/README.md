@@ -1,7 +1,6 @@
 # Card
 
-This is some default content for the README. Change this to the appropriate
-content.
+https://daisyui.com/components/card/
 
 ## Usage
 

@@ -1,4 +1,49 @@
-$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
-machineName: tabs
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
 name: Tabs
 status: experimental
+props:
+  type: object
+  properties:
+    tab_text:
+      type: string
+      title: Text in the tab
+    tab_type:
+      type: string
+      title: Tab type
+      examples:
+        - bordered
+        - lifted
+        - boxed
+      enum:
+        - bordered
+        - lifted
+        - boxed
+    tab_href:
+      type: string
+      title: Anchor for the tab
+      examples:
+        - true
+        - false
+    tab_size:
+      type: string
+      title: Tab size
+      examples:
+        - lg
+        - sm
+        - xs
+      enum:
+        - lg
+        - sm
+        - xs
+    tab_icon:
+      type: string
+      title: Icon
+      examples: []
+slots:
+  # Content to display in the tab.
+  tab_content_primary:
+      title: Tab content
+      description: Content of the tab
+  tab_content_secondary:
+      title: Tab secondary content
+      description: Second level of content if need it

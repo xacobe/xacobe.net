@@ -1,3 +1,10 @@
-{% block content %}
-  <li class="tab__item" {{ attributes }}>{{ link }}</li>
-{% endblock %}
+{% set classes = [
+    "tabs",
+    tab_type ? "tabs-" ~ tab_type,
+    tab_size ? "tabs-" ~ tab_size,
+]%}
+<div class="{{ classes|join(" ") }}">
+  {% block tab_content_primary %}
+  {{ tab_text }}
+  {% endblock %}
+</div>

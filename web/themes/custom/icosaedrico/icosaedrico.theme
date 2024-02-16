@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Stable9 theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for links.
+ */
+function icosaedrico_preprocess_menu_local_task(&$variables)
+{
+  // Añade siempre la clase 'tab'.
+  $existing_classes = $variables['element']['#link']['url']->getOption('attributes')['class'] ?? [];
+  $new_classes = array_merge($existing_classes, ['tab']);
+
+  // Verifica si el enlace está activo para ajustar las clases.
+  if (!empty($variables['element']['#active'])) {
+    // Añade 'tab-active' para enlaces activos, manteniendo 'tab'.
+    if (($key = array_search('is-active', $new_classes)) !== false) {
+      unset($new_classes[$key]); // Quita 'is-active' si existe.
+    }
+    $new_classes[] = 'tab-active'; // Añade 'tab-active'.
+  }
+
+  // Actualiza las clases en las opciones del enlace.
+  $variables['element']['#link']['url']->setOption('attributes', ['class' => $new_classes]);
+}
+
+

@@ -11,6 +11,20 @@
  * themed in menu-local-task.html.twig.
  */
 #}
-  {{ include('icosaedrico:menu', {
-     type: 'tabs',
-  }) }}
+    {% embed 'icosaedrico:tabs'  with {
+  tab_type: "bordered",
+  tab_size: "lg"
+} %}
+{% block tab_content_primary %}
+  {% if primary %}
+      <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+      {{ primary }}
+  {% endif %}
+{% endblock %}
+{% block tab_content_secondary %}
+  {% if secondary %}
+      <h2 class="visually-hidden">{{ 'Sencondary tabs'|t }}</h2>
+      {{ secondary }}
+  {% endif %}
+{% endblock %}
+    {% endembed %}

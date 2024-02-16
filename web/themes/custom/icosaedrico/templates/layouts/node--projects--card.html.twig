@@ -75,10 +75,11 @@
 
 {% embed 'icosaedrico:card' with {
   card_title: label,
-  card_button_url: node.field_project_url.0.uri|default('lol')
+  card_image_position: "right",
+  card_button_url: node.field_project_url.0.uri|default('/')
 } %}
  {% block card_media %}
-    <img src="{{ content.field_project_images }}" alt="Descripción alternativa">
+    {{ content.field_project_images }}
   {% endblock %}
 
   {% block card_content %}
@@ -90,6 +91,7 @@
         badge_color: 'primary'
       } only %}
     {% endfor %}
+
     {% include 'icosaedrico:button' with {
       text: node.field_project_url.0.title|default('Ver más'),
       href: card_button_url,

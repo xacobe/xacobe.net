@@ -46,12 +46,12 @@
   {% if multiple %}
     <div{{ attributes.addClass("flex max-w-prose mx-auto justify-end items-center") }}>
       {% for item in items %}
-        <div{{ item.attributes }}>{{ item.content }}</div>
-      {% endfor %}
+      {{ include('icosaedrico:badge', { badge_text: item.content["#title"], badge_href: item.content["#url"], badge_color: 'neutral' }) }}
+    {% endfor %}
     </div>
   {% else %}
-    {% for item in items %}
-      <div{{ attributes.addClass("flex max-w-prose mx-auto justify-end") }}>{{ item.content }}</div>
+   {% for item in items %}
+      {{ include('icosaedrico:badge', { badge_text: item.content["#title"], badge_href: item.content["#url"], badge_color: 'neutral' }) }}
     {% endfor %}
   {% endif %}
 {% else %}
@@ -66,7 +66,7 @@
       <div>
     {% endif %}
     {% for item in items %}
-      {{ include('icosaedrico:bagde', { text: item.content["#title"], href: item.content["#url"], color: 'red' }) }}
+      {{ include('icosaedrico:badge', { badge_text: item.content["#title"], badge_href: item.content["#url"], badge_color: 'neutral' }) }}
     {% endfor %}
     {% if multiple %}
       </div>
