@@ -1,0 +1,41 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Theme Switch
+status: stable
+description: A component to change between themes
+props:
+  type: object
+  properties:
+    theme_switch_label:
+      type: string
+      title: theme_switch_label
+      description: Label indication the theme`s name
+      # @todo Add examples here.
+      examples: []
+    theme_switch_type:
+      type: array
+      title: Type
+      description: Type of switch, as toogle or a checkbox
+      examples:
+        - toogle
+        - checkbox
+        - swap
+        - radio-input
+        - radio-button
+        - dropdown
+      enum:
+        - toogle
+        - checkbox
+        - swap
+        - radio-input
+        - radio-button
+        - dropdown
+      theme_switch_icon:
+        type: string
+        title: Icon
+        examples:
+          - sun
+          - moon
+      theme_switch_classes:
+        type: string
+        title: CSS classes
+
