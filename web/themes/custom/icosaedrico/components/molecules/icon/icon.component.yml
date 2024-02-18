@@ -4,18 +4,25 @@ status: experimental
 props:
   type: object
   properties:
-    name:
+    icon_name:
       type: string
       title: Name
-    text:
+      description: The name of the icon and the file
+    icon_svg_classes:
       type: string
-      title: Text
-    show_text:
-      type: boolean
-      title: Show text
-    icon_url:
-      type: string
-      title: Link
-    size:
+      title: CSS classes for the icon element
+      description: Any Tailwind, DaisyUI or theme custom classes
+    icon_svg_size:
       type: string
       title: Size
+      description: The size in pixels (without the px). Both, width and height
+    icon_svg_fill:
+      type: string
+      title: SVG fill
+      description: The SVG color fill
+    icon_svg_stroke:
+      type: string
+      title: SVG stroke color
+    icon_svg_stroke_width:
+      type: string
+      title: The SVG stroke width
