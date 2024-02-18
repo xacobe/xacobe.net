@@ -8,6 +8,18 @@ props:
       type: string
       title: Name
       description: The name of the icon and the file
+    icon_text:
+      type: string
+      title: Text
+      description: Text display with icon
+    icon_text_position:
+      type: string
+      title: Text position
+      examples:
+        - top
+        - right
+        - bottom
+        - left
     icon_svg_classes:
       type: string
       title: CSS classes for the icon element

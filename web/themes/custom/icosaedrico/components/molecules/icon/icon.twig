@@ -1,10 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-  width="{{ icon_svg_size|default('16') }}"
-  height="{{ icon_svg_size|default('16') }}"
-  fill="{{ icon_svg_fill|default('currentColor') }}"
-  stroke="{{ icon_svg_stroke }}"
-  stroke-width="{{ icon_svg_stroke_width }}"
-  class="bi bi-{{ icon_name }} {{ icon_svg_classes }}"
-  viewBox="0 0 16 16">
-  {{ source(componentMetadata.path ~ '/icons/' ~ (icon_name|default('knife')) ~ '.svg') }}
-</svg>
+{%
+  set icon_classes = [
+  'icon',
+  'flex',
+  'items-center',
+  icon_text_position == "right" ? "flex-row-reverse",
+  icon_text_position == "left" ? "flex-row",
+  icon_text_position == "bottom" ? "flex-col",
+  icon_text_position == "top" ? "flex-col-reverse",
+]
+%}
+
+<i class="{{ icon_classes|join(' ') }}">
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width="{{ icon_svg_size|default('16') }}"
+    height="{{ icon_svg_size|default('16') }}"
+    fill="{{ icon_svg_fill|default('currentColor') }}"
+    stroke="{{ icon_svg_stroke }}"
+    stroke-width="{{ icon_svg_stroke_width }}"
+    class="bi bi-{{ icon_name }} {{ icon_svg_classes }}"
+    viewBox="0 0 16 16">
+    {{ source(componentMetadata.path ~ '/icons/' ~ (icon_name|default('knife')) ~ '.svg') }}
+  </svg>
+  {% if icon_text is not empty %}
+  <p>{{ icon_text }}</p>
+  {% endif %}
+</i>
