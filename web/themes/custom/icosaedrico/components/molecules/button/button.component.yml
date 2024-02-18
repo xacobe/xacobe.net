@@ -7,38 +7,93 @@ libraryOverrides:
 props:
   type: object
   properties:
-    text:
+    button_text:
       type: string
       title: Title
       description: The title for the button
       examples:
         - Press
         - Submit now
-    href:
+    button_href:
       type: string
       title: Link
       description: The link for the button
       examples:
         - https://drupal.org
         - https://www.xacobe.net
-    target:
+    button_target:
       type: string
       title: Target
       description: The target for the button
       examples:
         - _blank
         - _self
-    color:
+    button_tag:
+      type: string
+      title: Tag
+      description: The HTML tag to use
+      examples:
+        - a
+        - button
+        - input-button
+        - input-submit
+        - input-radio
+        - input-checkbox
+        - input-reset
+    button_color:
       type: string
       title: Color
       description: The color for the button
       examples:
         - primary
         - secondary
-    icon:
+        - accent
+        - ghost
+        - link
+        - info
+        - success
+        - warning
+        - error
+    button_icon:
       type: string
       title: Icon Type
+    button_outline:
+      type: boolean
+      title: Outline
+      description: The button outlined
+    button_glass:
+      type: boolean
+      title: Button glass
+      description: Glass effect as background
+    button_size:
+      type: string
+      title: Button size
+      examples:
+        - block
+        - lg
+        - sm
+        - xs
       enum:
-        - power
-        - like
-        - external
+        - block
+        - lg
+        - sm
+        - xs
+        - wide
+    button_disable:
+      type: string
+      title: Button disable
+      description: If the button is disable and how, with classes or attributes
+      examples:
+        - class
+        - attribute
+      enum:
+        - class
+        - attribute
+    button_shape:
+      type: string
+      title: button_shape
+      description: Geometrical shape of the button
+      examples:
+        - square
+        - circle
+

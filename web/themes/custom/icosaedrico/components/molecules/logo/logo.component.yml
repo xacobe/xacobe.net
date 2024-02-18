@@ -1,0 +1,12 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Logo
+status: stable
+description: Site logo
+props:
+  type: object
+  properties:
+    style:
+      type: string
+      title: style
+      # @todo Add examples here.
+      examples: []

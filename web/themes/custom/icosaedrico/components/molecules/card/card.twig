@@ -1,31 +1,33 @@
 {%
   set classes_wrapper = [
   'card',
+  'w-96',
   'shadow-xl',
-  card_classes ? card_classes,
   card_image_position ? card_image_position,
   card_image_position == "right" ? "flex-row-reverse",
   card_image_position == "left" ? "card-side",
   card_image_position == "overlay" ? "image-full",
   card_image_position == "center" ? "card-side",
   card_responsive ? "lg:flew-row lg:items-stretch",
+  card_classes,
 ]
 %}
-{%
+    {%
   set classes_body = [
   'card-body',
   card_image_position == "center" ? "items-center text-center",
 ]
 %}
-<div class="{{ card_classes }}">
-  <h3 class="card-title"> {{ card_title }}</h3>
-    {% block card_media %}{% endblock %}
-  <p>{{ card_tags }}</p>
-  <div class="card-actions justify-end">
-  {% block card_content %}{% endblock %}
-  {% if card_url is not empty  %}
-    <a class="btn btn-primary" href="{{ card_url|striptags|trim }}">{{ card_url_title }}</a>
-  {% endif %}
-  </div>
-</div>
-
+    <div class="{{ classes_wrapper|join(' ') }}">
+      <div class="{{ classes_body|join(' ') }}">
+        <h3 class="card-title">
+          {{ card_title }}</h3>
+        {% block card_media %}{% endblock %}
+        <p>{{ card_tags }}</p>
+        <div class="card-actions justify-end"> {% block card_content %}{% endblock %}
+          {% if card_url is not empty  %}
+            <a class="btn btn-primary" href="{{ card_url|striptags|trim }}">{{ card_url_title }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>

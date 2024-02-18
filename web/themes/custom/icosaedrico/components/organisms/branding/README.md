@@ -5,8 +5,12 @@ content.
 
 ## Usage
 
-Here you should describe how/when to use this component. This information may be
-for developers or for editors, depending on the component type.
+{% include "icosaedrico:icon" with {
+  icon_name: "html_color",
+  icon_text: "HTML",
+  icon_text_position: "bottom",
+  icon_svg_size: "48"
+} only %}
 
 ## Additional information
 

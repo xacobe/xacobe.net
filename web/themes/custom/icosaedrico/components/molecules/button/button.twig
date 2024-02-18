@@ -3,17 +3,23 @@
 
 {%
   set classes = [
-    'badge',
-    'badge--' ~ color|clean_class,
-    'text-sm'
+    'btn',
+    'btn-' ~ button_color|clean_class,
+    button_size ? "btn-" ~ button_size,
+    button_text_size ? "btn-" ~ button_text_size,
+    button_outline ? "btn-outline",
+    button_glass ? "btn-glass",
+    button_disable == "class" ? "btn-disable",
+    button_shape ? "btn-" ~ button_shape,
   ]
 %}
 
-<a href="{{ href }}" target="{{ target|default('_self')}}" title="{{ text|striptags }}" {{ attributes.addClass(classes) }}>
-  {{ text }}
-
-  {# Add button icon #}
-  {% if icon is not empty %}
-    {{ source(componentMetadata.path ~ '/img/' ~ icon ~ '.svg') }}
+<{{ button_tag }} href="{{ button_href }}" target="{{ button_target|default('_self')}}" title="{{ button_text|striptags }}" {{ attributes.addClass(classes) }}>
+  {{ button_text }}
+  {% if button_icon is not empty %}
+    {{ include("icosaedrico:icon", {
+      icon_name: button_icon,
+      })
+    }}
   {% endif %}
-</a>
+</{{ button_tag }}>
