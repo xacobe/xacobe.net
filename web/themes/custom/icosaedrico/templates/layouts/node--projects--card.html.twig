@@ -75,7 +75,7 @@
 
 {% embed 'icosaedrico:card' with {
   card_title: label,
-  card_image_position: "right",
+  card_image_position: "left",
   card_button_url: node.field_project_url.0.uri|default('/')
 } %}
  {% block card_media %}
@@ -93,10 +93,13 @@
     {% endfor %}
 
     {% include 'icosaedrico:button' with {
-      text: node.field_project_url.0.title|default('Ver más'),
-      href: card_button_url,
-      target: '_blank',
-      icon: 'external'
+      button_tag: "a",
+      button_color: "primary",
+      button_disable: "class",
+      button_text: node.field_project_url.0.title|default('Ver más'),
+      button_href: card_button_url,
+      button_target: '_blank',
+      button_icon: "feed-icon"
     } only %}
     {{ content.body }}
   {% endblock %}

@@ -12,12 +12,44 @@
  * @see template_preprocess_region()
  */
 #}
-{% if content %}
-  {% if attributes is not empty %}
-  <div{{ attributes }}>
+{% if attributes is not empty %}
+  <div{{attributes}}>
   {% endif %}
-    {{ content }}
-  {% if attributes is not empty %}
+  <nav class="navbar bg-base-100">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/></svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li>
+            <a>Item 1</a>
+          </li>
+          <li>
+            <a>Parent</a>
+            <ul class="p-2">
+              <li>
+                <a>Submenu 1</a>
+              </li>
+              <li>
+                <a>Submenu 2</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a>Item 3</a>
+          </li>
+        </ul>
+      </div>
+      <img src="{{ directory ~ '/logo.svg' }}" alt="{{ 'Inicio'|t }}" width="72" fetchpriority="high" />
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      {{content.icosaedrico_main_menu}}
+    </div>
+    <div class="navbar-end">
+      {% include 'icosaedrico:theme_switch' %}
+    </nav>
+    {% if attributes is not empty %}
     </div>
   {% endif %}
-{% endif %}
+{{ content|without('icosaedrico_main_menu') }}
