@@ -4,22 +4,16 @@ status: experimental
 props:
   type: object
   properties:
-    user_name:
+    title:
       type: string
-      title: User name
+      title: User title
       # @todo Add examples here.
       examples: []
-    user_picture_url:
-      type: string
-      title: URl user picture
-    user_picture_width:
-      type: string
-      title: Picture width
-      examples: ['64'] # Ejemplo de ancho de imagen
-    user_picture_height:
-      type: string
-      title: Picture height
-      examples: ['64'] # Ejemplo de altura de imagen
 slots:
-  user:
-    picture: User picture
+  avatar_picture:
+    title: Avatar picture
+    description: Avatar picture
+  avatar_name:
+    title: Avatar picture
+    description: Avatar picture
+

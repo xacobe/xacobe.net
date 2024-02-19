@@ -1,4 +1,3 @@
-{% block user %}
-  <img src="{{ user_picture_url }}" width="{{ user_picture_width|default('72') }}" height="{{ user_picture_height|default('72') }}" alt="{{ user_name }}'s picture" class="border border-black border-solid rounded-full max-w-max" />
+{% block avatar_picture %}
 {% endblock %}
-<p>{{ user_name }}</p>
+<p>{{ avatar_name }}</p>

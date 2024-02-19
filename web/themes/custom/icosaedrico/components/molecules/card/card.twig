@@ -24,9 +24,12 @@
           {{ card_title }}</h3>
         {% block card_media %}{% endblock %}
         <p>{{ card_tags }}</p>
-        <div class="card-actions justify-end"> {% block card_content %}{% endblock %}
+        <div class="card-actions justify-end">
+        {% block card_content %}{% endblock %}
           {% if card_url is not empty  %}
-            <a class="btn btn-primary" href="{{ card_url|striptags|trim }}">{{ card_url_title }}</a>
+            <a class="btn btn-primary" href="{{ card_url|striptags|trim }}">
+              {{ card_url_title }}
+            </a>
           {% endif %}
         </div>
       </div>
