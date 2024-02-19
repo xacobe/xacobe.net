@@ -53,6 +53,11 @@
         "sort-packages": true
     },
     "extra": {
+        "patches": {
+            "drupal/core": {
+                "Render blocks later, so they can be placed individually in a region template": "https://www.drupal.org/files/issues/2023-11-20/core-render-blocks-later-3178202-65.patch"
+            }
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"

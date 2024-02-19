@@ -92,13 +92,9 @@
     </header>
   {% endif %}
 
-  {% if content_attributes|render|trim is not empty %}
     <div {{ content_attributes }}>
-  {% endif %}
-  {{ content }}
-  {% if content_attributes %}
+      {{ content }}
     </div>
-  {% endif %}
 
   <footer class="capitalize mt-2 text-center max-w-max">
     {% if not teaser %}
