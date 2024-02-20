@@ -6,7 +6,7 @@
     badge_text_size ? "badge-" ~ badge_text_size,
 
 ]%}
-<a href="{{ href }}" class="{{ classes | join(" ")}}">
+<a href="{{ badge_href }}" class="{{ classes | join(" ")}}">
  {{ badge_text }}
  {% if badge_icon is not empty %}
     {{ source(componentMetadata.path ~ '/img/' ~ badge_icon ~ '.svg') }}

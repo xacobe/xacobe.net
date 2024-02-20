@@ -1,0 +1,43 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Grid
+status: stable
+description: A grid display using CSS Grid
+props:
+  type: object
+  properties:
+    grid_title:
+      type: string
+      title: Grid title
+    grid_description:
+      type: string
+      title: Grid description
+    grid_cols:
+      type: string
+      title: Number of columns
+    grid_gap:
+      type: number
+      title: Gap between cells as Tailwind classes gap-<x>
+      examples:
+        - 2
+        - 4
+        - 8
+      default: 4
+    grid_tag_item:
+      type: string
+      title: Grid tag items
+      description: The tag items will be rendered, with li (ul/ol), ul, div, etc.
+      examples:
+        - ul
+        - ol
+        - article
+        - section
+        - div
+      enum:
+        - ul
+        - ol
+        - article
+        - section
+        - div
+slots:
+  grid_content:
+    title: Grid content

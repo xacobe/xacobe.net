@@ -1,7 +1,6 @@
 {%
   set classes_wrapper = [
   'card',
-  'w-96',
   'shadow-xl',
   card_image_position ? card_image_position,
   card_image_position == "right" ? "flex-row-reverse",
@@ -19,10 +18,11 @@
 ]
 %}
     <div class="{{ classes_wrapper|join(' ') }}">
+        {% block card_media %}{% endblock %}
       <div class="{{ classes_body|join(' ') }}">
         <h3 class="card-title">
-          {{ card_title }}</h3>
-        {% block card_media %}{% endblock %}
+          {{ card_title }}
+        </h3>
         <p>{{ card_tags }}</p>
         <div class="card-actions justify-end">
         {% block card_content %}{% endblock %}
