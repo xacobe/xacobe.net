@@ -70,17 +70,15 @@
 {% embed 'icosaedrico:card' with {
   card_title: label,
   card_date: node.getCreatedTime|format_date('long'),
-  card_button_url: node.field_project_url.0.uri|default('/'),
-  card_responsive: true
+  card_button_text: "Leer más",
+  card_button_url: url,
+  card_responsive: true,
 } %}
   {% block card_media %}
     {{ content.field_image }}
   {% endblock %}
   {% block card_content %}
-
     {{ content.body }}
-
-    {# Itera sobre los términos de taxonomía si existen #}
     {% if node.field_tags is not empty %}
       {% for item in node.field_tags %}
         {% set term_url = path('entity.taxonomy_term.canonical', {'taxonomy_term': item.entity.id}) %}
@@ -94,25 +92,5 @@
         } only %}
       {% endfor %}
     {% endif %}
-
-    {% include 'icosaedrico:button' with {
-      button_tag: "a",
-      button_color: "link",
-      button_size: "sm",
-      button_text: node.field_project_url.0.title|default('Leer'),
-      button_href: url,
-      button_target: '_blank',
-      button_icon: "arrow-right"
-    } only %}
   {% endblock %}
 {% endembed %}
-{% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-{{ author_picture.name }}

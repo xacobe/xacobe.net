@@ -43,7 +43,10 @@ props:
     card_url:
       type: string
       title: Card URL
-    card_url_button:
+      description: The Card URL will be used in the title or card link if set
+    card_button_text:
+      type: string
+    card_button_url:
       type: string
       title: Card URL button
       description: If added it will show a button with this URL
