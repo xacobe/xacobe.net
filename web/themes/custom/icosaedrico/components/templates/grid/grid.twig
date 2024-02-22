@@ -3,6 +3,7 @@
   "gap-" ~ grid_gap,
 ] %}
 
+{# TODO: This classes are here because thera no built at runtime #}
 {% set grid_classes_dummy = [
   "md:grid-cols-2",
   "lg:grid-cols-3",
@@ -12,14 +13,16 @@
 {% set grid_classes = grid_classes|merge([
   "grid-cols-" ~ grid_cols,
   "md:grid-cols-" ~ (grid_cols + 1),
-  "lg:grid-cols-" ~ (grid_cols + 2),
 ]) %}
 
-<section {{ attributes }} class="bg-white bg-gray-900">
-<div class="px-6 py-10 mx-auto">
-  <div class="flex items-center justify-between">
+<section {{ attributes }}>
+<div class="py-10">
+  <div class="flex items-center justify-between bg-white bg-gray-900 p-2">
     {% if title %}
-      <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl text-white">{{ title }}</h1>
+      {% include "icosaedrico:heading" with {
+        heading_title: title,
+        heading_tag: "h1",
+      } %}
     {% endif %}
     <button class="focus:outline-none">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600 transition-colors duration-300 transform text-gray-400 hover:text-blue-500" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -27,8 +30,7 @@
       </svg>
     </button>
   </div>
-  <hr
-  class="my-8 border-gray-200 border-gray-700">
+  <hr class="my-8 border-gray-200 border-gray-700">
 
   {# Grid cell #}
   <{{grid_tag_item}} class="{{ grid_classes|join(' ') }}">

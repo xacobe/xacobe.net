@@ -6,6 +6,7 @@ libraryOverrides:
     - core/once
 props:
   type: object
+  required: [button_tag]
   properties:
     button_text:
       type: string
@@ -32,6 +33,7 @@ props:
       type: string
       title: Tag
       description: The HTML tag to use
+      default: "a"
       examples:
         - a
         - button

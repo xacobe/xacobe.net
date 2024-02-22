@@ -7,7 +7,9 @@ module.exports = {
     // Ajusta las rutas según sea necesario
   ],
   theme: {
-    extend: {},
+    container: {
+      center: true,
+    },
   },
   plugins: [
     require("daisyui"),

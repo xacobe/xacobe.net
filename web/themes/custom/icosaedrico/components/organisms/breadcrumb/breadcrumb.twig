@@ -1,4 +1,9 @@
-{% set classes = ['breadcrumb', 'max-w-prose', 'mx-auto'] %}
+{% set classes = [
+  'breadcrumb',
+  'max-w-prose',
+  'mx-auto',
+  'pt-8']
+%}
 
 {% if breadcrumb and breadcrumb|length > 1 %}
   <nav {{ attributes.addClass(classes) }} role="navigation" aria-labelledby="system-breadcrumb">

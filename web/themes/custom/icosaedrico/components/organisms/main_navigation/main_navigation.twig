@@ -2,7 +2,6 @@
     {% set classes = [
   "flex",
   "justify-center",
-  "mb-5",
 ] %}
     <div
       role="navigation" aria-labelledby="{{ heading_id }}" {{ attributes|without('role', 'aria-labelledby').addClass(classes) }}>

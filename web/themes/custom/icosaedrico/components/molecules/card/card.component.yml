@@ -8,8 +8,11 @@ props:
       type: string
       title: Title
     card_tags:
-      type: string
+      type: array
       title: Tags
+    card_tag_url:
+      type: string
+      title: Title
     card_classes:
       type: string
       title: Card extra classes
@@ -37,6 +40,16 @@ props:
     card_responsive:
       type: boolean
       title: Card responsive
+    card_url:
+      type: string
+      title: Card URL
+    card_url_button:
+      type: string
+      title: Card URL button
+      description: If added it will show a button with this URL
+    card_clicky:
+      type: boolean
+      title: Make all the card a behave as a link
 slots:
   card_content:
       title: Card content
@@ -44,3 +57,5 @@ slots:
   card_media:
       title: Card media
       description: Image (or video content in a future)
+  card_date:
+      title: Date

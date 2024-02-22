@@ -874,6 +874,8 @@ html {
 
 .container {
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 640px) {
@@ -9504,9 +9506,19 @@ html:has(.drawer-open.drawer-open) {
   margin-right: 0.25rem;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .mx-auto {
@@ -9532,6 +9544,11 @@ html:has(.drawer-open.drawer-open) {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .my-8 {
@@ -12888,6 +12905,11 @@ html:has(.drawer-open.drawer-open) {
   padding-right: 0.25rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-20 {
   padding-left: 5rem;
   padding-right: 5rem;
@@ -12931,6 +12953,10 @@ html:has(.drawer-open.drawer-open) {
   padding-bottom: 2rem;
 }
 
+.pe-2 {
+  padding-inline-end: 0.5rem;
+}
+
 .pl-6 {
   padding-left: 1.5rem;
 }
@@ -12941,6 +12967,14 @@ html:has(.drawer-open.drawer-open) {
 
 .ps-2 {
   padding-inline-start: 0.5rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-left {
@@ -14386,6 +14420,8 @@ html:has(.drawer-open.drawer-open) {
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media (min-width: 640px) {
@@ -14967,38 +15003,36 @@ html:has(.drawer-open.drawer-open) {
 }
 
 @media (min-width: 1024px) {
-  .lg\:container {
+  .lg\:card-side {
+    align-items: stretch;
+    flex-direction: row;
+  }
+
+  .lg\:card-side :where(figure:first-child) {
+    overflow: hidden;
+    border-start-start-radius: inherit;
+    border-start-end-radius: unset;
+    border-end-start-radius: inherit;
+    border-end-end-radius: unset;
+  }
+
+  .lg\:card-side :where(figure:last-child) {
+    overflow: hidden;
+    border-start-start-radius: unset;
+    border-start-end-radius: inherit;
+    border-end-start-radius: unset;
+    border-end-end-radius: inherit;
+  }
+
+  .lg\:card-side figure > * {
+    max-width: unset;
+  }
+
+  :where(.lg\:card-side figure > *) {
     width: 100%;
-  }
-
-  @media (min-width: 640px) {
-    .lg\:container {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .lg\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .lg\:container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .lg\:container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    .lg\:container {
-      max-width: 1536px;
-    }
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .lg\:prose-lg {
@@ -15982,10 +16016,6 @@ html:has(.drawer-open.drawer-open) {
 }
 
 @media (min-width: 768px) {
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -16003,18 +16033,14 @@ html:has(.drawer-open.drawer-open) {
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
-  .lg\:items-stretch {
-    align-items: stretch;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
+  .dark\:text-gray-400 {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+  }
+
   @media (min-width: 1024px) {
     .dark\:lg\:hover\:\[paint-order\:markers\]:hover {
       paint-order: markers;

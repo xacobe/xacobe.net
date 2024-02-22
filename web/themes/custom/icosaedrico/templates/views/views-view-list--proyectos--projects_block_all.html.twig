@@ -1,37 +1,3 @@
-{% if attributes -%}
-  <div{{ attributes }}>
-{% endif %}
-  {% if title %}
-    <h3>{{ title }}</h3>
-  {% endif %}
-
-  <{{ list.type }}{{ list.attributes }}>
-
-    {% for row in rows %}
-      <li{{ row.attributes }}>
-        {# Renderizar el contenido de la fila #}
-        <div class="row-content">
-          {# Renderizar el campo de referencia a media directamente #}
-          {% if row.content['#row']._entity.field_media %}
-            {{ row.content['#row']._entity.field_media }}
-          {% endif %}
-        </div>
-      </li>
-    {% endfor %}
-
-  </{{ list.type }}>
-
-{% if attributes -%}
-  </div>
-{% endif %}
-
-
-
-
-
-
-
-
 {#
 /**
  * @file
@@ -50,10 +16,9 @@
  * @see template_preprocess_views_view_list()
  */
 #}
-
 {% embed 'icosaedrico:grid' with {
   grid_title: title,
-  grid_cols: "0",
+  grid_cols: "3",
   grid_tag_item: list.type,
   grid_gap: 8
 } %}

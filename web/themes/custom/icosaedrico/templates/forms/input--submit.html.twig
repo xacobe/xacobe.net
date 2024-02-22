@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{% if attributes.id == "edit-submit" %}
+  {% set classes = ["btn btn-sm btn-success"] %}
+  {% elseif attributes.id == 'edit-discard-changes' %}
+  {% set classes = ["btn btn-sm btn-warning"] %}
+  {% elseif attributes.id == 'edit-revert' %}
+  {% set classes = ["btn btn-sm btn-error"] %}
+{% endif %}
+
+<input{{ attributes.addClass(classes) }} />{{ children }}

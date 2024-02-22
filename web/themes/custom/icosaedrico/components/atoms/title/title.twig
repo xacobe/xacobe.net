@@ -2,7 +2,11 @@
   {% block title_block %}
     {{ title_prefix }}
     {% if title %}
-      <h1{{ title_attributes.addClass("text-2xl py-6 my-2 border-b") }}>{{ title }}</h1>
+      {% include "icosaedrico:heading" with {
+        heading_title: title,
+        heading_tag: "h1",
+        heading_classes: "py-6 my-2 border-b",
+      } %}
     {% endif %}
     {{ title_suffix }}
   {% endblock %}

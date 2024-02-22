@@ -1,0 +1,21 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: heading
+status: stable
+description: Heading tags
+props:
+  type: object
+  properties:
+    heading_title:
+      type: string
+      title: Heading title
+    heading_tag:
+      type: string
+      title: Heading tag
+      examples: ["h1", "h2", "h3", "h4", "h5"]
+      enum: ["h1", "h2", "h3", "h4", "h5"]
+    heading_classes:
+      type: string
+      title: Heading classes
+      examples: []
+    heading_attributes:
+      type: Drupal\Core\Template\Attribute

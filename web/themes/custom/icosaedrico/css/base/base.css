@@ -128,7 +128,9 @@ samp {
 small {
   font-size: 80%;
 }
-
+i {
+  font-style: normal;
+}
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.

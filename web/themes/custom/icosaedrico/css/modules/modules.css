@@ -5,6 +5,34 @@
 }
 .text-xl {  font-size: 2.2rem !important;}
 
-.content-prosa {
-  max-width: 80ch;
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px!important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px !important;
+  }
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }

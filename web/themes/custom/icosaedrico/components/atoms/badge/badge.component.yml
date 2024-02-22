@@ -23,6 +23,15 @@ props:
         - success
         - warning
         - error
+        - neutral-content
+        - primary-content
+        - secondary-content
+        - accent-content
+        - ghost-content
+        - info-content
+        - success-content
+        - warning-content
+        - error-content
       enum:
         - neutral
         - primary
@@ -33,6 +42,15 @@ props:
         - success
         - warning
         - error
+        - neutral-content
+        - primary-content
+        - secondary-content
+        - accent-content
+        - ghost-content
+        - info-content
+        - success-content
+        - warning-content
+        - error-content
     badge_outline:
       type: boolean
       title: Outline

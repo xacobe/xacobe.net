@@ -11,6 +11,9 @@ props:
     alert_description:
       type: string
       title: Description
+    alert_icon:
+      type: string
+      title: Icon
     alert_type:
       type: string
       title: Type of alert
