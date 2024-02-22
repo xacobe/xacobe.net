@@ -6,10 +6,15 @@ content.
 ## Usage
 
 {% include "icosaedrico:icon" with {
-  icon_name: "html_color",
-  icon_text: "HTML",
-  icon_text_position: "bottom",
-  icon_svg_size: "48"
+  icon_name: "arrow",
+  icon_text: "Next",
+  icon_text_position: "right",
+  icon_svg_classes: "bg-red",
+  icon_svg_size: "16",
+  icon_svg_fill: "red",
+  icon_svg_stroke: "blue",
+  icon_svg_stroke_width: "2"
+
 } only %}
 
 ## Additional information

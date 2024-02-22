@@ -20,6 +20,11 @@ props:
         - right
         - bottom
         - left
+      enum:
+        - top
+        - right
+        - bottom
+        - left
     icon_svg_classes:
       type: string
       title: CSS classes for the icon element

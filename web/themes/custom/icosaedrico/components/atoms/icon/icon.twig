@@ -9,8 +9,10 @@
   icon_text_position == "top" ? "flex-col-reverse",
 ]
 %}
-
+{% if icon_text is not empty %}
 <i class="{{ icon_classes|join(' ') }}">
+{% endif %}
+
   <svg xmlns="http://www.w3.org/2000/svg"
     width="{{ icon_svg_size|default('16') }}"
     height="{{ icon_svg_size|default('16') }}"
@@ -24,4 +26,6 @@
   {% if icon_text is not empty %}
   <p>{{ icon_text }}</p>
   {% endif %}
+{% if icon_text is not empty %}
 </i>
+{% endif %}
