@@ -70,7 +70,7 @@
 {% embed 'icosaedrico:card' with {
   card_title: label,
   card_date: node.getCreatedTime|format_date('long'),
-  card_url: url,
+  card_button_url: node.field_project_url.0.uri|default('/'),
   card_responsive: true
 } %}
   {% block card_media %}
