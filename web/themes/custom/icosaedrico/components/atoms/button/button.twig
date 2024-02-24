@@ -5,6 +5,7 @@
   set classes = [
     'btn',
     'btn-' ~ button_color|clean_class,
+    button_color == "link" ? "p-0",
     button_size ? "btn-" ~ button_size,
     button_text_size ? "btn-" ~ button_text_size,
     button_outline ? "btn-outline",

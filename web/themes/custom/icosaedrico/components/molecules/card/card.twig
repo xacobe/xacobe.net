@@ -8,7 +8,7 @@
   card_image_position == "overlay" ? "image-full",
   card_image_position == "center" ? "card-side",
   card_responsive ? "lg:card-side",
-  card_classes,
+  card_classes ? card_classes,
 ]
 %}
     {%
@@ -34,9 +34,9 @@
       </date>
     </div>
     {% endif %}
-    <div>{{ card_tags }}</div>
-    <div class="card-actions justify-end items-center">
-    {% block card_content %}{% endblock %}
+    <div class="card-actions justify-between items-center">
+    {% block card_content %}
+    {% endblock %}
       {% include 'icosaedrico:button' with {
         button_tag: "a",
         button_color: "link",
@@ -46,6 +46,18 @@
         button_target: '_self',
         button_icon: "arrow-right"
       } only %}
+
+      {% include 'icosaedrico:badge' with {
+          badge_text: card_tag_title,
+          badge_href: card_tag_url,
+          badge_target: '_blank',
+          badge_color: 'primary',
+          badge_size: 'sm'
+        } only %}
+
+
+
+
     </div>
   </div>
 </div>

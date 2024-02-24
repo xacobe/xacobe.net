@@ -3,8 +3,6 @@ name: Bagde
 status: experimental
 props:
   type: object
-  required:
-    - badge_text
   properties:
     badge_text:
       type: string

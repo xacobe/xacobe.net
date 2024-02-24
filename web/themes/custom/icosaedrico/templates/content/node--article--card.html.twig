@@ -66,31 +66,31 @@
  * @see template_preprocess_node()
  *
  */
-#}
+#}{{ dump(content.field_tags[0]["#title"]) }}
+
+
 {% embed 'icosaedrico:card' with {
   card_title: label,
   card_date: node.getCreatedTime|format_date('long'),
   card_button_text: "Leer más",
   card_button_url: url,
   card_responsive: true,
+  card_tags: node.field_tags,
+  card_tag_title: item.entity.label|default('Etiqueta sin título'),
+  card_tag_url: "path('entity.taxonomy_term.canonical', {'taxonomy_term': item.entity.id})",
 } %}
+
+  {% if card_tags %}
+    {% for item in card_tags %}
+      {% set card_tag_title = content.field_tags[0]["#title"]|default('Etiqueta sin título') %}
+      {% set card_tag_url = path('entity.taxonomy_term.canonical', {'taxonomy_term': item.entity.id}) %}
+    {% endfor %}
+  {% endif %}
   {% block card_media %}
     {{ content.field_image }}
   {% endblock %}
   {% block card_content %}
     {{ content.body }}
-    {% if node.field_tags is not empty %}
-      {% for item in node.field_tags %}
-        {% set term_url = path('entity.taxonomy_term.canonical', {'taxonomy_term': item.entity.id}) %}
-        {% set tagTitle = item.entity.label|default('Etiqueta sin título') %}
-        {% include 'icosaedrico:badge' with {
-          badge_text: tagTitle,
-          badge_href: term_url,
-          badge_target: '_blank',
-          badge_color: 'primary',
-          badge_size: 'sm'
-        } only %}
-      {% endfor %}
-    {% endif %}
+
   {% endblock %}
 {% endembed %}

@@ -8,7 +8,7 @@ props:
       type: string
       title: Title
     card_tags:
-      type: array
+      type: string
       title: Tags
     card_tag_url:
       type: string
