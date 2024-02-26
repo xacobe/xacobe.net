@@ -5,10 +5,14 @@ description: Dropdown can open a menu or any other element when the button is cl
 props:
   type: object
   properties:
+    dropdown_items:
+      type: array
+      title: An array containing the items
     dropdown_title:
       type: string
       title: Title
     dropdown_url:
+      type: string
       title: URL
     dropdown_type:
       type: string

@@ -67,6 +67,9 @@
   *
   */
 #}
+{% set classes = [
+  "max-w-prose mx-auto my-5 prose prose-slate"
+] %}
 <article {{ attributes }}>
   {% if display_submitted %}
     <header>
@@ -92,12 +95,14 @@
     </header>
   {% endif %}
 
-  <div {{ content_attributes.addClass("mx-auto max-w-max") }}>
-    {{ content }}
+  <div {{ content_attributes.addClass(classes) }}>
+    {{ content|without(
+      content.field_tags
+    ) }}
   </div>
 
   <footer class="mt-2">
-
+    {{ content.field_tags }}
   {% embed 'icosaedrico:avatar' with {
     avatar_name: node.uid.entity.name.value,
   } %}

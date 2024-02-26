@@ -7,8 +7,12 @@
   icon_text_position == "left" ? "flex-row",
   icon_text_position == "bottom" ? "flex-col",
   icon_text_position == "top" ? "flex-col-reverse",
+  icon_classes
 ]
 %}
+{% if icon_href is not empty %}
+<a href="{{ icon_href }}" class="{{ icon_href_classes }}">
+{% endif %}
 {% if icon_text is not empty %}
 <i class="{{ icon_classes|join(' ') }}">
 {% endif %}
@@ -28,4 +32,7 @@
   {% endif %}
 {% if icon_text is not empty %}
 </i>
+{% endif %}
+{% if icon_href is not empty %}
+</a>
 {% endif %}

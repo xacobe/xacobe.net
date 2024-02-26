@@ -1,0 +1,12 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Single post with recent
+status: stable
+description: A layout display a featured the last post and a lists in the left sidebar of the lastest
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      # @todo Add examples here.
+      examples: []

@@ -15,4 +15,15 @@
  * @see template_preprocess_menu_local_task()
  */
 #}
-{{ link }}
+{% if svg_icon is defined and svg_icon %}
+  {% include "icosaedrico:icon" with {
+    icon_name: svg_icon,
+    icon_text: link['#title'],
+    icon_href: link['#url'],
+    icon_text_position: "bottom",
+    icon_svg_size: "16",
+    icon_href_classes: "tab"
+  } %}
+{% else %}
+  {{ link }}
+{% endif %}

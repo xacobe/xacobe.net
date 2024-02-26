@@ -13,7 +13,23 @@ function icosaedrico_preprocess_menu_local_task(&$variables)
   // Añade siempre la clase 'tab'.
   $existing_classes = $variables['element']['#link']['url']->getOption('attributes')['class'] ?? [];
   $new_classes = array_merge($existing_classes, ['tab']);
-
+  // Determina las clases y SVGs basado en la ruta o el identificador de ruta.
+  $route_name = $variables['element']['#link']['url']->getRouteName();
+  // Asigna clases y SVGs según la ruta.
+  switch ($route_name) {
+    case 'entity.node.canonical':
+      $new_classes[] = 'see';
+      $variables['svg_icon'] = 'eye'; // Select the SVG icon name.
+      break;
+    case 'entity.node.edit_form':
+      $new_classes[] = 'pencil-square';
+      $variables['svg_icon'] = 'pencil-square';
+      break;
+    case 'entity.node.delete_form':
+      $new_classes[] = 'trash3';
+      $variables['svg_icon'] = 'trash3';
+      break;
+  }
   // Verifica si el enlace está activo para ajustar las clases.
   if (!empty($variables['element']['#active'])) {
     // Añade 'tab-active' para enlaces activos, manteniendo 'tab'.
@@ -22,9 +38,9 @@ function icosaedrico_preprocess_menu_local_task(&$variables)
     }
     $new_classes[] = 'tab-active'; // Añade 'tab-active'.
   }
-
   // Actualiza las clases en las opciones del enlace.
   $variables['element']['#link']['url']->setOption('attributes', ['class' => $new_classes]);
 }
+
 
 

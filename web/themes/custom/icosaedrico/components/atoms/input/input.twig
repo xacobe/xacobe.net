@@ -1,0 +1,11 @@
+{% set input_classes = [
+  input_attributes.type == "submit" ? "btn btn-sm",
+  input_attributes.id == "edit-submit" ? "btn-success",
+  input_attributes.id == "edit-discard-changes" ? "btn-warning",
+  input_attributes.id == "edit-revert" ? "btn-error",
+  input_attributes.id == "edit-preview" ? "btn-info",
+  input_attributes.type == "text" ? "input input-bordered input-xs w-full max-w-xs",
+  input_attributes.type == "checkbox" ? "checkbox checkbox-info",
+] %}
+
+<input{{ input_attributes.addClass(input_classes) }} />{{ input_children }}

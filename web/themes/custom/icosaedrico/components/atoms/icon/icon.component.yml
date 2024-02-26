@@ -12,6 +12,12 @@ props:
       type: string
       title: Text
       description: Text display with icon
+    icon_href:
+      type: string
+      title: Icon link
+    icon_href_classes:
+          type: string
+          title: Icon link classes
     icon_text_position:
       type: string
       title: Text position

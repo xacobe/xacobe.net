@@ -1,0 +1,30 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Input
+status: stable
+description: Input form element with a label when needed it
+props:
+  type: object
+  properties:
+    input_attributes:
+      type: string
+      title: Input attributes
+    input_children:
+      type: string
+      title: Input children
+    input_type:
+      type: string
+      title: Type
+      examples: []
+    input_classes:
+      type: array
+      title: Input classes
+      examples: []
+    input_label:
+      type: string
+      title: Input label
+    input_label_classes:
+      type: array
+      title: Input label classes
+    input_label_attributes:
+      type: string
+      title: Input label attributes

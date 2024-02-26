@@ -66,9 +66,7 @@
  * @see template_preprocess_node()
  *
  */
-#}{{ dump(content.field_tags[0]["#title"]) }}
-
-
+#}
 {% embed 'icosaedrico:card' with {
   card_title: label,
   card_date: node.getCreatedTime|format_date('long'),
@@ -91,6 +89,5 @@
   {% endblock %}
   {% block card_content %}
     {{ content.body }}
-
   {% endblock %}
 {% endembed %}
