@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme override of an image.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the img tag.
+ * - style_name: (optional) The name of the image style applied.
+ *
+ * @see template_preprocess_image()
+ */
+#}
+{% include "icosaedrico:image" with {
+  image_width: attributes.width,
+  image_height: attributes.height,
+  image_src: attributes.src,
+  image_alt: attributes.alt,
+  image_loading: attributes.loading
+} only %}

@@ -1,0 +1,31 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Image
+status: stable
+description: A image tag
+props:
+  type: object
+  properties:
+    image_width:
+      type: string
+      title: Image width
+    image_height:
+      type: string
+      title: Image height
+    image_src:
+      type: string
+      title: Image src
+    image_alt:
+      type: string
+      title: Image alt
+    image_loading:
+      type: string
+      title: Image loading
+      description: Image loading HTML attribute
+      examples:
+        - lazy
+        - eager
+    img_responsive:
+      type: boolean
+      title: Image responsive
+      description: If the image is responsive via CSS classes
+
