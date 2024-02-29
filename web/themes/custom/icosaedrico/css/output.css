@@ -9727,6 +9727,10 @@ html:has(.drawer-open.drawer-open) {
   height: 100%;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .w-1 {
   width: 0.25rem;
 }
@@ -9782,6 +9786,10 @@ html:has(.drawer-open.drawer-open) {
 
 .max-w-xs {
   max-width: 20rem;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-shrink {

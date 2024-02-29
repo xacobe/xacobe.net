@@ -24,8 +24,9 @@ props:
       examples:
         - lazy
         - eager
-    img_responsive:
+    image_responsive:
       type: boolean
       title: Image responsive
+      default: true
       description: If the image is responsive via CSS classes
 

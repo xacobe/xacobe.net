@@ -19,3 +19,12 @@ props:
       examples: []
     heading_attributes:
       type: Drupal\Core\Template\Attribute
+    heading_href:
+      type: string
+      title: Link
+    heading_href_target:
+      type: string
+      title: Link target
+      enum:
+        - _blank
+        - _self

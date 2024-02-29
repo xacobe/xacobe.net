@@ -1,3 +1,11 @@
 <{{ heading_tag }} {{ attributes.addClass(heading_classes) }}>
-  {{ heading_title }}
+{% if heading_href is not empty %}
+  <a href="{{ heading_href }}" target="{{ heading_href_target }}">
+{% endif %}
+
+{{ heading_title }}
+
+{% if heading_href %}
+  </a>
+{% endif %}
 </{{ heading_tag }}>
