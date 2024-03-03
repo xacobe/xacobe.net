@@ -41,16 +41,53 @@
           </li>
         </ul>
       </div>
-      <img src="/{{ directory ~ '/logo.svg' }}" alt="{{ 'Inicio'|t }}" width="72" fetchpriority="high" />
-      <a href="/" class="branding__title" rel="home">xacobe.<span class="branding__title--suffix">net</span></a>
-    </div>
-    <div class="navbar-center hidden lg:flex">
+     {{ content.icosaedrico_site_branding }}
+     </div>
+     <div class="navbar-center hidden lg:flex">
       {{content.icosaedrico_main_menu}}
+      {{ content|without(
+        'icosaedrico_main_menu',
+        'icosaedrico_site_branding',
+        ) }}
     </div>
     <div class="navbar-end">
       {% include 'icosaedrico:theme_switch' %}
-    </nav>
-    {% if attributes is not empty %}
-    </div>
-  {% endif %}
-{{ content|without('icosaedrico_main_menu') }}
+  </nav>
+  {% if attributes is not empty %}
+  </div>
+{% endif %}
+
+{# Icons #}
+<div class="block-web-technologies flex pt-12">
+  {% include "icosaedrico:icon" with {
+    icon_name: "html_color",
+    icon_text: "HTML",
+    icon_text_position: "bottom",
+    icon_svg_size: "72",
+    icon_svg_classes: "mx-4"
+  } only %}
+
+  {% include "icosaedrico:icon" with {
+      icon_name: "css_color",
+      icon_text: "CSS",
+      icon_text_position: "bottom",
+      icon_svg_size: "72",
+      icon_svg_classes: "mx-4"
+    } only %}
+
+  {% include "icosaedrico:icon" with {
+      icon_name: "js_color",
+      icon_text: "JS",
+      icon_text_position: "bottom",
+      icon_svg_size: "72",
+      icon_svg_classes: "mx-4"
+    } only %}
+
+  {% include "icosaedrico:icon" with {
+      icon_name: "drupal_color",
+      icon_text: "Drupal",
+      icon_text_position: "bottom",
+      icon_svg_size: "72",
+      icon_svg_classes: "mx-4"
+    } only %}
+</div>

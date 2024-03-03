@@ -43,14 +43,14 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container container px-20 py-4 mx-auto">
+<div class="px-20 py-4 mx-auto">
 
   <header role="banner">
     {{ page.header }}
+    {{ page.primary_menu }}
+    {{ page.secondary_menu }}
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
 
   {{ page.breadcrumb }}
 
@@ -59,7 +59,8 @@
   {{ page.help }}
 
   <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <a id="main-content" tabindex="-1"></a>
+    {# link is in html.html.twig #}
 
     <div class="layout-content">
       {{ page.content }}

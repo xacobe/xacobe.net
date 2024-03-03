@@ -12,4 +12,8 @@
  * - site_slogan: Slogan for site as defined in Site information settings.
  */
 #}
-    {{ include('icosaedrico:branding', {}) }}
+{% include "icosaedrico:branding" with {
+  branding_shape: "horizontal",
+  branding_size: "sm",
+} %}
+

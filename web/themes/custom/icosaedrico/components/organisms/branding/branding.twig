@@ -1,4 +1,22 @@
-<div {{ attributes.addClass("branding flex items-center flex-col") }}>
+{% set branding_classes = [
+  "branding",
+  "flex",
+  "items-center",
+  branding_shape == "square" ? "flex-col",
+] %}
+{% set branding_classes_logo = [
+  "branding__logo",
+  branding_size == "sm" ? "w-20",
+] %}
+{% set branding_classes_name = [
+  branding_size == "sm" ? "text-5xl",
+] %}
+{% set branding_classes_slogan = [
+  "branding__slogan",
+  branding_size == "sm" ? "hidden",
+] %}
+
+<div {{ attributes.addClass( branding_classes|safe_join(' ')) }}>
   {{ title_prefix }}
   {% if label %}
     <h2 {{ title_attributes }}>{{ label }}</h2>
@@ -6,46 +24,17 @@
   {{ title_suffix }}
   {% block content %}
   {% if site_logo %}
-    <a href="{{ path('<front>') }}" class="branding__logo" rel="home"><img src="{{ site_logo }}" alt="{{ 'Inicio'|t }}" width="150px" fetchpriority="high" /></a>
+    <a href="{{ path('<front>') }}" class="{{ branding_classes_logo|safe_join(' ') }}" rel="home">
+      <img src="{{ site_logo }}" alt="{{ 'Inicio'|t }}" fetchpriority="high" />
+    </a>
   {% endif %}
-  {% if site_name %}
-    <a href="{{ path('<front>') }}" class="branding__title" rel="home">xacobe.<span class="branding__title--suffix">net</span></a>
-  {% endif %}
-  <div class="branding__slogan">Desarrollo web</div>
-
-<div class="block-web-technologies flex pt-12">
-
-  {% include "icosaedrico:icon" with {
-    icon_name: "html_color",
-    icon_text: "HTML",
-    icon_text_position: "bottom",
-    icon_svg_size: "72",
-    icon_svg_classes: "mx-4"
-  } only %}
-
-  {% include "icosaedrico:icon" with {
-      icon_name: "css_color",
-      icon_text: "CSS",
-      icon_text_position: "bottom",
-      icon_svg_size: "72",
-      icon_svg_classes: "mx-4"
-    } only %}
-
-  {% include "icosaedrico:icon" with {
-      icon_name: "js_color",
-      icon_text: "JS",
-      icon_text_position: "bottom",
-      icon_svg_size: "72",
-      icon_svg_classes: "mx-4"
-    } only %}
-
-  {% include "icosaedrico:icon" with {
-      icon_name: "drupal_color",
-      icon_text: "Drupal",
-      icon_text_position: "bottom",
-      icon_svg_size: "72",
-      icon_svg_classes: "mx-4"
-    } only %}
-</div>
+  <div>
+    {% if site_name %}
+    <div class="{{ branding_classes_name|safe_join('') }} branding__title" >
+      <a href="{{ path('<front>') }}" rel="home">xacobe.<span class="branding__title--suffix">net</span></a>
+    </div>
+    {% endif %}
+    <div class="{{ branding_classes_slogan|safe_join(' ') }}">{{ site_slogan }}</div>
+  </div>
 {% endblock %}
 </div>

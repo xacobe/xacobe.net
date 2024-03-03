@@ -1,9 +1,10 @@
-{% set classes = [
+{% set tab_classes = [
     "tabs",
     tab_type ? "tabs-" ~ tab_type,
     tab_size ? "tabs-" ~ tab_size,
+    tab_classes,
 ]%}
-<div class="{{ classes|join(" ") }}">
+<div class="{{ tab_classes|join(" ") }}">
   {% block tab_content_primary %}
   {{ tab_text }}
   {% endblock %}

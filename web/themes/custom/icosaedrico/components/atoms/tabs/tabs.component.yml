@@ -39,6 +39,9 @@ props:
       type: string
       title: Icon
       examples: []
+    tab_classses:
+      type: string
+      title: Tab classes
 slots:
   # Content to display in the tab.
   tab_content_primary:
