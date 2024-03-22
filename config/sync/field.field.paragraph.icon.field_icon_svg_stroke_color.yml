@@ -1,0 +1,21 @@
+uuid: a6e5ae51-ed19-40ac-87a1-45d08fc0ed53
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_svg_stroke_color
+    - paragraphs.paragraphs_type.icon
+id: paragraph.icon.field_icon_svg_stroke_color
+field_name: field_icon_svg_stroke_color
+entity_type: paragraph
+bundle: icon
+label: 'Color línea'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '#000'
+default_value_callback: ''
+settings: {  }
+field_type: string

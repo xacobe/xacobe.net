@@ -1,0 +1,20 @@
+uuid: 74a91464-f4af-41da-9367-0f02c6e111c7
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_icon_size
+field_name: field_icon_size
+entity_type: paragraph
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

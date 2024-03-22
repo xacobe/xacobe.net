@@ -1,0 +1,53 @@
+uuid: f4ef2526-77b6-4f29-8e41-019eeb54c36d
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.url
+    - field.field.media.image.field_media_image
+    - media.type.image
+  module:
+    - layout_builder
+    - sdc_display
+    - svg_image
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.url
+targetEntityType: media
+bundle: image
+mode: url
+content:
+  field_media_image:
+    type: image_url
+    label: visually_hidden
+    settings:
+      image_style: ''
+    third_party_settings:
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

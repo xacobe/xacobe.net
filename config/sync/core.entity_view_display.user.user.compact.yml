@@ -6,10 +6,23 @@ dependencies:
     - core.entity_view_mode.user.compact
     - field.field.user.user.field_display_name
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - responsive_image.styles.narrow
   module:
-    - svg_image
+    - sdc_display
+    - svg_image_responsive
     - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
 _core:
   default_config_hash: 00zr_RBdTjPjBGITD3h4c1ESQZimjdVCcHGt1trLqIY
 id: user.user.compact
@@ -17,18 +30,39 @@ targetEntityType: user
 bundle: user
 mode: compact
 content:
+  field_display_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: true
+    third_party_settings:
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
   user_picture:
-    type: image
+    type: responsive_image
     label: hidden
     settings:
-      image_link: content
-      image_style: thumbnail
+      responsive_image_style: narrow
+      image_link: ''
       image_loading:
         attribute: lazy
-    third_party_settings: {  }
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: false
+    third_party_settings:
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
     weight: 0
     region: content
 hidden:
-  field_display_name: true
   langcode: true
   member_for: true

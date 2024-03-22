@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.card
     - node.type.projects
-    - system.menu.main
     - taxonomy.vocabulary.tipo_de_proyecto
   content:
     - 'taxonomy_term:tipo_de_proyecto:25ac848e-4a76-4e69-b2ab-26dd80abb952'
@@ -153,7 +152,14 @@ display:
           value:
             projects: projects
       style:
-        type: default
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          type: ol
+          wrapper_class: ''
+          class: ''
       row:
         type: 'entity:node'
         options:
@@ -171,26 +177,6 @@ display:
       header: {  }
       footer: {  }
       display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_1:
-    id: block_1
-    display_title: 'Proyectos - Todos'
-    display_plugin: block
-    position: 2
-    display_options:
-      display_description: ''
-      display_extenders:
-        metatag_display_extender:
-          metatags: {  }
-          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -550,6 +536,58 @@ display:
         title: false
         filters: false
         filter_groups: false
+      display_description: ''
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  projects_block_all:
+    id: projects_block_all
+    display_title: 'Proyectos - Todos'
+    display_plugin: block
+    position: 2
+    display_options:
+      sorts:
+        field_project_type_target_id:
+          id: field_project_type_target_id
+          table: node__field_project_type
+          field: field_project_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      defaults:
+        sorts: false
       display_description: ''
       display_extenders:
         metatag_display_extender:

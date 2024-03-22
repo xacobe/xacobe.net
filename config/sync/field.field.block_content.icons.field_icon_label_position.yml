@@ -1,0 +1,23 @@
+uuid: 1de7e980-cbe7-4533-8949-0fee81fe72c4
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.icons
+    - field.storage.block_content.field_icon_label_position
+  module:
+    - options
+id: block_content.icons.field_icon_label_position
+field_name: field_icon_label_position
+entity_type: block_content
+bundle: icons
+label: 'Posición del título'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: bottom
+default_value_callback: ''
+settings: {  }
+field_type: list_string

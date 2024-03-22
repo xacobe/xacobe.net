@@ -1,0 +1,25 @@
+uuid: 3ea764c6-2947-419d-a717-e89cea6a3a03
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_svg_stroke_width
+    - paragraphs.paragraphs_type.icon
+id: paragraph.icon.field_icon_svg_stroke_width
+field_name: field_icon_svg_stroke_width
+entity_type: paragraph
+bundle: icon
+label: 'Ancho de línea'
+description: 'Ancho de línea en pixels.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 2.0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

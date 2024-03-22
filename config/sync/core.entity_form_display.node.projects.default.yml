@@ -11,10 +11,17 @@ dependencies:
     - field.field.node.projects.field_project_url
     - node.type.projects
   module:
+    - field_layout
+    - layout_discovery
     - link
     - media_library
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.projects.default
 targetEntityType: node
 bundle: projects

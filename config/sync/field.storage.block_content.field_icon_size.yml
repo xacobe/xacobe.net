@@ -1,0 +1,20 @@
+uuid: 4a072a36-a4d3-43c8-a051-ee98504505e0
+langcode: es
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_icon_size
+field_name: field_icon_size
+entity_type: block_content
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

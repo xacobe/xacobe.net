@@ -12,9 +12,6 @@ props:
       type: string
       title: Text
       description: Text display with icon
-    icon_href:
-      type: string
-      title: Icon link
     icon_href_classes:
           type: string
           title: Icon link classes
@@ -22,11 +19,6 @@ props:
       type: string
       title: Text position
       examples:
-        - top
-        - right
-        - bottom
-        - left
-      enum:
         - top
         - right
         - bottom
@@ -49,3 +41,8 @@ props:
     icon_svg_stroke_width:
       type: string
       title: The SVG stroke width
+slots:
+  # Content to display in the chip.
+  icon_href:
+      title: Link
+      description: Icon link

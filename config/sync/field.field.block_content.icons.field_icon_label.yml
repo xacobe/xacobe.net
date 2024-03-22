@@ -1,0 +1,19 @@
+uuid: 7de93c0d-f30b-473f-9785-1c2dc48f33c9
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.icons
+    - field.storage.block_content.field_icon_label
+id: block_content.icons.field_icon_label
+field_name: field_icon_label
+entity_type: block_content
+bundle: icons
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,101 @@
+uuid: 30c0721f-df2d-416a-9236-0ec86ca817cf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.icon.field_icon
+    - field.field.paragraph.icon.field_icon_label
+    - field.field.paragraph.icon.field_icon_label_position
+    - field.field.paragraph.icon.field_icon_link
+    - field.field.paragraph.icon.field_icon_size
+    - field.field.paragraph.icon.field_icon_svg_fill_color
+    - field.field.paragraph.icon.field_icon_svg_stroke_color
+    - field.field.paragraph.icon.field_icon_svg_stroke_width
+    - paragraphs.paragraphs_type.icon
+  module:
+    - link
+    - options
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: paragraph.icon.default
+targetEntityType: paragraph
+bundle: icon
+mode: default
+content:
+  field_icon:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_icon_label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_icon_label_position:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_icon_link:
+    type: link_separate
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_icon_size:
+    type: number_unformatted
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_icon_svg_fill_color:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_icon_svg_stroke_color:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_icon_svg_stroke_width:
+    type: number_unformatted
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

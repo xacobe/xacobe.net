@@ -1,0 +1,23 @@
+uuid: 7d0c20d0-820a-4741-98fc-15f9d18dd4c3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_label_position
+    - paragraphs.paragraphs_type.icon
+  module:
+    - options
+id: paragraph.icon.field_icon_label_position
+field_name: field_icon_label_position
+entity_type: paragraph
+bundle: icon
+label: 'Posición del título'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: bottom
+default_value_callback: ''
+settings: {  }
+field_type: list_string

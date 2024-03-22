@@ -1,0 +1,15 @@
+uuid: a619885a-b3df-43b4-bf9d-0b6c298a0839
+langcode: es
+status: true
+dependencies: {  }
+name: scale_cut_520px
+label: 'Escalar y recortar - 520px'
+effects:
+  51f5edce-56e5-4122-a577-98b7d796f9f9:
+    uuid: 51f5edce-56e5-4122-a577-98b7d796f9f9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 520
+      height: 520
+      anchor: center-center

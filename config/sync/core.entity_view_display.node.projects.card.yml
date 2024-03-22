@@ -22,47 +22,16 @@ third_party_settings:
     enabled: false
     allow_custom: false
   sdc_display:
-    enabled: true
+    enabled: false
     component:
-      machine_name: 'icosaedrico:card'
-      show_deprecated: null
+      machine_name: ''
     mappings:
       static:
-        props:
-          card_title: ''
-          card_tags: ''
-          card_url: ''
-        slots:
-          card_content:
-            value: ''
-            format: basic_html
-          card_media:
-            value: ''
-            format: basic_html
+        props: {  }
+        slots: {  }
       dynamic:
-        props:
-          card_title: title
-          card_tags: field_project_tech
-          card_url: field_project_url
-        slots:
-          card_content:
-            body: body
-            field_project_images: null
-            field_project_tech: null
-            field_project_url: null
-            links: null
-            uid: null
-            title: null
-            created: null
-          card_media:
-            field_project_images: field_project_images
-            body: null
-            field_project_tech: null
-            field_project_url: null
-            links: null
-            uid: null
-            title: null
-            created: null
+        props: {  }
+        slots: {  }
 id: node.projects.card
 targetEntityType: node
 bundle: projects

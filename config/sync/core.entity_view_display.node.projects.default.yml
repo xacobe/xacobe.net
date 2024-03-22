@@ -12,8 +12,21 @@ dependencies:
     - node.type.projects
   module:
     - link
+    - sdc_display
     - text
     - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
 id: node.projects.default
 targetEntityType: node
 bundle: projects
@@ -28,7 +41,7 @@ content:
     region: content
   field_project_images:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -37,7 +50,7 @@ content:
     region: content
   field_project_status:
     type: boolean
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -47,7 +60,7 @@ content:
     region: content
   field_project_tech:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -55,22 +68,27 @@ content:
     region: content
   field_project_type:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     weight: 104
     region: content
   field_project_url:
-    type: link
-    label: above
+    type: link_separate
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
     weight: 103
     region: content
   links:

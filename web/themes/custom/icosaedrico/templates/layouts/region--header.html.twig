@@ -16,7 +16,7 @@
   <div{{attributes}}>
   {% endif %}
   <nav class="navbar bg-base-100">
-    <div class="navbar-start">
+    <div class="flex-1">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/></svg>
@@ -43,30 +43,35 @@
       </div>
      {{ content.icosaedrico_site_branding }}
      </div>
-     <div class="navbar-center hidden lg:flex">
+     <div class="text-center hidden lg:flex">
       {{content.icosaedrico_main_menu}}
       {{ content|without(
         'icosaedrico_main_menu',
         'icosaedrico_site_branding',
         ) }}
     </div>
-    <div class="navbar-end">
+    <div class="flex-1 justify-end">
       {% include 'icosaedrico:theme_switch' %}
   </nav>
+
   {% if attributes is not empty %}
   </div>
 {% endif %}
 
 {# Icons #}
-<div class="block-web-technologies flex pt-12">
+{% include "icosaedrico:branding" with {
+  branding_shape: "horizontal",
+  branding_size: "sm",
+} %}
+
+<div class="block-web-technologies flex pt-12 justify-center">
   {% include "icosaedrico:icon" with {
     icon_name: "html_color",
     icon_text: "HTML",
     icon_text_position: "bottom",
     icon_svg_size: "72",
     icon_svg_classes: "mx-4"
-  } only %}
-
+    } only %}
   {% include "icosaedrico:icon" with {
       icon_name: "css_color",
       icon_text: "CSS",

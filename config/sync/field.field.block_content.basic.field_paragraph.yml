@@ -1,0 +1,36 @@
+uuid: 8daebaaf-231d-4d7c-8748-9721cc6d83e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_paragraph
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.icon
+  module:
+    - entity_reference_revisions
+id: block_content.basic.field_paragraph
+field_name: field_paragraph
+entity_type: block_content
+bundle: basic
+label: Paragraph
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      from_library: from_library
+      icon: icon
+    negate: 0
+    target_bundles_drag_drop:
+      from_library:
+        weight: 3
+        enabled: true
+      icon:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

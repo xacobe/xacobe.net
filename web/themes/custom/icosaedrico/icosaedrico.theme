@@ -10,7 +10,7 @@
  */
 function icosaedrico_preprocess_menu_local_task(&$variables)
 {
-  // Añade siempre la clase 'tab'.
+  // Añade siempre la clase 'tab' a menu--local-tasks.
   $existing_classes = $variables['element']['#link']['url']->getOption('attributes')['class'] ?? [];
   $new_classes = array_merge($existing_classes, ['tab']);
   // Determina las clases y SVGs basado en la ruta o el identificador de ruta.
@@ -41,6 +41,4 @@ function icosaedrico_preprocess_menu_local_task(&$variables)
   // Actualiza las clases en las opciones del enlace.
   $variables['element']['#link']['url']->setOption('attributes', ['class' => $new_classes]);
 }
-
-
 

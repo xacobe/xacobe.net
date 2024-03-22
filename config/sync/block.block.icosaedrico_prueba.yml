@@ -1,0 +1,26 @@
+uuid: 7a4bf1cb-c50d-45a7-ab5f-4ca29dca038d
+langcode: es
+status: false
+dependencies:
+  content:
+    - 'block_content:icons:c37b3afe-cb86-4eb4-b489-ed11be8f1c99'
+  module:
+    - block_content
+  theme:
+    - icosaedrico
+id: icosaedrico_prueba
+theme: icosaedrico
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:c37b3afe-cb86-4eb4-b489-ed11be8f1c99'
+settings:
+  id: 'block_content:c37b3afe-cb86-4eb4-b489-ed11be8f1c99'
+  label: prueba
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+  label_display_type: '0'
+visibility: {  }

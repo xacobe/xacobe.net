@@ -1,0 +1,25 @@
+uuid: 4e121323-a86e-4357-84a3-c3c9c9a4e5f0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_size
+    - paragraphs.paragraphs_type.icon
+id: paragraph.icon.field_icon_size
+field_name: field_icon_size
+entity_type: paragraph
+bundle: icon
+label: Tamaño
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 32.0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,21 @@
+uuid: c4946ead-174c-4122-be79-aecfa6f60ddf
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_icon_svg_fill_color
+field_name: field_icon_svg_fill_color
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

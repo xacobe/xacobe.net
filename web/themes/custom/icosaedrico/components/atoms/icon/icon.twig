@@ -2,6 +2,8 @@
   set icon_classes = [
   'icon',
   'flex',
+  'ff-reem-kufi',
+  'uppercase',
   'items-center',
   icon_text_position == "right" ? "flex-row-reverse",
   icon_text_position == "left" ? "flex-row",
@@ -10,6 +12,10 @@
   icon_classes
 ]
 %}
+
+{% set icon_text_classes = [
+  icon_text_position == "bottom" ? "mt-2"
+] %}
 {% if icon_href is not empty %}
 <a href="{{ icon_href }}" class="{{ icon_href_classes }}">
 {% endif %}
@@ -25,10 +31,10 @@
     stroke-width="{{ icon_svg_stroke_width }}"
     class="bi bi-{{ icon_name }} {{ icon_svg_classes }}"
     viewBox="0 0 16 16">
-    {{ source(componentMetadata.path ~ '/icons/' ~ (icon_name|default('knife')) ~ '.svg') }}
+    {{ source(componentMetadata.path ~ '/icons/' ~ (icon_name|striptags|default('knife')) ~ '.svg') }}
   </svg>
   {% if icon_text is not empty %}
-  <p>{{ icon_text }}</p>
+  <p class="{{ icon_text_classes|join(' ') }}">{{ icon_text }}</p>
   {% endif %}
 {% if icon_text is not empty %}
 </i>
