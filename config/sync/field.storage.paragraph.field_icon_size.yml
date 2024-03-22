@@ -1,5 +1,5 @@
-uuid: 74a91464-f4af-41da-9367-0f02c6e111c7
-langcode: es
+uuid: d508b86d-7f90-4664-8366-f1d552cfa83e
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,10 +7,10 @@ dependencies:
 id: paragraph.field_icon_size
 field_name: field_icon_size
 entity_type: paragraph
-type: decimal
+type: integer
 settings:
-  precision: 10
-  scale: 2
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

@@ -44,16 +44,7 @@
     <div class="card-content w-full">
       {% block card_content %}{% endblock %}
     </div>
-    <footer class="card-actions justify-between items-center">
-      {% include 'icosaedrico:button' with {
-        button_tag: "a",
-        button_color: "link",
-        button_size: "sm",
-        button_text: card_button_text,
-        button_href: card_button_url,
-        button_target: '_self',
-        button_icon: "arrow-right"
-      } only %}
+    <footer class="card-actions justify-between items-center mt-auto">
       {% include 'icosaedrico:badge' with {
           badge_text: card_tag_title,
           badge_href: card_tag_url,
@@ -62,6 +53,15 @@
           badge_size: 'sm',
           badge_outline: true
         } only %}
+        {% include 'icosaedrico:button' with {
+        button_tag: "a",
+        button_color: "link",
+        button_size: "sm",
+        button_text: card_button_text,
+        button_href: card_button_url,
+        button_target: '_self',
+        button_icon: "arrow-right"
+      } only %}
     </footer>
   </div>
 </div>

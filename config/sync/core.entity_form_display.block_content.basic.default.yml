@@ -7,15 +7,8 @@ dependencies:
     - field.field.block_content.basic.body
     - field.field.block_content.basic.field_paragraph
   module:
-    - field_layout
-    - layout_discovery
     - paragraphs
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 _core:
   default_config_hash: jAps3FCxvKecABS_tgExbhCZrBLQB3bNPWw18WjE3ss
 id: block_content.basic.default

@@ -9,6 +9,7 @@
   icon_text_position == "left" ? "flex-row",
   icon_text_position == "bottom" ? "flex-col",
   icon_text_position == "top" ? "flex-col-reverse",
+   "p-" ~ icon_svg_stroke_width,
   icon_classes
 ]
 %}
@@ -17,7 +18,7 @@
   icon_text_position == "bottom" ? "mt-2"
 ] %}
 {% if icon_href is not empty %}
-<a href="{{ icon_href }}" class="{{ icon_href_classes }}">
+<a href="{{ icon_href }}" {{ attributes.addClass(classes) }}>
 {% endif %}
 {% if icon_text is not empty %}
 <i class="{{ icon_classes|join(' ') }}">
@@ -29,12 +30,12 @@
     fill="{{ icon_svg_fill|default('currentColor') }}"
     stroke="{{ icon_svg_stroke }}"
     stroke-width="{{ icon_svg_stroke_width }}"
-    class="bi bi-{{ icon_name }} {{ icon_svg_classes }}"
+    class="bi bi-{{ icon_name }} {{ icon_svg_classes }} overflow-visible"
     viewBox="0 0 16 16">
     {{ source(componentMetadata.path ~ '/icons/' ~ (icon_name|striptags|default('knife')) ~ '.svg') }}
   </svg>
   {% if icon_text is not empty %}
-  <p class="{{ icon_text_classes|join(' ') }}">{{ icon_text }}</p>
+  <p class="{{ icon_text_classes|join(' ') }}">{{ icon_text|default("lol") }}</p>
   {% endif %}
 {% if icon_text is not empty %}
 </i>

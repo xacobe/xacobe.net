@@ -1,5 +1,5 @@
-uuid: 4e121323-a86e-4357-84a3-c3c9c9a4e5f0
-langcode: es
+uuid: 792ba7e7-befc-49a4-9eea-0424c5d46fee
+langcode: en
 status: true
 dependencies:
   config:
@@ -15,11 +15,11 @@ required: false
 translatable: false
 default_value:
   -
-    value: 32.0
+    value: 32
 default_value_callback: ''
 settings:
   min: null
   max: null
   prefix: ''
   suffix: ''
-field_type: decimal
+field_type: integer

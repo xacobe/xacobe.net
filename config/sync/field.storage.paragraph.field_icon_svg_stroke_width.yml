@@ -1,5 +1,5 @@
-uuid: 45bca90c-f71d-4e18-8190-759f924ac3d0
-langcode: es
+uuid: eb8dc10b-834c-4223-9e7a-0c0f5a648791
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,10 +7,10 @@ dependencies:
 id: paragraph.field_icon_svg_stroke_width
 field_name: field_icon_svg_stroke_width
 entity_type: paragraph
-type: decimal
+type: integer
 settings:
-  precision: 10
-  scale: 2
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

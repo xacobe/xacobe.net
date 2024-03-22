@@ -38,29 +38,17 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
-  ]
-%}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {# {{ content }} #}
        {% include "icosaedrico:icon" with {
-    icon_name: content.field_icon['#items'].0.value,
-    icon_text: content.field_icon_link['#items'].0.title,
-    icon_href: content.field_icon_link['#items'].0.uri,
-    icon_text_position: content.field_icon_label_position['#items'].0.value,
-    icon_svg_size: content.field_icon_size['#items'].0.value,
-    icon_href_classes: "tab",
-    icon_svg_fill: content.field_icon_svg_fill_color['#items'].0.value,
-    icon_svg_stroke: content.field_icon_svg_stroke_color['#items'].0.value,
-    icon_svg_stroke_width: content.field_icon_svg_stroke_width['#items'].0.value,
-  } %}
+          icon_name: content.field_icon['#items'].0.value,
+          icon_text: content.field_icon_link['#items'].0.title|default(),
+          icon_href: content.field_icon_link['#items'].0.uri,
+          icon_text_position: content.field_icon_label_position['#items'].0.value,
+          icon_svg_size: content.field_icon_size['#items'].0.value,
+          icon_svg_fill: content.field_icon_svg_fill_color['#items'].0.value|default(),
+          icon_svg_stroke: content.field_icon_svg_stroke_color['#items'].0.value|default(),
+          icon_svg_stroke_width: content.field_icon_svg_stroke_width['#items'].0.value|default(),
+        } %}
     {% endblock %}
-  </div>
 {% endblock paragraph %}

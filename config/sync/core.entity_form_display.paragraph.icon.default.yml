@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.icon.field_icon
-    - field.field.paragraph.icon.field_icon_label
     - field.field.paragraph.icon.field_icon_label_position
     - field.field.paragraph.icon.field_icon_link
     - field.field.paragraph.icon.field_icon_size
@@ -13,14 +12,7 @@ dependencies:
     - field.field.paragraph.icon.field_icon_svg_stroke_width
     - paragraphs.paragraphs_type.icon
   module:
-    - field_layout
-    - layout_discovery
     - link
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: paragraph.icon.default
 targetEntityType: paragraph
 bundle: icon
@@ -28,15 +20,7 @@ mode: default
 content:
   field_icon:
     type: string_textfield
-    weight: 5
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_icon_label:
-    type: string_textfield
-    weight: 8
+    weight: 0
     region: content
     settings:
       size: 60
@@ -50,7 +34,7 @@ content:
     third_party_settings: {  }
   field_icon_link:
     type: link_default
-    weight: 4
+    weight: 5
     region: content
     settings:
       placeholder_url: ''
@@ -58,14 +42,14 @@ content:
     third_party_settings: {  }
   field_icon_size:
     type: number
-    weight: 7
+    weight: 3
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_icon_svg_fill_color:
     type: string_textfield
-    weight: 3
+    weight: 7
     region: content
     settings:
       size: 60
@@ -73,7 +57,7 @@ content:
     third_party_settings: {  }
   field_icon_svg_stroke_color:
     type: string_textfield
-    weight: 2
+    weight: 1
     region: content
     settings:
       size: 60
@@ -81,7 +65,7 @@ content:
     third_party_settings: {  }
   field_icon_svg_stroke_width:
     type: number
-    weight: 1
+    weight: 4
     region: content
     settings:
       placeholder: ''

@@ -8,6 +8,10 @@ props:
       type: string
       title: Name
       description: The name of the icon and the file
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
     icon_text:
       type: string
       title: Text

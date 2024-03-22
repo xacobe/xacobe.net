@@ -13,14 +13,7 @@ dependencies:
     - field.field.block_content.icons.field_icon_svg_stroke_color
     - field.field.block_content.icons.field_icon_svg_stroke_width
   module:
-    - field_layout
-    - layout_discovery
     - link
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: block_content.icons.default
 targetEntityType: block_content
 bundle: icons
