@@ -29,6 +29,23 @@ function icosaedrico_preprocess_menu_local_task(&$variables)
       $new_classes[] = 'trash3';
       $variables['svg_icon'] = 'trash3';
       break;
+    case 'layout_builder.overrides.node.view':
+      $new_classes[] = 'columns';
+      $variables['svg_icon'] = 'columns';
+      break;
+    case 'entity.node.devel_load':
+      $new_classes[] = 'code-slash';
+      $variables['svg_icon'] = 'code-slash';
+      break;
+    case 'entity.node.content_translation_overview':
+      $new_classes[] = 'translate';
+      $variables['svg_icon'] = 'translate';
+      break;
+    case 'entity.node.version_history':
+      $new_classes[] = 'arrow-counterclockwise';
+      $variables['svg_icon'] = 'arrow-counterclockwise';
+      break;
+
   }
   // Verifica si el enlace está activo para ajustar las clases.
   if (!empty($variables['element']['#active'])) {

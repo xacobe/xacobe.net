@@ -24,6 +24,7 @@
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
         "drupal/entity_usage": "^2.0@beta",
+        "drupal/layout_builder_component_attributes": "^2.1",
         "drupal/metatag": "^2.0",
         "drupal/paragraphs": "^1.17",
         "drupal/pathauto": "^1.12",

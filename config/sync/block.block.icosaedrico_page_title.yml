@@ -2,6 +2,8 @@ uuid: 46bb8890-aa89-4c0f-8608-1f9781018490
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - icosaedrico
 _core:
@@ -18,4 +20,8 @@ settings:
   label_display: '0'
   provider: core
   label_display_type: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

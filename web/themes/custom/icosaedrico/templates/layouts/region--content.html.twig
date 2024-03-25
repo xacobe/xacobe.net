@@ -20,10 +20,10 @@
     <div class="max-w-prose mx-auto my-6">{{ content.icosaedrico_breadcrumbs }}</div>
     <section class="container">{{ content.icosaedrico_messages }}</section>
     <section class="container">{{ content.icosaedrico_help }}</section>
-    <div class="container">{{ content.icosaedrico_primary_local_tasks }}</div>
-    <div class="container">{{ content.icosaedrico_secondary_local_tasks }}</div>
+    {{ content.icosaedrico_primary_local_tasks }}
+    {{ content.icosaedrico_secondary_local_tasks }}
     <div class="container">{{ content.icosaedrico_page_title }}</div>
-    <div class="container">{{ content|without(
+    {{ content|without(
       "icosaedrico_breadcrumbs",
       "icosaedrico_messages",
       "icosaedrico_help",

@@ -6,15 +6,17 @@
 ] %}
 {% set branding_classes_logo = [
   "branding__logo",
-  branding_size == "sm" ? "w-20 me-4",
+  branding_size == "sm" ? "w-40 me-4",
 ] %}
 {% set branding_classes_name = [
-  branding_size == "sm" ? "text-5xl mb-3",
+  branding_size == "sm" ? "text-25xl mb-3",
+  branding_size == "lg" ? "text-25xl mb-3",
 ] %}
 {% set branding_classes_slogan = [
   "branding__slogan",
   branding_size == "sm" ? "hidden",
 ] %}
+
 
 <div {{ attributes.addClass( branding_classes|safe_join(' ')) }}>
   {{ title_prefix }}

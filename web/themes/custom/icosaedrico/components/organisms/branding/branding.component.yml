@@ -1,5 +1,5 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
-name: branding
+name: Branding
 status: experimental
 props:
   type: object
@@ -19,3 +19,6 @@ props:
         - sm
         - md
         - lg
+      branding_direction:
+        - vertical
+        - horizontal

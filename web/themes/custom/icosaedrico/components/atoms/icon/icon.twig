@@ -18,7 +18,7 @@
   icon_text_position == "bottom" ? "mt-2"
 ] %}
 {% if icon_href is not empty %}
-<a href="{{ icon_href }}" {{ attributes.addClass(classes) }}>
+<a href="{{ icon_href }}" {{ attributes.addClass(classes, icon_href_classes) }}>
 {% endif %}
 {% if icon_text is not empty %}
 <i class="{{ icon_classes|join(' ') }}">
@@ -35,7 +35,7 @@
     {{ source(componentMetadata.path ~ '/icons/' ~ (icon_name|striptags|default('knife')) ~ '.svg') }}
   </svg>
   {% if icon_text is not empty %}
-  <p class="{{ icon_text_classes|join(' ') }}">{{ icon_text|default("lol") }}</p>
+  <p class="{{ icon_text_classes|join(' ') }}">{{ icon_text|default("") }}</p>
   {% endif %}
 {% if icon_text is not empty %}
 </i>
