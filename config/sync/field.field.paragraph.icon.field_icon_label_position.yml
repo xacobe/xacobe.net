@@ -13,7 +13,7 @@ entity_type: paragraph
 bundle: icon
 label: 'Posición del título'
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -

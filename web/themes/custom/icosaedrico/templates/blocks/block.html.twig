@@ -31,8 +31,9 @@
   {% if label %}
     {% include "icosaedrico:heading" with {
       heading_title: label,
-      heading_attributes: title_attributes,
       heading_tag: "h2",
+      heading_attributes: title_attributes,
+      heading_classes: "ff-lobster"
     } %}
   {% endif %}
   {{ title_suffix }}

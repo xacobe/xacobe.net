@@ -1,0 +1,23 @@
+uuid: 5a1684a4-208d-40a0-b38f-fb811221883f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_link_wrap
+    - paragraphs.paragraphs_type.icon
+id: paragraph.icon.field_icon_link_wrap
+field_name: field_icon_link_wrap
+entity_type: paragraph
+bundle: icon
+label: 'Icon link wrap'
+description: 'Show the icons as a link'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Si
+  off_label: 'No'
+field_type: boolean

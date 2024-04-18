@@ -9618,6 +9618,14 @@ html:has(.drawer-open.drawer-open) {
   margin-top: auto;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -9743,6 +9751,10 @@ html:has(.drawer-open.drawer-open) {
   height: 2.5rem;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .h-2 {
   height: 0.5rem;
 }
@@ -9771,10 +9783,6 @@ html:has(.drawer-open.drawer-open) {
   height: 100%;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
 .min-h-full {
   min-height: 100%;
 }
@@ -9793,6 +9801,10 @@ html:has(.drawer-open.drawer-open) {
 
 .w-20 {
   width: 5rem;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .w-5 {
@@ -9833,10 +9845,6 @@ html:has(.drawer-open.drawer-open) {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-40 {
-  width: 10rem;
 }
 
 .max-w-full {
@@ -16171,10 +16179,6 @@ html:has(.drawer-open.drawer-open) {
 @media (min-width: 1024px) {
   .lg\:flex {
     display: flex;
-  }
-
-  .lg\:hidden {
-    display: none;
   }
 
   .lg\:grid-cols-3 {

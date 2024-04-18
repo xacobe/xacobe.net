@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.icon.field_icon
     - field.field.paragraph.icon.field_icon_label_position
     - field.field.paragraph.icon.field_icon_link
+    - field.field.paragraph.icon.field_icon_link_wrap
     - field.field.paragraph.icon.field_icon_size
     - field.field.paragraph.icon.field_icon_svg_fill_color
     - field.field.paragraph.icon.field_icon_svg_stroke_color
@@ -39,6 +40,13 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_icon_link_wrap:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_icon_size:
     type: number

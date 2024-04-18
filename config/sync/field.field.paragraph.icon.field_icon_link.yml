@@ -15,7 +15,12 @@ label: Enlace
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:#'
+    title: ''
+    options: {  }
 default_value_callback: ''
 settings:
   title: 1
