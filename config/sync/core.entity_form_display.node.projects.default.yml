@@ -45,14 +45,14 @@ content:
     third_party_settings: {  }
   field_project_status:
     type: boolean_checkbox
-    weight: 13
+    weight: 12
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_project_tech:
     type: entity_reference_autocomplete
-    weight: 12
+    weight: 13
     region: content
     settings:
       match_operator: CONTAINS

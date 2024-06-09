@@ -6,7 +6,6 @@ dependencies:
     - field.field.paragraph.icon.field_icon
     - field.field.paragraph.icon.field_icon_label_position
     - field.field.paragraph.icon.field_icon_link
-    - field.field.paragraph.icon.field_icon_link_wrap
     - field.field.paragraph.icon.field_icon_size
     - field.field.paragraph.icon.field_icon_svg_fill_color
     - field.field.paragraph.icon.field_icon_svg_stroke_color
@@ -59,21 +58,6 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 4
-    region: content
-  field_icon_link_wrap:
-    type: boolean
-    label: hidden
-    settings:
-      format: true-false
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings:
-      sdc_display:
-        enabled: 0
-        component:
-          machine_name: null
-          show_deprecated: 0
-    weight: 11
     region: content
   field_icon_size:
     type: number_unformatted

@@ -20,7 +20,7 @@
   icon_text_position == "hidden" ? "hidden",
 ] %}
 <div class="{{ icon_classes|join(" ") }}">
-{% if icon_link_wrap %}
+{% if icon_href %}
 <a href="{{ icon_href }}" {{ attributes.addClass(classes, icon_href_classes) }}>
 {% endif %}
   <svg xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@
   {% if icon_text is not empty %}
   <p class="{{ icon_text_classes|join(" ") }}">{{ icon_text }}</p>
   {% endif %}
-{% if icon_link_wrap %}
+{% if icon_href %}
 </a>
 {% endif %}
 </div>

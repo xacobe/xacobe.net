@@ -1,0 +1,28 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Link
+status: stable
+props:
+  type: object
+  properties:
+    href:
+      type: string
+      title: href
+      # @todo Add examples here.
+      examples: []
+    text:
+      type: string
+      title: Text
+      # @todo Add examples here.
+      examples: []
+    target:
+      type: string
+      title: Target
+      # @todo Add examples here.
+      examples: []
+    attributes:
+      type: Drupal\Core\Template\Attribute
+  slots:
+  # Content to display in the chip.
+  link_content:
+      title: Content
+      description: Content of the link

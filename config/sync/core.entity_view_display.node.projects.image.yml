@@ -1,0 +1,63 @@
+uuid: f14ce665-bee2-47dc-aac5-16b99ac67e98
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.image
+    - field.field.node.projects.body
+    - field.field.node.projects.field_project_images
+    - field.field.node.projects.field_project_status
+    - field.field.node.projects.field_project_tech
+    - field.field.node.projects.field_project_type
+    - field.field.node.projects.field_project_url
+    - image.style.max_650x650
+    - node.type.projects
+  module:
+    - layout_builder
+    - media
+    - sdc_display
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.projects.image
+targetEntityType: node
+bundle: projects
+mode: image
+content:
+  field_project_images:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: max_650x650
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_project_status: true
+  field_project_tech: true
+  field_project_type: true
+  field_project_url: true
+  langcode: true
+  links: true

@@ -1,11 +1,7 @@
 {% set image_classes = [
   image_responsive ? "h-auto w-full",
 ] %}
+
 <img
-  src="{{ image_src }}"
-  class="{{ image_classes|join(" ") }}"
-  width="{{ image_width }}"
-  height="{{ image_height }}"
-  alt="{{ image_alt }}"
-  loading="{{ image_loading }}"
+{{ attributes.addClass(image_classes|join(" "))}}
 />

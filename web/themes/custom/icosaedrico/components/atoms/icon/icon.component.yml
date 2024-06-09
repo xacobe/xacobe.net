@@ -50,8 +50,7 @@ props:
     icon_svg_stroke_width:
       type: string
       title: The SVG stroke width
-slots:
-  # Content to display in the chip.
-  icon_href:
+    icon_href:
+      type: string
       title: Link
       description: Icon link

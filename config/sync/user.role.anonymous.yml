@@ -5,7 +5,6 @@ dependencies:
   config:
     - filter.format.restricted_html
   module:
-    - contact
     - filter
     - media
     - storybook
@@ -18,7 +17,6 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
-  - 'access site-wide contact form'
   - 'render storybook stories'
   - 'use text format restricted_html'
   - 'view media'

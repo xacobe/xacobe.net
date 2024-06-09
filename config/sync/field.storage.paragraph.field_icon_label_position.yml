@@ -23,9 +23,6 @@ settings:
     -
       value: left
       label: Left
-    -
-      value: hidden
-      label: Hidden
   allowed_values_function: ''
 module: options
 locked: false

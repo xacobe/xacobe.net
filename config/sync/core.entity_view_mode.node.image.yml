@@ -1,0 +1,11 @@
+uuid: 651f0e1b-7c5c-4d81-b22b-d1b705ba1412
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.image
+label: Image
+description: 'Image and optional link'
+targetEntityType: node
+cache: true

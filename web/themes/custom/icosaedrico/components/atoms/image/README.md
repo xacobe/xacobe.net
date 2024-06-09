@@ -5,8 +5,11 @@ content.
 
 ## Usage
 
-Here you should describe how/when to use this component. This information may be
-for developers or for editors, depending on the component type.
+{% include "icosaedrico:image" with {
+  attributes,
+  {# image_responsive: image_responsive|default(true) #}
+} only %}
+
 
 ## Additional information
 

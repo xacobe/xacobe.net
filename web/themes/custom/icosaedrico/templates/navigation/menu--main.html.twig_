@@ -21,3 +21,4 @@
 
 
 {% include 'icosaedrico:main_navigation' %}
+{{ dump(_context) }}

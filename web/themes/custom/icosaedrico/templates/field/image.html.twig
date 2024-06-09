@@ -11,10 +11,6 @@
  */
 #}
 {% include "icosaedrico:image" with {
-  image_width: attributes.width,
-  image_height: attributes.height,
-  image_src: attributes.src,
-  image_alt: attributes.alt,
-  image_loading: attributes.loading,
-  image_responsive: image_responsive|default(true)
+  attributes,
+  image_responsive: image_responsive|default(false)
 } only %}

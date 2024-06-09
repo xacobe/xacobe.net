@@ -8,14 +8,12 @@ module:
   automated_cron: 0
   big_pipe: 0
   block: 0
-  block_class: 0
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
   cl_editorial: 0
   config: 0
   config_translation: 0
-  contact: 0
   contextual: 0
   datetime: 0
   datetime_range: 0
@@ -40,6 +38,7 @@ module:
   locale: 0
   media: 0
   media_library: 0
+  menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
@@ -69,7 +68,6 @@ module:
   responsive_image: 0
   rest: 0
   sdc: 0
-  sdc_block: 0
   sdc_display: 0
   sdc_tags: 0
   serialization: 0

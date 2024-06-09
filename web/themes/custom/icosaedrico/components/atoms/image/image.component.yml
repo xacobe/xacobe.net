@@ -29,4 +29,6 @@ props:
       title: Image responsive
       default: true
       description: If the image is responsive via CSS classes
+    attributes:
+      type: Drupal\Core\Template\Attribute
 

@@ -3,13 +3,16 @@ langcode: es
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.card
+    - field.storage.node.field_project_images
+    - image.style.max_325x325
+    - image.style.wide
     - node.type.projects
     - taxonomy.vocabulary.tipo_de_proyecto
   content:
     - 'taxonomy_term:tipo_de_proyecto:25ac848e-4a76-4e69-b2ab-26dd80abb952'
     - 'taxonomy_term:tipo_de_proyecto:3c67ec2a-b24b-44c1-8bc3-601bdad27b8c'
   module:
+    - media
     - node
     - taxonomy
     - user
@@ -27,46 +30,65 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Proyectos (todos)'
+      title: Proyectos
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        field_project_images:
+          id: field_project_images
+          table: node__field_project_images
+          field: field_project_images
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
           plugin_id: field
           label: ''
           exclude: false
           alter:
             alter_text: false
+            text: ''
             make_link: false
+            path: ''
             absolute: false
-            word_boundary: false
-            ellipsis: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
             strip_tags: false
             trim: false
+            preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: '0'
+          element_class: 'grid grid-cols-2 gap-4'
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: target_id
+          type: media_thumbnail
           settings:
-            link_to_entity: true
-          group_column: value
+            image_link: ''
+            image_style: wide
+            image_loading:
+              attribute: lazy
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -152,19 +174,18 @@ display:
           value:
             projects: projects
       style:
-        type: html_list
+        type: default
         options:
+          grouping: {  }
           row_class: ''
           default_row_class: false
-          uses_fields: false
-          type: ol
-          wrapper_class: ''
-          class: ''
       row:
-        type: 'entity:node'
+        type: fields
         options:
-          relationship: none
-          view_mode: card
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
       query:
         type: views_query
         options:
@@ -174,6 +195,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: 'grid grid-cols-2 gap-4'
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -185,14 +207,82 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
-  block_2:
-    id: block_2
-    display_title: 'Proyectos Personales (block)'
+      tags:
+        - 'config:field.storage.node.field_project_images'
+  block_1:
+    id: block_1
+    display_title: 'Personales - Archivados'
     display_plugin: block
     position: 3
     display_options:
-      title: 'Proyectos Personales'
+      title: 'Personales - Antiguos'
+      fields:
+        field_project_images:
+          id: field_project_images
+          table: node__field_project_images
+          field: field_project_images
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: '0'
+          element_class: 'grid grid-cols-2 gap-4'
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: media_thumbnail
+          settings:
+            image_link: ''
+            image_style: max_325x325
+            image_loading:
+              attribute: lazy
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       filters:
         status:
           id: status
@@ -260,6 +350,182 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+        field_project_status_value:
+          id: field_project_status_value
+          table: node__field_project_status
+          field: field_project_status_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        title: false
+        css_class: false
+        fields: false
+        filters: false
+        filter_groups: false
+      css_class: 'grid grid-flow-col auto-cols-max gap-4'
+      display_description: ''
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_project_images'
+  block_2:
+    id: block_2
+    display_title: Personales
+    display_plugin: block
+    position: 2
+    display_options:
+      title: Personales
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            projects: projects
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            5: 5
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: tipo_de_proyecto
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_project_status_value:
+          id: field_project_status_value
+          table: node__field_project_status
+          field: field_project_status_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: boolean
+          operator: '='
+          value: '0'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -281,14 +547,15 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_project_images'
   block_3:
     id: block_3
-    display_title: 'Proyectos Trabajo (block)'
+    display_title: Trabajos
     display_plugin: block
     position: 4
     display_options:
-      title: 'Proyectos Trabajo'
+      title: Trabajos
       filters:
         status:
           id: status
@@ -415,14 +682,82 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_project_images'
   block_4:
     id: block_4
-    display_title: 'Proyectos Trabajo - archivo (block)'
+    display_title: 'Trabajos - Archivados'
     display_plugin: block
     position: 5
     display_options:
-      title: 'Proyectos Trabajo - archivo'
+      title: 'Trabajos - Archivados'
+      fields:
+        field_project_images:
+          id: field_project_images
+          table: node__field_project_images
+          field: field_project_images
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: '0'
+          element_class: 'grid grid-cols-2 gap-4'
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: media_thumbnail
+          settings:
+            image_link: ''
+            image_style: max_325x325
+            image_loading:
+              attribute: lazy
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       filters:
         status:
           id: status
@@ -534,8 +869,11 @@ display:
           1: AND
       defaults:
         title: false
+        css_class: false
+        fields: false
         filters: false
         filter_groups: false
+      css_class: 'grid grid-flow-col auto-cols-max gap-4'
       display_description: ''
       display_extenders:
         metatag_display_extender:
@@ -549,12 +887,13 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_project_images'
   projects_block_all:
     id: projects_block_all
-    display_title: 'Proyectos - Todos'
+    display_title: Todos
     display_plugin: block
-    position: 2
+    position: 1
     display_options:
       sorts:
         field_project_type_target_id:
@@ -601,4 +940,5 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_project_images'

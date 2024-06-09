@@ -1,0 +1,22 @@
+attributes:
+  class:
+    label: ''
+    description: ''
+  target:
+    label: ''
+    description: ''
+    options:
+      _blank: 'New window (_blank)'
+      _self: 'Same window (_self)'
+    default_value: ''
+  data-icon:
+    label: Icon
+    description: 'Enter the icon class (e.g., rss)'
+    default_value: ''
+  data-icon-show:
+    label: 'Show icon only'
+    description: 'Show only the icon, without the text'
+    options:
+      'true': 'Yes'
+      'false': 'No'
+    default_value: 'false'

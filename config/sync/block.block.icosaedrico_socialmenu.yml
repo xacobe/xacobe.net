@@ -1,0 +1,26 @@
+uuid: 33833741-8873-430b-b327-fb8db4fd4caf
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-menu
+  module:
+    - system
+  theme:
+    - icosaedrico
+id: icosaedrico_socialmenu
+theme: icosaedrico
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:social-menu'
+settings:
+  id: 'system_menu_block:social-menu'
+  label: 'Social menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+  label_display_type: '0'
+visibility: {  }

@@ -5,7 +5,6 @@ dependencies:
   config:
     - filter.format.basic_html
   module:
-    - contact
     - file
     - filter
     - media
@@ -21,7 +20,6 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access shortcuts'
-  - 'access site-wide contact form'
   - 'delete own files'
   - 'render storybook stories'
   - 'use text format basic_html'
