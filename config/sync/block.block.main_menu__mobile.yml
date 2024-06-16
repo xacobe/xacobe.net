@@ -1,0 +1,26 @@
+uuid: 4cc033c1-515b-4cf6-aa4a-9ef14c6f5cbb
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - icosaedrico
+id: main_menu__mobile
+theme: icosaedrico
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main menu mobile'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+  label_display_type: '0'
+visibility: {  }

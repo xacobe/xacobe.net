@@ -1,0 +1,26 @@
+uuid: d4eff54d-cc04-4426-b911-3fd734011491
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - icosaedrico
+id: main_menu__desktop
+theme: icosaedrico
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main menu desktop'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+  label_display_type: '0'
+visibility: {  }
