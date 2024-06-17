@@ -17,12 +17,20 @@
 #}
 {% if content %}
   <div{{ attributes }}>
-    <div class="max-w-prose mx-auto my-6">{{ content.icosaedrico_breadcrumbs }}</div>
-    <section class="container">{{ content.icosaedrico_messages }}</section>
-    <section class="container">{{ content.icosaedrico_help }}</section>
+  {% if content.icosaedrico_breadcrumbs|render %}
+    <div class="breadcrumb max-w-prose mx-auto">
+      {{ content.icosaedrico_breadcrumbs }}
+    </div>
+  {% endif %}
+   {% if content.icosaedrico_message is not empty %}
+     {{ content.icosaedrico_messages }}
+  {% endif %}
+  {% if content.icosaedrico_help is not empty %}
+    {{ content.icosaedrico_help }}
+  {% endif %}
+    {{ content.icosaedrico_page_title }}
     {{ content.icosaedrico_primary_local_tasks }}
     {{ content.icosaedrico_secondary_local_tasks }}
-    <div class="container">{{ content.icosaedrico_page_title }}</div>
     {{ content|without(
       "icosaedrico_breadcrumbs",
       "icosaedrico_messages",
@@ -30,6 +38,6 @@
       "icosaedrico_page_title",
       "icosaedrico_primary_local_tasks",
       "icosaedrico_secondary_local_tasks"
-    ) }} </div>
+    ) }}
   </div>
 {% endif %}

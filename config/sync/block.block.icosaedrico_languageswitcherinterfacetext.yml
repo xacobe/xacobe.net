@@ -1,0 +1,21 @@
+uuid: 806c29ea-6581-4c13-9cab-1c049b691da4
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - icosaedrico
+id: icosaedrico_languageswitcherinterfacetext
+theme: icosaedrico
+region: header
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher (Interface text)'
+  label_display: '0'
+  provider: language
+  label_display_type: '0'
+visibility: {  }

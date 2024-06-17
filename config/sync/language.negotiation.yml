@@ -8,7 +8,9 @@ url:
   prefixes:
     en: en
     es: es
+    gl: gl
   domains:
     en: ''
     es: ''
+    gl: ''
 selected_langcode: site_default

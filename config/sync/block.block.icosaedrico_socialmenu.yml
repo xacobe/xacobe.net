@@ -1,6 +1,6 @@
 uuid: 33833741-8873-430b-b327-fb8db4fd4caf
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.social-menu
@@ -11,7 +11,7 @@ dependencies:
 id: icosaedrico_socialmenu
 theme: icosaedrico
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: 'system_menu_block:social-menu'
 settings:

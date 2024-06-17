@@ -20,4 +20,5 @@ settings:
   label_display: '0'
   provider: node
   block_count: 10
+  label_display_type: '0'
 visibility: {  }

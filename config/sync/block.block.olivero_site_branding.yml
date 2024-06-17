@@ -22,4 +22,5 @@ settings:
   use_site_logo: true
   use_site_name: true
   use_site_slogan: false
+  label_display_type: '0'
 visibility: {  }

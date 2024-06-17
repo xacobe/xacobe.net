@@ -10,6 +10,7 @@ header .branding__title {
 }
 
 .branding__slogan {
+  position: relative;
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -18,6 +19,24 @@ header .branding__title {
   /* width: 100%; */
   text-align: center;
 }
+.branding__slogan--suffix {
+  position: absolute;
+  border-block: solid 2px #ff000091;
+  top: 1.6rem;
+  width: max-content;
+  color: #ff000091;
+  right: -50px;
+  transform: rotate(-20deg);
+  font-size: 0.8rem;
+  letter-spacing: 0.2px;
+  padding-inline: 0.5rem;
+  word-spacing: -2px;
+}
 header .branding__logo {
   width: 4rem;
 }
+
+header .branding__slogan {
+  display: none;
+}
+

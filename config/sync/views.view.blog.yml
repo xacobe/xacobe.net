@@ -565,7 +565,7 @@ display:
       menu:
         type: normal
         title: Blog
-        weight: -48
+        weight: -47
         menu_name: main
         parent: ''
     cache_metadata:

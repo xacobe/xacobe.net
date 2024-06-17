@@ -5,8 +5,15 @@ content.
 
 ## Usage
 
-Here you should describe how/when to use this component. This information may be
-for developers or for editors, depending on the component type.
+{% embed 'icosaedrico:dropdown' with {
+    dropdown_details_tag: true,
+    } %}
+
+    {% block dropdown_content %}
+      {{ item.link }}
+    {% endblock %}
+
+  {% endembed %}
 
 ## Additional information
 

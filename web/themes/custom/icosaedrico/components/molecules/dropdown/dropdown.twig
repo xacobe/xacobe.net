@@ -1,24 +1,40 @@
-{% set dropdown_classes = [
+{% set wrapper_classes = [
   "dropdown",
-    dropdown_position_x ? "dropdown-"~ {{ dropdown_position_x }},
-    dropdown_position_y ? "dropdown-"~ {{ dropdown_position_y }},
-    dropdown_hover ? "dropdown-hover",
+  position_x ? "dropdown-"~ position_x,
+  position_y ? "dropdown-"~ position_y,
+  hover ? "dropdown-hover",
 ] %}
 
-{% if dropdown_details_tag %}
-  <details class="dropdown">
-    <summary class="m-1 btn">open or close</summary>
+{% set classes = [
+  "p-2",
+  "shadow",
+  "menu",
+  "dropdown-content",
+  "z-[1]",
+  "bg-base-100",
+  "rounded-box",
+  "w-52",
+] %}
+
+{% if details_tag %}
+  <details class="dropdown dropdown-end">
+    <summary class="m-1 btn btn-ghost">{{ title }}</summary>
   {% else %}
-    <div {{ attributes.addClass(dropdown_classes)}}>
-      <div tabindex="0" role="button" class="btn m-1">Click</div>
-    {% endif %}
-    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-      <li>
-        <a href="{{ dropdown_url }}">{{ dropdown_title }}</a>
-      </li>
-    </ul>
-    {% if dropdown_details_tag %}
-    </details>
-{% else %}
-  </div>
+    <div {{ attributes.addClass(wrapper_classes) }}>
+      <div tabindex="0" role="button" class="btn btn-sm m-1">{{ title }}</div>
 {% endif %}
+
+  <ul{{ attributes.removeClass('inline').addClass(classes) }}>
+    {%- for items in links -%}
+      <li{{ items.attributes }}>
+          {{ items.link }}
+      </li>
+    {%- endfor -%}
+  </ul>
+
+{% if details_tag %}
+    </details>
+  {% else %}
+    </div>
+{% endif %}
+

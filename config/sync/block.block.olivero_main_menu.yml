@@ -24,4 +24,5 @@ settings:
   level: 1
   depth: 2
   expand_all_items: true
+  label_display_type: '0'
 visibility: {  }

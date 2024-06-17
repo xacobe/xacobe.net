@@ -1,0 +1,20 @@
+_core:
+  default_config_hash: Pawi-B_G9uQKas3Y_fetFE280PlvGZWgmOOh_4F88lY
+langcode: es
+sa_tracker: true
+sa_tracker_server: false
+sa_tracker_duration: 365
+sa_tracker_ad: false
+track_auth: false
+track_admin: false
+track_exclude_url:
+  - ''
+lib_chartist: false
+lib_chartist_mode: ''
+displaystat: 180
+google-id: ''
+piwik-uri: ''
+piwik-id: ''
+custom: ''
+custom-noscript: ''
+live_period: 10

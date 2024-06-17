@@ -19,4 +19,5 @@ settings:
   provider: core
   primary: true
   secondary: false
+  label_display_type: '0'
 visibility: {  }

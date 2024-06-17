@@ -1,17 +1,7 @@
-{% set heading_id = attributes.id ~ '-menu'|clean_id %}
     {% set classes = [
   "flex",
   "justify-center",
 ] %}
-    <nav
-      role="navigation" aria-labelledby="{{ heading_id }}" {{ attributes|without('role', 'aria-labelledby').addClass(classes) }}>
-      {# Label. If not displayed, we still provide it for screen readers. #}
-      {% if not configuration.label_display %}
-        {% set title_attributes = title_attributes.addClass('visually-hidden') %}
-      {% endif %}
-      {{ title_prefix }}
-      <h2{{title_attributes.setAttribute('id',heading_id)}}>{{ configuration.label }}</h2>
-      {{ title_suffix }}
 
       {% block content %}
 
@@ -27,7 +17,7 @@
           {% import _self as menus %}
           {% if items %}
             {% if menu_level == 0 %}
-              <ul {{ attributes.addClass("menu menu-horizontal px-1 text-xl") }}>
+              <ul {{ attributes.addClass("main-menu menu menu-horizontal px-1 uppercase") }}>
               {% else %}
                 <ul {{ attributes.addClass("p-2") }}>
                 {% endif %}
@@ -44,4 +34,3 @@
           {% endmacro %}
 
         {% endblock %}
-      </nav>

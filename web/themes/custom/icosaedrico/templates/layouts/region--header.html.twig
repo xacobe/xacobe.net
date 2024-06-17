@@ -12,25 +12,39 @@
  * @see template_preprocess_region()
  */
 #}
-{% if attributes is not empty %}
-  <div{{attributes}}>
-  {% endif %}
-  <nav class="navbar bg-base-100">
-    <div class="flex-1">
-     {{ content.icosaedrico_site_branding }}
-    </div>
-    <div class="text-center hidden lg:flex">
-     {{content.icosaedrico_main_menu}}
-     {{ content|without(
-       'icosaedrico_main_menu',
-       'icosaedrico_site_branding',
-       ) }}
-    </div>
-    <div class="flex-1 justify-end">
-      {# {% include 'icosaedrico:theme_switch' %} #}
-    </div>
-  </nav>
 
-  {% if attributes is not empty %}
+{% set classes = [
+  "navbar",
+  "bg-base-100",
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="navbar-start w-full lg:w-1/2 items-start">
+    <div class="dropdown me-2 lg:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost ps-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+      </div>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        {{ content.main_menu__mobile }}
+      </ul>
+    </div>
+    {{ content.icosaedrico_site_branding }}
   </div>
-{% endif %}
+  <div class="navbar-center hidden lg:inline-flex">
+    {{ content.main_menu__desktop }}
+     {{ content|without(
+       'main_menu__mobile',
+       'main_menu__desktop',
+       'icosaedrico_site_branding',
+       'icosaedrico_socialmenu',
+       'icosaedrico_languageswitcherinterfacetext',
+       ) }}
+  </div>
+  <div class="navbar-end w-auto lg:w-1/2">
+
+    {# {% include 'icosaedrico:theme_switch' %} #}
+      {{ content.icosaedrico_languageswitcherinterfacetext }}
+      {{ content.icosaedrico_socialmenu }}
+
+  </div>
+</div>

@@ -1,7 +1,8 @@
-.main-navigation__item {
-  border-bottom: solid 2px #ccc;
+.block-main-menu-mobile-menu {
+  .main-menu li { width: 100%;}
 }
-
-.main-navigation__item:has(li > a.active) {
-  border-bottom: solid 2px red;
+.block-main-menu-desktop-menu {
+  .main-menu {
+    /* display: none; */
+  }
 }

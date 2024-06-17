@@ -5,32 +5,32 @@ description: Dropdown can open a menu or any other element when the button is cl
 props:
   type: object
   properties:
-    dropdown_items:
+    items:
       type: array
       title: An array containing the items
-    dropdown_title:
+    title:
       type: string
       title: Title
-    dropdown_url:
+    url:
       type: string
       title: URL
-    dropdown_type:
+    type:
       type: string
       title: Type
       description: Using &lt;details&gt; tag or standar div
       # @todo Add examples here.
       examples: []
-    dropdown_position_x:
+    position_x:
       type: string
       title: Position
       description: Where will open the pop respective to the button
       examples:
-        - left
-        - right
+        - start
+        - end
       enum:
         - left
         - right
-    dropdown_position_y:
+    position_y:
       type: string
       title: Position
       description: Where will open the pop respective to the button
@@ -40,11 +40,18 @@ props:
       enum:
         - top
         - bottom
-      dropdown_details_tag:
-        type: boolean
-        title: Details tag
-        description: Use the <details> tag insted of a <div>. Position will not apply
-      dropdown_hover:
-        type: boolean
-        title: Hover
-        description: Show the dropdown on hover
+    details_tag:
+      type: boolean
+      title: Details tag
+      description: Use the <details> tag insted of a <div>. Position will not apply
+    hover:
+      type: boolean
+      title: Hover
+      description: Show the dropdown on hover
+    attributes:
+      type: Drupal\Core\Template\Attribute
+slots:
+  # Content to display in the Dropdown.
+  dropdown_content:
+      title: Content
+      description: Content of the dropdown

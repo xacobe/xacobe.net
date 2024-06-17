@@ -5,12 +5,10 @@ content.
 
 ## Usage
 
-{% include "icosaedrico:icon" with {
-  icon_name: "html_color",
-  icon_text: "HTML",
-  icon_text_position: "bottom",
-  icon_svg_size: "48"
-} only %}
+{% include "icosaedrico:branding" with {
+  branding_shape: "horizontal",
+  branding_size: "sm",
+} %}
 
 ## Additional information
 

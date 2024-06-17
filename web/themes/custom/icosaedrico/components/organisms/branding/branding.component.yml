@@ -22,3 +22,6 @@ props:
       branding_direction:
         - vertical
         - horizontal
+    branding_slogan_show:
+      type: boolean
+      title: Show slogan

@@ -17,4 +17,5 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
+  label_display_type: '0'
 visibility: {  }

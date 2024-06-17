@@ -21,7 +21,7 @@ props:
       examples: []
     attributes:
       type: Drupal\Core\Template\Attribute
-  slots:
+slots:
   # Content to display in the chip.
   link_content:
       title: Content

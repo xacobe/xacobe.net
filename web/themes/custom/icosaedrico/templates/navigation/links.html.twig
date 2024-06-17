@@ -42,12 +42,14 @@
       <ul{{attributes.removeClass('inline').addClass("max-w-prosemx-auto")}}>
         {%- for item in links -%}
           <li{{item.attributes}}>
-            {% include 'icosaedrico:button' with {
-      button_tag: "a",
-      button_color: "link",
-      button_text: item.text,
-      button_href: item.link['#url'],
-    } only %}
+
+    {% embed 'icosaedrico:link' with {
+    } %}
+      {% block link_content %}
+          {{ item.link }}
+      {% endblock %}
+    {% endembed %}
+
           </li>
         {%- endfor -%}
       </ul>

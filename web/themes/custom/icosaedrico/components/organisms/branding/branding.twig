@@ -2,6 +2,9 @@
   "branding",
   "flex",
   "items-center",
+  "text-center",
+  "mx-auto",
+  "lg:mx-0",
   branding_shape == "square" ? "flex-col",
 ] %}
 {% set branding_classes_logo = [
@@ -9,12 +12,13 @@
   branding_size == "sm" ? "w-40 me-4",
 ] %}
 {% set branding_classes_name = [
-  branding_size == "sm" ? "text-25xl mb-3",
-  branding_size == "lg" ? "text-25xl mb-3",
+  branding_size == "sm" ? "text-25xl",
+  branding_size == "lg" ? "text-25xl",
 ] %}
 {% set branding_classes_slogan = [
   "branding__slogan",
-  branding_size == "sm" ? "hidden",
+  "mb-12",
+  branding_slogan_show == false ? "hidden",
 ] %}
 
 
@@ -36,7 +40,10 @@
       <a href="{{ path('<front>') }}" rel="home">xacobe.<span class="branding__title--suffix">net</span></a>
     </div>
     {% endif %}
-    <div class="{{ branding_classes_slogan|safe_join(' ') }}">{{ site_slogan }}</div>
+    {# <div class="{{ branding_classes_slogan|safe_join(' ') }}">{{ site_slogan }}</div> #}
+    <div class="{{ branding_classes_slogan|safe_join(' ') }}">
+      <span class="branding__slogan--text">{{ site_slogan }}</span><span class="branding__slogan--suffix">{{ "and other stuff"|t }}</span>
+    </div>
   </div>
 {% endblock %}
 </div>

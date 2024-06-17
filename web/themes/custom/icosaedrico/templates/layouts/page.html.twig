@@ -43,7 +43,6 @@
  * @see html.html.twig
  */
 #}
-<div class="lg:px-24 md:px-8 px-4 py-4 mx-auto">
 
   <header role="banner">
     {{ page.header }}
@@ -57,7 +56,7 @@
 
   {{ page.help }}
 
-  <main role="main">
+  <main role="main" class="lg:px-24 md:px-8 px-4 py-4 mx-auto">
     <a id="main-content" tabindex="-1"></a>
     {# link is in html.html.twig #}
 
@@ -80,9 +79,7 @@
   </main>
 
   {% if page.footer %}
-    <footer class="max-w-prose mx-auto flex justify-center" role="contentinfo">
+    <footer class="max-w-prose mx-auto flex flex-col gap-4 items-center" role="contentinfo">
       {{ page.footer }}
     </footer>
   {% endif %}
-
-</div>{# /.layout-container #}

@@ -73,6 +73,7 @@ module:
   serialization: 0
   settings_tray: 0
   shortcut: 0
+  simple_analytics: 0
   storybook: 0
   svg_image: 0
   svg_image_responsive: 0
