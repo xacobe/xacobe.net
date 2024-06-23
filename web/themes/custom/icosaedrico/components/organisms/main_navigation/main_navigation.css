@@ -1,8 +1,60 @@
-.block-main-menu-mobile-menu {
-  .main-menu li { width: 100%;}
+/* Comodore 64 Rainbow */
+:root {
+  --c64-red: hsl(0, 70%, 50%);
+  --c64-orange: hsl(14, 68%, 50%);
+  --c64-yellow: hsl(49, 87%, 50%);
+  --c64-green: hsl(120, 42%, 50%);
+  --c64-blue: hsl(196, 100%, 50%);
+
+    --c64-red--light: hsl(0, 70%, 90%);
+  --c64-orange--light: hsl(14, 68%, 90%);
+  --c64-yellow--light: hsl(49, 87%, 90%);
+  --c64-green--light: hsl(120, 42%, 90%);
+  --c64-blue--light: hsl(196, 100%, 90%);
+
 }
-.block-main-menu-desktop-menu {
-  .main-menu {
-    /* display: none; */
+.main-menu {
+  a {
+    border-bottom: solid 4px transparent;
+    border-radius: 0;
+  }
+  a:hover {
+    background-color: transparent !important;
+  }
+  a.is-active {
+    --color-light: 100;
+  }
+  li:nth-child(1) {
+    a.is-active {
+      border-color: var(--c64-red--light);
+    }
+    a:hover {
+      border-color: var(--c64-red);
+    }
+  }
+  li:nth-child(2) {
+    a.is-active {
+      border-color: var(--c64-orange--light);
+    }
+    a:hover {
+      border-color: var(--c64-orange);
+    }
+  }
+  li:nth-child(3) {
+    a.is-active {
+        border-color: var(--c64-green--light);
+      }
+      a:hover {
+        border-color: var(--c64-green);
+      }
+  }
+
+  li:nth-child(4) {
+    a.is-active {
+        border-color: var(--c64-blue--light);
+      }
+      a:hover {
+        border-color: var(--c64-blue);
+      }
   }
 }
