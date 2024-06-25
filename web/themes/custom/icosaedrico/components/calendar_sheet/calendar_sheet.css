@@ -1,0 +1,59 @@
+[data-component-id="icosaedrico:calendar_sheet"] {
+  /* @todo Add your styles here. */
+}
+.calendar-sheet {
+  max-width: max-content;
+}
+.month {
+  position: relative;
+  background-color: #6cbc80;
+    width: 5rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 2rem;
+}
+.month:before {
+  content: "";
+  display: block;
+  /* background: #0000004a; */
+  width: 0;
+  height: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+  border-right: solid red 0;
+  border-bottom: solid #00000024 2rem;
+  border-top: solid green 0;
+  border-left: solid 2rem transparent;
+}
+.day-of-month {
+  background-color: #fbf7ec;
+  font-size: 3rem;
+  font-weight: bold;
+  width: 5rem;
+  text-align: center;
+  line-height: 2.7rem;
+  padding-block-end: 0.4rem;
+  color: #000000a3;
+  padding-block-start: 0rem;
+}
+.day-of-week {
+  background-color: #fbf7ec;
+  font-size: 0.7rem;
+  width: 5rem;
+  text-align: center;
+  line-height: 2.7rem;
+  padding-block-start: 0.3rem;
+  color: #000000a3;
+  text-transform: uppercase;
+  line-height: 1rem;
+}
+.year {
+  text-align: center;
+  font-weight: bold;
+  color: #da9696;
+  font-size: 1rem;
+}

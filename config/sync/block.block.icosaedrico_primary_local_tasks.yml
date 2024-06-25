@@ -9,7 +9,7 @@ _core:
 id: icosaedrico_primary_local_tasks
 theme: icosaedrico
 region: content
-weight: -2
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

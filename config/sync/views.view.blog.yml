@@ -8,7 +8,6 @@ dependencies:
     - field.storage.node.field_image
     - field.storage.node.field_tags
     - node.type.article
-    - system.menu.main
   module:
     - node
     - text
@@ -480,6 +479,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: ''
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -556,6 +556,9 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      defaults:
+        css_class: false
+      css_class: container
       display_description: ''
       display_extenders:
         metatag_display_extender:
@@ -563,11 +566,14 @@ display:
           tokenize: false
       path: blog
       menu:
-        type: normal
+        type: none
         title: Blog
-        weight: -47
+        description: ''
+        weight: -48
+        expanded: false
         menu_name: main
         parent: ''
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:

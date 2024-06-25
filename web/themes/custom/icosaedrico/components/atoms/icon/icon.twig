@@ -1,43 +1,16 @@
-{%
-  set icon_classes = [
-  'icon',
-  'flex',
-  'ff-reem-kufi',
-  'uppercase',
-  'items-center',
-  'text-center',
-  icon_text_position == "right" ? "flex-row-reverse",
-  icon_text_position == "left" ? "flex-row",
-  icon_text_position == "bottom" ? "flex-col",
-  icon_text_position == "top" ? "flex-col-reverse",
-  icon_text_position == "hidden" ? "mb-16",
-   "p-" ~ icon_svg_stroke_width,
-  icon_classes
-]
-%}
-
-{% set icon_text_classes = [
-  icon_text_position == "bottom" ? "mt-2",
-  icon_text_position == "hidden" ? "hidden",
-] %}
-<div class="{{ icon_classes|join(" ") }}">
 {% if icon_href %}
-<a href="{{ icon_href }}" {{ attributes.addClass(classes, icon_href_classes) }}>
+  <a href="{{ icon_href }}" {{ attributes.addClass(classes, icon_href_classes) }}>
+    {% endif %}
+      <svg xmlns="http://www.w3.org/2000/svg"
+        width="{{ icon_svg_size|default('16') }}"
+        height="{{ icon_svg_size|default('16') }}"
+        fill="{{ icon_svg_fill|default('currentColor') }}"
+        stroke="{{ icon_svg_stroke }}"
+        stroke-width="{{ icon_svg_stroke_width }}"
+        class="bi bi-{{ icon_name }} {{ icon_svg_classes }} overflow-visible"
+        viewBox="0 0 16 16">
+        {{ source(componentMetadata.path ~ '/icons/' ~ (icon_name|default('knife')) ~ '.svg') }}
+      </svg>
+    {% if icon_href %}
+  </a>
 {% endif %}
-  <svg xmlns="http://www.w3.org/2000/svg"
-    width="{{ icon_svg_size|default('16') }}"
-    height="{{ icon_svg_size|default('16') }}"
-    fill="{{ icon_svg_fill|default('currentColor') }}"
-    stroke="{{ icon_svg_stroke }}"
-    stroke-width="{{ icon_svg_stroke_width }}"
-    class="bi bi-{{ icon_name }} {{ icon_svg_classes }} overflow-visible"
-    viewBox="0 0 16 16">
-    {{ source(componentMetadata.path ~ '/icons/' ~ (icon_name|default('knife')) ~ '.svg') }}
-  </svg>
-  {% if icon_text is not empty %}
-  <p class="{{ icon_text_classes|join(" ") }}">{{ icon_text }}</p>
-  {% endif %}
-{% if icon_href %}
-</a>
-{% endif %}
-</div>

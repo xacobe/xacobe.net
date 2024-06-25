@@ -12,26 +12,9 @@ props:
       type: Drupal\Core\Template\Attribute
       title: Attributes
       description: Wrapper attributes.
-    icon_text:
-      type: string
-      title: Text
-      description: Text display with icon
-    icon_link_wrap:
-      type: string
-      title: Link Wrap
-      description: Show the icons as a link
     icon_href_classes:
           type: string
           title: Icon link classes
-    icon_text_position:
-      type: string
-      title: Text position
-      examples:
-        - top
-        - right
-        - bottom
-        - left
-        - hidden
     icon_svg_classes:
       type: string
       title: CSS classes for the icon element

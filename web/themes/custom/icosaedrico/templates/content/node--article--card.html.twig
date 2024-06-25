@@ -85,9 +85,15 @@
       {% set card_tag_url = path('entity.taxonomy_term.canonical', {'taxonomy_term': item.entity.id}) %}
     {% endfor %}
   {% endif %}
+
   {% block card_media %}
-    {{ content.field_image }}
-  {% endblock %}
+      {% set created_date = node.getCreatedTime|date('U')|date('c') %}
+      {% set year = created_date|date('Y') %}
+      {% set month = created_date|date('M') %}
+      {% set day_of_month = created_date|date('d') %}
+      {% set day_of_week = created_date|date('l') %}
+      {% include "icosaedrico:calendar_sheet" %}
+    {% endblock %}
   {% block card_content %}
     {{ content.body }}
   {% endblock %}

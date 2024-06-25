@@ -1,0 +1,27 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Calendar sheet
+status: stable
+description: A calendar sheet as the office desktops
+props:
+  type: object
+  properties:
+    year:
+      type: string
+      title: Year
+      # @todo Add examples here.
+      examples: []
+    month:
+      type: string
+      title: Month
+      # @todo Add examples here.
+      examples: []
+    day_of_month:
+      type: string
+      title: Day of month
+      # @todo Add examples here.
+      examples: []
+    day_of_week:
+      type: string
+      title: Day of week
+      # @todo Add examples here.
+      examples: []

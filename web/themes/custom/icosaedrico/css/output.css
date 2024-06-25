@@ -9575,6 +9575,11 @@ html:has(.drawer-open.drawer-open) {
   margin-bottom: 2rem;
 }
 
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .-mb-12 {
   margin-bottom: -3rem;
 }
@@ -9645,6 +9650,14 @@ html:has(.drawer-open.drawer-open) {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.ms-8 {
+  margin-inline-start: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .box-border {
@@ -9800,6 +9813,10 @@ html:has(.drawer-open.drawer-open) {
   height: auto;
 }
 
+.h-dvh {
+  height: 100dvh;
+}
+
 .h-full {
   height: 100%;
 }
@@ -9887,6 +9904,10 @@ html:has(.drawer-open.drawer-open) {
 
 .max-w-xs {
   max-width: 20rem;
+}
+
+.max-w-screen-sm {
+  max-width: 640px;
 }
 
 .flex-1 {
@@ -12433,6 +12454,16 @@ html:has(.drawer-open.drawer-open) {
   background-color: var(--fallback-wac,oklch(var(--wac)/var(--tw-bg-opacity)));
 }
 
+.bg-black-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 225 223 / var(--tw-bg-opacity));
+}
+
+.bg-green-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 111 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -13030,6 +13061,10 @@ html:has(.drawer-open.drawer-open) {
   padding: 1rem;
 }
 
+.p-10 {
+  padding: 2.5rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -13429,6 +13464,21 @@ html:has(.drawer-open.drawer-open) {
 .text-warning-content {
   --tw-text-opacity: 1;
   color: var(--fallback-wac,oklch(var(--wac)/var(--tw-text-opacity)));
+}
+
+.text-black-100 {
+  --tw-text-opacity: 1;
+  color: rgb(226 225 223 / var(--tw-text-opacity));
+}
+
+.text-black-950 {
+  --tw-text-opacity: 1;
+  color: rgb(38 35 34 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(255 50 50 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -16137,6 +16187,11 @@ html:has(.drawer-open.drawer-open) {
 }
 
 @media (min-width: 640px) {
+  .sm\:text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgb(255 50 50 / var(--tw-text-opacity));
+  }
+
   .sm\:underline {
     text-decoration-line: underline;
   }
@@ -16169,6 +16224,10 @@ html:has(.drawer-open.drawer-open) {
 
   .lg\:w-1\/2 {
     width: 50%;
+  }
+
+  .lg\:w-1\/4 {
+    width: 25%;
   }
 
   .lg\:grid-cols-3 {

@@ -1,36 +1,66 @@
-    {% set classes = [
+{% set classes = [
   "flex",
   "justify-center",
 ] %}
 
-      {% block content %}
+{% block content %}
 
-        {% import _self as menus %}
+  {% import _self as menus %}
 
-        {#
-          We call a macro which calls itself to render the full tree.
-          @see https://twig.symfony.com/doc/3.x/tags/macro.html
-        #}
-        {{ menus.menu_links(items, attributes, 0) }}
+  {#
+    We call a macro which calls itself to render the full tree.
+    @see https://twig.symfony.com/doc/3.x/tags/macro.html
+  #}
+  {{ menus.menu_links(items, attributes, 0) }}
 
-        {% macro menu_links(items, attributes, menu_level) %}
-          {% import _self as menus %}
-          {% if items %}
-            {% if menu_level == 0 %}
-              <ul {{ attributes.addClass("main-menu menu menu-horizontal px-1 uppercase") }}>
-              {% else %}
-                <ul {{ attributes.addClass("p-2") }}>
-                {% endif %}
-                {% for item in items %}
-                  <li {{ item.attributes }}>
-                    {{ link(item.title, item.url) }}
-                    {% if item.below %}
-                      {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              </ul>
+  {% macro menu_links(items, attributes, menu_level) %}
+    {% import _self as menus %}
+    {% if items %}
+      {% if menu_level == 0 %}
+        <ul {{ attributes.addClass("main-menu menu menu-horizontal px-1 uppercase") }}>
+      {% else %}
+        <ul {{ attributes.addClass("p-2") }}>
+      {% endif %}
+      {% for item in items %}
+        {% set item_attributes = item.attributes|default(create_attribute()) %}
+        {% set url_attributes = item.url.options.attributes|default({}) %}
+        {% set icon = url_attributes['data-icon']|default('') %}
+        {% set show_only_icon = url_attributes['data-icon-show']|default('false') %}
+        {% set active_class = item.in_active_trail ? 'is-active' : '' %}
+        <li{{ item_attributes|without('data-icon', 'data-icon-show') }}>
+          {% if icon %}
+            {% if show_only_icon == 'true' %}
+              <a href="{{ item.url }}" class="menu-link-icon {{ active_class }}">
+                {% include "icosaedrico:icon" with {
+                  icon_name: icon,
+                  icon_svg_classes: "menu-icon",
+                  icon_svg_size: "32",
+                  icon_svg_fill: "currentColor"
+                } only %}
+              </a>
+            {% else %}
+              <a href="{{ item.url }}" class="menu-link flex flex-col text-black-100 {{ active_class }}">
+                {% include "icosaedrico:icon" with {
+                  icon_name: icon,
+                  icon_svg_classes: "menu-icon",
+                  icon_svg_size: "32",
+                  icon_svg_fill: "currentColor",
+                } only %}
+                <div class="text-black-950">{{ item.title }}</div>
+              </a>
             {% endif %}
-          {% endmacro %}
+          {% else %}
+            <a href="{{ item.url }}" class="menu-link {{ active_class }}">
+              {{ item.title }}
+            </a>
+          {% endif %}
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endmacro %}
 
-        {% endblock %}
+{% endblock %}

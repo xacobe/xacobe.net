@@ -19,7 +19,7 @@
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
-  <div class="navbar-start w-full lg:w-1/2 items-start">
+  <div class="navbar-start w-full lg:w-1/4 items-start ms-8">
     <div class="dropdown me-2 lg:hidden">
       <div tabindex="0" role="button" class="btn btn-ghost ps-0">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
@@ -30,7 +30,7 @@
     </div>
     {{ content.icosaedrico_site_branding }}
   </div>
-  <div class="navbar-center hidden lg:inline-flex">
+  <div class="navbar-center hidden lg:w-1/2 lg:inline-flex justify-center">
     {{ content.main_menu__desktop }}
      {{ content|without(
        'main_menu__mobile',
@@ -40,7 +40,7 @@
        'icosaedrico_languageswitcherinterfacetext',
        ) }}
   </div>
-  <div class="navbar-end w-auto lg:w-1/2">
+  <div class="navbar-end w-auto lg:w-1/4">
 
     {# {% include 'icosaedrico:theme_switch' %} #}
       {{ content.icosaedrico_languageswitcherinterfacetext }}
