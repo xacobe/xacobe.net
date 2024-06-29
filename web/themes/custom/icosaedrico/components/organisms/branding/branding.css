@@ -2,15 +2,26 @@
   font-family: "Lobster", sans-serif;
   font-size: 4.8rem;
 }
-header {
-  .branding {
-      filter: grayscale(1) opacity(.5);
-    }
-  @media (min-width: 1024px) {
+.frontpage {
+  header {
       .branding {
+        filter: grayscale(1) opacity(.5);
+      }
+      .branding__logo  {
+        display: none;
+      }
+
+      @media (min-width: 1024px) {
+        .branding__logo {
+          display: block;
+        }
+        .branding {
           filter: grayscale(0) opacity(1);
         }
-    }
+      }
+  }
+}
+header {
   .branding__title {
       font-size: 32px;
     }

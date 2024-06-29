@@ -10,10 +10,12 @@ dependencies:
     - field.field.node.projects.field_project_tech
     - field.field.node.projects.field_project_type
     - field.field.node.projects.field_project_url
+    - image.style.max_650x650
     - node.type.projects
   module:
     - layout_builder
     - link
+    - media
     - sdc_display
     - text
     - user
@@ -45,12 +47,19 @@ content:
     weight: 2
     region: content
   field_project_images:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     label: hidden
     settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
+      image_link: ''
+      image_style: max_650x650
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
     weight: 0
     region: content
   field_project_tech:

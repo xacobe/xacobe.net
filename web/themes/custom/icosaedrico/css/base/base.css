@@ -4,14 +4,104 @@ p {
   color: #666;
 }
 
-h1,
-h2,
-h3 {
-  line-height: normal;
+/*** Typography ***/
+
+/* Font family */
+.ff-lobster {
+  font-family: "Lobster", sans-serif;
+}
+.ff-reem-kufi {
+  font-family: "Reem Kufi", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.ff-open-sans-normal {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
+/* Headings */
+h1, .h1 {
+  font-family: "Reem Kufi", sans-serif !important;
+  font-size: 2.4rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+}
+h2, .h2 {
+  font-family: "Lobster", sans-serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 300 !important;
+}
+h3, .h3 {
+  font-family: "Reem Kufi", sans-serif !important;
+  font-size: 1.2rem !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.75rem;
+}
+
+h4, .h4 {
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* Text size */
+.fs-xs {
+  font-family: "Open Sans", sans-serif;
+  font-size: .8rem;
+}
+.fs-sm {
+  font-family: "Open Sans", sans-serif;
+  font-size: .875rem;
+}
+.fs-base {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.fs-md {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+}
+/* Font styles */
+.display-1 {
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-2 {
+  font-size: 5.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-3 {
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
 
 /* own overrides other libraries */
 .prose {
   width: 80ch !important;
 }
+
+/* Containers */
+
+.container-sm { max-width: 576px;}
+.container-md { max-width: 768px;}
+.container-lg { max-width:  992px;}
+.container-xl { max-width:  1200px;}

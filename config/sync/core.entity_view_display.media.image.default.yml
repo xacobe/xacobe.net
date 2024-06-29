@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_media_image
-    - image.style.scale_cut_520px
+    - image.style.project
     - media.type.image
   module:
     - sdc_display
@@ -33,7 +33,7 @@ content:
     label: visually_hidden
     settings:
       image_link: ''
-      image_style: scale_cut_520px
+      image_style: project
       image_loading:
         attribute: lazy
       svg_attributes:

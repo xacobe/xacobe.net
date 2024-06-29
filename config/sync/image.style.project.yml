@@ -1,0 +1,15 @@
+uuid: 467ebb39-60e3-4ce4-82a3-6501fa73d314
+langcode: es
+status: true
+dependencies: {  }
+name: project
+label: Project
+effects:
+  0a11774d-5db3-40f1-9fc1-505df7f70626:
+    uuid: 0a11774d-5db3-40f1-9fc1-505df7f70626
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 756
+      height: 491
+      anchor: center-top

@@ -67,26 +67,26 @@
  *
  */
 #}
-{% embed 'icosaedrico:card' with {
-  card_title: label,
-  card_date: node.getCreatedTime|format_date('long'),
-  card_button_text: "Leer más",
-  card_button_url: url,
-  card_url: url,
-  card_responsive: true,
-  card_tags: node.field_tags,
-  card_tag_title: item.entity.label|default('Etiqueta sin título'),
-  card_tag_url: "path('entity.taxonomy_term.canonical', {'taxonomy_term': item.entity.id})",
+{% embed 'icosaedrico:blog_teaser' with {
+  title: label,
+  date: node.getCreatedTime|format_date('long'),
+  button_text: "Leer más",
+  button_url: url,
+  url: url,
+  responsive: true,
+  tags: node.field_tags,
+  tag_title: item.entity.label|default('Etiqueta sin título'),
+  tag_url: "path('entity.taxonomy_term.canonical', {'taxonomy_term': item.entity.id})",
 } %}
 
-  {% if card_tags %}
-    {% for item in card_tags %}
-      {% set card_tag_title = content.field_tags[0]["#title"]|default('Etiqueta sin título') %}
-      {% set card_tag_url = path('entity.taxonomy_term.canonical', {'taxonomy_term': item.entity.id}) %}
+  {% if tags %}
+    {% for item in tags %}
+      {% set tag_title = content.field_tags[0]["#title"]|default('Etiqueta sin título') %}
+      {% set tag_url = path('entity.taxonomy_term.canonical', {'taxonomy_term': item.entity.id}) %}
     {% endfor %}
   {% endif %}
 
-  {% block card_media %}
+  {% block media %}
       {% set created_date = node.getCreatedTime|date('U')|date('c') %}
       {% set year = created_date|date('Y') %}
       {% set month = created_date|date('M') %}
@@ -94,7 +94,8 @@
       {% set day_of_week = created_date|date('l') %}
       {% include "icosaedrico:calendar_sheet" %}
     {% endblock %}
-  {% block card_content %}
+  {% block content %}
     {{ content.body }}
   {% endblock %}
 {% endembed %}
+

@@ -353,6 +353,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -527,17 +528,18 @@ display:
         - 'config:field.storage.node.field_tags'
   blog_block_list:
     id: blog_block_list
-    display_title: 'Blog block list'
+    display_title: 'Blog list'
     display_plugin: block
     position: 1
     display_options:
+      defaults:
+        css_class: false
+      css_class: 'container-md mx-auto'
       display_description: ''
       display_extenders:
         metatag_display_extender:
           metatags: {  }
           tokenize: false
-      block_description: 'Blog block list'
-      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -564,7 +566,7 @@ display:
         metatag_display_extender:
           metatags: {  }
           tokenize: false
-      path: blog
+      path: blog-res
       menu:
         type: none
         title: Blog

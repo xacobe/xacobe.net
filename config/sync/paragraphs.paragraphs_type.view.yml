@@ -1,0 +1,15 @@
+uuid: 2fc081b9-3f77-4a8a-8f48-be6200e514bd
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: view
+label: Vista
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

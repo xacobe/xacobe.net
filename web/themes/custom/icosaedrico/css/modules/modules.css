@@ -1,14 +1,8 @@
-/* Font family */
-.ff-lobster {
-  font-family: "Lobster", sans-serif;
+/* Frames */
+.border-frame {
+  padding: 0.2rem;
+  box-shadow: black 0px 0px 3px -1px;
 }
-.ff-reem-kufi {
-  font-family: "Reem Kufi", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
 /* Containers */
 .container {
   padding-right: 15px;

@@ -1,0 +1,11 @@
+uuid: b483b7b0-775a-4259-b1e3-d710da5e4c65
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+id: media.avatar
+label: Avatar
+description: ''
+targetEntityType: media
+cache: true

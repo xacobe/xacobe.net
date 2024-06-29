@@ -1,3 +1,16 @@
-.title__text {
-  text-transform: capitalize;
+.divider {
+  justify-content: center;
+
+  &::before,
+  &::after {
+    width: 12% !important;
+    flex-grow: 0!important;
+    background-color: #dbdbdb!important;
+  }
+}
+
+.page-title--article {
+  .page-title {
+    text-transform: none;
+  }
 }

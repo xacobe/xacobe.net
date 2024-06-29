@@ -6,3 +6,4 @@ name: 'Tipo de proyecto'
 vid: tipo_de_proyecto
 description: 'Para los diferentes tipos de proyectos: personales y de trabajo'
 weight: 0
+new_revision: false

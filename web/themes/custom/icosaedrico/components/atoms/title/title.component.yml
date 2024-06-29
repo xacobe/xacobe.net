@@ -1,3 +1,15 @@
 '$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
 name: Title
 status: experimental
+
+props:
+  type: object
+  properties:
+    icon_name:
+      type: string
+      title: Name
+      description: The name of the icon and the file
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.

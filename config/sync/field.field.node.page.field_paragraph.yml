@@ -7,6 +7,7 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.icon
+    - paragraphs.paragraphs_type.view
   module:
     - entity_reference_revisions
 id: node.page.field_paragraph
@@ -25,6 +26,7 @@ settings:
     target_bundles:
       from_library: from_library
       icon: icon
+      view: view
     negate: 0
     target_bundles_drag_drop:
       from_library:
@@ -32,5 +34,8 @@ settings:
         enabled: true
       icon:
         weight: 4
+        enabled: true
+      view:
+        weight: 6
         enabled: true
 field_type: entity_reference_revisions

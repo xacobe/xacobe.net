@@ -1,6 +1,5 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
-langcode: es
 module:
   admin_toolbar: 0
   admin_toolbar_search: 0
@@ -11,6 +10,7 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
+  cl_devel: 0
   cl_editorial: 0
   config: 0
   config_translation: 0
@@ -23,6 +23,7 @@ module:
   editor: 0
   entity_reference_revisions: 0
   entity_usage: 0
+  extra_body_classes: 0
   field: 0
   field_ui: 0
   file: 0
@@ -33,6 +34,7 @@ module:
   language: 0
   layout_builder: 0
   layout_builder_component_attributes: 0
+  layout_builder_expose_all_field_blocks: 0
   layout_discovery: 0
   link: 0
   locale: 0
@@ -73,7 +75,6 @@ module:
   serialization: 0
   settings_tray: 0
   shortcut: 0
-  simple_analytics: 0
   storybook: 0
   svg_image: 0
   svg_image_responsive: 0
@@ -86,6 +87,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  viewsreference: 0
   pathauto: 1
   content_translation: 10
   views: 10

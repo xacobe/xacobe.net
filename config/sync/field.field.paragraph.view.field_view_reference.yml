@@ -1,0 +1,34 @@
+uuid: f90919e6-eb6d-4da5-905e-188a0e3a335c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_reference
+    - paragraphs.paragraphs_type.view
+  module:
+    - viewsreference
+id: paragraph.view.field_view_reference
+field_name: field_view_reference
+entity_type: paragraph
+bundle: view
+label: view_reference
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+  plugin_types:
+    block: block
+  preselect_views: {  }
+  enabled_settings:
+    argument: argument
+    pager: pager
+    offset: offset
+    title: title
+    limit: limit
+field_type: viewsreference

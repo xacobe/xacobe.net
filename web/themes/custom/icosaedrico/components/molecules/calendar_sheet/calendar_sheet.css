@@ -7,13 +7,13 @@
 .month {
   position: relative;
   background-color: #6cbc80;
-    width: 5rem;
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  line-height: 1.4rem;
+  overflow: hidden;
+  border-top: solid 1px #00000036;
 }
 .month:before {
   content: "";
@@ -29,27 +29,38 @@
   border-top: solid green 0;
   border-left: solid 2rem transparent;
 }
-.day-of-month {
-  background-color: #fbf7ec;
-  font-size: 3rem;
-  font-weight: bold;
-  width: 5rem;
-  text-align: center;
-  line-height: 2.7rem;
-  padding-block-end: 0.4rem;
-  color: #000000a3;
-  padding-block-start: 0rem;
-}
 .day-of-week {
   background-color: #fbf7ec;
-  font-size: 0.7rem;
-  width: 5rem;
+  font-size: 0.6rem;
   text-align: center;
-  line-height: 2.7rem;
-  padding-block-start: 0.3rem;
   color: #000000a3;
   text-transform: uppercase;
   line-height: 1rem;
+  border-top: solid 3px #00000021;
+}
+.day-of-month {
+  position: relative;
+  background-color: #fbf7ec;
+  font-size: 1.8rem;
+  font-weight: bold;
+  width: 4rem;
+  text-align: center;
+  line-height: 1.2rem;
+  padding-block-end: 0.7rem;
+  color: #000000a3;
+}
+.day-of-month::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  right: 0;
+  position: absolute;
+  border-right: solid red 0;
+  border-bottom: solid #ffffff 0.8rem;
+  border-top: solid green 0;
+  border-left: solid 0.6rem #d7d0bf;
+  bottom: 0;
 }
 .year {
   text-align: center;

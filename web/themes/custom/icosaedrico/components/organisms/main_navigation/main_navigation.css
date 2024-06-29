@@ -100,49 +100,59 @@
   a:hover {
     background-color: transparent !important;
   }
-  a.is-active {
-    --color-light: 100;
-  }
+
   li:nth-child(1) {
     a.is-active {
-      color: var(--red-300);
+      color: var(--orange-500);
     }
     a:hover {
-      color: var(--red-500);
+      color: var(--orange-300);
     }
   }
   li:nth-child(2) {
     a.is-active {
-      color: var(--orange-300);
+      color: var(--red-500);
     }
     a:hover {
-      color: var(--orange-500);
+      color: var(--red-300);
     }
   }
   li:nth-child(3) {
     a.is-active {
+      color: var(--green-500);
+    }
+    a:hover {
         color: var(--green-300);
-      }
-      a:hover {
-        color: var(--green-500);
       }
   }
 
   li:nth-child(4) {
     a.is-active {
-        color: var(--blue-300);
-      }
-      a:hover {
-        color: var(--blue-500);
+      color: var(--purple-500);
+    }
+    a:hover {
+        color: var(--purple-300);
       }
   }
     li:nth-child(5) {
       a.is-active {
-        color: var(--purple-300);
+        color: var(--blue-300);
       }
 
       a:hover {
-        color: var(--purple-500);
+        color: var(--blue-500);
       }
     }
+}
+
+/*TODO See why doesnt have active state on frontpage*/
+.frontpage {
+    li:nth-child(1) {
+    a {
+      color: var(--orange-500);
+    }
+    a:hover {
+      color: var(--orange-300);
+    }
+  }
 }

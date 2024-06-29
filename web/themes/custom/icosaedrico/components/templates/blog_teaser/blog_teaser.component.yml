@@ -1,26 +1,26 @@
 '$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
-name: Card
+name: Blog teaser
 status: stable
 props:
   type: object
   properties:
-    card_title:
+    title:
       type: string
       title: Title
-    card_tags:
+    tags:
       type: string
       title: Tags
-    card_tag_url:
+    tag_url:
       type: string
       title: Title
-    card_classes:
+    classes:
       type: string
       title: Card extra classes
       examples:
         - glass
         - bg-primary text-primary-content
         - bg-neutral text-neutral-content
-    card_image_position:
+    image_position:
       type: string
       title: Card types
       examples:
@@ -37,28 +37,28 @@ props:
         - bottom
         - center
         - overlay
-    card_responsive:
+    responsive:
       type: boolean
       title: Card responsive
-    card_url:
+    url:
       type: string
       title: Card URL
       description: The Card URL will be used in the title or card link if set
-    card_button_text:
+    button_text:
       type: string
-    card_button_url:
+    button_url:
       type: string
       title: Card URL button
       description: If added it will show a button with this URL
-    card_clicky:
+    clicky:
       type: boolean
       title: Make all the card a behave as a link
 slots:
-  card_content:
+  content:
       title: Card content
       description: Content of the chip
-  card_media:
+  media:
       title: Card media
       description: Image (or video content in a future)
-  card_date:
+  date:
       title: Date

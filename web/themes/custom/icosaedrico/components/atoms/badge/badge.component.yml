@@ -18,6 +18,7 @@ props:
         - accent
         - ghost
         - info
+        - tag
         - success
         - warning
         - error
@@ -37,6 +38,7 @@ props:
         - accent
         - ghost
         - info
+        - tag
         - success
         - warning
         - error

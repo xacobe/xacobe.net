@@ -11,7 +11,7 @@ third_party_settings:
 name: Proyectos
 type: projects
 description: 'Proyectos personales y trabajos.'
-help: ''
+help: null
 new_revision: false
 preview_mode: 1
 display_submitted: false

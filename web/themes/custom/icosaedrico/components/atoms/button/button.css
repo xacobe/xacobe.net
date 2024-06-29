@@ -1,0 +1,15 @@
+.btn-link {
+    border: none;
+    background: white !important;
+    padding-inline: 1rem !important;
+    display: flex !important;
+    max-width: max-content;
+    color: black !important;
+    text-decoration: none !important;
+    font-weight: normal !important;
+    font-size: 0.8rem !important;
+
+    &:hover {
+      color: var(--red-700)
+    }
+}

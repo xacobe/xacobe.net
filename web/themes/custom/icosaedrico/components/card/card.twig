@@ -1,0 +1,19 @@
+{%
+  set classes = [
+  'card',
+  'flex',
+  'flex-row',
+  'gap-8',
+  ]
+%}
+
+<div {{ attributes.addClass(classes)}}>
+  <div class="card__media basis-1/2 border-frame">
+    {% block card_media %}
+    {% endblock %}
+  </div>
+  <div class="card__content basis-1/2 flex flex-col justify-center items-center gap-2">
+    {% block card_content %}
+    {% endblock %}
+  </div>
+</div>

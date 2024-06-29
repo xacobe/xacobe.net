@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.avatar
     - core.entity_view_mode.media.full
     - core.entity_view_mode.media.media_library
   module:
@@ -75,6 +76,7 @@ filters:
       default_view_mode: default
       allowed_view_modes:
         default: default
+        avatar: avatar
         full: full
         media_library: media_library
       allowed_media_types:
