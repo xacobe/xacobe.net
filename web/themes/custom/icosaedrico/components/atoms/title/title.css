@@ -14,3 +14,7 @@
     text-transform: none;
   }
 }
+.page-title--blog {
+  text-transform: none;
+  width: auto;
+}

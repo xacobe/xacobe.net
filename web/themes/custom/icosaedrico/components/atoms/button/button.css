@@ -13,3 +13,17 @@
       color: var(--red-700)
     }
 }
+.btn-primary {
+  color: var(--black-50) !important;
+  border-color: var(--red-800) !important;
+  background: var(--red-700) !important;
+}
+.btn-secondary {
+  color: var(--black-400) !important;
+  border-color: var(--black-400) !important;
+  background-color: white !important;
+
+  &:hover {
+    background-color: var(--black-50) !important;
+  }
+}

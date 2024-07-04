@@ -58,23 +58,3 @@ function icosaedrico_preprocess_menu_local_task(&$variables)
   // Actualiza las clases en las opciones del enlace.
   $variables['element']['#link']['url']->setOption('attributes', ['class' => $new_classes]);
 }
-
-/**
- * Implementa hook_preprocess_HOOK() para page-title.html.twig.
- */
-function icosaedrico_preprocess_page_title(&$variables)
-{
-  // Asegurarse de que estamos en una página de nodo.
-  if (\Drupal::routeMatch()->getRouteName() == 'entity.node.canonical') {
-    // Obtener el nodo.
-    $node = \Drupal::routeMatch()->getParameter('node');
-    if ($node instanceof \Drupal\node\NodeInterface) {
-      // Obtener el tipo de contenido del nodo.
-      $content_type = $node->getType();
-
-      // Añadir una clase basada en el tipo de contenido.
-      $variables['title_attributes']['class'][] = 'page-title--' . $content_type;
-    }
-  }
-}
-

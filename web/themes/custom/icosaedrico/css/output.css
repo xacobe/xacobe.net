@@ -9767,6 +9767,10 @@ html:has(.drawer-open.drawer-open) {
   display: none;
 }
 
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
 .size-16 {
   width: 4rem;
   height: 4rem;
