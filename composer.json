@@ -39,6 +39,7 @@
         "drupal/svg_image": "^3.0",
         "drupal/token": "^1.13",
         "drupal/tracer": "^1.0",
+        "drupal/upgrade_status": "^4.3",
         "drupal/viewsreference": "^2.0@beta",
         "drupal/webprofiler": "^10.1"
     },
@@ -63,6 +64,9 @@
         "patches": {
             "drupal/core": {
                 "Render blocks later, so they can be placed individually in a region template": "https://www.drupal.org/files/issues/2023-11-20/core-render-blocks-later-3178202-65.patch"
+            },
+            "drupal/extra_body_classes": {
+                "PHP8.2 deprecated passing null to string parameter": "https://www.drupal.org/files/issues/2024-04-18/extra_body_classes-3401503.patch"
             }
         },
         "drupal-scaffold": {
