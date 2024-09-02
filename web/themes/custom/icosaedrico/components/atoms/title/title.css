@@ -17,4 +17,7 @@
 .page-title--blog {
   text-transform: none;
   width: auto;
+  font-size: 2rem;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 200;
 }
