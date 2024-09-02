@@ -165,7 +165,7 @@ display:
           entity_type: paragraphs_library_item
           entity_field: paragraphs
           plugin_id: field
-          label: Parráfos
+          label: Paragraphs
           exclude: false
           alter:
             alter_text: false
