@@ -8,8 +8,7 @@
 /**
  * Implements hook_preprocess_HOOK() for links.
  */
-function icosaedrico_preprocess_menu_local_task(&$variables)
-{
+function icosaedrico_preprocess_menu_local_task(&$variables) {
   // Añade siempre la clase 'tab' a menu--local-tasks.
   $existing_classes = $variables['element']['#link']['url']->getOption('attributes')['class'] ?? [];
   $new_classes = array_merge($existing_classes, ['tab']);
@@ -19,28 +18,35 @@ function icosaedrico_preprocess_menu_local_task(&$variables)
   switch ($route_name) {
     case 'entity.node.canonical':
       $new_classes[] = 'see';
-      $variables['svg_icon'] = 'eye'; // Select the SVG icon name.
+      // Select the SVG icon name.
+      $variables['svg_icon'] = 'eye';
       break;
+
     case 'entity.node.edit_form':
       $new_classes[] = 'pencil-square';
       $variables['svg_icon'] = 'pencil-square';
       break;
+
     case 'entity.node.delete_form':
       $new_classes[] = 'trash3';
       $variables['svg_icon'] = 'trash3';
       break;
+
     case 'layout_builder.overrides.node.view':
       $new_classes[] = 'columns';
       $variables['svg_icon'] = 'columns';
       break;
+
     case 'entity.node.devel_load':
       $new_classes[] = 'code-slash';
       $variables['svg_icon'] = 'code-slash';
       break;
+
     case 'entity.node.content_translation_overview':
       $new_classes[] = 'translate';
       $variables['svg_icon'] = 'translate';
       break;
+
     case 'entity.node.version_history':
       $new_classes[] = 'arrow-counterclockwise';
       $variables['svg_icon'] = 'arrow-counterclockwise';
@@ -50,11 +56,37 @@ function icosaedrico_preprocess_menu_local_task(&$variables)
   // Verifica si el enlace está activo para ajustar las clases.
   if (!empty($variables['element']['#active'])) {
     // Añade 'tab-active' para enlaces activos, manteniendo 'tab'.
-    if (($key = array_search('is-active', $new_classes)) !== false) {
-      unset($new_classes[$key]); // Quita 'is-active' si existe.
+    if (($key = array_search('is-active', $new_classes)) !== FALSE) {
+      // Quita 'is-active' si existe.
+      unset($new_classes[$key]);
     }
-    $new_classes[] = 'tab-active'; // Añade 'tab-active'.
+    // Añade 'tab-active'.
+    $new_classes[] = 'tab-active';
   }
   // Actualiza las clases en las opciones del enlace.
   $variables['element']['#link']['url']->setOption('attributes', ['class' => $new_classes]);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+function icosaedrico_preprocess_block(&$variables) {
+  // Verificar si el atributo 'id' está definido.
+  if (isset($variables['attributes']['id'])) {
+    // Verificar si el atributo 'id' es un objeto y tiene el método __toString.
+    if (is_object($variables['attributes']['id']) && method_exists($variables['attributes']['id'], '__toString')) {
+      // Obtener el ID como cadena de texto.
+      $block_id = $variables['attributes']['id']->__toString();
+    }
+    else {
+      // Si el ID ya es una cadena de texto.
+      $block_id = (string) $variables['attributes']['id'];
+    }
+
+    // Remover el prefijo del ID (por ejemplo, "icosaedrico")
+    $new_block_id = str_replace('icosaedrico-', '', $block_id);
+
+    // Asignar el nuevo ID al bloque.
+    $variables['attributes']['id'] = $new_block_id;
+  }
 }

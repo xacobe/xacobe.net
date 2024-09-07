@@ -53,12 +53,13 @@
     {% for item in items %}
         {% include 'icosaedrico:button' with {
       button_tag: "a",
-      button_color: "secondary",
+      button_color: "link",
       button_size: "sm",
       button_text: "Ver online",
       button_href: item.content["#url"],
       button_target: '_blank',
-      button_icon: "box-arrow-up-right"
+      button_icon: "box-arrow-up-right",
+      button_icon_size: "12"
     } only %}
       {# <div{{ attributes }}>{{ item.content }}</div> #}
     {% endfor %}

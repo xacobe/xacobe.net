@@ -7,6 +7,7 @@
     'btn-' ~ button_color|clean_class,
     button_color == "link" ? "p-0",
     button_size ? "btn-" ~ button_size,
+    button_size == "sm" ? "text-xs uppercase",
     button_text_size ? "btn-" ~ button_text_size,
     button_outline ? "btn-outline",
     button_glass ? "btn-glass",
@@ -20,6 +21,7 @@
   {% if button_icon is not empty %}
     {{ include("icosaedrico:icon", {
       icon_name: button_icon,
+      icon_svg_size: button_icon_size,
       })
     }}
   {% endif %}

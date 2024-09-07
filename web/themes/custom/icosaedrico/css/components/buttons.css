@@ -1,0 +1,27 @@
+.btn {
+  background-color: none;
+}
+.btn-link {
+    border: none;
+    background: white !important;
+    max-width: max-content;
+    color: black !important;
+    text-decoration: none !important;
+    font-weight: normal !important;
+}
+.btn-link:hover {
+  color: var(--red-700)
+}
+.btn-primary {
+  color: var(--black-50) !important;
+  border-color: var(--red-800) !important;
+  background: var(--red-700) !important;
+}
+.btn-secondary {
+  color: var(--black-400) !important;
+  border-color: var(--black-400) !important;
+  background-color: white !important;
+}
+.btn-secondary:hover {
+  background-color: var(--black-50) !important;
+}

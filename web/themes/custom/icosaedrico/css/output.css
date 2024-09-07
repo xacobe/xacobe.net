@@ -11307,6 +11307,10 @@ html:has(.drawer-open.drawer-open) {
   border-top-width: 2px;
 }
 
+.border-b-4 {
+  border-bottom-width: 4px;
+}
+
 .border-solid {
   border-style: solid;
 }
@@ -11447,6 +11451,21 @@ html:has(.drawer-open.drawer-open) {
 .border-warning-content {
   --tw-border-opacity: 1;
   border-color: var(--fallback-wac,oklch(var(--wac)/var(--tw-border-opacity)));
+}
+
+.border-black-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(167 162 157 / var(--tw-border-opacity));
+}
+
+.border-black-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(199 196 193 / var(--tw-border-opacity));
+}
+
+.border-black-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(226 225 223 / var(--tw-border-opacity));
 }
 
 .border-x-accent {
@@ -13150,6 +13169,11 @@ html:has(.drawer-open.drawer-open) {
   padding-bottom: 1.5rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -13503,6 +13527,16 @@ html:has(.drawer-open.drawer-open) {
 .text-warning-content {
   --tw-text-opacity: 1;
   color: var(--fallback-wac,oklch(var(--wac)/var(--tw-text-opacity)));
+}
+
+.text-black-500 {
+  --tw-text-opacity: 1;
+  color: rgb(120 113 108 / var(--tw-text-opacity));
+}
+
+.text-black-300 {
+  --tw-text-opacity: 1;
+  color: rgb(167 162 157 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -16031,11 +16065,6 @@ html:has(.drawer-open.drawer-open) {
   font-weight: 700;
 }
 
-.hover\:grayscale-0:hover {
-  --tw-grayscale: grayscale(0);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .before\:hover\:text-center:hover::before {
   content: var(--tw-content);
   text-align: center;
@@ -16189,6 +16218,10 @@ html:has(.drawer-open.drawer-open) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -16223,6 +16256,10 @@ html:has(.drawer-open.drawer-open) {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
   }
 
   .lg\:px-24 {

@@ -4,5 +4,6 @@ global-styling:
     theme:
       css/base/normalize.css: {}
       css/base/base.css: {}
+      css/components/buttons.css: {}
       css/modules/modules.css: {}
       css/output.css: {}

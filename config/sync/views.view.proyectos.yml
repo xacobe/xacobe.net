@@ -15,6 +15,7 @@ dependencies:
   module:
     - media
     - node
+    - splide
     - taxonomy
     - user
 id: proyectos
@@ -969,12 +970,13 @@ display:
         fields: false
         filters: false
         filter_groups: false
-      css_class: mb-8
+      css_class: 'flex justify-center gap-4 mb-8'
       display_description: ''
       display_extenders:
         metatag_display_extender:
           metatags: {  }
           tokenize: false
+      block_description: 'Trabajos - no archivados'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1186,11 +1188,43 @@ display:
         groups:
           1: AND
       style:
-        type: default
+        type: splide
         options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: false
+          caption:
+            field_project_images: '0'
+          optionset: trabajo_archivos
+          class: ''
+          image: ''
+          link: ''
+          overlay: field_project_images
+          title: ''
+          vanilla: false
+          layout: ''
+          cache: 86400
+          admin_uri: '/es/admin/structure/views/ajax/display/proyectos/works_archived/style_options?_wrapper_format=drupal_ajax'
+          grid: ''
+          grid_medium: ''
+          grid_small: ''
+          style: ''
+          skin: ''
+          overridables:
+            arrows: '0'
+            pagination: '0'
+            autoplay: '0'
+            autoWidth: '0'
+            autoHeight: '0'
+            drag: '0'
+            wheel: '0'
+            randomize: '0'
+          thumbnail: ''
+          optionset_nav: ''
+          skin_nav: ''
+          thumbnail_effect: ''
+          navpos: ''
+          override: false
+          pagination_pos: ''
+          preserve_keys: false
+          visible_items: null
       row:
         type: fields
         options:

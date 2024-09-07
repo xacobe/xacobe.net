@@ -6,6 +6,8 @@ module:
   admin_toolbar_tools: 0
   automated_cron: 0
   big_pipe: 0
+  blazy: 0
+  blazy_ui: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -75,6 +77,8 @@ module:
   serialization: 0
   settings_tray: 0
   shortcut: 0
+  splide: 0
+  splide_ui: 0
   storybook: 0
   svg_image: 0
   svg_image_responsive: 0

@@ -1,31 +1,24 @@
 {#
 /**
- * @file
- * Theme override to display primary and secondary local tasks.
- *
- * Available variables:
- * - primary: HTML list items representing primary tasks.
- * - secondary: HTML list items representing secondary tasks.
- *
- * Each item in these variables (primary and secondary) can be individually
- * themed in menu-local-task.html.twig.
- */
+  * @file
+  * Theme override to display primary and secondary local tasks.
+  *
+  * Available variables:
+  * - primary: HTML list items representing primary tasks.
+  * - secondary: HTML list items representing secondary tasks.
+  *
+  * Each item in these variables (primary and secondary) can be individually
+  * themed in menu-local-task.html.twig.
+  */
 #}
-    {% embed 'icosaedrico:tabs'  with {
-  tab_type: "lifted",
-  tab_size: "lg",
-  tab_classes: "max-w-prose mx-auto justify-center mb-4"
-} %}
-{% block tab_content_primary %}
-  {% if primary %}
-      <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
-      {{ primary }}
-  {% endif %}
-{% endblock %}
-{% block tab_content_secondary %}
-  {% if secondary %}
-      <h2 class="visually-hidden">{{ 'Sencondary tabs'|t }}</h2>
-      {{ secondary }}
-  {% endif %}
-{% endblock %}
-    {% endembed %}
+
+<div class="flex justify-center">
+{% if primary %}
+  <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+  {{ primary }}
+{% endif %}
+{% if secondary %}
+  <h2 class="visually-hidden">{{ 'Sencondary tabs'|t }}</h2>
+  {{ secondary }}
+{% endif %}
+</div>

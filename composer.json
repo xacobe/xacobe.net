@@ -12,12 +12,17 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/blazy": "^3.0",
         "drupal/block_class": "^2.0",
         "drupal/cl_devel": "^2.0@beta",
         "drupal/cl_editorial": "^2.0@beta",
@@ -35,13 +40,19 @@
         "drupal/sdc_block": "^1.0@beta",
         "drupal/sdc_display": "^1.0@beta",
         "drupal/sdc_styleguide": "^1.0@beta",
+        "drupal/splide": "^2.0",
         "drupal/storybook": "^1.0@alpha",
         "drupal/svg_image": "^3.0",
         "drupal/token": "^1.13",
         "drupal/tracer": "^1.0",
         "drupal/upgrade_status": "^4.3",
         "drupal/viewsreference": "^2.0@beta",
-        "drupal/webprofiler": "^10.1"
+        "drupal/webprofiler": "^10.1",
+        "enshrined/svg-sanitize": "^0.20.0",
+        "league/commonmark": "^2.5",
+        "michelf/php-markdown": "^2.0",
+        "npm-asset/splidejs--splide": "^4",
+        "oomphinc/composer-installers-extender": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -56,9 +67,11 @@
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "php-http/discovery": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "oomphinc/composer-installers-extender": true
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "preferred-install": "dist"
     },
     "extra": {
         "patches": {
@@ -74,12 +87,18 @@
                 "web-root": "web/"
             }
         },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "installer-paths": {
             "web/core": [
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
