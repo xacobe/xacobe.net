@@ -35,3 +35,9 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+/* Divider */
+.divider {
+  height: inherit !important;
+  white-space: wrap !important;
+}

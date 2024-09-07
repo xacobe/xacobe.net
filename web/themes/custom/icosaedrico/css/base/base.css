@@ -97,7 +97,7 @@ h4, .h4 {
 
 /* own overrides other libraries */
 .prose {
-  width: 80ch !important;
+  max-width: 80ch !important;
 }
 
 /* Containers */
