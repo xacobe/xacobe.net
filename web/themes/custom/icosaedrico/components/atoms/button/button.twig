@@ -21,7 +21,7 @@
   {% if button_icon is not empty %}
     {{ include("icosaedrico:icon", {
       icon_name: button_icon,
-      icon_svg_size: button_icon_size,
+      icon_svg_size: button_icon_size|default(""),
       })
     }}
   {% endif %}
