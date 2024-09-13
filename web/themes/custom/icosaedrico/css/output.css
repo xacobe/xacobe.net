@@ -13539,6 +13539,11 @@ html:has(.drawer-open.drawer-open) {
   color: rgb(167 162 157 / var(--tw-text-opacity));
 }
 
+.text-black-400 {
+  --tw-text-opacity: 1;
+  color: rgb(142 135 129 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -16214,6 +16219,10 @@ html:has(.drawer-open.drawer-open) {
 }
 
 @media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

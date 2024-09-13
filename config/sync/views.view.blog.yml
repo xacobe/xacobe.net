@@ -482,7 +482,12 @@ display:
       relationships: {  }
       css_class: ''
       header: {  }
-      footer: {  }
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          plugin_id: text
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -534,8 +539,23 @@ display:
     display_options:
       defaults:
         css_class: false
+        footer: false
       css_class: 'container-md mx-auto'
       display_description: ''
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<hr class="pb-8 mb-4">'
+            format: basic_html
+          tokenize: false
       display_extenders:
         metatag_display_extender:
           metatags: {  }
