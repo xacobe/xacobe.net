@@ -31,7 +31,7 @@ options:
     heightRatio: '0'
     autoWidth: false
     autoHeight: false
-    perPage: 6
+    perPage: 4
     perMove: 0
     clones: 0
     cloneStatus: true
@@ -94,11 +94,11 @@ options:
         fixedWidth: '0'
         fixedHeight: '0'
         heightRatio: '0'
-        perPage: 4
+        perPage: 2
         perMove: 0
         clones: 0
         focus: '0'
-        gap: .5rem
+        gap: '0'
         padding: ''
         easing: 'cubic-bezier(.42,.65,.27,.99)'
         arrows: 'true'
@@ -117,7 +117,7 @@ options:
         fixedWidth: '0'
         fixedHeight: '0'
         heightRatio: '0'
-        perPage: 5
+        perPage: 3
         perMove: 0
         clones: 0
         focus: '0'
@@ -140,7 +140,7 @@ options:
         fixedWidth: '0'
         fixedHeight: '0'
         heightRatio: '0'
-        perPage: 6
+        perPage: 4
         perMove: 0
         clones: 0
         focus: '0'

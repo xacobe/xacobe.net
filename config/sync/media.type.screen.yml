@@ -1,0 +1,18 @@
+uuid: f3237fda-8abf-4897-9373-698679bd7b31
+langcode: es
+status: true
+dependencies: {  }
+id: screen
+label: Screen
+description: 'A display to show content display on screens, as monitors, TV and phones'
+source: image
+queue_thumbnail_downloads: true
+new_revision: false
+source_configuration:
+  source_field: field_media_image_1
+field_map:
+  name: name
+  mimetype: name
+  filesize: name
+  width: name
+  height: name

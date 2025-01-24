@@ -1,0 +1,37 @@
+uuid: 99c94b10-6477-4abd-8cee-791b1e60e46c
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.screen.field_media_image_1
+    - image.style.medium
+    - media.type.screen
+  module:
+    - svg_image
+id: media.screen.media_library
+targetEntityType: media
+bundle: screen
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_image_1: true
+  langcode: true
+  name: true
+  uid: true
