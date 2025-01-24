@@ -38,6 +38,7 @@
         "drupal/pathauto": "^1.12",
         "drupal/redirect": "^1.9",
         "drupal/sdc_styleguide": "^1.0@beta",
+        "drupal/simple_analytics": "^3.0",
         "drupal/splide": "^2.0",
         "drupal/storybook": "^1.0@alpha",
         "drupal/svg_image": "^3.0",
