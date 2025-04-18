@@ -12,6 +12,23 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
+  ckeditor5_plugin_pack: 0
+  ckeditor5_plugin_pack_auto_image: 0
+  ckeditor5_plugin_pack_bookmark: 0
+  ckeditor5_plugin_pack_emoji: 0
+  ckeditor5_plugin_pack_find_and_replace: 0
+  ckeditor5_plugin_pack_font: 0
+  ckeditor5_plugin_pack_highlight: 0
+  ckeditor5_plugin_pack_indent_block: 0
+  ckeditor5_plugin_pack_link_attributes: 0
+  ckeditor5_plugin_pack_page_break: 0
+  ckeditor5_plugin_pack_paste_markdown: 0
+  ckeditor5_plugin_pack_select_all: 0
+  ckeditor5_plugin_pack_templates: 0
+  ckeditor5_plugin_pack_text_transformation: 0
+  ckeditor5_plugin_pack_todo_document_list: 0
+  ckeditor5_plugin_pack_word_count: 0
+  ckeditor5_premium_features_fullscreen: 0
   cl_devel: 0
   cl_editorial: 0
   config: 0

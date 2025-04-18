@@ -21,6 +21,7 @@ display:
           label: 'Data de subida'
         count:
           label: 'Usado en'
+          format_plural_string: !!binary MSBwbGFjZQNAY291bnQgcGxhY2Vz
         operations:
           label: Operacións
       pager:
@@ -56,6 +57,8 @@ display:
   page_2:
     display_options:
       fields:
+        entity_label:
+          label: Entity
         type:
           label: 'Tipo de entidade'
         count:
