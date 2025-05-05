@@ -149,6 +149,8 @@
         }
     },
     "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "drupal/coder": "^8.3",
         "drupal/core-dev": "^10",
         "drupal/devel": "^5.1"
     }
