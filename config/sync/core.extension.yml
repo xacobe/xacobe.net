@@ -42,7 +42,6 @@ module:
   editor: 0
   entity_reference_revisions: 0
   entity_usage: 0
-  extra_body_classes: 0
   field: 0
   field_ui: 0
   file: 0
@@ -53,7 +52,6 @@ module:
   language: 0
   layout_builder: 0
   layout_builder_component_attributes: 0
-  layout_builder_expose_all_field_blocks: 0
   layout_discovery: 0
   link: 0
   locale: 0
@@ -88,7 +86,6 @@ module:
   redirect_404: 0
   responsive_image: 0
   rest: 0
-  sdc: 0
   sdc_display: 0
   sdc_tags: 0
   serialization: 0
