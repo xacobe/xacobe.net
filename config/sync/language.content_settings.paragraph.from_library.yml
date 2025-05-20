@@ -1,18 +1,18 @@
-uuid: 5acfe298-f828-42e9-aa80-27fe74be3be8
-langcode: es
+uuid: 267689b3-62ca-4ff8-abf5-d305b211a3b7
+langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.project_tech
+    - paragraphs.paragraphs_type.from_library
   module:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: taxonomy_term.project_tech
-target_entity_type_id: taxonomy_term
-target_bundle: project_tech
+id: paragraph.from_library
+target_entity_type_id: paragraph
+target_bundle: from_library
 default_langcode: site_default
 language_alterable: false

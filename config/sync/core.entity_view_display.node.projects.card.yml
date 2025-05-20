@@ -10,7 +10,7 @@ dependencies:
     - field.field.node.projects.field_project_tech
     - field.field.node.projects.field_project_type
     - field.field.node.projects.field_project_url
-    - image.style.max_650x650
+    - image.style.large
     - node.type.projects
   module:
     - layout_builder
@@ -51,7 +51,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: max_650x650
+      image_style: large
       image_loading:
         attribute: lazy
     third_party_settings:

@@ -1,0 +1,20 @@
+uuid: fb617c83-205a-439c-aaa7-57cbf22e028b
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.screen
+  module:
+    - metatag
+id: media.screen.metatag
+field_name: metatag
+entity_type: media
+bundle: screen
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed
