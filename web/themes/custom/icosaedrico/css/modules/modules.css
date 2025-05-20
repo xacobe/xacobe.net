@@ -41,3 +41,15 @@
   height: inherit !important;
   white-space: wrap !important;
 }
+
+/* Black and white pics */
+.splide--optionset--trabajo-archivos .splide__slide img {
+  filter: grayscale(100%);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.splide--optionset--trabajo-archivos {
+  .splide__slide img:hover {
+    filter: grayscale(0%);
+  }
+}  

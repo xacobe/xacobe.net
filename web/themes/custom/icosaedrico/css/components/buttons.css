@@ -1,16 +1,15 @@
 .btn {
   background-color: none;
+  padding-inline: 1rem !important;
 }
 .btn-link {
     border: none;
-    background: white !important;
     max-width: max-content;
     color: black !important;
-    text-decoration: none !important;
     font-weight: normal !important;
 }
 .btn-link:hover {
-  color: var(--red-700)
+  color: #999 !important;
 }
 .btn-primary {
   color: var(--black-50) !important;

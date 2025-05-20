@@ -75,13 +75,13 @@
     {% endblock %}
 
     {% block card_content %}
+      {{ content.field_project_tech }}
     {% include "icosaedrico:heading" with {
         heading_title: label,
         heading_tag: "h3",
         heading_classes: "card__title",
       } only %}
       {{ content.body }}
-      {{ content.field_project_tech }}
       {{ content.field_project_url }}
     {% endblock %}
 {% endembed %}
