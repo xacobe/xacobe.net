@@ -4,7 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.media.screen.field_media_image_1
-    - image.style.large
+    - field.field.media.screen.field_screenshot_desktop
+    - field.field.media.screen.field_screenshot_mobile
     - media.type.screen
   module:
     - svg_image
@@ -27,6 +28,36 @@ content:
       svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_screenshot_desktop:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_screenshot_mobile:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   created: true

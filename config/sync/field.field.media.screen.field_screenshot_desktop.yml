@@ -1,0 +1,38 @@
+uuid: 171f0ba6-ef1e-4e78-84fe-29fa968aa1ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_screenshot_desktop
+    - media.type.screen
+  module:
+    - image
+id: media.screen.field_screenshot_desktop
+field_name: field_screenshot_desktop
+entity_type: media
+bundle: screen
+label: 'Desktop Screenshot'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: projects/screenshots
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

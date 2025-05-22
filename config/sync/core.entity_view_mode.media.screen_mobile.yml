@@ -1,0 +1,11 @@
+uuid: 9675df35-e15f-4905-835f-43c68afdf5ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.screen_mobile
+label: Mobile
+description: ''
+targetEntityType: media
+cache: true

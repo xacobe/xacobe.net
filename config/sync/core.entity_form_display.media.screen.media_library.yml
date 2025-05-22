@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_form_mode.media.media_library
     - field.field.media.screen.field_media_image_1
+    - field.field.media.screen.field_screenshot_desktop
+    - field.field.media.screen.field_screenshot_mobile
     - image.style.thumbnail
     - media.type.screen
   module:
@@ -24,6 +26,8 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_screenshot_desktop: true
+  field_screenshot_mobile: true
   langcode: true
   name: true
   path: true
