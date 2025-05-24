@@ -1,0 +1,31 @@
+uuid: a0694a4b-05a3-4563-946a-7f57d9af97e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_screenshot_mobile
+    - media.type.screen
+    - media.type.video
+    - node.type.projects
+id: node.projects.field_screenshot_mobile
+field_name: field_screenshot_mobile
+entity_type: node
+bundle: projects
+label: 'Mobile Screenshot'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      screen: screen
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: screen
+field_type: entity_reference

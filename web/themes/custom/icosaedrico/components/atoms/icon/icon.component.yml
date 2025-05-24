@@ -3,15 +3,12 @@ name: Icon
 status: experimental
 props:
   type: object
+  required: [icon_name]
   properties:
     icon_name:
       type: string
       title: Name
       description: The name of the icon and the file
-    attributes:
-      type: Drupal\Core\Template\Attribute
-      title: Attributes
-      description: Wrapper attributes.
     icon_href_classes:
           type: string
           title: Icon link classes

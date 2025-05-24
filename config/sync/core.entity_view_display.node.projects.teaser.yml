@@ -10,6 +10,8 @@ dependencies:
     - field.field.node.projects.field_project_tech
     - field.field.node.projects.field_project_type
     - field.field.node.projects.field_project_url
+    - field.field.node.projects.field_screenshot_desktop
+    - field.field.node.projects.field_screenshot_mobile
     - node.type.projects
   module:
     - text
@@ -38,4 +40,6 @@ hidden:
   field_project_tech: true
   field_project_type: true
   field_project_url: true
+  field_screenshot_desktop: true
+  field_screenshot_mobile: true
   langcode: true

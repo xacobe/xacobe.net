@@ -19,8 +19,6 @@ props:
       title: Target
       # @todo Add examples here.
       examples: []
-    attributes:
-      type: Drupal\Core\Template\Attribute
 slots:
   # Content to display in the chip.
   link_content:

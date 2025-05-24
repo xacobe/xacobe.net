@@ -10,25 +10,15 @@ dependencies:
     - field.field.node.projects.field_project_tech
     - field.field.node.projects.field_project_type
     - field.field.node.projects.field_project_url
+    - field.field.node.projects.field_screenshot_desktop
+    - field.field.node.projects.field_screenshot_mobile
     - image.style.max_650x650
     - node.type.projects
   module:
     - layout_builder
     - media
-    - sdc_display
     - user
 third_party_settings:
-  sdc_display:
-    enabled: false
-    component:
-      machine_name: ''
-    mappings:
-      static:
-        props: {  }
-        slots: {  }
-      dynamic:
-        props: {  }
-        slots: {  }
   layout_builder:
     enabled: false
     allow_custom: false
@@ -45,12 +35,7 @@ content:
       image_style: max_650x650
       image_loading:
         attribute: lazy
-    third_party_settings:
-      sdc_display:
-        enabled: 0
-        component:
-          machine_name: null
-          show_deprecated: 0
+    third_party_settings: {  }
     weight: 0
     region: content
 hidden:
@@ -59,5 +44,7 @@ hidden:
   field_project_tech: true
   field_project_type: true
   field_project_url: true
+  field_screenshot_desktop: true
+  field_screenshot_mobile: true
   langcode: true
   links: true

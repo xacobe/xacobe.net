@@ -3,25 +3,20 @@
   "gap-" ~ grid_gap,
 ] %}
 
-{# TODO: This classes are here because thera no built at runtime #}
-{% set grid_classes_dummy = [
-  "md:grid-cols-2",
-  "lg:grid-cols-3",
-  "gap-" ~ grid_gap,
-] %}
+{# Convert grid_cols to integer before math operations #}
+{% set md_cols = grid_cols|default(1)|number_format + 1 %}
 
 {% set grid_classes = grid_classes|merge([
   "grid-cols-" ~ grid_cols,
-  "md:grid-cols-" ~ (grid_cols + 1),
+  "md:grid-cols-" ~ md_cols,
 ]) %}
 
-<section {{ attributes.add }}>
-  {# Grid cell #}
-  <{{grid_tag_item}} class="{{ grid_classes|join(' ') }}">
+<section {{ attributes.addClass(grid_classes) }}>
+  <{{ grid_tag_item }} class="grid-item">
     {% for row in rows %}
       <li>
         {% block grid_content %}{% endblock %}
       </li>
     {% endfor %}
-    <{{grid_tag_item}}
+  </{{ grid_tag_item }}>
 </section>

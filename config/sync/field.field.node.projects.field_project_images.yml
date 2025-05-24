@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_project_images
     - media.type.image
+    - media.type.screen
     - node.type.projects
 id: node.projects.field_project_images
 field_name: field_project_images
@@ -21,9 +22,10 @@ settings:
   handler_settings:
     target_bundles:
       image: image
+      screen: screen
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: image
 field_type: entity_reference

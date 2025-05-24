@@ -6,5 +6,6 @@ global-styling:
       css/base/base.css: {}
       css/components/buttons.css: {}
       css/modules/modules.css: {}
+      css/modules/devices.css: {}
       css/modules/cv.css: {}
       css/output.css: {}

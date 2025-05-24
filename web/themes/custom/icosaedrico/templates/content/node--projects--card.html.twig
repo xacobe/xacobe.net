@@ -67,21 +67,51 @@
  *
  */
 #}
-{% embed 'icosaedrico:card' with {
+<article {{ attributes }}>
+  {% block content %}
+    <div class="card-body">
+      <div{{ content_attributes.addClass('content flex gap-4') }}>
 
-} %}
-    {% block card_media %}
-      {{ content.field_project_images }}
-    {% endblock %}
+        {# Desktop device display #}
+        <div class="device-wrapper screenshot-desktop">
+          <div class="device" data-device="Macbook" data-orientation="portrait" data-color="black">
+            <div class="screen">
+              <!-- PUT CONTENTS HERE -->
+             {{ content.field_screenshot_desktop }}
+            </div>
+            <div class="button">
+              <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+            </div>
+          </div>
+        </div>
 
-    {% block card_content %}
-      {{ content.field_project_tech }}
-    {% include "icosaedrico:heading" with {
-        heading_title: label,
-        heading_tag: "h3",
-        heading_classes: "card__title",
-      } only %}
-      {{ content.body }}
-      {{ content.field_project_url }}
-    {% endblock %}
-{% endembed %}
+        {# Mobile device display #}
+        <div class="device-wrapper screenshot-mobile">
+          <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+            <div class="screen">
+              <!-- PUT CONTENTS HERE -->
+             {{ content.field_screenshot_mobile }}
+            </div>
+            <div class="button">
+              <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        {{ title_prefix }}
+        {% if label %}
+          <h2{{ title_attributes.addClass('card-title justify-center') }}>
+            <a href="{{ url }}">{{ label }}</a>
+          </h2>
+        {% endif %}
+        {{ title_suffix }}
+  {% if content.field_project_url %}
+        {{ content.field_project_url }}
+  {% endif %}
+      </div>
+    </div>
+  {% endblock %}
+</article>
+{# Compare this snippet from web/themes/custom/icosaedrico/templates/content/node--projects--card.html.twig: #}

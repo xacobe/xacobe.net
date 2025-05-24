@@ -5,9 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.screen_desktop
     - field.field.media.screen.field_media_image_1
-    - field.field.media.screen.field_screenshot_desktop
-    - field.field.media.screen.field_screenshot_mobile
-    - image.style.large
+    - image.style.width_640
     - media.type.screen
   module:
     - layout_builder
@@ -26,7 +24,7 @@ content:
     label: visually_hidden
     settings:
       image_link: ''
-      image_style: large
+      image_style: width_640
       image_loading:
         attribute: lazy
       svg_attributes:
@@ -38,8 +36,6 @@ content:
     region: content
 hidden:
   created: true
-  field_screenshot_desktop: true
-  field_screenshot_mobile: true
   langcode: true
   name: true
   thumbnail: true

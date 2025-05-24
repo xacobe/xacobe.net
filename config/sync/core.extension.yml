@@ -79,14 +79,11 @@ module:
   redirect_404: 0
   responsive_image: 0
   rest: 0
-  sdc_display: 0
-  sdc_tags: 0
   serialization: 0
   settings_tray: 0
   shortcut: 0
   splide: 0
   splide_ui: 0
-  storybook: 0
   svg_image: 0
   svg_image_responsive: 0
   system: 0
@@ -95,8 +92,13 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  ui_patterns: 0
+  ui_patterns_blocks: 0
+  ui_patterns_field_formatters: 0
+  ui_patterns_layouts: 0
+  ui_patterns_library: 0
+  ui_patterns_views: 0
   update: 0
-  upgrade_status: 0
   user: 0
   views_ui: 0
   viewsreference: 0

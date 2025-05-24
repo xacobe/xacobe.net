@@ -1,0 +1,31 @@
+uuid: 079fd458-dd3a-4db1-a5fd-e249e03d8855
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_screenshot_desktop
+    - media.type.screen
+    - media.type.video
+    - node.type.projects
+id: node.projects.field_screenshot_desktop
+field_name: field_screenshot_desktop
+entity_type: node
+bundle: projects
+label: 'Desktop Screenshot'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      screen: screen
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: screen
+field_type: entity_reference

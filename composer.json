@@ -46,6 +46,7 @@
         "drupal/svg_image": "^3.0",
         "drupal/token": "^1.13",
         "drupal/tracer": "^1.0",
+        "drupal/ui_patterns": "^2.0",
         "drupal/upgrade_status": "^4.3",
         "drupal/viewsreference": "^2.0@beta",
         "drush/drush": "^13",

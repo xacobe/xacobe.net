@@ -9,7 +9,6 @@ dependencies:
     - filter
     - media
     - shortcut
-    - storybook
     - system
 _core:
   default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
@@ -21,6 +20,5 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'delete own files'
-  - 'render storybook stories'
   - 'use text format basic_html'
   - 'view media'

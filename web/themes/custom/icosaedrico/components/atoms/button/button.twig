@@ -1,6 +1,3 @@
-{# We compute if the URL is external in twig, so we can avoid passing a #}
-{# parameter **every** time we use this component #}
-
 {%
   set classes = [
     'btn',
@@ -19,10 +16,13 @@
 <{{ button_tag }} href="{{ button_href }}" target="{{ button_target|default('_self')}}" title="{{ button_text|striptags }}" {{ attributes.addClass(classes) }}>
   {{ button_text }}
   {% if button_icon is not empty %}
+    {% set icon_attributes = create_attribute() %}
+    
     {{ include("icosaedrico:icon", {
       icon_name: button_icon,
-      icon_svg_size: button_icon_size|default(""),
-      })
-    }}
+      icon_svg_size: button_icon_size|default("16"),
+      icon_svg_classes: "inline-block",
+      attributes: icon_attributes,
+    }, with_context = false) }}
   {% endif %}
 </{{ button_tag }}>

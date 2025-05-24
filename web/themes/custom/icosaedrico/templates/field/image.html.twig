@@ -10,7 +10,4 @@
  * @see template_preprocess_image()
  */
 #}
-{% include "icosaedrico:image" with {
-  attributes,
-  image_responsive: image_responsive|default(false)
-} only %}
+<img class="device-screen"{{ attributes }} />

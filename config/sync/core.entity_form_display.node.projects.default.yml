@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.projects.field_project_tech
     - field.field.node.projects.field_project_type
     - field.field.node.projects.field_project_url
+    - field.field.node.projects.field_screenshot_desktop
+    - field.field.node.projects.field_screenshot_mobile
     - node.type.projects
   module:
     - link
@@ -73,6 +75,20 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_screenshot_desktop:
+    type: media_library_widget
+    weight: 26
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_screenshot_mobile:
+    type: media_library_widget
+    weight: 27
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   langcode:
     type: language_select

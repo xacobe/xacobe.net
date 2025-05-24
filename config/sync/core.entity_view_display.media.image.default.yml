@@ -7,20 +7,7 @@ dependencies:
     - image.style.project
     - media.type.image
   module:
-    - sdc_display
     - svg_image
-third_party_settings:
-  sdc_display:
-    enabled: false
-    component:
-      machine_name: ''
-    mappings:
-      static:
-        props: {  }
-        slots: {  }
-      dynamic:
-        props: {  }
-        slots: {  }
 _core:
   default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
 id: media.image.default
@@ -40,12 +27,7 @@ content:
         width: null
         height: null
       svg_render_as_image: false
-    third_party_settings:
-      sdc_display:
-        enabled: 0
-        component:
-          machine_name: null
-          show_deprecated: 0
+    third_party_settings: {  }
     weight: 1
     region: content
 hidden:

@@ -9,24 +9,13 @@ dependencies:
     - field.field.node.projects.field_project_tech
     - field.field.node.projects.field_project_type
     - field.field.node.projects.field_project_url
+    - field.field.node.projects.field_screenshot_desktop
+    - field.field.node.projects.field_screenshot_mobile
     - node.type.projects
   module:
     - link
-    - sdc_display
     - text
     - user
-third_party_settings:
-  sdc_display:
-    enabled: false
-    component:
-      machine_name: ''
-    mappings:
-      static:
-        props: {  }
-        slots: {  }
-      dynamic:
-        props: {  }
-        slots: {  }
 id: node.projects.default
 targetEntityType: node
 bundle: projects
@@ -37,7 +26,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_project_images:
     type: entity_reference_entity_view
@@ -46,7 +35,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 102
+    weight: 4
     region: content
   field_project_status:
     type: boolean
@@ -56,7 +45,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 106
+    weight: 8
     region: content
   field_project_tech:
     type: entity_reference_label
@@ -64,7 +53,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 105
+    weight: 7
     region: content
   field_project_type:
     type: entity_reference_label
@@ -72,7 +61,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 104
+    weight: 6
     region: content
   field_project_url:
     type: link_separate
@@ -83,18 +72,31 @@ content:
       url_plain: false
       rel: '0'
       target: '0'
-    third_party_settings:
-      sdc_display:
-        enabled: 0
-        component:
-          machine_name: null
-          show_deprecated: 0
-    weight: 103
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_screenshot_desktop:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: screen_desktop
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_screenshot_mobile:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: screen_mobile
+      link: false
+    third_party_settings: {  }
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   langcode: true
