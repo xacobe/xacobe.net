@@ -70,7 +70,22 @@
 <article {{ attributes }}>
   {% block content %}
     <div class="card-body">
-      <div{{ content_attributes.addClass('content flex gap-4') }}>
+      <div{{ content_attributes.addClass('screenshot_wrapper content flex justify-center gap-4') }}>
+
+      {# Title and description #}
+      <div class="screenshot-title flex flex-col items-center justify-center">
+        {{ title_prefix }}
+        {% if label %}
+          <h2{{ title_attributes.addClass('card-title text-center') }}>
+            <a href="{{ url }}">{{ label }}</a>
+          </h2>
+          {{ content.field_project_tech}}
+        {% endif %}
+        {{ title_suffix }}
+        {% if content.field_project_url %}
+              {{ content.field_project_url }}
+        {% endif %}
+      </div>
 
         {# Desktop device display #}
         <div class="device-wrapper screenshot-desktop">
@@ -98,18 +113,6 @@
           </div>
         </div>
 
-      </div>
-      <div class="flex flex-col items-center justify-center">
-        {{ title_prefix }}
-        {% if label %}
-          <h2{{ title_attributes.addClass('card-title justify-center') }}>
-            <a href="{{ url }}">{{ label }}</a>
-          </h2>
-        {% endif %}
-        {{ title_suffix }}
-  {% if content.field_project_url %}
-        {{ content.field_project_url }}
-  {% endif %}
       </div>
     </div>
   {% endblock %}

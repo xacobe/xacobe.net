@@ -53,3 +53,10 @@
     filter: grayscale(0%);
   }
 }
+
+.tech-icons {
+  padding-top: 1rem;
+  img {
+    width: 25px;
+  }
+}

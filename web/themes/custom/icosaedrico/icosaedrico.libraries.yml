@@ -9,3 +9,5 @@ global-styling:
       css/modules/devices.css: {}
       css/modules/cv.css: {}
       css/output.css: {}
+  js:
+    js/index.js: {}

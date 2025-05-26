@@ -1,0 +1,39 @@
+uuid: ddad4fa4-50b1-4889-87df-d524b924d43a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.icon
+    - field.field.taxonomy_term.project_tech.field_tech_icon
+    - image.style.thumbnail
+    - taxonomy.vocabulary.project_tech
+  module:
+    - layout_builder
+    - svg_image
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: taxonomy_term.project_tech.icon
+targetEntityType: taxonomy_term
+bundle: project_tech
+mode: icon
+content:
+  field_tech_icon:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  langcode: true

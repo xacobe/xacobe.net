@@ -42,25 +42,24 @@
   ]
 %}
 
-{% if label_hidden %}
-  {% if multiple %}
+<div class="tech-icons flex">
+  {% if label_hidden %}
+    {% if multiple %}
+        {% for item in items %}
+          {{ item.attributes }}{{ item.content }}
+        {% endfor %}
+    {% else %}
       {% for item in items %}
-        {{ include('icosaedrico:badge', { badge_text: item.content["#title"], badge_href: item.content["#url"], badge_color: 'tag' }) }}
+        {{ attributes }}{{ item.content }}
       {% endfor %}
+    {% endif %}
   {% else %}
-    {% for item in items %}
-      {{ include('icosaedrico:badge', { badge_text: item.content["#title"], badge_href: item.content["#url"], badge_color: 'tag' }) }}
-    {% endfor %}
+      {% if multiple %}
+      {% endif %}
+      {% for item in items %}
+        {{ item.attributes }}{{ item.content }}
+      {% endfor %}
+      {% if multiple %}
+      {% endif %}
   {% endif %}
-{% else %}
-  <div{{ attributes.addClass("flex gap-4") }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-    {% if multiple %}
-    {% endif %}
-    {% for item in items %}
-      {{ include('icosaedrico:badge', { badge_text: item.content["#title"], badge_href: item.content["#url"], badge_color: 'tag' }) }}
-    {% endfor %}
-    {% if multiple %}
-    {% endif %}
-  </div>
-{% endif %}
+</div>
