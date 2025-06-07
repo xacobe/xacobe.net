@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.projects.field_project_tech
     - field.field.node.projects.field_project_type
     - field.field.node.projects.field_project_url
+    - field.field.node.projects.field_project_year
     - field.field.node.projects.field_screenshot_desktop
     - field.field.node.projects.field_screenshot_mobile
     - image.style.large
@@ -94,4 +95,5 @@ content:
 hidden:
   field_project_status: true
   field_project_type: true
+  field_project_year: true
   langcode: true

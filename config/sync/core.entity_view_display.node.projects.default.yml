@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.projects.field_project_tech
     - field.field.node.projects.field_project_type
     - field.field.node.projects.field_project_url
+    - field.field.node.projects.field_project_year
     - field.field.node.projects.field_screenshot_desktop
     - field.field.node.projects.field_screenshot_mobile
     - node.type.projects
@@ -75,6 +76,14 @@ content:
       target: '0'
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_project_year:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_screenshot_desktop:
     type: entity_reference_entity_view
