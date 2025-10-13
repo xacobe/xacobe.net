@@ -1,0 +1,29 @@
+name: Lamirada
+type: theme
+'base theme': stable9
+version: 1.0.0
+libraries:
+  - lamirada/base
+  - lamirada/messages
+  - core/normalize
+  - lamirada/filmstrip
+  - lamirada/grid-plus
+  - lamirada/menu-mobile
+libraries-extend:
+  user/drupal.user:
+    - lamirada/user
+  core/drupal.dropbutton:
+    - lamirada/dropbutton
+  core/drupal.dialog:
+    - lamirada/dialog
+  file/drupal.file:
+    - lamirada/file
+  core/drupal.progress:
+    - lamirada/progress
+description: 'A theme for Lamiradalamirada.com'
+core_version_requirement: ^10
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'
+

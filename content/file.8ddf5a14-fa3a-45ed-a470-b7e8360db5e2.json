@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "8ddf5a14-fa3a-45ed-a470-b7e8360db5e2"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "filename": [
+        {
+            "value": "clip_documentales.mp4"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-06\/clip_documentales.mp4",
+            "url": "\/sites\/default\/files\/2025-06\/clip_documentales.mp4"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "video\/mp4"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 1454810
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-06-30T13:32:49+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-06-30T13:32:54+00:00"
+        }
+    ]
+}

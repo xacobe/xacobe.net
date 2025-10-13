@@ -1,0 +1,19 @@
+:root {
+  /* Colors */
+  --white-sand: #f1f1f1;
+  --black-almost: #0c0c0c;
+  --grey-300: #d2d2d2;
+  --grey-500: #a8a8a8;
+}
+
+.bg-white {
+  background-color: var(--white-sand);
+}
+
+.text-grey-300 {
+  color: var(--grey-300)
+}
+
+.text-grey-500 {
+  color: var(--grey-500)
+}

@@ -1,0 +1,160 @@
+base:
+  version: VERSION
+  css:
+    component:
+      css/index.css:
+        weight: -10
+      css/base/base.css:
+        weight: -10
+      css/base/animations.css:
+        weight: -10
+      css/base/colors.css:
+        weight: -10
+      css/base/utilities.css:
+        weight: -10
+      css/base/typography.css:
+        weight: -10
+      css/components/branding.css:
+        weight: -10
+      css/components/components.css:
+        weight: -10
+      css/components/containers.css:
+        weight: -10
+      css/components/filmstrip.css:
+        weight: -10
+      css/components/grid.css:
+        weight: -10
+      css/components/menus.css:
+        weight: -10
+      css/components/menu-mobile.css:
+        weight: -10
+      css/layout/sections.css:
+        weight: -10
+      css/base/core/action-links.css:
+        weight: -5
+      css/base/core/breadcrumb.css:
+        weight: -5
+      css/base/core/button.css:
+        weight: -5
+      css/base/core/container-inline.css:
+        weight: -5
+      css/base/core/details.css:
+        weight: -5
+      css/base/core/exposed-filters.css:
+        weight: -5
+      css/base/core/field.css:
+        weight: -5
+      css/base/core/form.css:
+        weight: -5
+      css/base/core/icons.css:
+        weight: -5
+      css/base/core/inline-form.css:
+        weight: -5
+      css/base/core/item-list.css:
+        weight: -5
+      css/base/core/link.css:
+        weight: -5
+      css/base/core/links.css:
+        weight: -5
+      css/base/core/menu.css:
+        weight: -5
+      css/base/core/more-link.css:
+        weight: -5
+      css/base/core/pager.css:
+        weight: -5
+      css/base/core/tabledrag.css:
+        weight: -5
+      css/base/core/tableselect.css:
+        weight: -5
+      css/base/core/tablesort.css:
+        weight: -5
+      css/base/core/tabs.css:
+        weight: -5
+      css/base/core/textarea.css:
+        weight: -5
+      css/base/core/ui-dialog.css:
+        weight: -5
+dialog:
+  version: VERSION
+  css:
+    component:
+      css/components/dialog.css:
+        weight: -10
+dropbutton:
+  version: VERSION
+  css:
+    component:
+      css/components/dropbutton.css:
+        weight: -10
+file:
+  version: VERSION
+  css:
+    component:
+      css/components/file.css:
+        weight: -10
+image-widget:
+  version: VERSION
+  css:
+    component:
+      css/components/image-widget.css: {  }
+indented:
+  version: VERSION
+  css:
+    component:
+      css/components/indented.css: {  }
+messages:
+  version: VERSION
+  css:
+    component:
+      css/base/core/messages.css:
+        weight: -10
+node:
+  version: VERSION
+  css:
+    component:
+      css/components/node.css:
+        weight: -10
+progress:
+  version: VERSION
+  css:
+    component:
+      css/base/core/progress.css:
+        weight: -10
+search-results:
+  version: VERSION
+  css:
+    component:
+      css/components/search-results.css: {  }
+slider-click-to-scroll:
+  js:
+    js/slider-click-to-scroll.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+filmstrip:
+  version: 1.0
+  js:
+    js/filmstrip.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+grid-plus:
+  version: 1.0
+  js:
+    js/grid-plus.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+menu-mobile:
+  version: 1.0
+  js:
+    js/menu-mobile.js: {}
+  dependencies:
+    - core/drupal
+user:
+  version: VERSION
+  css:
+    component:
+      css/components/user.css:
+        weight: -10

@@ -1,0 +1,104 @@
+{
+    "uuid": [
+        {
+            "value": "e886fd5f-3b5e-4676-80a7-18994ce2866c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "bae7fb4d-3795-4d25-ab96-3af36b14586f"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-07-04T03:59:18+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_user": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "name": [
+        {
+            "value": "photo_reportajes.jpg"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Reportajes",
+            "title": null,
+            "width": 2560,
+            "height": 1920,
+            "target_type": "file",
+            "target_uuid": "96479b1c-2ff0-4cb4-9b07-31455e803697"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-06-30T13:30:39+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-07-04T03:59:18+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "",
+            "pid": null,
+            "langcode": "es"
+        }
+    ],
+    "field_filmstrip_link": [
+        {
+            "uri": "internal:\/foto\/reportajes",
+            "title": "Reportajes",
+            "options": []
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Reportajes",
+            "title": "",
+            "width": 2560,
+            "height": 1920,
+            "target_type": "file",
+            "target_uuid": "96479b1c-2ff0-4cb4-9b07-31455e803697"
+        }
+    ]
+}

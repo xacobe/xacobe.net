@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "4737a297-7031-4e7f-a825-147dc5917dd2"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "filename": [
+        {
+            "value": "clip_videoclips.mp4"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-06\/clip_videoclips.mp4",
+            "url": "\/sites\/default\/files\/2025-06\/clip_videoclips.mp4"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "video\/mp4"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 3315710
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-06-30T13:32:49+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-06-30T13:32:54+00:00"
+        }
+    ]
+}

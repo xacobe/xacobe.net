@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override for page titles.
+ *
+ * Available variables:
+ * - title_attributes: HTML attributes for the page title element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title: The page title, for use in the actual content.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ */
+#}
+{{ title_prefix }}
+{% if title["#markup"] == "Fotografía" %}
+      <h1{{title_attributes.addClass('page-title fs-xxl container-lg d-flex flex-row')}}>
+        <span>{{ title }}</span><span><a href="/video/videoclips" class="grey-lighter">Vídeo</a></span>
+      </h1>
+      {% elseif title["#markup"] == "Vídeo"%}
+      <h1{{title_attributes.addClass('page-title fs-xxl container-lg d-flex flex-row')}}>
+        <span>{{ title }}</span><span><a href="/fotografia/reportajes" class="grey-lighter">Fotografía</a></span>
+      </h1>
+      {% else %}
+      <h1{{title_attributes.addClass('page-title fs-xxl container-lg')}}>
+        {{ title }}
+      </h1>
+    {% endif %}
+{{ title_suffix }}

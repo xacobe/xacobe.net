@@ -1,0 +1,59 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+
+{% set attributes = attributes.addClass('container-lg') %}
+
+
+{% block content %}
+  {% if site_logo %}
+    <a href="{{ path('<front>') }}" rel="home" class="site-logo">
+      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high" />
+    </a>
+  {% endif %}
+  {% if site_name %}
+    <div class="site-name">
+      <a href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
+    </div>
+  {% endif %}
+  {% if site_slogan %}
+    <div class="site-slogan">{{ site_slogan }}</div>
+  {% endif %}
+  <div class="burger-container">
+    <div id="burger">
+      <div class="bar topBar"></div>
+      <div class="bar btmBar"></div>
+    </div>
+  </div>
+  <ul class="menu-mobile">
+      <li class="menu-item"><a href="/#servicios">Servicios</a></li>
+      <li class="menu-item"><a href="/#contacto">Contacto</a></li>
+      {# <li class="menu-item d-flex">
+        <a class="text-orange" href="/">Vídeo</a>
+        <a href="/videos/videoclips">Videoclips</a>
+        <a href="/videos/acusticos">Acústicos</a>
+        <a href="/videos/documentales">Documentales</a>
+        <a href="/videos/publicidad">Publicidad</a>
+        </li>
+      <li class="menu-item d-flex">
+        <a href="/fotografia/">Fotografía</a>
+        <a href="#">Exposiciones</a>
+        <a href="#">Sesiones</a>
+        <a href="#">Reportajes</a>
+        <a href="#">Bodas</a>
+      </li> #}
+    </ul>
+
+{% endblock %}

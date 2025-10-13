@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "d6926515-51d0-43b0-ac9e-1c1f1fc69889"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "filename": [
+        {
+            "value": "clip_acusticos.mp4"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-07\/clip_acusticos.mp4",
+            "url": "\/sites\/default\/files\/2025-07\/clip_acusticos.mp4"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "video\/mp4"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 1810845
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-07-03T10:01:13+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-07-03T10:01:15+00:00"
+        }
+    ]
+}

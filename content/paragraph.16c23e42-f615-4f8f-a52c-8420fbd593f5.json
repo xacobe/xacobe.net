@@ -1,0 +1,63 @@
+{
+    "uuid": [
+        {
+            "value": "16c23e42-f615-4f8f-a52c-8420fbd593f5"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "filmstrip",
+            "target_type": "paragraphs_type",
+            "target_uuid": "7e50303e-bcc5-4ba5-84cd-06ee43e02249"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-07-03T15:41:27+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "field_filmstrip": [
+        {
+            "target_type": "paragraph",
+            "target_uuid": "c55189d8-ea9b-4d31-b58e-77f3d4c38c7c"
+        },
+        {
+            "target_type": "paragraph",
+            "target_uuid": "59575672-ed2b-4df8-8d59-3e5f1166e091"
+        },
+        {
+            "target_type": "paragraph",
+            "target_uuid": "40aa803d-fbcc-46f9-a0ce-2cb7f4f5853f"
+        },
+        {
+            "target_type": "paragraph",
+            "target_uuid": "9a46a8da-dda3-4c57-bd64-17f59927b3cd"
+        }
+    ]
+}

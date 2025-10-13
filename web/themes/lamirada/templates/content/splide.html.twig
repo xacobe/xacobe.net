@@ -1,0 +1,110 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the Splide slider template.
+ *
+ * This template holds 3 displays: main, thumbnail and overlay splides in one.
+ *
+ * Available variables:
+ * - items: The array of items containing main image/video/audio, optional
+ *     image/video/audio overlay and captions, and optional thumbnail
+ *     texts/images.
+ * - settings: A cherry-picked settings that mostly defines the slide HTML or
+ *     layout, and none of JS settings/options which are defined at data-splide.
+ * - attributes: The array of attributes to hold the main container classes, id.
+ * - content_attributes: The array of attributes to hold optional RTL, id and
+ *     data-splide containing JSON object aka JS settings the Splide expects to
+ *     override default options. We don't store these JS settings in the normal
+ *     <head>, but inline within data-splide attribute instead.
+ *
+ * Debug:
+ * @see https://www.drupal.org/node/1906780
+ * @see https://www.drupal.org/node/1903374
+ * Use Kint: {{ kint(variable) }}
+ * Dump all available variables and their contents: {{ dump() }}
+ * Dump only the available variable keys: {{ dump(_context|keys) }}
+ *
+ * Note!
+ * - Unlike Slick, Splide unsplide is not changing markups to respect HTML list
+ *   (UL > LI). Instead, softly done via splide.load.min.js. Except for grid
+ *   markups which are no biggies either. However should you want to destroy
+ *   some markups, simply set splides.is.unsplide to TRUE upstream.
+ * - If you see blazies, it is used to interop with Slick, such as required by
+ *   ElevateZoomPlus.
+ */
+#}
+{%
+  set classes = [
+    splides.is.unsplide ? 'unsplide',
+    blazies.is.nav ? 'splide--' ~ display|clean_class,
+    settings.skin ? 'splide--skin--' ~ settings.skin|clean_class,
+    'boxed' in settings.skin ? 'splide--skin--boxed',
+    'split' in settings.skin ? 'splide--skin--split',
+    settings.optionset ? 'splide--optionset--' ~ settings.optionset|clean_class,
+    splides.transition ? 'splide--' ~ splides.transition|clean_class,
+    settings.perPage > 1 ? 'is-carousel' : 'is-slider',
+    settings.fullwidth ? 'is-fullwidth',
+    blazies.count <= settings.perPage ? 'is-less',
+    settings.vertical ? 'is-vertical',
+    display == 'main' and settings.media_switch ? 'is-' ~ settings.media_switch|clean_class,
+    display == 'nav' and settings.nav_caption ? 'is-captioned',
+    settings.skin_arrows or arrow_down_attributes is defined ? 'is-arrowed',
+    arrow_down_attributes is defined ? 'is-arrowed--down',
+    settings.skin_arrows ? 'is-arrowed--' ~ settings.skin_arrows|clean_class,
+    splides.use.autoplay ? 'is-autoplay',
+    settings.autoscroll ? 'is-autoscroll',
+    settings.pagination ? 'is-paginated',
+    settings.pagination_fx ? 'is-paginated--fx-' ~ settings.pagination_fx|clean_class,
+    settings.pagination_tab ? 'is-paginated--tab',
+    settings.pagination_pos ? 'is-paginated--' ~ settings.pagination_pos|clean_class,
+    settings.skin_dots ? 'is-paginated--' ~ settings.skin_dots|clean_class,
+    settings.attributes.class ? settings.attributes.class|join(' '),
+  ]
+%}
+<div{{- attributes.addClass(classes) -}}>
+  {% block splide_content %}
+    <div class="splide__track">
+      <ul{{- list_attributes -}}>{{- items -}}</ul>
+    </div>
+  {% endblock %}
+
+  {%- if splides.use.slider -%}
+    <div{{-content_attributes.addClass('splide__slider')-}}>
+  {%- endif -%}
+
+
+  {#
+     Put it outside .splide__track for proper layering/ z-index + positioning
+     against arrows, pagination, and the slide contents. Also note block BLAH.
+  #}
+  {%- if splides.use.progress -%}
+    {% block splide_progress %}
+      <div class="splide__progress"><div class="splide__progress__bar"></div></div>
+    {% endblock %}
+  {%- endif -%}
+  {%- if splides.use.autoplay -%}
+    {% block splide_autoplay %}
+      <button class="splide__toggle" type="button" aria-controls="toggle-track" aria-label="{{ 'Pause autoplay'|t }}">
+        <svg class="splide__toggle__play" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m22 12-20 11v-22l10 5.5z"></path></svg>
+        <svg class="splide__toggle__pause" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m2 1v22h7v-22zm13 0v22h7v-22z"></path></svg>
+      </button>
+    {% endblock %}
+  {%- endif -%}
+
+  {%- if splides.use.slider -%}
+    </div>
+  {%- endif -%}
+
+  {% block splide_arrow %}
+    <div{{- arrows_attributes -}}></div>
+    {%- if arrow_down_attributes is defined -%}
+      <button{{- arrow_down_attributes.addClass('splide__arrow--down')
+        .setAttribute('type', 'button')
+        .setAttribute('data-target', settings.downTarget)
+        .setAttribute('data-offset', settings.downOffset) -}}></button>
+    {%- endif -%}
+  {% endblock %}
+  {% block splide_pagination %}
+    <ul{{- pagination_attributes -}}></ul>
+  {% endblock %}
+</div>

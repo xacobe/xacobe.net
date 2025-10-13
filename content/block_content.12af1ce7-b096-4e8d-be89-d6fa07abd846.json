@@ -1,0 +1,63 @@
+{
+    "uuid": [
+        {
+            "value": "12af1ce7-b096-4e8d-be89-d6fa07abd846"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "clean_block",
+            "target_type": "block_content_type",
+            "target_uuid": "bfa90189-cbfb-418c-8892-4485bf5e335c"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-02-11T04:11:21+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "info": [
+        {
+            "value": "Mensaje pi\u00e9 de p\u00e1gina"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-06-30T13:22:58+00:00"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "field_clean_code": [
+        {
+            "value": "<p class=\"footer-firma\">Hecho con Drupal y \u2764\ufe0f por <a href=\"https:\/\/xacobe.net\">xacobe.net<\/a>&nbsp;<\/p>",
+            "format": "full_html",
+            "processed": "<p class=\"footer-firma\">Hecho con Drupal y \u2764\ufe0f por <a href=\"https:\/\/xacobe.net\">xacobe.net<\/a>&nbsp;<\/p>"
+        }
+    ]
+}

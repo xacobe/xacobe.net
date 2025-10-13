@@ -1,0 +1,128 @@
+/* Frontpage */
+lite-youtube  {
+  cursor: none !important;
+}
+.section--servicios .lyt-playbtn {
+  display: none;
+}
+
+/* Video */
+
+@media all and (max-width: 768px) {
+
+  .path-video {
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .system-branding-block {
+      width: 100%;
+      align-items: center;
+    }
+
+    .page-title-block {
+      width: 45%;
+      padding-inline-end: .2rem;
+
+      .page-title {
+        padding: 0;
+        margin: 0;
+        text-align: right;
+      }
+    }
+
+    .menu--video {
+      width: 45%;
+    }
+
+    .menu--video {
+      .menu {
+        font-size: .9rem;
+      }
+    }
+  }
+}
+.title-section--services {
+  padding-block-start: 2rem;
+  padding-block-end: 2rem;
+  font-size: 3.6rem;
+  text-align: center;
+
+  @media all and (min-width: 768px) {
+    text-align: left;
+    font-size: 10rem;
+  }
+}
+.section--servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: .2rem;
+
+  > * {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    position: relative;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+
+  .services__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 1;
+    aspect-ratio: initial;
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0;
+    color: white;
+    background-color: var(--orange);
+    white-space: nowrap;
+
+    &:hover {
+      background-color: white;
+      color: var(--orange);
+    }
+
+    @media all and (min-width: 420px) {
+      font-size: 2rem;
+    }
+    @media all and (min-width: 768px) {
+      font-size: 3rem;
+      grid-column: span 2;
+    }
+  }
+
+  .services__body {
+    aspect-ratio: initial;
+    font-family: sans-serif;
+    text-transform: initial;
+    font-size: 0.9rem;
+    align-items: center;
+    display: flex;
+    padding: 0.8rem;
+    background-color: #f3f3f3;
+    color: #6e6e6e;
+    text-align: center;
+
+    &:hover {
+        background-color: white;
+      }
+
+  }
+
+  lite-youtube {
+    background-size: auto;
+    aspect-ratio: 1 / 1;
+
+    >.lyt-playbtn {
+      background-size: 20%;
+    }
+  }
+
+}

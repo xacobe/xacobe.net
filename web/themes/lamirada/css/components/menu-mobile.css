@@ -1,0 +1,109 @@
+.header {
+  .burger-container {
+    position: fixed;
+    right: 1rem;
+    top: 0.4rem;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: all 0.1s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 10;
+
+    #burger {
+      width: 18px;
+      height: 8px;
+      position: relative;
+      display: block;
+      margin: -4px auto 0;
+      top: 50%;
+
+      .bar {
+        width: 100%;
+        height: 1px;
+        display: block;
+        position: relative;
+        background: #000;
+        transition: all 0.1s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+
+        &.topBar {
+          transform: translateY(0) rotate(0deg);
+        }
+
+        &.topBar {
+          transform: translateY(6px) rotate(0deg);
+        }
+      }
+    }
+  }
+
+  .menu-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+    position: fixed;
+    transform: translateY(-91dvh);
+    padding-inline: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background: black;
+    list-style: none;
+    transition: all .5s;
+
+    .menu-item {
+      margin-top: 0;
+
+      a {
+        display: block;
+        position: relative;
+        color: #FFF;
+        font-family: sans-serif;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 200;
+        padding-inline: 1.2rem;
+      }
+    }
+  }
+
+  &.menu-opened {
+
+    .burger-container {
+      transform: rotate(90deg);
+
+      #burger .bar {
+        transition: all 0.1s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+
+        &.topBar {
+          transform: translateY(4px) rotate(45deg);
+          background-color: white;
+          z-index: 999;
+        }
+
+        &.btmBar {
+          transform: translateY(3px) rotate(-45deg);
+          background-color: white;
+          z-index: 999;
+        }
+      }
+    }
+
+    .menu-mobile {
+      transform: translateY(0);
+
+      .menu-item {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+
+      }
+    }
+  }
+}

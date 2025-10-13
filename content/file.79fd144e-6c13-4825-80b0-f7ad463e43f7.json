@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "79fd144e-6c13-4825-80b0-f7ad463e43f7"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "filename": [
+        {
+            "value": "video.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/media-icons\/generic\/video.png",
+            "url": "\/sites\/default\/files\/media-icons\/generic\/video.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 4156
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-06-30T13:32:54+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-06-30T13:32:54+00:00"
+        }
+    ]
+}

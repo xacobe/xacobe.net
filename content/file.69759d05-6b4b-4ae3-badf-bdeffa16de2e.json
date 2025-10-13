@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "69759d05-6b4b-4ae3-badf-bdeffa16de2e"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "filename": [
+        {
+            "value": "clip_bodas.mp4"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-07\/clip_bodas.mp4",
+            "url": "\/sites\/default\/files\/2025-07\/clip_bodas.mp4"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "video\/mp4"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 1388494
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-07-03T10:01:59+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-07-03T10:02:01+00:00"
+        }
+    ]
+}

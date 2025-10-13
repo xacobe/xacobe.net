@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "882450b7-b9ab-446a-9c9f-855f32ba4c64"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "filename": [
+        {
+            "value": "photo_sesiones.jpg"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-07\/photo_sesiones_0.jpg",
+            "url": "\/sites\/default\/files\/2025-07\/photo_sesiones_0.jpg"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/jpeg"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 3738232
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-07-03T10:00:28+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-07-03T10:00:32+00:00"
+        }
+    ]
+}

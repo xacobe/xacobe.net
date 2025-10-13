@@ -1,0 +1,104 @@
+{
+    "uuid": [
+        {
+            "value": "22547eef-5485-4bfb-9a43-f869dc0592f0"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "bae7fb4d-3795-4d25-ab96-3af36b14586f"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-07-04T03:56:59+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_user": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "name": [
+        {
+            "value": "photo_sesiones.jpg"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Sesiones",
+            "title": null,
+            "width": 6000,
+            "height": 4000,
+            "target_type": "file",
+            "target_uuid": "882450b7-b9ab-446a-9c9f-855f32ba4c64"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-07-03T10:00:28+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-07-04T03:56:59+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "",
+            "pid": null,
+            "langcode": "es"
+        }
+    ],
+    "field_filmstrip_link": [
+        {
+            "uri": "internal:\/foto\/sesiones",
+            "title": "Sesiones",
+            "options": []
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Sesiones",
+            "title": "",
+            "width": 6000,
+            "height": 4000,
+            "target_type": "file",
+            "target_uuid": "882450b7-b9ab-446a-9c9f-855f32ba4c64"
+        }
+    ]
+}

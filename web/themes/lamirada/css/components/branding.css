@@ -1,0 +1,99 @@
+.header {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.header--left {
+
+  .site-name {
+    text-align: left;
+    padding-inline-start: .2rem;
+  }
+}
+
+.site-name {
+  font-family: "Alatsi", serif;
+  text-align: center;
+  padding-block-start: 1rem;
+  font-size: 1.2rem;
+  transition: transform .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+  a {
+    color: #757575;
+  }
+
+  @media all and (min-width: 768px) {
+    font-size: 2.4rem;
+  }
+
+  &.video {
+    @media all and (min-width: 768px) {
+      transform: translateX(0);
+    }
+  }
+
+  &.photo {
+    @media all and (min-width: 768px) {
+      transform: translateX(-11.4rem);
+    }
+  }
+}
+
+.page-subtitle {
+  font-family: "Alatsi", serif;
+  font-size: 4rem;
+  line-height: 1;
+  margin: 0;
+  color: grey;
+  padding-block-end: 1rem;
+}
+
+
+/* Photo */
+.path-fotografia,
+.path-video {
+  .site-name {
+    padding-bottom: 0.2rem !important;
+
+    @media (min-width: 768px) {
+      padding-bottom: 0.4rem !important;
+      font-size: 1.7rem;
+    }
+  }
+
+  .page-title {
+    gap: .4rem;
+    @media (min-width: 768px) {
+      font-size: 3.35rem;
+
+    }
+  }
+
+  .page-subtitle {
+    font-family: "Alatsi", serif;
+    font-size: 2.6rem;
+    line-height: 1;
+    margin: 0;
+    color: grey;
+    padding-block-end: 1rem;
+    letter-spacing: 9px;
+  }
+
+  .page-subtitle--reportajes {
+    font-size: 1.8rem;
+  }
+
+  .page-subtitle--bodas {
+    letter-spacing: 27px;
+  }
+}
+
+
+.path-video {
+  .site-name {
+    @media (min-width: 768px) {
+      padding-bottom: 0.4rem !important;
+      font-size: 1.65rem;
+    }
+  }
+}

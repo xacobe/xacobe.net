@@ -1,0 +1,55 @@
+{
+    "uuid": [
+        {
+            "value": "59575672-ed2b-4df8-8d59-3e5f1166e091"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "filmframe",
+            "target_type": "paragraphs_type",
+            "target_uuid": "90266317-2976-4f98-9ace-5d55df0ca8c2"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-07-03T15:42:37+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "field_filmstrip_item": [
+        {
+            "target_type": "media",
+            "target_uuid": "917d487d-bc27-4826-b1c3-0a5a190ad95f"
+        },
+        {
+            "target_type": "media",
+            "target_uuid": "64483b1e-ef5a-44c5-b789-f17551d642c6"
+        }
+    ]
+}

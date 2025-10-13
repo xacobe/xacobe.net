@@ -1,0 +1,182 @@
+/* Filmstrip Menu */
+.filmstrip {
+  transition: transform .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  width: 110%;
+  transform: translate(-15px, 0) rotate(-3deg);
+  padding-block: 1.2rem;
+  z-index: 1;
+  position: relative;
+
+  &.video,
+  &.photo {
+    transform: translate(-2rem, -40dvh) rotate(-3deg);
+    transition: transform .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    @media all and (min-width: 768px) {
+      transform: translate(-2rem, -30dvh) rotate(-3deg);
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 1.8rem;
+    width: 100%;
+    position: absolute;
+    background-size: 15rem;
+    background-position: top left;
+  }
+
+  &::before {
+    top: 0;
+    background-image: url("../../images/filmstrip-35mm.png");
+  }
+
+  &::after {
+    bottom: 0;
+    background-image: url("../../images/filmstrip-35mm.png");
+  }
+}
+
+.frames-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  position: relative;
+  padding-block: 1rem;
+  background-color: #0d0d0d;
+
+  @media all and (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+
+}
+
+.video .frames-container,
+.photo .frames-container {
+  grid-template-columns: repeat(1, 1fr);
+
+  @media all and (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.filmstrip__item {
+  position: relative;
+  height: 16dvh;
+
+  @media all and (min-width: 768px) {
+    height: 210px;
+  }
+
+  a {
+    display: none;
+    z-index: 9999;
+    bottom: -70px;
+    right: 71px;
+    color: white;
+    font-size: var(--fs-md);
+    width: min-content;
+
+    @media all and (min-width: 768px) {
+      bottom: -7rem;
+      background-color: var(--black);
+      padding-inline: 0.6rem;
+      padding-block: 0.4rem;
+      position: absolute;
+    }
+  }
+
+  .media-element-image,
+  .media-element-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    display: none;
+  }
+
+  .filmstrip__placeholder {
+    background-image: url(../../images/filmstrip-35mm.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+    /* z-index: 1; */
+    background-position: center;
+    background-size: 104% 140%;
+    display: block;
+  }
+
+  &.show-video {
+
+    > * {
+      display: none;
+    }
+
+    .media-element-video {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  &.show-photo {
+
+    >* {
+      display: none;
+    }
+
+    .media-element-image {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    a {
+      display: block;
+    }
+
+    a:last-child {
+      left: 2rem;
+    }
+  }
+}
+
+
+
+.filmstrip__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  animation: none;
+  /* Inicialmente sin animación */
+}
+
+.filmstrip__item.flash::before {
+  animation: flash-open 0.1s ease-in-out forwards;
+}
+
+.filmstrip__item.flash--close::before {
+  animation: flash-close 0.2s ease-in-out forwards;
+}

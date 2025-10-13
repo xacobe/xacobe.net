@@ -1,0 +1,65 @@
+.ff-alatsi-regular {
+  font-weight: 400;
+  font-style: normal;
+}
+.ff-anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.fs-xxl {
+  font-size: 5rem;
+  font-weight: lighter;
+  margin: 0;
+  @media all and (min-width: 768px) {
+    font-size: 10rem;
+  }
+}
+.fs-xl {
+  font-size: var(--fs-xl);
+}
+
+.fs-lg {
+  font-size: var(--fs-lg);
+}
+
+.fs-md {
+  font-size: var(--fs-md);
+}
+
+.fs-sm {
+  font-size: var(--fs-sm);
+}
+
+.fs-xs {
+  font-size: var(--fs-xs);
+}
+
+/* CSS Trick = https://kizu.dev/fit-to-width-text/ */
+
+@supports (animation-range: entry-crossing) {
+  .fit-to-width {
+    margin-block-start: 0;
+    max-width: 90vw;
+    font-size: 10rem;
+    /* max-font-size */
+    overflow: hidden;
+
+    &>* {
+      inline-size: max-content;
+      line-height: 1.1;
+      transform-origin: 0 0;
+      animation: apply-text-ratio linear;
+      animation-timeline: view(inline);
+      animation-range: entry-crossing;
+      display: block;
+    }
+  }
+}
+
+@keyframes apply-text-ratio {
+  from {
+    scale: 0;
+    margin-block-end: -1lh;
+  }
+}

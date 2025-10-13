@@ -1,0 +1,87 @@
+{
+    "uuid": [
+        {
+            "value": "b5e8e2cd-c94c-47bd-970c-7fbbcb8166ca"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "video",
+            "target_type": "media_type",
+            "target_uuid": "7b1fa7d7-133c-4c9f-9e17-344bd40a83a9"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-07-03T10:01:13+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "name": [
+        {
+            "value": "clip_acusticos.mp4"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "",
+            "title": null,
+            "width": 180,
+            "height": 180,
+            "target_type": "file",
+            "target_uuid": "79fd144e-6c13-4825-80b0-f7ad463e43f7"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-07-03T10:01:13+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-07-03T10:01:13+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "es"
+        }
+    ],
+    "field_media_video_file": [
+        {
+            "display": null,
+            "description": null,
+            "target_type": "file",
+            "target_uuid": "d6926515-51d0-43b0-ac9e-1c1f1fc69889"
+        }
+    ]
+}

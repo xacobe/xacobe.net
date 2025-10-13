@@ -1,0 +1,29 @@
+:root {
+  --black: #000;
+  --orange: #fa2f2f;
+  --grey-light: #a9a9a9;
+  --grey-lighter: #cbcbcb;
+
+  --ff-alatsi: "Alatsi", serif;
+  --ff-anton: "Anton", sans-serif;
+  --fs-xxl: 10rem;
+  --fs-xl: 5rem;
+  --fs-lg: 3.5rem;
+  --fs-md: 2rem;
+}
+body {
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+}
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+.dialog-off-canvas-main-canvas {
+  position: relative;
+}
+.grey-lighter { color: var(--grey-lighter)};
+
+.text-orange {
+  color: var(--orange)
+}

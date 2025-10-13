@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "539fde6d-8391-42a4-8674-332191636412"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "filename": [
+        {
+            "value": "photo_bodas.jpg"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-06\/photo_bodas.jpg",
+            "url": "\/sites\/default\/files\/2025-06\/photo_bodas.jpg"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/jpeg"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 13141904
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-06-30T13:30:39+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-06-30T13:31:25+00:00"
+        }
+    ]
+}

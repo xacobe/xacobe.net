@@ -1,0 +1,104 @@
+{
+    "uuid": [
+        {
+            "value": "28d21ad5-0f91-4745-bbc4-b7957b8eb4ef"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "bae7fb4d-3795-4d25-ab96-3af36b14586f"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-07-04T03:59:08+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_user": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "fbb7bd43-6d18-4519-b11a-b47733d71451"
+        }
+    ],
+    "name": [
+        {
+            "value": "photo_bodas.jpg"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Bodas",
+            "title": null,
+            "width": 5760,
+            "height": 3840,
+            "target_type": "file",
+            "target_uuid": "539fde6d-8391-42a4-8674-332191636412"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-06-30T13:30:39+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-07-04T03:59:08+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "",
+            "pid": null,
+            "langcode": "es"
+        }
+    ],
+    "field_filmstrip_link": [
+        {
+            "uri": "internal:\/foto\/bodas",
+            "title": "Bodas",
+            "options": []
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Bodas",
+            "title": "",
+            "width": 5760,
+            "height": 3840,
+            "target_type": "file",
+            "target_uuid": "539fde6d-8391-42a4-8674-332191636412"
+        }
+    ]
+}

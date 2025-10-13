@@ -1,0 +1,63 @@
+{
+    "uuid": [
+        {
+            "value": "b742ba7c-4a46-4bf7-a48b-5c1675e04f93"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "clean_block",
+            "target_type": "block_content_type",
+            "target_uuid": "bfa90189-cbfb-418c-8892-4485bf5e335c"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-02-08T02:52:38+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "info": [
+        {
+            "value": "Page title blok"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-06-21T11:10:25+00:00"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "field_clean_code": [
+        {
+            "value": "<div class=\"page-title\"><div class=\"page-title__first\">Eduardo<\/div><div class=\"page-title__last\">Laborda<\/div><\/div>",
+            "format": "full_html",
+            "processed": "<div class=\"page-title\"><div class=\"page-title__first\">Eduardo<\/div><div class=\"page-title__last\">Laborda<\/div><\/div>"
+        }
+    ]
+}
