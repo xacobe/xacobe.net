@@ -1,0 +1,20 @@
+uuid: e060f1a4-3b22-4245-a7f3-16d97bcc02e3
+langcode: es
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.name
+field_name: name
+entity_type: media
+bundle: image
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

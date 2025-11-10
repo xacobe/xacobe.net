@@ -867,11 +867,7 @@ display:
       style:
         type: default
         options:
-          grouping:
-            -
-              field: field_project_year
-              rendered: true
-              rendered_strip: false
+          grouping: {  }
           row_class: ''
           default_row_class: false
       row:

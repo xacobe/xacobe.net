@@ -60,3 +60,27 @@
     width: 25px;
   }
 }
+
+
+/* Article */
+.archivados {
+    .grid-item {
+        width: 120px;
+        height: 80px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .device-screen {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 1.5s ease-out;
+    }
+    
+    .grid-item:hover .device-screen {
+        transform: translateY(var(--scroll-distance, 0px));
+    }
+}

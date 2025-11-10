@@ -1,0 +1,20 @@
+uuid: 46bb8890-aa89-4c0f-8608-1f9781018490
+langcode: en
+status: true
+dependencies:
+  theme:
+    - icosaedrico
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: icosaedrico_page_title
+theme: icosaedrico
+region: content
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

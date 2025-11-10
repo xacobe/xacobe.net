@@ -1,0 +1,16 @@
+uuid: fba20b45-3e55-4170-b39f-81f2f1a4f835
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.projects
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.projects
+target_entity_type_id: node
+target_bundle: projects
+default_langcode: site_default
+language_alterable: true
