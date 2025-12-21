@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de0a1efa0c4db0b90d20c21166d6cb17",
+    "content-hash": "8aa35e3010fad8542fb3253c9345fe26",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2199,135 +2199,6 @@
             }
         },
         {
-            "name": "drupal/gin",
-            "version": "4.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "4.1.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-4.1.2.zip",
-                "reference": "4.1.2",
-                "shasum": "d7554670f78a7695c20032845c8b3c35abe0bd77"
-            },
-            "require": {
-                "drupal/core": "^10.3 || ^11 <11.2",
-                "drupal/gin_toolbar": "^2.0"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "drupal": {
-                    "version": "4.1.2",
-                    "datestamp": "1760186645",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "scripts": {
-                "phpcs": [
-                    "phpcs -s --runtime-set ignore_warnings_on_exit 1 --runtime-set ignore_errors_on_exit 0 'web/modules/custom'"
-                ]
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Sascha Eggenberger (saschaeggi)",
-                    "homepage": "https://www.drupal.org/u/saschaeggi",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "saschaeggi",
-                    "homepage": "https://www.drupal.org/user/1999056"
-                }
-            ],
-            "description": "For a better Admin and Content Editor Experience.",
-            "homepage": "https://www.drupal.org/project/gin",
-            "support": {
-                "source": "https://git.drupalcode.org/project/gin",
-                "issues": "https://www.drupal.org/project/issues/gin"
-            },
-            "funding": [
-                {
-                    "type": "github",
-                    "url": "https://github.com/sponsors/saschaeggi"
-                },
-                {
-                    "type": "other",
-                    "url": "https://paypal.me/saschaeggi"
-                }
-            ]
-        },
-        {
-            "name": "drupal/gin_toolbar",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/gin_toolbar.git",
-                "reference": "2.1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin_toolbar-2.1.0.zip",
-                "reference": "2.1.0",
-                "shasum": "b312a2dea5379ea5883d92c2a2e5f0499972a083"
-            },
-            "require": {
-                "drupal/core": "^10 || ^11 <11.2"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.1.0",
-                    "datestamp": "1750245881",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Sascha Eggenberger (saschaeggi)",
-                    "homepage": "https://www.drupal.org/u/saschaeggi",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "saschaeggi",
-                    "homepage": "https://www.drupal.org/user/1999056"
-                }
-            ],
-            "description": "Gin Toolbar for Frontend use",
-            "homepage": "https://www.drupal.org/project/gin_toolbar",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/gin_toolbar",
-                "issues": "https://www.drupal.org/project/issues/gin_toolbar"
-            },
-            "funding": [
-                {
-                    "type": "github",
-                    "url": "https://github.com/sponsors/saschaeggi"
-                },
-                {
-                    "type": "other",
-                    "url": "https://paypal.me/saschaeggi"
-                }
-            ]
-        },
-        {
             "name": "drupal/layout_builder_component_attributes",
             "version": "2.2.0",
             "source": {
@@ -3136,6 +3007,188 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/tome",
+            "version": "1.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/tome.git",
+                "reference": "8.x-1.13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/tome-8.x-1.13.zip",
+                "reference": "8.x-1.13",
+                "shasum": "e652ba7bf126287dd4fc7d4fec80bb84df9d39a5"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11",
+                "drupal/tome_static": "*",
+                "drupal/tome_sync": "*"
+            },
+            "conflict": {
+                "drush/drush": "<11.6"
+            },
+            "require-dev": {
+                "drupal/book": "^1.0",
+                "drupal/ctools": "^4.1",
+                "drupal/pathauto": "^1.13",
+                "drupal/redirect": "^1.10",
+                "drupal/token": "^1.15",
+                "drupal/tome_base": "*",
+                "drupal/tome_static": "*",
+                "drupal/tome_sync": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.13",
+                    "datestamp": "1732382851",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Mortenson",
+                    "homepage": "https://www.drupal.org/u/samuelmortenson",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Lee Rowlands",
+                    "homepage": "https://www.drupal.org/u/larowlan",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Everything you need to do everything statically.",
+            "homepage": "http://drupal.org/project/tome",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tome",
+                "issues": "https://www.drupal.org/project/issues/tome"
+            }
+        },
+        {
+            "name": "drupal/tome_base",
+            "version": "1.13.0",
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11",
+                "drupal/tome": "^1"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.13",
+                    "datestamp": "1732382851",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "samuel.mortenson",
+                    "homepage": "https://www.drupal.org/user/2582268"
+                }
+            ],
+            "description": "Contains shared services and traits between Tome Sync and Tome Static.",
+            "homepage": "https://www.drupal.org/project/tome",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tome"
+            }
+        },
+        {
+            "name": "drupal/tome_static",
+            "version": "1.13.0",
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11",
+                "drupal/tome": "^1",
+                "drupal/tome_base": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.13",
+                    "datestamp": "1732382851",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "samuel.mortenson",
+                    "homepage": "https://www.drupal.org/user/2582268"
+                }
+            ],
+            "description": "Exports an entire Drupal site to static HTML.",
+            "homepage": "https://www.drupal.org/project/tome",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tome"
+            }
+        },
+        {
+            "name": "drupal/tome_sync",
+            "version": "1.13.0",
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11",
+                "drupal/tome": "^1",
+                "drupal/tome_base": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.13",
+                    "datestamp": "1732382851",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "samuel.mortenson",
+                    "homepage": "https://www.drupal.org/user/2582268"
+                }
+            ],
+            "description": "Allows Drupal to installed from flat files and keeps content in sync.",
+            "homepage": "https://www.drupal.org/project/tome",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tome"
             }
         },
         {

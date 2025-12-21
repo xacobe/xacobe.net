@@ -44,6 +44,7 @@
         "drupal/storybook": "^1.0@alpha",
         "drupal/svg_image": "^3.2",
         "drupal/token": "^1.13",
+        "drupal/tome": "^1.13",
         "drupal/tracer": "^1.0",
         "drupal/ui_patterns": "^2.0",
         "drupal/upgrade_status": "^4.3",

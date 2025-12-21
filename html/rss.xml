@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://xacobe.net/">
+  <channel>
+    <title>xacobe.net - Diseño &amp; desarrollo web</title>
+    <link>https://xacobe.net/</link>
+    <description/>
+    <language>es</language>
+    
+    <item>
+  <title>Conceptos básicos de contenedores (Docker)</title>
+  <link>https://xacobe.net/blog/conceptos-basicos-de-contenedores-docker</link>
+  <description>&lt;span class="page-title--blog"&gt;Conceptos básicos de contenedores (Docker)&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;xacobe&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;time datetime="2025-04-18T17:42:31+02:00" title="Friday, 18 de April 2025"&gt;Fri, 04/18/2025 - 17:42&lt;/time&gt;
+&lt;/span&gt;
+    </description>
+  <pubDate>Fri, 18 Apr 2025 15:42:31 +0000</pubDate>
+    <dc:creator>xacobe</dc:creator>
+    <guid isPermaLink="false">32 at https://xacobe.net</guid>
+    </item>
+<item>
+  <title>Navegadores y prácticas enfocados en la privacidad</title>
+  <link>https://xacobe.net/blog/navegadores-y-practicas-enfocados-en-la-privacidad</link>
+  <description>&lt;span class="page-title--blog"&gt;Navegadores y prácticas enfocados en la privacidad&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;xacobe&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;time datetime="2025-04-17T13:47:46+02:00" title="Thursday, 17 de April 2025"&gt;Thu, 04/17/2025 - 13:47&lt;/time&gt;
+&lt;/span&gt;
+    </description>
+  <pubDate>Thu, 17 Apr 2025 11:47:46 +0000</pubDate>
+    <dc:creator>xacobe</dc:creator>
+    <guid isPermaLink="false">31 at https://xacobe.net</guid>
+    </item>
+<item>
+  <title>Preparar Blender para modelar e imprimir en 3D</title>
+  <link>https://xacobe.net/blog/preparar-blender-para-modelar-e-imprimir-en-3d</link>
+  <description>&lt;span class="page-title--blog"&gt;Preparar Blender para modelar e imprimir en 3D&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;xacobe&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;time datetime="2024-01-21T08:39:03+01:00" title="Sunday, 21 de January 2024"&gt;Sun, 01/21/2024 - 08:39&lt;/time&gt;
+&lt;/span&gt;
+    </description>
+  <pubDate>Sun, 21 Jan 2024 07:39:03 +0000</pubDate>
+    <dc:creator>xacobe</dc:creator>
+    <guid isPermaLink="false">3 at https://xacobe.net</guid>
+    </item>
+<item>
+  <title>Chuleta Git, comandos básicos</title>
+  <link>https://xacobe.net/blog/chuleta-git-comandos-basicos</link>
+  <description>&lt;span class="page-title--blog"&gt;Chuleta Git, comandos básicos&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;xacobe&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;time datetime="2023-12-13T08:37:24+01:00" title="Wednesday, 13 de December 2023"&gt;Wed, 12/13/2023 - 08:37&lt;/time&gt;
+&lt;/span&gt;
+    </description>
+  <pubDate>Wed, 13 Dec 2023 07:37:24 +0000</pubDate>
+    <dc:creator>xacobe</dc:creator>
+    <guid isPermaLink="false">2 at https://xacobe.net</guid>
+    </item>
+
+  </channel>
+</rss>
