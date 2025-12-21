@@ -20,35 +20,25 @@ echo "🔄 Cambiando a rama gh-pages..."
 git checkout gh-pages
 
 echo "🧹 Limpiando contenido anterior..."
-find . -maxdepth 1 ! -name '.git' ! -name '.' ! -name '.gitignore' -exec rm -rf {} +
+git rm -rf . 2>/dev/null || true
 
 echo "📦 Copiando sitio estático..."
 git checkout main -- html
 
-# Detectar la estructura generada por Tome
-if [ -d "html/xacobe.net" ]; then
-    echo "📁 Moviendo contenido desde html/xacobe.net/..."
-    mv html/xacobe.net/* . 2>/dev/null || true
-    mv html/xacobe.net/.* . 2>/dev/null || true
-elif [ -d "html/internal" ]; then
-    echo "📁 Moviendo contenido desde html/internal/..."
-    mv html/internal/* . 2>/dev/null || true
-    mv html/internal/.* . 2>/dev/null || true
-else
-    echo "📁 Moviendo contenido desde html/..."
-    mv html/* . 2>/dev/null || true
-    mv html/.* . 2>/dev/null || true
-fi
+# Mover todo el contenido de html a la raíz
+mv html/* . 2>/dev/null || true
+mv html/.* . 2>/dev/null || true
+rmdir html 2>/dev/null || true
 
-# Limpiar directorios vacíos
-rm -rf html
-
-# Si existe carpeta internal en la raíz, mover su contenido
-if [ -d "internal" ]; then
-    echo "📁 Reorganizando desde carpeta internal..."
-    mv internal/* . 2>/dev/null || true
-    mv internal/.* . 2>/dev/null || true
-    rmdir internal 2>/dev/null || true
+# Si existe la carpeta xacobe.net, mover su contenido a la raíz
+# (probablemente contiene index.html y assets principales)
+if [ -d "xacobe.net" ]; then
+    echo "📁 Procesando carpeta xacobe.net..."
+    # Mover archivos que están dentro de xacobe.net a la raíz
+    # Pero sin sobrescribir las carpetas que ya existen (blog, en, gl, etc)
+    cp -rn xacobe.net/* . 2>/dev/null || true
+    cp -rn xacobe.net/.* . 2>/dev/null || true
+    rm -rf xacobe.net
 fi
 
 echo "📤 Publicando en GitHub Pages..."
