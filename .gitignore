@@ -79,3 +79,6 @@ node_modules
 
 # Own
 /scripts
+
+# añadir excepción para /web/sites/default/settings.php
+!/web/sites/default/settings.php
