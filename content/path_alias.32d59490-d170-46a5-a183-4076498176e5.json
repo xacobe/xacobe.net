@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "32d59490-d170-46a5-a183-4076498176e5"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/82faa17c-d8ec-4ae0-91d0-a3236a9b0dd0"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/blog\/publicar-un-drupal-estatico-con-tome-github"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

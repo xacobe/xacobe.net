@@ -3511,5 +3511,11 @@
     ],
     "shortcut.4e641688-4776-43b9-8fa9-57c6767c3f8b": [],
     "paragraph.b2517601-a49a-4b8e-b483-ae783bb3febe": [],
-    "paragraph.0ed7bea6-51dd-467f-8c1d-18fc95205c6f": []
+    "paragraph.0ed7bea6-51dd-467f-8c1d-18fc95205c6f": [],
+    "node.82faa17c-d8ec-4ae0-91d0-a3236a9b0dd0": [
+        "user.69204c51-a337-40c1-b7c1-1ec0b2ad6788"
+    ],
+    "path_alias.32d59490-d170-46a5-a183-4076498176e5": [
+        "node.82faa17c-d8ec-4ae0-91d0-a3236a9b0dd0"
+    ]
 }

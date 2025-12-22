@@ -1,0 +1,103 @@
+{
+    "uuid": [
+        {
+            "value": "82faa17c-d8ec-4ae0-91d0-a3236a9b0dd0"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "es"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "article",
+            "target_type": "node_type",
+            "target_uuid": "19aeae61-2063-4f77-bf60-0e6d421fb61d"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2025-12-22T03:00:11+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "69204c51-a337-40c1-b7c1-1ec0b2ad6788"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "69204c51-a337-40c1-b7c1-1ec0b2ad6788"
+        }
+    ],
+    "title": [
+        {
+            "value": "Publicar un Drupal est\u00e1tico con Tome a Github"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-12-22T02:44:29+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-12-22T03:02:52+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/blog\/publicar-un-drupal-estatico-con-tome-github",
+            "langcode": "es"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false
+        }
+    ],
+    "body": [
+        {
+            "value": "<h2>Configuraci\u00f3n inicial<\/h2><p>Instalar el m\u00f3dulo <a href=\"https:\/\/www.drupal.org\/project\/tome\">Tome<\/a> y activar los subm\u00f3dulos &nbsp;Tome base y Tome static<\/p><p><code>composer install drupal\/tome<\/code><\/p><p><code>drush en tome_base tome_static<\/code><\/p><p>Configurar el repositorio en Github para usar p\u00e1ginas est\u00e1ticas.&nbsp;<\/p><p>Crear repositorio gh-pages<\/p><p><code>git branch gh-pages<\/code><\/p><p>En el repositorio &gt; Settings&nbsp;<\/p><ul><li>Source: &nbsp;Deploy from a branch<\/li><li>Branch: gh-pages y \/root<\/li><\/ul><p>En Custom domain poner el dominio final donde alojaremos la web, ya sea el propio de github o uno propio.<\/p><p>Cuando nos permita (suele tardar un par de horas o m\u00e1s) activamos el https<\/p><h2>Script para automatizar el despliegue<\/h2><p>Cambiar &lt;tusitioweb.com&gt; con el dominio deseado<\/p><pre><code class=\"language-plaintext\">#!\/bin\/bash\r\n\r\nset -e\r\n\r\necho \"--------------------------------\"\r\necho \"Cambiando a la rama main...\"\r\necho \"--------------------------------\"\r\ngit checkout main\r\n\r\necho \"--------------------------------\"\r\necho \"Generando sitio est\u00e1tico con Drush Tome...\"\r\necho \"--------------------------------\"\r\nddev drush tome:static -l &lt;https:\/\/tusitioweb.com&gt; -y\r\n\r\necho \"--------------------------------\"\r\necho \"A\u00f1adiendo cambios...\"\r\necho \"--------------------------------\"\r\ngit add .\r\n\r\necho \"--------------------------------\"\r\necho \"Haciendo commit...\"\r\necho \"--------------------------------\"\r\ngit commit -m \"Actualizar sitio est\u00e1tico\" || true\r\n\r\n# Haciendo push a la rama main\r\necho \"--------------------------------\"\r\necho \"Haciendo push a la rama main...\"\r\necho \"--------------------------------\"\r\ngit push origin main\r\n\r\n# Cambiar a la rama gh-pages\r\necho \"--------------------------------\"\r\necho \"Cambiando a la rama gh-pages...\"\r\necho \"--------------------------------\"\r\ngit checkout gh-pages\r\n\r\n# Guardar solo el archivo CNAME si existe\r\necho \"--------------------------------\"\r\necho \"Preservando archivo CNAME...\"\r\necho \"--------------------------------\"\r\nif [ -f \"CNAME\" ]; then\r\nCNAME_CONTENT=$(cat CNAME)\r\nPRESERVE_CNAME=true\r\nelse\r\n    CNAME_CONTENT=\"&lt;tusitioweb.com&gt;\"\r\nPRESERVE_CNAME=false\r\nfi\r\n\r\n# Limpiar TODO en gh-pages excepto CNAME\r\necho \"--------------------------------\"\r\necho \"Limpiando directorio ra\u00edz (excepto CNAME)...\"\r\necho \"--------------------------------\"\r\n# M\u00e9todo seguro: eliminar todo excepto .git y CNAME\r\nfind . -maxdepth 1 ! -name '.' ! -name '.git' ! -name 'CNAME' -exec rm -rf {} + 2&gt;\/dev\/null || true\r\n\r\n# Restaurar\/Crear CNAME\r\necho \"--------------------------------\"\r\necho \"Restaurando archivo CNAME...\"\r\necho \"--------------------------------\"\r\necho \"$CNAME_CONTENT\" &gt; CNAME\r\n\r\n# Copiar la carpeta html desde main\r\necho \"--------------------------------\"\r\necho \"Copiando archivos est\u00e1ticos desde main...\"\r\necho \"--------------------------------\"\r\ngit checkout main -- html\r\n\r\n# Mover contenido de html a la ra\u00edz\r\necho \"--------------------------------\"\r\necho \"Moviendo archivos a la ra\u00edz...\"\r\necho \"--------------------------------\"\r\nif [ -d \"html\" ]; then\r\nmv html\/* . 2&gt;\/dev\/null || true\r\nrmdir html 2&gt;\/dev\/null || true\r\nfi\r\n\r\n# A\u00f1adir los cambios\r\necho \"--------------------------------\"\r\necho \"A\u00f1adiendo cambios a gh-pages...\"\r\necho \"--------------------------------\"\r\ngit add . \r\n\r\n# Hacer commit de los cambios en gh-pages\r\necho \"--------------------------------\"\r\necho \"Haciendo commit del sitio est\u00e1tico...\"\r\necho \"--------------------------------\"\r\ngit commit -m \"Publicando sitio est\u00e1tico $(date '+%Y-%m-%d %H:%M:%S')\"\r\n\r\n# Hacer push a la rama gh-pages\r\necho \"--------------------------------\"\r\necho \"Haciendo push a la rama gh-pages...\"\r\necho \"--------------------------------\"\r\ngit push origin gh-pages\r\n\r\n# Volver a main (opcional)\r\necho \"--------------------------------\"\r\necho \"Volviendo a la rama main...\"\r\necho \"--------------------------------\"\r\ngit checkout main\r\n\r\necho \"--------------------------------\"\r\necho \"\u2705 \u00a1Sitio publicado!\"\r\necho \"\ud83c\udf10 Disponible en: &lt;https:\/\/tusitioweb.com\/&gt;\"\r\necho \"--------------------------------\"<\/code><\/pre><p>Guardar el script como deploy.sh y ejecutar:<\/p><p><code>.\/deploy.sh<\/code><\/p><p>&nbsp;<\/p><p>&nbsp;<\/p>",
+            "format": "full_html",
+            "processed": "<h2>Configuraci\u00f3n inicial<\/h2><p>Instalar el m\u00f3dulo <a href=\"https:\/\/www.drupal.org\/project\/tome\">Tome<\/a> y activar los subm\u00f3dulos &nbsp;Tome base y Tome static<\/p><p><code>composer install drupal\/tome<\/code><\/p><p><code>drush en tome_base tome_static<\/code><\/p><p>Configurar el repositorio en Github para usar p\u00e1ginas est\u00e1ticas.&nbsp;<\/p><p>Crear repositorio gh-pages<\/p><p><code>git branch gh-pages<\/code><\/p><p>En el repositorio &gt; Settings&nbsp;<\/p><ul><li>Source: &nbsp;Deploy from a branch<\/li><li>Branch: gh-pages y \/root<\/li><\/ul><p>En Custom domain poner el dominio final donde alojaremos la web, ya sea el propio de github o uno propio.<\/p><p>Cuando nos permita (suele tardar un par de horas o m\u00e1s) activamos el https<\/p><h2>Script para automatizar el despliegue<\/h2><p>Cambiar &lt;tusitioweb.com&gt; con el dominio deseado<\/p><pre><code class=\"language-plaintext\">#!\/bin\/bash\n\nset -e\n\necho \"--------------------------------\"\necho \"Cambiando a la rama main...\"\necho \"--------------------------------\"\ngit checkout main\n\necho \"--------------------------------\"\necho \"Generando sitio est\u00e1tico con Drush Tome...\"\necho \"--------------------------------\"\nddev drush tome:static -l &lt;https:\/\/tusitioweb.com&gt; -y\n\necho \"--------------------------------\"\necho \"A\u00f1adiendo cambios...\"\necho \"--------------------------------\"\ngit add .\n\necho \"--------------------------------\"\necho \"Haciendo commit...\"\necho \"--------------------------------\"\ngit commit -m \"Actualizar sitio est\u00e1tico\" || true\n\n# Haciendo push a la rama main\necho \"--------------------------------\"\necho \"Haciendo push a la rama main...\"\necho \"--------------------------------\"\ngit push origin main\n\n# Cambiar a la rama gh-pages\necho \"--------------------------------\"\necho \"Cambiando a la rama gh-pages...\"\necho \"--------------------------------\"\ngit checkout gh-pages\n\n# Guardar solo el archivo CNAME si existe\necho \"--------------------------------\"\necho \"Preservando archivo CNAME...\"\necho \"--------------------------------\"\nif [ -f \"CNAME\" ]; then\nCNAME_CONTENT=$(cat CNAME)\nPRESERVE_CNAME=true\nelse\n    CNAME_CONTENT=\"&lt;tusitioweb.com&gt;\"\nPRESERVE_CNAME=false\nfi\n\n# Limpiar TODO en gh-pages excepto CNAME\necho \"--------------------------------\"\necho \"Limpiando directorio ra\u00edz (excepto CNAME)...\"\necho \"--------------------------------\"\n# M\u00e9todo seguro: eliminar todo excepto .git y CNAME\nfind . -maxdepth 1 ! -name '.' ! -name '.git' ! -name 'CNAME' -exec rm -rf {} + 2&gt;\/dev\/null || true\n\n# Restaurar\/Crear CNAME\necho \"--------------------------------\"\necho \"Restaurando archivo CNAME...\"\necho \"--------------------------------\"\necho \"$CNAME_CONTENT\" &gt; CNAME\n\n# Copiar la carpeta html desde main\necho \"--------------------------------\"\necho \"Copiando archivos est\u00e1ticos desde main...\"\necho \"--------------------------------\"\ngit checkout main -- html\n\n# Mover contenido de html a la ra\u00edz\necho \"--------------------------------\"\necho \"Moviendo archivos a la ra\u00edz...\"\necho \"--------------------------------\"\nif [ -d \"html\" ]; then\nmv html\/* . 2&gt;\/dev\/null || true\nrmdir html 2&gt;\/dev\/null || true\nfi\n\n# A\u00f1adir los cambios\necho \"--------------------------------\"\necho \"A\u00f1adiendo cambios a gh-pages...\"\necho \"--------------------------------\"\ngit add . \n\n# Hacer commit de los cambios en gh-pages\necho \"--------------------------------\"\necho \"Haciendo commit del sitio est\u00e1tico...\"\necho \"--------------------------------\"\ngit commit -m \"Publicando sitio est\u00e1tico $(date '+%Y-%m-%d %H:%M:%S')\"\n\n# Hacer push a la rama gh-pages\necho \"--------------------------------\"\necho \"Haciendo push a la rama gh-pages...\"\necho \"--------------------------------\"\ngit push origin gh-pages\n\n# Volver a main (opcional)\necho \"--------------------------------\"\necho \"Volviendo a la rama main...\"\necho \"--------------------------------\"\ngit checkout main\n\necho \"--------------------------------\"\necho \"\u2705 \u00a1Sitio publicado!\"\necho \"\ud83c\udf10 Disponible en: &lt;https:\/\/tusitioweb.com\/&gt;\"\necho \"--------------------------------\"<\/code><\/pre><p>Guardar el script como deploy.sh y ejecutar:<\/p><p><code>.\/deploy.sh<\/code><\/p><p>&nbsp;<\/p><p>&nbsp;<\/p>",
+            "summary": ""
+        }
+    ],
+    "field_image": [],
+    "field_tags": []
+}

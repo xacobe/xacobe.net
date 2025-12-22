@@ -7,6 +7,26 @@
     <language>es</language>
     
     <item>
+  <title>Publicar un Drupal estático con Tome a Github</title>
+  <link>https://xacobe.net/blog/publicar-un-drupal-estatico-con-tome-github</link>
+  <description>&lt;span class="page-title--blog"&gt;Publicar un Drupal estático con Tome a Github&lt;/span&gt;
+
+            &lt;div&gt;&lt;h2&gt;Configuración inicial&lt;/h2&gt;&lt;p&gt;Instalar el módulo &lt;a href="https://www.drupal.org/project/tome"&gt;Tome&lt;/a&gt; y activar los submódulos &amp;nbsp;Tome base y Tome static&lt;/p&gt;&lt;p&gt;&lt;code&gt;composer install drupal/tome&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;drush en tome_base tome_static&lt;/code&gt;&lt;/p&gt;&lt;p&gt;Configurar el repositorio en Github para usar páginas estáticas.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Crear repositorio gh-pages&lt;/p&gt;&lt;p&gt;&lt;code&gt;git branch gh-pages&lt;/code&gt;&lt;/p&gt;&lt;p&gt;En el repositorio &amp;gt; Settings&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;xacobe&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;time datetime="2025-12-22T03:44:29+01:00" title="Monday, 22 de December 2025"&gt;Mon, 12/22/2025 - 03:44&lt;/time&gt;
+&lt;/span&gt;
+    &lt;ul class="links max-w-prose mx-auto"&gt;&lt;li&gt;
+
+    &lt;a href target class="links max-w-prose mx-auto" data-component-id="icosaedrico:link"&gt;
+            &lt;a href="https://xacobe.net/blog/publicar-un-drupal-estatico-con-tome-github" rel="tag" title="Publicar un Drupal estático con Tome a Github" hreflang="es"&gt;Read more&lt;span class="visually-hidden"&gt; about Publicar un Drupal estático con Tome a Github&lt;/span&gt;&lt;/a&gt;
+      &lt;/a&gt;
+
+          &lt;/li&gt;&lt;/ul&gt;</description>
+  <pubDate>Mon, 22 Dec 2025 02:44:29 +0000</pubDate>
+    <dc:creator>xacobe</dc:creator>
+    <guid isPermaLink="false">38 at https://xacobe.net</guid>
+    </item>
+<item>
   <title>Conceptos básicos de contenedores (Docker)</title>
   <link>https://xacobe.net/blog/conceptos-basicos-de-contenedores-docker</link>
   <description>&lt;span class="page-title--blog"&gt;Conceptos básicos de contenedores (Docker)&lt;/span&gt;
@@ -24,7 +44,7 @@
     &lt;span&gt;Tags:&lt;/span&gt;
   &lt;/div&gt;
           &lt;div&gt;
-              &lt;a href="https://xacobe.net/taxonomy/term/1" class="badge badge-neutral    px-3 py-2"&gt;
+              &lt;a href="https://xacobe.net/xacobe.net/taxonomy/term/1" class="badge badge-neutral    px-3 py-2"&gt;
  webdev
  &lt;/a&gt;
 
@@ -33,7 +53,7 @@
     &lt;ul class="links max-w-prose mx-auto"&gt;&lt;li&gt;
 
     &lt;a href target class="links max-w-prose mx-auto" data-component-id="icosaedrico:link"&gt;
-            &lt;a href="https://xacobe.net/blog/conceptos-basicos-de-contenedores-docker" rel="tag" title="Conceptos básicos de contenedores (Docker)" hreflang="es"&gt;Read more&lt;span class="visually-hidden"&gt; about Conceptos básicos de contenedores (Docker)&lt;/span&gt;&lt;/a&gt;
+            &lt;a href="https://xacobe.net/xacobe.net/blog/conceptos-basicos-de-contenedores-docker" rel="tag" title="Conceptos básicos de contenedores (Docker)" hreflang="es"&gt;Read more&lt;span class="visually-hidden"&gt; about Conceptos básicos de contenedores (Docker)&lt;/span&gt;&lt;/a&gt;
       &lt;/a&gt;
 
           &lt;/li&gt;&lt;/ul&gt;</description>
@@ -59,11 +79,11 @@
     &lt;span&gt;Tags:&lt;/span&gt;
   &lt;/div&gt;
           &lt;div&gt;
-              &lt;a href="https://xacobe.net/blog/privacidad" class="badge badge-neutral    px-3 py-2"&gt;
+              &lt;a href="https://xacobe.net/xacobe.net/blog/privacidad" class="badge badge-neutral    px-3 py-2"&gt;
  privacidad
  &lt;/a&gt;
 
-          &lt;a href="https://xacobe.net/blog/seguridad" class="badge badge-neutral    px-3 py-2"&gt;
+          &lt;a href="https://xacobe.net/xacobe.net/blog/seguridad" class="badge badge-neutral    px-3 py-2"&gt;
  seguridad
  &lt;/a&gt;
 
@@ -72,7 +92,7 @@
     &lt;ul class="links max-w-prose mx-auto"&gt;&lt;li&gt;
 
     &lt;a href target class="links max-w-prose mx-auto" data-component-id="icosaedrico:link"&gt;
-            &lt;a href="https://xacobe.net/blog/navegadores-y-practicas-enfocados-en-la-privacidad" rel="tag" title="Navegadores y prácticas enfocados en la privacidad" hreflang="es"&gt;Read more&lt;span class="visually-hidden"&gt; about Navegadores y prácticas enfocados en la privacidad&lt;/span&gt;&lt;/a&gt;
+            &lt;a href="https://xacobe.net/xacobe.net/blog/navegadores-y-practicas-enfocados-en-la-privacidad" rel="tag" title="Navegadores y prácticas enfocados en la privacidad" hreflang="es"&gt;Read more&lt;span class="visually-hidden"&gt; about Navegadores y prácticas enfocados en la privacidad&lt;/span&gt;&lt;/a&gt;
       &lt;/a&gt;
 
           &lt;/li&gt;&lt;/ul&gt;</description>
@@ -98,11 +118,11 @@
     &lt;span&gt;Tags:&lt;/span&gt;
   &lt;/div&gt;
           &lt;div&gt;
-              &lt;a href="https://xacobe.net/taxonomy/term/3" class="badge badge-neutral    px-3 py-2"&gt;
+              &lt;a href="https://xacobe.net/xacobe.net/taxonomy/term/3" class="badge badge-neutral    px-3 py-2"&gt;
  3D Print
  &lt;/a&gt;
 
-          &lt;a href="https://xacobe.net/taxonomy/term/4" class="badge badge-neutral    px-3 py-2"&gt;
+          &lt;a href="https://xacobe.net/xacobe.net/taxonomy/term/4" class="badge badge-neutral    px-3 py-2"&gt;
  Blender
  &lt;/a&gt;
 
@@ -111,7 +131,7 @@
     &lt;ul class="links max-w-prose mx-auto"&gt;&lt;li&gt;
 
     &lt;a href target class="links max-w-prose mx-auto" data-component-id="icosaedrico:link"&gt;
-            &lt;a href="https://xacobe.net/blog/preparar-blender-para-modelar-e-imprimir-en-3d" rel="tag" title="Preparar Blender para modelar e imprimir en 3D" hreflang="es"&gt;Read more&lt;span class="visually-hidden"&gt; about Preparar Blender para modelar e imprimir en 3D&lt;/span&gt;&lt;/a&gt;
+            &lt;a href="https://xacobe.net/xacobe.net/blog/preparar-blender-para-modelar-e-imprimir-en-3d" rel="tag" title="Preparar Blender para modelar e imprimir en 3D" hreflang="es"&gt;Read more&lt;span class="visually-hidden"&gt; about Preparar Blender para modelar e imprimir en 3D&lt;/span&gt;&lt;/a&gt;
       &lt;/a&gt;
 
           &lt;/li&gt;&lt;/ul&gt;</description>
@@ -137,11 +157,11 @@
     &lt;span&gt;Tags:&lt;/span&gt;
   &lt;/div&gt;
           &lt;div&gt;
-              &lt;a href="https://xacobe.net/taxonomy/term/1" class="badge badge-neutral    px-3 py-2"&gt;
+              &lt;a href="https://xacobe.net/xacobe.net/taxonomy/term/1" class="badge badge-neutral    px-3 py-2"&gt;
  webdev
  &lt;/a&gt;
 
-          &lt;a href="https://xacobe.net/taxonomy/term/2" class="badge badge-neutral    px-3 py-2"&gt;
+          &lt;a href="https://xacobe.net/xacobe.net/taxonomy/term/2" class="badge badge-neutral    px-3 py-2"&gt;
  git
  &lt;/a&gt;
 
@@ -150,7 +170,7 @@
     &lt;ul class="links max-w-prose mx-auto"&gt;&lt;li&gt;
 
     &lt;a href target class="links max-w-prose mx-auto" data-component-id="icosaedrico:link"&gt;
-            &lt;a href="https://xacobe.net/blog/chuleta-git-comandos-basicos" rel="tag" title="Chuleta Git, comandos básicos" hreflang="es"&gt;Read more&lt;span class="visually-hidden"&gt; about Chuleta Git, comandos básicos&lt;/span&gt;&lt;/a&gt;
+            &lt;a href="https://xacobe.net/xacobe.net/blog/chuleta-git-comandos-basicos" rel="tag" title="Chuleta Git, comandos básicos" hreflang="es"&gt;Read more&lt;span class="visually-hidden"&gt; about Chuleta Git, comandos básicos&lt;/span&gt;&lt;/a&gt;
       &lt;/a&gt;
 
           &lt;/li&gt;&lt;/ul&gt;</description>
