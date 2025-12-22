@@ -10,8 +10,7 @@ git checkout main
 echo "--------------------------------"
 echo "Generando sitio estático con Drush Tome..."
 echo "--------------------------------"
-# ddev drush tome:static -l https://xacobe.net -y
-ddev drush tome:static --base-url="" -y
+ddev drush tome:static -l https://xacobe.net
 
 echo "--------------------------------"
 echo "Añadiendo cambios..."
