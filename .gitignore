@@ -66,7 +66,21 @@
 /.gitattributes
 
 # DDEV
-/.ddev
+# Ignorar todo el directorio .ddev por defecto
+.ddev/*
+# Pero permitir estos archivos/directorios de configuración esenciales
+!.ddev/config.yaml
+!.ddev/nginx/
+!.ddev/apache/
+!.ddev/php/
+!.ddev/docker-compose.*.yaml
+.ddev/.ssh/
+.ddev/.secrets/
+.ddev/.homeadditions/
+.ddev/mysql/
+.ddev/*.db
+.ddev/*.sql
+.ddev/commands/web/seed-db
 
 # Node modules
 /node_modules
