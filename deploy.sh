@@ -8,6 +8,11 @@ echo "--------------------------------"
 git checkout main
 
 echo "--------------------------------"
+echo "Limpiando carpeta html existente..."
+echo "--------------------------------"
+rm -rf html
+
+echo "--------------------------------"
 echo "Generando sitio estático con Drush Tome..."
 echo "--------------------------------"
 ddev drush tome:static -l https://xacobe.net
