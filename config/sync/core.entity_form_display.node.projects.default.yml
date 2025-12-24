@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.projects.field_project_tech
     - field.field.node.projects.field_project_type
     - field.field.node.projects.field_project_url
+    - field.field.node.projects.field_project_video
     - field.field.node.projects.field_project_year
     - field.field.node.projects.field_screenshot_desktop
     - field.field.node.projects.field_screenshot_mobile
@@ -76,6 +77,13 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_project_video:
+    type: media_library_widget
+    weight: 29
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_project_year:
     type: string_textfield
