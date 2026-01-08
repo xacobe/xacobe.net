@@ -1,0 +1,23 @@
+uuid: cd3adf16-e8f2-4307-b2e9-fc0db5c2751d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - icosaedrico
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: icosaedrico_syndicate
+theme: icosaedrico
+region: footer
+weight: -6
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

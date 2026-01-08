@@ -1,0 +1,25 @@
+uuid: 10b81dd6-587e-4b41-9471-d760e239b59a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - icosaedrico
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: icosaedrico_site_branding
+theme: icosaedrico
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

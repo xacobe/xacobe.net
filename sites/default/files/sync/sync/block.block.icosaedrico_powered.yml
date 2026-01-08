@@ -1,0 +1,22 @@
+uuid: 40916aef-534c-4c5d-b58d-7bdbd53da102
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - icosaedrico
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: icosaedrico_powered
+theme: icosaedrico
+region: footer
+weight: -5
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }
