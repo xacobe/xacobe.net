@@ -49,6 +49,11 @@ Thumbs.db
 /web/example.gitignore
 /web/sites/development.services.yml
 
+/web/sites/*/files/translations/
+/web/sites/*/files/oembed_thumbnails/
+/web/sites/*/files/php/
+/web/sites/*/files/languages/
+
 # =========================
 # Archivos sensibles
 # =========================
