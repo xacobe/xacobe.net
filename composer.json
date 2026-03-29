@@ -43,6 +43,7 @@
         "drupal/tome": "^1.13",
         "drupal/tracer": "^1.0",
         "drupal/upgrade_status": "^4.3",
+        "drupal/views_bulk_operations": "^4.4",
         "drupal/viewsreference": "^2.0@beta",
         "drush/drush": "^13",
         "enshrined/svg-sanitize": "^0.20.0",
