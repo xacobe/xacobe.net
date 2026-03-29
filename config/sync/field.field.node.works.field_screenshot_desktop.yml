@@ -11,7 +11,7 @@ field_name: field_screenshot_desktop
 entity_type: node
 bundle: works
 label: 'Desktop Screenshot'
-description: ''
+description: 'Mantener el ratio 16:10 (por ejemplo: 2056 x 1282 ó 1104 x 686)'
 required: false
 translatable: false
 default_value: {  }

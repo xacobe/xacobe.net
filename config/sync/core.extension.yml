@@ -29,7 +29,6 @@ module:
   ckeditor5_plugin_pack_todo_document_list: 0
   ckeditor5_plugin_pack_word_count: 0
   ckeditor5_premium_features_fullscreen: 0
-  cl_editorial: 0
   config: 0
   contextual: 0
   datetime: 0
