@@ -12,25 +12,10 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
-  ckeditor5_plugin_pack: 0
-  ckeditor5_plugin_pack_auto_image: 0
-  ckeditor5_plugin_pack_bookmark: 0
-  ckeditor5_plugin_pack_emoji: 0
-  ckeditor5_plugin_pack_find_and_replace: 0
-  ckeditor5_plugin_pack_font: 0
-  ckeditor5_plugin_pack_highlight: 0
-  ckeditor5_plugin_pack_indent_block: 0
-  ckeditor5_plugin_pack_link_attributes: 0
-  ckeditor5_plugin_pack_page_break: 0
-  ckeditor5_plugin_pack_paste_markdown: 0
-  ckeditor5_plugin_pack_select_all: 0
-  ckeditor5_plugin_pack_templates: 0
-  ckeditor5_plugin_pack_text_transformation: 0
-  ckeditor5_plugin_pack_todo_document_list: 0
-  ckeditor5_plugin_pack_word_count: 0
-  ckeditor5_premium_features_fullscreen: 0
+  cl_devel: 0
   cl_editorial: 0
   config: 0
+  config_translation: 0
   contextual: 0
   datetime: 0
   datetime_range: 0
@@ -50,8 +35,10 @@ module:
   language: 0
   layout_builder: 0
   layout_builder_component_attributes: 0
+  layout_builder_expose_all_field_blocks: 0
   layout_discovery: 0
   link: 0
+  locale: 0
   media: 0
   media_library: 0
   menu_link_attributes: 0
@@ -60,12 +47,16 @@ module:
   metatag: 0
   metatag_app_links: 0
   metatag_dc: 0
+  metatag_facebook: 0
   metatag_favicons: 0
   metatag_google_cse: 0
   metatag_hreflang: 0
   metatag_mobile: 0
   metatag_open_graph: 0
+  metatag_open_graph_products: 0
+  metatag_pinterest: 0
   metatag_routes: 0
+  metatag_twitter_cards: 0
   metatag_verification: 0
   metatag_views: 0
   mysql: 0
@@ -79,11 +70,14 @@ module:
   redirect_404: 0
   responsive_image: 0
   rest: 0
+  sdc_display: 0
+  sdc_tags: 0
   serialization: 0
   settings_tray: 0
   shortcut: 0
   splide: 0
   splide_ui: 0
+  storybook: 0
   svg_image: 0
   svg_image_responsive: 0
   system: 0
@@ -91,12 +85,9 @@ module:
   telephone: 0
   text: 0
   token: 0
-  tome: 0
-  tome_base: 0
-  tome_static: 0
-  tome_sync: 0
   toolbar: 0
   update: 0
+  upgrade_status: 0
   user: 0
   views_ui: 0
   viewsreference: 0

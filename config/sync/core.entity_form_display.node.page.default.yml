@@ -59,7 +59,7 @@ content:
     weight: 1
     region: content
     settings:
-      include_locked: false
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path

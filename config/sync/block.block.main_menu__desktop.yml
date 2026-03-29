@@ -20,7 +20,7 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: null
+  depth: 0
   expand_all_items: false
   label_display_type: '0'
 visibility: {  }
