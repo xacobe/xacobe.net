@@ -1,98 +1,119 @@
-# gitignore template for Drupal 8 projects
-#
-# earlier versions of Drupal are tracked in `community/PHP/`
-#
-# follows official upstream conventions:
-# https://www.drupal.org/docs/develop/using-composer
+# =========================
+# Sistema / OS
+# =========================
+.DS_Store
+Thumbs.db
 
-# Ignore configuration files that may contain sensitive information
-/web/sites/*/*settings*.php
-/web/sites/*/*services*.yml
+# =========================
+# IDEs / Editores
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
 
-# Ignore paths that may contain user-generated content
-# /web/sites/*/public
-# /web/sites/*/private
-# /web/sites/*/files-public
-# /web/sites/*/files-private
+# =========================
+# Composer (dependencias)
+# =========================
+/vendor/
+/web/core/
+/web/vendor/
 
-# Ignore paths that may contain temporary files
-/web/sites/*/translations
-/web/sites/*/tmp
-/web/sites/*/cache
+/web/*.php
+/web/*.txt
 
-# Ignore drupal core (if not versioning drupal sources)
-/web/vendor
-/web/core
-/web/modules/README.txt
-/web/modules/contrib
-/web/profiles/README.txt
-/web/profiles
-/web/sites/development.services.yml
-/web/sites/example.settings.local.php
-/web/sites/example.sites.php
-/web/sites/README.txt
-/web/themes/contrib
-/web/themes/README.txt
+/web/.eslintrc*
 /web/.csslintrc
-/web/.editorconfig
-/web/.eslintignore
-/web/.eslintrc.json
-/web/.gitattributes
-/web/.htaccess
-/web/.ht.router.php
-/web/autoload.php
-/web/composer.json
-/web/composer.lock
+
+# ⚠️ IMPORTANTE:
+# Normalmente NO ignoramos composer.lock en proyectos
+# Si quieres reproducibilidad, comenta la siguiente línea:
+# composer.lock
+
+# =========================
+# Drupal contrib (instalado vía Composer)
+# =========================
+/web/modules/*
+!/web/modules/custom/
+
+/web/profiles/*
+!/web/profiles/custom/
+
+/web/themes/*
+!/web/themes/custom/
+
+/web/sites/*.txt
+/web/sites/example.*
+/web/themes/*.txt
+
 /web/example.gitignore
-/web/index.php
-/web/INSTALL.txt
-/web/LICENSE.txt
-/web/README.txt
-/web/robots.txt
-/web/update.php
-/web/web.config
+/web/sites/development.services.yml
 
-# Ignore vendor dependencies and scripts
-/vendor
-/composer.phar
-/composer
-/robo.phar
-/robo
-/drush.phar
-/drush
-/drupal.phar
-/drupal
-/.editorconfig
-/.gitattributes
+# =========================
+# Archivos sensibles
+# =========================
+/web/sites/*/*.settings.php
+/web/sites/*/*.services.yml
 
-# DDEV
-# Ignorar todo el directorio .ddev por defecto
-.ddev/*
-# Pero permitir estos archivos/directorios de configuración esenciales
-!.ddev/config.yaml
-!.ddev/nginx/
-!.ddev/apache/
-!.ddev/php/
-!.ddev/docker-compose.*.yaml
-.ddev/.ssh/
-.ddev/.secrets/
-.ddev/.homeadditions/
-.ddev/mysql/
-.ddev/*.db
-.ddev/*.sql
-.ddev/commands/web/seed-db
+# =========================
+# Archivos generados
+# =========================
+/web/sites/*/files/
+/web/sites/*/private/
 
-# Node modules
-/node_modules
+# =========================
+# Configuración local
+# =========================
+.env
+.env.local
+.env.*
 
+# =========================
+# Node / Frontend
+# =========================
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Testing / temporales
+# =========================
+/web/sites/simpletest/
+/tmp/
+
+# =========================
 # Backups
-/backups
-/node_modules
-node_modules/*
-node_modules
+# =========================
+*.sql
+*.tar.gz
 
-# Own
-/scripts
+# =========================
+# DDEV (mantener config, ignorar runtime)
+# =========================
 
-# añadir excepción para /web/sites/default/settings.php
-!/web/sites/default/settings.local.php
+# Ignoramos archivos generados
+.ddev/.dbimageBuild/
+.ddev/.webimageBuild/
+.ddev/.global_commands/
+.ddev/.downloaded_images/
+.ddev/.ssh-agent/
+.ddev/tmp/
+
+# Ignoramos overrides locales
+.ddev/docker-compose.*.yaml
+
+# =========================
+# PERMITIMOS configuración DDEV
+# =========================
+!.ddev/config.yaml
+!.ddev/docker-compose.yaml
+!.ddev/web-build/
+!.ddev/db-build/
+!.ddev/commands/
