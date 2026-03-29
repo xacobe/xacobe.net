@@ -1,0 +1,7 @@
+git_content_format: 1
+languages:
+  - en
+  - es
+  - gl
+default_language: es
+front_page: /node/1
