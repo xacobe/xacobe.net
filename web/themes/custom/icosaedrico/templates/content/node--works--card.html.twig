@@ -82,8 +82,10 @@
           {{ content.field_project_tech}}
         {% endif %}
         {{ title_suffix }}
-        {% if content.field_project_url %}
-              {{ content.field_project_url }}
+        {% if node.field_project_url.uri %}
+          <a href="{{ node.field_project_url.uri }}" target="_blank">
+            {{ node.field_project_url.title ?: node.field_project_url.uri }}
+          </a>
         {% endif %}
       </div>
 

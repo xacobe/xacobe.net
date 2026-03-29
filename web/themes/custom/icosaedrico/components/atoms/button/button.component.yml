@@ -42,7 +42,7 @@ props:
         - input-radio
         - input-checkbox
         - input-reset
-    button_type:
+    button_color:
       type: string
       title: Color
       description: The color for the button
