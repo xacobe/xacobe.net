@@ -28,6 +28,7 @@
         "drupal/cl_devel": "^2.0@beta",
         "drupal/cl_editorial": "^3.0@RC",
         "drupal/classy_paragraphs": "^2.0",
+        "drupal/config_split": "^2.0",
         "drupal/core-composer-scaffold": "^10",
         "drupal/core-project-message": "^10",
         "drupal/entity_usage": "^2.0@beta",

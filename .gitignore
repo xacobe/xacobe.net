@@ -52,14 +52,15 @@ Thumbs.db
 # =========================
 # Archivos sensibles
 # =========================
+/web/sites/default/settings.php
 /web/sites/*/*.settings.php
 /web/sites/*/*.services.yml
 
 # =========================
 # Archivos generados
 # =========================
-/web/sites/*/files/
 /web/sites/*/private/
+/web/sites/*/files/styles/
 
 # =========================
 # Configuración local
