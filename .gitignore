@@ -52,6 +52,8 @@ Thumbs.db
 /web/sites/*/files/translations/
 /web/sites/*/files/oembed_thumbnails/
 /web/sites/*/files/php/
+/web/sites/*/files/css/
+/web/sites/*/files/js
 /web/sites/*/files/languages/
 
 # =========================
@@ -99,6 +101,7 @@ build/
 # =========================
 *.sql
 *.tar.gz
+*.sql.gz
 
 # =========================
 # DDEV (mantener config, ignorar runtime)
