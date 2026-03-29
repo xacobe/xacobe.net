@@ -14,5 +14,5 @@ third_party_settings:
 id: media.screen
 target_entity_type_id: media
 target_bundle: screen
-default_langcode: site_default
+default_langcode: zxx
 language_alterable: false

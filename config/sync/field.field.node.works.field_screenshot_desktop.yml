@@ -1,15 +1,15 @@
-uuid: 079fd458-dd3a-4db1-a5fd-e249e03d8855
+uuid: 47d1cbc6-68d9-417b-bd54-553b4272b371
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_screenshot_desktop
     - media.type.screen
-    - node.type.projects
-id: node.projects.field_screenshot_desktop
+    - node.type.works
+id: node.works.field_screenshot_desktop
 field_name: field_screenshot_desktop
 entity_type: node
-bundle: projects
+bundle: works
 label: 'Desktop Screenshot'
 description: ''
 required: false

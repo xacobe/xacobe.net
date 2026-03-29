@@ -1,0 +1,40 @@
+uuid: 94ad0cf7-2748-4484-8841-42ae149987db
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.image
+    - field.field.node.works.body
+    - field.field.node.works.field_project_status
+    - field.field.node.works.field_project_tech
+    - field.field.node.works.field_project_type
+    - field.field.node.works.field_project_url
+    - field.field.node.works.field_project_video
+    - field.field.node.works.field_project_year
+    - field.field.node.works.field_screenshot_desktop
+    - field.field.node.works.field_screenshot_mobile
+    - node.type.works
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.works.image
+targetEntityType: node
+bundle: works
+mode: image
+content: {  }
+hidden:
+  body: true
+  field_project_status: true
+  field_project_tech: true
+  field_project_type: true
+  field_project_url: true
+  field_project_video: true
+  field_project_year: true
+  field_screenshot_desktop: true
+  field_screenshot_mobile: true
+  langcode: true
+  links: true

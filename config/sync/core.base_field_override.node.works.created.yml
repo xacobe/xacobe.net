@@ -1,0 +1,18 @@
+uuid: 805f4388-9a6b-4dfe-a4ae-c3436e549a72
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.works
+id: node.works.created
+field_name: created
+entity_type: node
+bundle: works
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

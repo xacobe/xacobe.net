@@ -1,0 +1,17 @@
+uuid: 5d9aca65-19a2-4fbb-ad06-bc8fbb75b405
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Works
+type: works
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

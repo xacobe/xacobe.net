@@ -1,16 +1,16 @@
-uuid: 079fd458-dd3a-4db1-a5fd-e249e03d8855
+uuid: 199b1f82-6e2c-42ec-8751-75d7d342cf8f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_screenshot_desktop
-    - media.type.screen
-    - node.type.projects
-id: node.projects.field_screenshot_desktop
-field_name: field_screenshot_desktop
+    - field.storage.node.field_project_video
+    - media.type.remote_video
+    - node.type.works
+id: node.works.field_project_video
+field_name: field_project_video
 entity_type: node
-bundle: projects
-label: 'Desktop Screenshot'
+bundle: works
+label: project_video
 description: ''
 required: false
 translatable: false
@@ -20,10 +20,10 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      screen: screen
+      remote_video: remote_video
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: screen
+    auto_create_bundle: ''
 field_type: entity_reference

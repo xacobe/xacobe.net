@@ -1,14 +1,14 @@
-uuid: b546f762-b939-4d0c-b557-cfb326aba662
+uuid: e11b2147-cc57-42af-8b70-8b8a2220398a
 langcode: es
 status: true
 dependencies:
   config:
     - node.type.projects
-id: node.projects.promote
-field_name: promote
+id: node.projects.sticky
+field_name: sticky
 entity_type: node
 bundle: projects
-label: 'Promoted to front page'
+label: 'Sticky at top of lists'
 description: ''
 required: false
 translatable: false

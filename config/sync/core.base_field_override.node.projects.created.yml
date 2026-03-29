@@ -1,0 +1,18 @@
+uuid: 7adf1837-1b09-43d4-93c2-063c45a93d0a
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.projects
+id: node.projects.created
+field_name: created
+entity_type: node
+bundle: projects
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

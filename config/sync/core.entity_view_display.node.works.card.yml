@@ -1,0 +1,87 @@
+uuid: f140daa2-4b70-47a3-aad8-42da9e80905e
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.works.body
+    - field.field.node.works.field_project_status
+    - field.field.node.works.field_project_tech
+    - field.field.node.works.field_project_type
+    - field.field.node.works.field_project_url
+    - field.field.node.works.field_project_video
+    - field.field.node.works.field_project_year
+    - field.field.node.works.field_screenshot_desktop
+    - field.field.node.works.field_screenshot_mobile
+    - node.type.works
+  module:
+    - layout_builder
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.works.card
+targetEntityType: node
+bundle: works
+mode: card
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_project_tech:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: icon
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_project_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_screenshot_desktop:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: screen_desktop
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_screenshot_mobile:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: screen_mobile
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_project_status: true
+  field_project_type: true
+  field_project_video: true
+  field_project_year: true
+  langcode: true

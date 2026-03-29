@@ -1,0 +1,47 @@
+uuid: daa8bc9d-f8bd-41da-9463-8a5cd048b19b
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.works.body
+    - field.field.node.works.field_project_status
+    - field.field.node.works.field_project_tech
+    - field.field.node.works.field_project_type
+    - field.field.node.works.field_project_url
+    - field.field.node.works.field_project_video
+    - field.field.node.works.field_project_year
+    - field.field.node.works.field_screenshot_desktop
+    - field.field.node.works.field_screenshot_mobile
+    - node.type.works
+  module:
+    - text
+    - user
+id: node.works.teaser
+targetEntityType: node
+bundle: works
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_project_status: true
+  field_project_tech: true
+  field_project_type: true
+  field_project_url: true
+  field_project_video: true
+  field_project_year: true
+  field_screenshot_desktop: true
+  field_screenshot_mobile: true
+  langcode: true

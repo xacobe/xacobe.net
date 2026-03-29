@@ -1,20 +1,20 @@
-uuid: b546f762-b939-4d0c-b557-cfb326aba662
+uuid: 3113dd61-2c09-4b46-a605-36ceb7df0064
 langcode: es
 status: true
 dependencies:
   config:
-    - node.type.projects
-id: node.projects.promote
-field_name: promote
+    - node.type.page
+id: node.page.status
+field_name: status
 entity_type: node
-bundle: projects
-label: 'Promoted to front page'
+bundle: page
+label: Published
 description: ''
 required: false
 translatable: false
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: 'On'
