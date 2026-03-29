@@ -1,0 +1,18 @@
+uuid: ec1cbe60-2842-4d3c-92b8-2abb2fab3d86
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.screen
+id: media.screen.changed
+field_name: changed
+entity_type: media
+bundle: screen
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

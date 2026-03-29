@@ -1,0 +1,42 @@
+uuid: 2f7e0876-46d2-41b6-a0c6-9f7818641177
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.screen_desktop
+    - field.field.media.screen.field_media_image_1
+    - image.style.width_640
+    - media.type.screen
+  module:
+    - layout_builder
+    - svg_image
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: media.screen.screen_desktop
+targetEntityType: media
+bundle: screen
+mode: screen_desktop
+content:
+  field_media_image_1:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: width_640
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

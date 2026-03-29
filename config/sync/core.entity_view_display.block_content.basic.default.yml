@@ -8,20 +8,7 @@ dependencies:
     - field.field.block_content.basic.field_paragraph
   module:
     - entity_reference_revisions
-    - sdc_display
     - text
-third_party_settings:
-  sdc_display:
-    enabled: false
-    component:
-      machine_name: ''
-    mappings:
-      static:
-        props: {  }
-        slots: {  }
-      dynamic:
-        props: {  }
-        slots: {  }
 _core:
   default_config_hash: hBNNDTFwakREOTa6GGMqN899Iyrii0hInwSJtQ7Kj30
 id: block_content.basic.default

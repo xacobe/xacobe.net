@@ -1,0 +1,20 @@
+uuid: 2581e7c2-cd4a-4cdc-8298-bb9696bd5b8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.screen
+  module:
+    - path
+id: media.screen.path
+field_name: path
+entity_type: media
+bundle: screen
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

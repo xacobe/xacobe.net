@@ -9,24 +9,12 @@ dependencies:
     - node.type.article
   module:
     - layout_builder
-    - sdc_display
     - text
     - user
 third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-  sdc_display:
-    enabled: false
-    component:
-      machine_name: ''
-    mappings:
-      static:
-        props: {  }
-        slots: {  }
-      dynamic:
-        props: {  }
-        slots: {  }
 _core:
   default_config_hash: br6izr-iGEu--JvNbCJNtOBpRnxpFLXfoV5y61U9Nqc
 id: node.article.default

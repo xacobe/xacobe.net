@@ -1,0 +1,15 @@
+uuid: 1592de36-7d15-453d-b1cb-10fbf8dcb9e8
+langcode: en
+status: true
+dependencies: {  }
+name: iphone_x
+label: 'IPhone X'
+effects:
+  72c053db-f4a6-466c-81c1-5bdc38f0b72a:
+    uuid: 72c053db-f4a6-466c-81c1-5bdc38f0b72a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 420
+      height: 915
+      anchor: center-top

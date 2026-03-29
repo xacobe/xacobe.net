@@ -22,21 +22,36 @@ settings:
       - removeFormat
       - '|'
       - link
+      - specialCharacters
       - '|'
+      - fontBackgroundColor
+      - fontFamily
+      - fontSize
+      - highlight
+      - selectAll
+      - fontColor
+      - showBlocks
+      - findAndReplace
       - alignment
       - bulletedList
       - numberedList
+      - pageBreak
+      - todoList
       - '|'
       - blockQuote
+      - drupalInsertImage
       - drupalMedia
       - insertTable
       - horizontalLine
       - '|'
       - heading
+      - insertTemplate
       - codeBlock
       - '|'
       - sourceEditing
       - code
+      - fullScreen
+      - bookmark
   plugins:
     ckeditor5_alignment:
       enabled_alignments:
@@ -95,11 +110,102 @@ settings:
         - heading4
         - heading5
         - heading6
+    ckeditor5_imageResize:
+      allow_resize: true
     ckeditor5_list:
       properties:
         reversed: true
         startIndex: true
       multiBlock: true
+    ckeditor5_plugin_pack_auto_image__auto_image:
+      enabled: false
+    ckeditor5_plugin_pack_find_and_replace__find_and_replace:
+      ui_type: dialog
+    ckeditor5_plugin_pack_font__font_color:
+      colors: {  }
+      use_default_colors: true
+      use_colorpicker: true
+    ckeditor5_plugin_pack_font__font_family:
+      options: ''
+    ckeditor5_plugin_pack_font__font_size:
+      options: ''
+    ckeditor5_plugin_pack_highlight__highlight:
+      options: {  }
+      use_default_markers: true
+      attach_styles: false
+    ckeditor5_plugin_pack_link_attributes__link_attributes:
+      attributes: {  }
+    ckeditor5_plugin_pack_paste_markdown__paste_markdown:
+      enabled: true
+    ckeditor5_plugin_pack_text_transformation__text_transformation:
+      enabled: true
+      extra_transformations: ''
+      extra_regex_transformations: {  }
+      groups:
+        typography:
+          transformations:
+            ellipsis:
+              enabled: 1
+            enDash:
+              enabled: 1
+            emDash:
+              enabled: 1
+          enabled: 1
+        quotes:
+          transformations:
+            quotesPrimary:
+              enabled: 1
+            quotesSecondary:
+              enabled: 1
+          enabled: 1
+        symbols:
+          transformations:
+            trademark:
+              enabled: 1
+            registeredTrademark:
+              enabled: 1
+            copyright:
+              enabled: 1
+          enabled: 1
+        mathematical:
+          transformations:
+            oneHalf:
+              enabled: 1
+            oneThird:
+              enabled: 1
+            twoThirds:
+              enabled: 1
+            oneFourth:
+              enabled: 1
+            threeQuarters:
+              enabled: 1
+            lessThanOrEqual:
+              enabled: 1
+            greaterThanOrEqual:
+              enabled: 1
+            notEqual:
+              enabled: 1
+            arrowLeft:
+              enabled: 1
+            arrowRight:
+              enabled: 1
+          enabled: 1
+        misc:
+          transformations:
+            quotesPrimaryEnGb:
+              enabled: 0
+            quotesSecondaryEnGb:
+              enabled: 1
+            quotesPrimaryPl:
+              enabled: 0
+            quotesSecondaryPl:
+              enabled: 0
+          enabled: 1
+    ckeditor5_plugin_pack_todo_document_list__todo_document_list:
+      attach_default_styles: false
+    ckeditor5_plugin_pack_word_count__word_count:
+      word_count_enabled: true
+      word_count_mode: words_chars
     ckeditor5_sourceEditing:
       allowed_tags: {  }
     media_media:

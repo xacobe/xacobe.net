@@ -1,0 +1,11 @@
+uuid: fe95caf9-04c3-4df6-a740-29dffbdd8672
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.screen_desktop
+label: Desktop
+description: ''
+targetEntityType: media
+cache: true

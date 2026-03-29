@@ -1,1 +1,2 @@
 label: 'Data longa predeterminada'
+pattern: 'l, j \d\e F Y'

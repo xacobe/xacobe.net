@@ -9,20 +9,8 @@ dependencies:
     - media.type.image
   module:
     - layout_builder
-    - sdc_display
     - svg_image
 third_party_settings:
-  sdc_display:
-    enabled: false
-    component:
-      machine_name: ''
-    mappings:
-      static:
-        props: {  }
-        slots: {  }
-      dynamic:
-        props: {  }
-        slots: {  }
   layout_builder:
     enabled: false
     allow_custom: false
@@ -45,12 +33,7 @@ content:
         width: null
         height: null
       svg_render_as_image: false
-    third_party_settings:
-      sdc_display:
-        enabled: 0
-        component:
-          machine_name: null
-          show_deprecated: 0
+    third_party_settings: {  }
     weight: 1
     region: content
 hidden:

@@ -1,0 +1,20 @@
+uuid: 81c1e3bb-d65f-4ff7-bc4c-8512aa0babdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.screen
+id: media.screen.name
+field_name: name
+entity_type: media
+bundle: screen
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

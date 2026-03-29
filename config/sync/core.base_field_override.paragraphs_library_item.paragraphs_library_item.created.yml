@@ -1,0 +1,18 @@
+uuid: 2907b7ac-b20a-420b-80e1-09b767661eaf
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+id: paragraphs_library_item.paragraphs_library_item.created
+field_name: created
+entity_type: paragraphs_library_item
+bundle: paragraphs_library_item
+label: 'Authored on'
+description: 'The time that the library item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

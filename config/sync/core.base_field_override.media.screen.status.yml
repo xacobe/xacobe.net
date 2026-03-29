@@ -1,0 +1,22 @@
+uuid: 50f72926-a4a8-4de0-acdb-189b42a847f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.screen
+id: media.screen.status
+field_name: status
+entity_type: media
+bundle: screen
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

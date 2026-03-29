@@ -10,30 +10,21 @@ dependencies:
     - field.field.node.projects.field_project_tech
     - field.field.node.projects.field_project_type
     - field.field.node.projects.field_project_url
-    - image.style.max_650x650
+    - field.field.node.projects.field_project_year
+    - field.field.node.projects.field_screenshot_desktop
+    - field.field.node.projects.field_screenshot_mobile
+    - image.style.large
     - node.type.projects
   module:
     - layout_builder
     - link
     - media
-    - sdc_display
     - text
     - user
 third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-  sdc_display:
-    enabled: false
-    component:
-      machine_name: ''
-    mappings:
-      static:
-        props: {  }
-        slots: {  }
-      dynamic:
-        props: {  }
-        slots: {  }
 id: node.projects.card
 targetEntityType: node
 bundle: projects
@@ -44,31 +35,27 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
   field_project_images:
     type: media_thumbnail
     label: hidden
     settings:
       image_link: ''
-      image_style: max_650x650
+      image_style: large
       image_loading:
         attribute: lazy
-    third_party_settings:
-      sdc_display:
-        enabled: 0
-        component:
-          machine_name: null
-          show_deprecated: 0
+    third_party_settings: {  }
     weight: 0
     region: content
   field_project_tech:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     label: visually_hidden
     settings:
-      link: true
+      view_mode: icon
+      link: false
     third_party_settings: {  }
-    weight: 3
+    weight: 5
     region: content
   field_project_url:
     type: link
@@ -80,14 +67,34 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 4
+    weight: 6
+    region: content
+  field_screenshot_desktop:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: screen_desktop
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_screenshot_mobile:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: screen_mobile
+      link: false
+    third_party_settings: {  }
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
 hidden:
   field_project_status: true
   field_project_type: true
+  field_project_video: true
+  field_project_year: true
   langcode: true

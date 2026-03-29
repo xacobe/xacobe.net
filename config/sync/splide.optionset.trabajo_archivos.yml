@@ -31,7 +31,7 @@ options:
     heightRatio: '0'
     autoWidth: false
     autoHeight: false
-    perPage: 4
+    perPage: 6
     perMove: 0
     clones: 0
     cloneStatus: true
@@ -94,7 +94,7 @@ options:
         fixedWidth: '0'
         fixedHeight: '0'
         heightRatio: '0'
-        perPage: 2
+        perPage: 4
         perMove: 0
         clones: 0
         focus: '0'
@@ -117,7 +117,7 @@ options:
         fixedWidth: '0'
         fixedHeight: '0'
         heightRatio: '0'
-        perPage: 3
+        perPage: 5
         perMove: 0
         clones: 0
         focus: '0'
@@ -140,7 +140,7 @@ options:
         fixedWidth: '0'
         fixedHeight: '0'
         heightRatio: '0'
-        perPage: 4
+        perPage: 6
         perMove: 0
         clones: 0
         focus: '0'
