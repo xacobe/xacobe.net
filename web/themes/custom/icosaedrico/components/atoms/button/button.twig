@@ -13,11 +13,17 @@
   ]
 %}
 
-<{{ button_tag }} href="{{ button_href }}" target="{{ button_target|default('_self')}}" title="{{ button_text|striptags }}" {{ attributes.addClass(classes) }}>
+<{{ button_tag }}
+  {% if button_tag == 'a' %}
+    href="{{ button_href }}"
+    target="{{ button_target|default('_self') }}"
+  {% endif %}
+  title="{{ button_text|striptags }}"
+  {{ attributes.addClass(classes) }}
+>
   {{ button_text }}
   {% if button_icon is not empty %}
     {% set icon_attributes = create_attribute() %}
-    
     {{ include("icosaedrico:icon", {
       icon_name: button_icon,
       icon_svg_size: button_icon_size|default("16"),

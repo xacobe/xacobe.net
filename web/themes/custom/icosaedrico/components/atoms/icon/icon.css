@@ -1,7 +1,7 @@
-.icon svg {
+[data-component-id="icosaedrico:icon"] svg {
   display: inline-block;
 }
 
-.icon--sm {
+[data-component-id="icosaedrico:icon"].icon--sm {
   width: 3.2rem;
 }

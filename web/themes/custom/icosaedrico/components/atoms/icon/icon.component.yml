@@ -1,4 +1,4 @@
-'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json'
 name: Icon
 status: experimental
 props:
@@ -30,6 +30,13 @@ props:
     icon_svg_stroke_width:
       type: string
       title: The SVG stroke width
+    icon_svg_viewbox:
+      type: string
+      title: viewBox
+      description: "SVG viewBox attribute. Default: '0 0 16 16' (Bootstrap Icons). Solo cambiar para iconos no-Bootstrap."
+      examples:
+        - '0 0 16 16'
+        - '0 0 24 24'
     icon_href:
       type: string
       title: Link

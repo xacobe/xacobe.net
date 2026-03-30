@@ -3,11 +3,13 @@ global-styling:
   css:
     theme:
       css/base/normalize.css: {}
+      css/output.css: {}
+      css/base/tokens.css: {}
       css/base/base.css: {}
       css/components/buttons.css: {}
+      css/components/forms.css: {}
       css/modules/modules.css: {}
       css/modules/devices.css: {}
       css/modules/cv.css: {}
-      css/output.css: {}
   js:
     js/index.js: {}

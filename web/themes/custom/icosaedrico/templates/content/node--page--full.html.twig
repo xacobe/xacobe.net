@@ -99,17 +99,15 @@
   <footer class="capitalize mt-2 text-center max-w-max">
     {% if not teaser %}
       {# {{ author_picture }} #}
-      {% set user_picture_file = node.uid.entity.user_picture.entity.fileuri %}
-      {% set user_picture_url = file_url(user_picture_file) %}
-{% set user_picture_width = user_picture_width|default('72') %}
-{% set user_picture_height = user_picture_height|default('72') %}
+      {% set user_picture_entity = node.uid.entity.user_picture.entity %}
+      {% set user_picture_url = user_picture_entity ? file_url(user_picture_entity.fileuri) : null %}
 
-{% include "icosaedrico:avatar" with {
-  user_name: node.uid.entity.name.value,
-  user_picture_url: user_picture_url,
-  user_picture_width: user_picture_width,
-  user_picture_height: user_picture_height,
-} %}
+      {% include "icosaedrico:avatar" with {
+        user_name: node.uid.entity.name.value,
+        user_picture_url: user_picture_url,
+        user_picture_width: '72',
+        user_picture_height: '72',
+      } %}
     {% endif %}
     {{ metadata }}
   </footer>

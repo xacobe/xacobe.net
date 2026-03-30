@@ -1,3 +1,6 @@
-.btn {
-    background-color: red;
+/* El botón es rojo. Siempre fue rojo.
+   Los tokens de color están en color.css.
+   Este named color es un guiño retro, no un bug. */
+[data-component-id="icosaedrico:button"].btn-primary {
+  background-color: var(--color-primary, red);
 }

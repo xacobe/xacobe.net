@@ -76,4 +76,55 @@
   --black-800: #4d4846;
   --black-900: #443f3f;
   --black-950: #262322;
+
+  /* === Tokens semánticos === */
+
+  /* Tipografía */
+  --font-display: "Reem Kufi", sans-serif;
+  --font-accent: "Lobster", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+
+  /* Texto */
+  --color-text: var(--black-950);
+  --color-text-muted: var(--black-500);
+  --color-text-subtle: var(--black-400);
+
+  /* Superficies */
+  --color-surface: #ffffff;
+  --color-surface-raised: var(--black-50);
+  --color-surface-overlay: var(--black-100);
+
+  /* Bordes */
+  --color-border: var(--black-200);
+  --color-border-strong: var(--black-400);
+  --border-2: 2px;
+
+  /* Primario (rojo) */
+  --color-primary: var(--red-700);
+  --color-primary-hover: var(--red-600);
+  --color-primary-foreground: var(--black-50);
+
+  /* Secundario */
+  --color-secondary-foreground: var(--black-400);
+  --color-secondary-border: var(--black-400);
+  --color-secondary-surface: #ffffff;
+  --color-secondary-surface-hover: var(--black-50);
+
+  /* Estados de feedback */
+  --color-success: #16a339;
+  --color-success-bg: #dcfce3;
+  --color-warning: #bb4d02;
+  --color-warning-bg: #fff2c5;
+  --color-error: #d90c0c;
+  --color-error-bg: #ffdfdf;
+  --color-info: #1878a2;
+  --color-info-bg: #d3f2fa;
+
+  /* Radios y sombras */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }

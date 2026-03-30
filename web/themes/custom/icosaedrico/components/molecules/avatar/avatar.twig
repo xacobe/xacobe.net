@@ -1,3 +1,16 @@
-{% block avatar_picture %}
-{% endblock %}
-<p>{{ avatar_name }}</p>
+<div {{ attributes.addClass('avatar') }}>
+  {% if user_picture_url %}
+    <div class="avatar__media">
+      <img
+        src="{{ user_picture_url }}"
+        alt="{{ user_name }}"
+        width="{{ user_picture_width|default('72') }}"
+        height="{{ user_picture_height|default('72') }}"
+        loading="lazy"
+      />
+    </div>
+  {% endif %}
+  {% if user_name %}
+    <p class="avatar__name">{{ user_name }}</p>
+  {% endif %}
+</div>

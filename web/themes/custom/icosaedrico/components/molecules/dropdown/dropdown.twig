@@ -5,15 +5,8 @@
   hover ? "dropdown-hover",
 ] %}
 
-{% set classes = [
-  "p-2",
-  "shadow",
-  "menu",
+{% set content_classes = [
   "dropdown-content",
-  "z-[1]",
-  "bg-base-100",
-  "rounded-box",
-  "w-52",
 ] %}
 
 {% if details_tag %}
@@ -24,7 +17,7 @@
       <div tabindex="0" role="button" class="btn btn-sm m-1">{{ title }}</div>
 {% endif %}
 
-  <ul{{ attributes.removeClass('inline').addClass(classes) }}>
+  <ul{{ attributes.removeClass('inline').addClass(content_classes) }}>
     {%- for items in links -%}
       <li{{ items.attributes }}>
           {{ items.link }}
@@ -37,4 +30,3 @@
   {% else %}
     </div>
 {% endif %}
-

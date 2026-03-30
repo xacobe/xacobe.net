@@ -26,27 +26,26 @@ p {
 
 /* Headings */
 h1, .h1 {
-  font-family: "Reem Kufi", sans-serif !important;
-  font-size: 2.4rem !important;
-  font-weight: 700 !important;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
   text-transform: uppercase;
 }
 h2, .h2 {
-  font-family: "Lobster", sans-serif !important;
-  font-size: 2.2rem !important;
-  font-weight: 300 !important;
+  font-family: var(--font-accent);
+  font-size: 2.2rem;
+  font-weight: 300;
 }
 h3, .h3 {
-  color: var(--black-800);
-  font-family: "Reem Kufi", sans-serif !important;
-  font-size: 1.2rem !important;
-  font-weight: 800 !important;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
   text-transform: uppercase;
   line-height: 1.75rem;
 }
-
 h4, .h4 {
-  font-family: "Reem Kufi", sans-serif;
+  font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -54,20 +53,19 @@ h4, .h4 {
 
 /* Text size */
 .fs-xs {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: .8rem;
 }
 .fs-sm {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: .875rem;
 }
 .fs-base {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
 }
-
 .fs-md {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-body);
   font-size: 1.2rem;
 }
 /* Font styles */

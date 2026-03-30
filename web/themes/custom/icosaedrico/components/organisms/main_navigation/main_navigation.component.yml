@@ -1,14 +1,13 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
 name: Main navigation
-status: experimental
+status: stable
 props:
   type: object
   properties:
-    title:
+    menu_level_0_classes:
       type: string
-      title: Title
-      description: The menu's title.
-    attributes_lol:
-      type: Drupal\Core\Template\Attribute
-      title: Attributes
-      description: Wrapper attributes.
+      title: Root menu classes
+      description: "CSS classes for the top-level <ul>. Default: 'main-menu menu menu-horizontal px-1 uppercase'."
+      examples:
+        - 'main-menu menu menu-horizontal px-1 uppercase'
+        - 'menu menu-horizontal px-4 text-xl'

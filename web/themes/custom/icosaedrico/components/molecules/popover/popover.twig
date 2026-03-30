@@ -1,0 +1,8 @@
+<details class="popover popover--{{ popover_position|default('start') }}" {{ attributes }}>
+  <summary class="popover__trigger">
+    {% block popover_trigger %}{% endblock %}
+  </summary>
+  <div class="popover__content">
+    {% block popover_content %}{% endblock %}
+  </div>
+</details>

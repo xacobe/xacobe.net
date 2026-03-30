@@ -1,0 +1,17 @@
+[data-component-id="icosaedrico:card"] {
+  /* Estilos del componente card */
+}
+
+.card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-title {
+  font-family: var(--font-accent);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+}

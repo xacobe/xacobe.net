@@ -1,19 +1,26 @@
-'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json'
 name: Avatar
-status: experimental
+status: stable
 props:
   type: object
   properties:
-    title:
+    user_name:
       type: string
-      title: User title
-      # @todo Add examples here.
-      examples: []
-slots:
-  avatar_picture:
-    title: Avatar picture
-    description: Avatar picture
-  avatar_name:
-    title: Avatar picture
-    description: Avatar picture
-
+      title: Name
+      description: The user's display name
+    user_picture_url:
+      type: string
+      title: Picture URL
+      description: URL of the user's picture
+    user_picture_width:
+      type: string
+      title: Width
+      description: Width in pixels
+      examples:
+        - '72'
+    user_picture_height:
+      type: string
+      title: Height
+      description: Height in pixels
+      examples:
+        - '72'

@@ -1,0 +1,22 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json'
+name: Popover
+status: stable
+description: Desplegable nativo con details/summary. Cierra al hacer click fuera.
+props:
+  type: object
+  properties:
+    popover_position:
+      type: string
+      title: Posición
+      description: Alineación del panel respecto al trigger.
+      default: 'start'
+      enum:
+        - start
+        - end
+slots:
+  popover_trigger:
+    title: Trigger
+    description: Contenido del summary (botón, icono, texto...)
+  popover_content:
+    title: Contenido
+    description: Contenido del panel desplegable

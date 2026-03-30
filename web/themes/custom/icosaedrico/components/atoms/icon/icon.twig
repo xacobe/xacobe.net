@@ -9,7 +9,7 @@
       stroke="{{ icon_svg_stroke }}"
       stroke-width="{{ icon_svg_stroke_width }}"
       class="bi bi-{{ icon_name }} {{ icon_svg_classes }} overflow-visible"
-      viewBox="0 0 16 16">
+      viewBox="{{ icon_svg_viewbox|default('0 0 16 16') }}">
       {{ source(componentMetadata.path ~ '/icons/' ~ (icon_name|default('knife')) ~ '.svg') }}
     </svg>
 {% if icon_href %}

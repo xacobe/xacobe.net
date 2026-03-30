@@ -1,12 +1,19 @@
 .divider {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
 
-  &::before,
-  &::after {
-    width: 12% !important;
-    flex-grow: 0!important;
-    background-color: #dbdbdb!important;
-  }
+.divider::before,
+.divider::after {
+  content: "";
+  display: block;
+  width: 12%;
+  height: 1px;
+  background-color: var(--color-border);
+  flex-shrink: 0;
 }
 
 .page-title--article {

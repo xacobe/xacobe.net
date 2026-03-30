@@ -1,0 +1,11 @@
+/*
+ * Typography utilities
+ * Escala tipográfica, alineación y transformaciones de texto.
+ * Pendiente: escala de tamaños y familias validadas con el Figma.
+ *
+ * Los tokens de fuente (--font-display, --font-accent, --font-body)
+ * están definidos en tokens.css
+ *
+ * Las clases .ff-*, .fs-*, .display-* y headings base
+ * están en css/base/base.css
+ */
