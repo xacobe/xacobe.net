@@ -67,52 +67,64 @@
   *
   */
 #}
-{% set classes = [
-  "max-w-prose mx-auto my-5 prose prose-slate"
-] %}
-<article {{ attributes }}>
-  {% if display_submitted %}
-    <header>
-      {{ title_prefix }}
-      {% if label and not page %}
-        <h2 class="blog__title py-4 mt-2 pb-4" {{ title_attributes }}>
-          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-        </h2>
+<article {{ attributes.addClass('article') }}>
+
+  <header class="article__header">
+
+    {# Línea eyebrow: categoría · fecha #}
+    <div class="article__eyebrow">
+      {% if node.field_tags.0.entity %}
+        <span class="article__category">{{ node.field_tags.0.entity.label }}</span>
+        <span class="article__eyebrow-sep">·</span>
       {% endif %}
+      <time>{{ node.getCreatedTime|format_date('long') }}</time>
+    </div>
 
-      {# Date #}
-      <div {{ author_attributes.addClass("max-w-prose mx-auto flex items-center mb-8") }}>
-        <div class="p-1">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-date mx-1" viewbox="0 0 16 16">
-            <path d="M6.445 11.688V6.354h-.633A13 13 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23"/>
-            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-          </svg>
+    {# Título #}
+    {{ title_prefix }}
+    {% if label and not page %}
+      <h2 class="article__title" {{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% else %}
+      <h1 class="article__title" {{ title_attributes }}>{{ label }}</h1>
+    {% endif %}
+    {{ title_suffix }}
 
+    {# Deck / subtítulo (resumen del campo body) #}
+    {% if node.body.summary %}
+      <p class="article__deck">{{ node.body.summary }}</p>
+    {% endif %}
+
+    {# Byline #}
+    {% if display_submitted %}
+      <div {{ author_attributes.addClass('article__byline') }}>
+        <div class="article__author">
+          {{ author_picture }}
+          <div>
+            <span class="article__author-name">{{ author_name }}</span>
+          </div>
         </div>
-        <span class="text-sm p-1">{{ node.getCreatedTime|format_date('long') }}</span>
+        <div class="prose-meta">
+          <time>{{ node.getCreatedTime|format_date('medium') }}</time>
+        </div>
       </div>
+    {% endif %}
 
-    </header>
-  {% endif %}
+  </header>
 
-  <div {{ content_attributes.addClass(classes) }}>
-    {{ content|without(
-      content.field_tags
-    ) }}
+  <div {{ content_attributes.addClass('article__body prose') }}>
+    {{ content|without('field_tags', 'field_image') }}
   </div>
 
-  <footer class="mt-2">
+  <footer class="article__footer">
     {{ content.field_tags }}
-  {% embed 'icosaedrico:avatar' with {
-    avatar_name: node.uid.entity.name.value,
-  } %}
-    {% block card_media %}
-    {% endblock %}
-  {% endembed %}
-
-
-    {{ author_picture }}
+    {% embed 'icosaedrico:avatar' with {
+      avatar_name: node.uid.entity.name.value,
+    } %}
+      {% block card_media %}{% endblock %}
+    {% endembed %}
     {{ metadata }}
-
   </footer>
+
 </article>

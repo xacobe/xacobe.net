@@ -85,6 +85,15 @@
   --font-body: "Open Sans", sans-serif;
   --font-ui: "Inter", sans-serif;
 
+  /* Tipografía — prose (blog, lectura larga) */
+  --font-prose-headline: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-prose-body: "Noto Serif", Georgia, "Times New Roman", serif;
+
+  /* Colores — superficie papel */
+  --color-paper: #fbf9f4;
+  --color-paper-container: #f5f4ed;
+  --color-prose-accent: var(--black-600); /* muted — para detalles editoriales */
+
   /* Tipografía — escala (base 8, sub-grid 4px para texto) */
   --fs-h1: 4rem;       /* 64px — Reem Kufi 600 */
   --fs-h2: 2.5rem;     /* 40px — Lobster 400 */

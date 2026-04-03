@@ -11,6 +11,7 @@ global-styling:
       css/components/buttons.css: {}
       css/components/forms.css: {}
       css/modules/modules.css: {}
+      css/modules/prose.css: {}
       css/modules/devices.css: {}
       css/modules/cv.css: {}
   js:

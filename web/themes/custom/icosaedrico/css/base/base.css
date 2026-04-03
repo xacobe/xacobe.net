@@ -112,10 +112,6 @@ h4, .h4 {
   line-height: 1.2;
 }
 
-/* own overrides other libraries */
-.prose {
-  max-width: 80ch !important;
-}
 
 /* Containers */
 
