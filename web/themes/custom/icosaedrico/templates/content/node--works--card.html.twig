@@ -5,6 +5,8 @@
   {%- if icon_name -%}
     {%- set icon_src = base_path ~ active_theme_path() ~ '/img/icons/' ~ icon_name ~ '.svg' -%}
     {%- set tech_icons = tech_icons|merge([{ src: icon_src, label: term.label }]) -%}
+  {%- else -%}
+    {%- set tech_icons = tech_icons|merge([{ src: null, label: term.label }]) -%}
   {%- endif -%}
 {%- endfor -%}
 

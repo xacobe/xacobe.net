@@ -13,7 +13,11 @@
       <ul class="project-card__tech">
         {% for icon in tech_icons %}
           <li class="project-card__tech-item" title="{{ icon.label }}">
-            <img src="{{ icon.src }}" alt="{{ icon.label }}">
+            {% if icon.src %}
+              <img src="{{ icon.src }}" alt="{{ icon.label }}">
+            {% else %}
+              <span class="project-card__tech-label">{{ icon.label }}</span>
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
