@@ -29,7 +29,9 @@ module:
   ckeditor5_plugin_pack_todo_document_list: 0
   ckeditor5_plugin_pack_word_count: 0
   ckeditor5_premium_features_fullscreen: 0
+  cl_editorial: 0
   config: 0
+  config_translation: 0
   contextual: 0
   datetime: 0
   datetime_range: 0
@@ -51,6 +53,7 @@ module:
   layout_builder_component_attributes: 0
   layout_discovery: 0
   link: 0
+  locale: 0
   media: 0
   media_library: 0
   menu_link_attributes: 0
@@ -78,11 +81,15 @@ module:
   redirect_404: 0
   responsive_image: 0
   rest: 0
+  sdc_devel: 0
+  sdc_display: 0
+  sdc_tags: 0
   serialization: 0
   settings_tray: 0
   shortcut: 0
   splide: 0
   splide_ui: 0
+  storybook: 0
   svg_image: 0
   svg_image_responsive: 0
   system: 0

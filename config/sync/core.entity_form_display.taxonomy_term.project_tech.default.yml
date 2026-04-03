@@ -4,11 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.project_tech.field_tech_icon
-    - image.style.thumbnail
     - taxonomy.vocabulary.project_tech
   module:
     - path
-    - svg_image
     - text
 id: taxonomy_term.project_tech.default
 targetEntityType: taxonomy_term
@@ -24,12 +22,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_tech_icon:
-    type: image_image
-    weight: 1
+    type: string_textfield
+    weight: 26
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select

@@ -295,7 +295,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: Name
+            label: Nombre
             description: ''
             use_operator: false
             operator: name_op
@@ -993,7 +993,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: Name
+            label: Nombre
             description: ''
             use_operator: false
             operator: name_op
@@ -1142,7 +1142,7 @@ display:
           entity_type: media
           entity_field: name
           plugin_id: field
-          label: Name
+          label: Nombre
           type: string
           settings:
             link_to_entity: false
@@ -1283,7 +1283,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: Name
+            label: Nombre
             description: ''
             use_operator: false
             operator: name_op

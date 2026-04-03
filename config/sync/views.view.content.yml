@@ -150,7 +150,7 @@ display:
           entity_type: node
           entity_field: status
           plugin_id: field
-          label: Status
+          label: Estado
           exclude: false
           alter:
             alter_text: false
@@ -259,7 +259,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
+          submit_button: Filtro
           reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -384,7 +384,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Status
+            label: Estado
             description: ''
             use_operator: false
             operator: status_op

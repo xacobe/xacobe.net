@@ -133,7 +133,7 @@ display:
           entity_type: file
           entity_field: filename
           plugin_id: field
-          label: Name
+          label: Nombre
           exclude: false
           alter:
             alter_text: false
@@ -300,7 +300,7 @@ display:
           entity_type: file
           entity_field: status
           plugin_id: field
-          label: Status
+          label: Estado
           exclude: false
           alter:
             alter_text: false
@@ -606,7 +606,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
+          submit_button: Filtro
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -727,7 +727,7 @@ display:
           exposed: true
           expose:
             operator_id: status_op
-            label: Status
+            label: Estado
             description: ''
             use_operator: false
             operator: status_op

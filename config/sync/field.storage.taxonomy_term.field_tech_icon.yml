@@ -1,27 +1,18 @@
-uuid: 66124da1-ee50-48f1-80b7-abf398bda186
+uuid: 72e15554-d1db-4448-9956-81605712dd78
 langcode: en
 status: true
 dependencies:
   module:
-    - file
-    - image
     - taxonomy
 id: taxonomy_term.field_tech_icon
 field_name: field_tech_icon
 entity_type: taxonomy_term
-type: image
+type: string
 settings:
-  target_type: file
-  display_field: false
-  display_default: true
-  uri_scheme: public
-  default_image:
-    uuid: ''
-    alt: ''
-    title: ''
-    width: null
-    height: null
-module: image
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

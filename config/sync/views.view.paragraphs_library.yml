@@ -100,7 +100,7 @@ display:
           entity_type: paragraph
           entity_field: type
           plugin_id: field
-          label: Type
+          label: Tipo
           exclude: false
           alter:
             alter_text: false
@@ -559,7 +559,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
+          submit_button: Filtro
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -647,7 +647,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: Type
+            label: Tipo
             description: ''
             use_operator: false
             operator: type_op

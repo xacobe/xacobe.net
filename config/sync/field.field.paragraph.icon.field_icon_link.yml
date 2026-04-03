@@ -1,5 +1,5 @@
-uuid: bd4e8d32-ec2c-44ed-b072-9e53124519bc
-langcode: es
+uuid: 210d9e83-a0ec-43a3-9350-0b51952c2180
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: paragraph.icon.field_icon_link
 field_name: field_icon_link
 entity_type: paragraph
 bundle: icon
-label: Enlace
+label: 'Icon link'
 description: ''
 required: false
 translatable: false
