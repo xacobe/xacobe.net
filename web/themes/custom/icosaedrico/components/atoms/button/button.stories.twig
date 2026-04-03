@@ -1,0 +1,135 @@
+{% macro render(button_text, button_tag, button_href, button_color, button_size, button_outline, button_glass, button_shape, button_disable, button_icon) %}
+  {{ include('icosaedrico:button', {
+    button_text: button_text,
+    button_tag: button_tag,
+    button_href: button_href,
+    button_color: button_color,
+    button_size: button_size,
+    button_outline: button_outline,
+    button_glass: button_glass,
+    button_shape: button_shape,
+    button_disable: button_disable,
+    button_icon: button_icon,
+  }, with_context = false) }}
+{% endmacro %}
+
+{% stories button with {
+  title: 'Atoms/Button',
+  description: 'Botón reutilizable. Soporta etiqueta `<a>` o `<button>`, colores, tamaños, variante outline y con icono.',
+  tags: ['autodocs'],
+  args: {
+    button_text: 'Botón',
+    button_tag: 'a',
+    button_href: '#',
+    button_color: 'primary',
+    button_size: '',
+    button_outline: false,
+    button_glass: false,
+    button_shape: '',
+    button_disable: '',
+    button_icon: '',
+  },
+  argTypes: {
+    button_text: {
+      description: 'Texto visible del botón.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: 'Botón' } }
+    },
+    button_tag: {
+      description: 'Etiqueta HTML a usar.',
+      control: { type: 'radio' },
+      options: ['a', 'button'],
+      table: { type: { summary: 'a | button' }, defaultValue: { summary: 'a' } }
+    },
+    button_href: {
+      description: 'Destino del enlace (solo si tag es `a`).',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: '#' } }
+    },
+    button_color: {
+      description: 'Variante de color.',
+      control: { type: 'select' },
+      options: ['primary', 'secondary', 'link', ''],
+      table: { type: { summary: 'primary | secondary | link' }, defaultValue: { summary: 'primary' } }
+    },
+    button_size: {
+      description: 'Tamaño del botón.',
+      control: { type: 'select' },
+      options: ['', 'lg', 'sm', 'xs', 'wide', 'block'],
+      table: { type: { summary: 'lg | sm | xs | wide | block' }, defaultValue: { summary: '-' } }
+    },
+    button_outline: {
+      description: 'Variante con borde y fondo transparente.',
+      control: { type: 'boolean' },
+      table: { type: { summary: 'boolean' }, defaultValue: { summary: 'false' } }
+    },
+    button_glass: {
+      description: 'Efecto de cristal en el fondo.',
+      control: { type: 'boolean' },
+      table: { type: { summary: 'boolean' }, defaultValue: { summary: 'false' } }
+    },
+    button_shape: {
+      description: 'Forma geométrica del botón.',
+      control: { type: 'select' },
+      options: ['', 'square', 'circle'],
+      table: { type: { summary: 'square | circle' }, defaultValue: { summary: '-' } }
+    },
+    button_disable: {
+      description: 'Desactiva el botón via clase CSS o atributo HTML.',
+      control: { type: 'radio' },
+      options: ['', 'class', 'attribute'],
+      table: { type: { summary: 'class | attribute' }, defaultValue: { summary: '-' } }
+    },
+    button_icon: {
+      description: 'Nombre del icono SVG (sin extensión) de `img/icons/`.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: '-' } }
+    }
+  }
+} %}
+
+  {% story primary with {
+    name: 'Primary',
+    description: 'Botón principal de acción.',
+    args: { button_text: 'Ver proyecto', button_tag: 'a', button_href: '#', button_color: 'primary' }
+  } %}
+    {{ _self.render(button_text, button_tag, button_href, button_color, button_size, button_outline, button_glass, button_shape, button_disable, button_icon) }}
+  {% endstory %}
+
+  {% story secondary with {
+    name: 'Secondary',
+    tags: ['!autodocs'],
+    description: 'Botón secundario.',
+    args: { button_text: 'Cancelar', button_tag: 'button', button_href: '', button_color: 'secondary' }
+  } %}
+    {{ _self.render(button_text, button_tag, button_href, button_color, button_size, button_outline, button_glass, button_shape, button_disable, button_icon) }}
+  {% endstory %}
+
+  {% story outline with {
+    name: 'Outline',
+    tags: ['!autodocs'],
+    description: 'Variante con borde y fondo transparente.',
+    args: { button_text: 'Saber más', button_tag: 'a', button_href: '#', button_color: 'primary', button_outline: true }
+  } %}
+    {{ _self.render(button_text, button_tag, button_href, button_color, button_size, button_outline, button_glass, button_shape, button_disable, button_icon) }}
+  {% endstory %}
+
+  {% story sizes with {
+    name: 'Tamaños',
+    tags: ['!autodocs'],
+    description: 'Comparativa de tamaños: lg, default, sm, xs.',
+    args: { button_text: 'Botón lg', button_tag: 'a', button_href: '#', button_color: 'primary', button_size: 'lg' }
+  } %}
+    {{ _self.render(button_text, button_tag, button_href, button_color, button_size, button_outline, button_glass, button_shape, button_disable, button_icon) }}
+  {% endstory %}
+
+  {% story disabled with {
+    name: 'Disabled',
+    tags: ['!autodocs'],
+    description: 'Botón desactivado mediante clase CSS.',
+    args: { button_text: 'No disponible', button_tag: 'button', button_href: '', button_color: 'primary', button_disable: 'class' }
+  } %}
+    {{ _self.render(button_text, button_tag, button_href, button_color, button_size, button_outline, button_glass, button_shape, button_disable, button_icon) }}
+  {% endstory %}
+
+{% endstories %}
