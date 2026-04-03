@@ -1,7 +1,24 @@
 [data-component-id="icosaedrico:icon"] svg {
   display: inline-block;
+  overflow: visible;
+  flex-shrink: 0;
 }
 
-[data-component-id="icosaedrico:icon"].icon--sm {
+/* Linked icon */
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.icon-link:hover {
+  color: var(--color-primary);
+}
+
+/* Size modifier */
+[data-component-id="icosaedrico:icon"].icon--sm svg {
   width: 3.2rem;
+  height: 3.2rem;
 }

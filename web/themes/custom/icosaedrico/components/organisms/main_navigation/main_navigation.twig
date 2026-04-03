@@ -1,66 +1,56 @@
-{% set classes = [
-  "flex",
-  "justify-center",
-] %}
-
 {% block content %}
-
   {% import _self as menus %}
-
-  {#
-    We call a macro which calls itself to render the full tree.
-    @see https://twig.symfony.com/doc/3.x/tags/macro.html
-  #}
-  {{ menus.menu_links(items, attributes, 0, menu_level_0_classes|default('main-menu px-1 uppercase')) }}
+  {{ menus.menu_links(items, attributes, 0, menu_level_0_classes|default('main-menu')) }}
 
   {% macro menu_links(items, attributes, menu_level, menu_level_0_classes) %}
     {% import _self as menus %}
     {% if items %}
-      {% if menu_level == 0 %}
-        <ul {{ attributes.addClass(menu_level_0_classes) }}>
-      {% else %}
-        <ul {{ attributes.addClass("p-2") }}>
-      {% endif %}
-      {% for item in items %}
-        {% set item_attributes = item.attributes|default(create_attribute()) %}
-        {% set url_attributes = item.url.getOption('attributes')|default({}) %}
-        {% set icon = url_attributes['data-icon']|default('') %}
-        {% set show_only_icon = url_attributes['data-icon-show']|default('false') %}
-        {% set active_class = item.in_active_trail ? 'is-active' : '' %}
-        <li{{ item_attributes|without('data-icon', 'data-icon-show') }}>
-          {% if icon %}
-            {% if show_only_icon == 'true' %}
-              <a href="{{ item.url }}" class="menu-link-icon {{ active_class }}">
+      {% set list_class = menu_level == 0 ? menu_level_0_classes : 'nav-menu' %}
+      <ul {{ attributes.addClass(list_class) }}>
+        {% for item in items %}
+
+          {%- set url_attributes = item.url.getOption('attributes')|default({}) -%}
+          {%- set icon      = url_attributes['data-icon']|default('') -%}
+          {%- set icon_only = url_attributes['data-icon-show']|default('') == 'true' -%}
+          {%- set active    = item.in_active_trail ? 'is-active' : '' -%}
+
+          <li {{ item.attributes|default(create_attribute())|without('data-icon', 'data-icon-show') }}>
+
+            {% if icon and icon_only %}
+              {# Icon-only link — visually just the icon, title as aria-label #}
+              <a href="{{ item.url }}" class="menu-link menu-link--icon-only {{ active }}" aria-label="{{ item.title }}">
                 {% include "icosaedrico:icon" with {
                   icon_name: icon,
-                  icon_svg_classes: "menu-icon",
                   icon_svg_size: "16",
-                  icon_svg_fill: "currentColor"
+                  icon_svg_fill: active ? "currentColor" : "var(--color-text-muted)",
                 } only %}
               </a>
-            {% else %}
-              <a href="{{ item.url }}" class="menu-link flex flex-col text-black-500 {{ active_class }}">
+
+            {% elseif icon %}
+              {# Icon + label link #}
+              <a href="{{ item.url }}" class="menu-link menu-link--has-icon {{ active }}">
                 {% include "icosaedrico:icon" with {
                   icon_name: icon,
-                  icon_svg_classes: "menu-icon",
                   icon_svg_size: "16",
-                  icon_svg_fill: "currentColor",
+                  icon_svg_fill: active ? "currentColor" : "var(--color-text-muted)",
                 } only %}
-                <div class="text-black-950">{{ item.title }}</div>
+                <span class="menu-label">{{ item.title }}</span>
+              </a>
+
+            {% else %}
+              {# Text-only link #}
+              <a href="{{ item.url }}" class="menu-link {{ active }}">
+                {{ item.title }}
               </a>
             {% endif %}
-          {% else %}
-            <a href="{{ item.url }}" class="menu-link {{ active_class }}">
-              {{ item.title }}
-            </a>
-          {% endif %}
-          {% if item.below %}
-            {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_level_0_classes) }}
-          {% endif %}
-        </li>
-      {% endfor %}
+
+            {% if item.below %}
+              {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_level_0_classes) }}
+            {% endif %}
+
+          </li>
+        {% endfor %}
       </ul>
     {% endif %}
   {% endmacro %}
-
 {% endblock %}

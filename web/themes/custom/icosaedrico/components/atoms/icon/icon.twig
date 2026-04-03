@@ -1,17 +1,10 @@
-{% set attributes = attributes ?: create_attribute() %}
-{% if icon_href %}
-  <a href="{{ icon_href }}" {{ attributes.addClass(classes, icon_href_classes) }}>
-{% endif %}
-    <svg xmlns="http://www.w3.org/2000/svg"
-      width="{{ icon_svg_size|default('16') }}"
-      height="{{ icon_svg_size|default('16') }}"
-      fill="{{ icon_svg_fill|default('currentColor') }}"
-      stroke="{{ icon_svg_stroke }}"
-      stroke-width="{{ icon_svg_stroke_width }}"
-      class="bi bi-{{ icon_name }} {{ icon_svg_classes }} overflow-visible"
-      viewBox="{{ icon_svg_viewbox|default('0 0 16 16') }}">
-      {{ source(componentMetadata.path ~ '/icons/' ~ (icon_name|default('knife')) ~ '.svg') }}
-    </svg>
-{% if icon_href %}
-  </a>
-{% endif %}
+<svg xmlns="http://www.w3.org/2000/svg"
+  width="{{ icon_svg_size|default('16') }}"
+  height="{{ icon_svg_size|default('16') }}"
+  fill="{{ icon_svg_fill|default('currentColor') }}"
+  {% if icon_svg_stroke %}stroke="{{ icon_svg_stroke }}"{% endif %}
+  {% if icon_svg_stroke_width %}stroke-width="{{ icon_svg_stroke_width }}"{% endif %}
+  class="bi bi-{{ icon_name }}{% if icon_svg_classes %} {{ icon_svg_classes }}{% endif %}"
+  viewBox="{{ icon_svg_viewbox|default('0 0 16 16') }}">
+  {{ source(componentMetadata.path ~ '/icons/' ~ (icon_name|default('knife')) ~ '.svg') }}
+</svg>

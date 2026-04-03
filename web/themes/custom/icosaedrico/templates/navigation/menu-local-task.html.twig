@@ -16,12 +16,12 @@
  */
 #}
 {% if svg_icon is defined and svg_icon %}
-  {% include "icosaedrico:icon" with {
-    icon_name: svg_icon,
-    icon_href: link['#url'],
-    icon_svg_size: "16",
-    icon_href_classes: "btn btn-link",
-  } %}
+  <a href="{{ link['#url'] }}" class="icon-link" title="{{ link['#title'] }}">
+    {% include "icosaedrico:icon" with {
+      icon_name: svg_icon,
+      icon_svg_size: "16",
+    } only %}
+  </a>
 {% else %}
   {{ link }}
 {% endif %}

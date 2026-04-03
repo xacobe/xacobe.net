@@ -8,6 +8,4 @@ props:
   icon_svg_stroke: ""
   icon_svg_stroke_width: ""
   icon_svg_viewbox: "0 0 16 16"
-  icon_href: ""
-  icon_href_classes: ""
 slots: {}

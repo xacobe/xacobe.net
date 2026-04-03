@@ -1,18 +1,18 @@
-/* Comodore 64 Rainbow */
+/* ── Commodore 64 Rainbow vars ───────────────────────────── */
 :root {
-  --c64-red: hsl(0, 70%, 50%);
-  --c64-orange: hsl(14, 68%, 50%);
-  --c64-yellow: hsl(49, 87%, 50%);
-  --c64-green: hsl(120, 42%, 50%);
-  --c64-blue: hsl(196, 100%, 50%);
-
-    --c64-red--light: hsl(0, 70%, 90%);
-  --c64-orange--light: hsl(14, 68%, 90%);
-  --c64-yellow--light: hsl(49, 87%, 90%);
+  --c64-red:          hsl(0,   70%, 50%);
+  --c64-orange:       hsl(14,  68%, 50%);
+  --c64-yellow:       hsl(49,  87%, 50%);
+  --c64-green:        hsl(120, 42%, 50%);
+  --c64-blue:         hsl(196,100%, 50%);
+  --c64-red--light:   hsl(0,   70%, 90%);
+  --c64-orange--light:hsl(14,  68%, 90%);
+  --c64-yellow--light:hsl(49,  87%, 90%);
   --c64-green--light: hsl(120, 42%, 90%);
-  --c64-blue--light: hsl(196, 100%, 90%);
+  --c64-blue--light:  hsl(196,100%, 90%);
 }
-/* Estilos base compartidos por .main-menu y .nav-menu */
+
+/* ── Base list ───────────────────────────────────────────── */
 .main-menu,
 .nav-menu {
   display: flex;
@@ -21,70 +21,82 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 0.25rem;
+  gap: var(--spacing-1);
 }
 
-.main-menu {
-  a {
-    border-bottom: solid 4px transparent;
-    border-radius: 0;
-  }
-  a:hover {
-    background-color: transparent;
-  }
-
-  li:nth-child(1) {
-    a.is-active {
-      color: var(--orange-500);
-    }
-    a:hover {
-      color: var(--orange-300);
-    }
-  }
-  li:nth-child(2) {
-    a.is-active {
-      color: var(--red-500);
-    }
-    a:hover {
-      color: var(--red-300);
-    }
-  }
-  li:nth-child(3) {
-    a.is-active {
-      color: var(--green-500);
-    }
-    a:hover {
-        color: var(--green-300);
-      }
-  }
-
-  li:nth-child(4) {
-    a.is-active {
-      color: var(--purple-500);
-    }
-    a:hover {
-        color: var(--purple-300);
-      }
-  }
-    li:nth-child(5) {
-      a.is-active {
-        color: var(--blue-300);
-      }
-
-      a:hover {
-        color: var(--blue-500);
-      }
-    }
+/* ── Links ───────────────────────────────────────────────── */
+.main-menu a,
+.nav-menu a {
+  display: block;
+  padding-inline: var(--spacing-2);
+  padding-block: var(--spacing-2);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-text);
+  border-bottom: 3px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-/*TODO See why doesnt have active state on frontpage*/
-.frontpage {
-    li:nth-child(1) {
-    a {
-      color: var(--orange-500);
-    }
-    a:hover {
-      color: var(--orange-300);
-    }
-  }
+.main-menu a:hover,
+.nav-menu a:hover {
+  background-color: transparent;
+}
+
+/* ── Icon-only link ──────────────────────────────────────── */
+.menu-link--icon-only {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Icon + label link ───────────────────────────────────── */
+.main-menu a.menu-link--has-icon {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+.menu-link--has-icon svg {
+  color: var(--color-text-muted);
+}
+
+/* En activo, el SVG hereda el color de sección del <a> padre */
+.main-menu a.is-active svg {
+  color: inherit;
+}
+.menu-link--has-icon .menu-label {
+  color: var(--color-text);
+}
+
+/* ── Per-item rainbow active / hover ────────────────────── */
+.main-menu li:nth-child(1) a.is-active { color: var(--c64-orange); border-bottom-color: var(--c64-orange); }
+.main-menu li:nth-child(1) a:hover     { color: var(--orange-300); }
+
+.main-menu li:nth-child(2) a.is-active { color: var(--c64-red); border-bottom-color: var(--c64-red); }
+.main-menu li:nth-child(2) a:hover     { color: var(--red-300); }
+
+.main-menu li:nth-child(3) a.is-active { color: var(--c64-green); border-bottom-color: var(--c64-green); }
+.main-menu li:nth-child(3) a:hover     { color: var(--green-300); }
+
+.main-menu li:nth-child(4) a.is-active { color: var(--purple-500); border-bottom-color: var(--purple-500); }
+.main-menu li:nth-child(4) a:hover     { color: var(--purple-300); }
+
+.main-menu li:nth-child(5) a.is-active { color: var(--c64-blue); border-bottom-color: var(--c64-blue); }
+.main-menu li:nth-child(5) a:hover     { color: var(--blue-300); }
+
+/* ── Frontpage active override ───────────────────────────── */
+/* TODO: active state missing on frontpage */
+.frontpage .main-menu li:nth-child(1) a { color: var(--c64-orange); }
+.frontpage .main-menu li:nth-child(1) a:hover { color: var(--orange-300); }
+
+/* ── Submenu (level > 0) ─────────────────────────────────── */
+.main-menu ul,
+.nav-menu ul {
+  flex-direction: column;
+  padding: var(--spacing-2);
+  gap: var(--spacing-1);
 }

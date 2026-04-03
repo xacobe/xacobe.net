@@ -1,6 +1,7 @@
 '$schema': 'https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json'
 name: Icon
-status: experimental
+status: stable
+description: Bootstrap Icon SVG inline. Optionally wrapped in a link.
 props:
   type: object
   required: [icon_name]
@@ -8,36 +9,28 @@ props:
     icon_name:
       type: string
       title: Name
-      description: The name of the icon and the file
-    icon_href_classes:
-          type: string
-          title: Icon link classes
-    icon_svg_classes:
-      type: string
-      title: CSS classes for the icon element
-      description: Any Tailwind, DaisyUI or theme custom classes
+      description: Bootstrap Icon file name (e.g. "star-fill", "arrow-right").
     icon_svg_size:
       type: string
       title: Size
-      description: The size in pixels (without the px). Both, width and height
+      description: Width and height in pixels, without unit (e.g. "16", "24").
     icon_svg_fill:
       type: string
-      title: SVG fill
-      description: The SVG color fill
+      title: Fill color
+      description: CSS color value. Defaults to currentColor.
     icon_svg_stroke:
       type: string
-      title: SVG stroke color
+      title: Stroke color
+      description: CSS color value for stroke.
     icon_svg_stroke_width:
       type: string
-      title: The SVG stroke width
+      title: Stroke width
+      description: SVG stroke-width value.
     icon_svg_viewbox:
       type: string
       title: viewBox
-      description: "SVG viewBox attribute. Default: '0 0 16 16' (Bootstrap Icons). Solo cambiar para iconos no-Bootstrap."
-      examples:
-        - '0 0 16 16'
-        - '0 0 24 24'
-    icon_href:
+      description: "Override when the icon is not a standard Bootstrap Icon. Default: '0 0 16 16'."
+    icon_svg_classes:
       type: string
-      title: Link
-      description: Icon link
+      title: SVG classes
+      description: Extra classes on the SVG element (e.g. swap-on, swap-off).

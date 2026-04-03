@@ -1,0 +1,26 @@
+name: "Default"
+description: "Menú de navegación principal con items de texto."
+props:
+  menu_level_0_classes: main-menu
+  items:
+    - title: Inicio
+      url: "/"
+      in_active_trail: true
+      attributes: {}
+      below: []
+    - title: Trabajos
+      url: "/trabajos"
+      in_active_trail: false
+      attributes: {}
+      below: []
+    - title: Blog
+      url: "/blog"
+      in_active_trail: false
+      attributes: {}
+      below: []
+    - title: Contacto
+      url: "/contacto"
+      in_active_trail: false
+      attributes: {}
+      below: []
+slots: {}

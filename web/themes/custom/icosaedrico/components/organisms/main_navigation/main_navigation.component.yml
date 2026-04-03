@@ -7,7 +7,8 @@ props:
     menu_level_0_classes:
       type: string
       title: Root menu classes
-      description: "CSS classes for the top-level <ul>. Default: 'main-menu menu menu-horizontal px-1 uppercase'."
-      examples:
-        - 'main-menu menu menu-horizontal px-1 uppercase'
-        - 'menu menu-horizontal px-4 text-xl'
+      description: "CSS classes for the top-level <ul>. Default: 'main-menu'."
+    items:
+      type: array
+      title: Menu items
+      description: "Provided automatically by Drupal's menu system. Use only in demos."
