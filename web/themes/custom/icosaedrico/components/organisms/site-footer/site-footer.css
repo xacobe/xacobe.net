@@ -1,0 +1,15 @@
+.site-footer {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.site-footer__content .footer-branding {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+

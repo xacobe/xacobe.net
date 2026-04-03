@@ -1,0 +1,49 @@
+<article {{ attributes.addClass('project-card') }}>
+
+  <div class="project-card__info">
+    {{ title_prefix }}
+    {% if title %}
+      <h2 {{ title_attributes.addClass('project-card__title') }}>
+        {% if url %}<a href="{{ url }}">{{ title }}</a>{% else %}{{ title }}{% endif %}
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+
+    {% if tech_icons %}
+      <ul class="project-card__tech">
+        {% for icon in tech_icons %}
+          <li class="project-card__tech-item" title="{{ icon.label }}">
+            <img src="{{ icon.src }}" alt="{{ icon.label }}">
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if project_url %}
+      <a href="{{ project_url }}" class="project-card__link" target="_blank" rel="noopener">
+        {{ project_url_title ?: project_url }}
+      </a>
+    {% endif %}
+  </div>
+
+  <div class="project-card__screenshots">
+    <div class="project-card__screenshot project-card__screenshot--desktop">
+      <div class="device-wrapper">
+        <div class="device" data-device="Macbook" data-orientation="portrait" data-color="black">
+          <div class="screen">{% block screenshot_desktop %}{% endblock %}</div>
+          <div class="button"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card__screenshot project-card__screenshot--mobile">
+      <div class="device-wrapper">
+        <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+          <div class="screen">{% block screenshot_mobile %}{% endblock %}</div>
+          <div class="button"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</article>

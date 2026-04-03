@@ -1,0 +1,14 @@
+.illas-cies {
+  display: block;
+  margin: 0 auto;
+  max-width: 640px; /* default: sm */
+  width: 100%;
+}
+
+.illas-cies--xs {
+  max-width: 320px;
+}
+
+.illas-cies--lg {
+  max-width: 100%;
+}

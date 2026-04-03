@@ -1,91 +1,63 @@
+{% macro render(branding_layout, branding_size, branding_show_logo, branding_show_slogan, site_logo, site_name, site_slogan) %}
+  {{ include('icosaedrico:branding', {
+    branding_layout: branding_layout,
+    branding_size: branding_size,
+    branding_show_logo: branding_show_logo,
+    branding_show_slogan: branding_show_slogan,
+    site_logo: site_logo,
+    site_name: site_name,
+    site_slogan: site_slogan,
+  }, with_context = false) }}
+{% endmacro %}
+
 {% stories branding with {
   title: 'Organisms/Branding',
+  description: 'Logo, nombre y eslogan del sitio. Soporta layouts horizontal/vertical y tamaños sm, md, lg, xl.',
+  tags: ['autodocs'],
   argTypes: {
     branding_layout: { control: { type: 'radio' }, options: ['horizontal', 'vertical'] },
     branding_size: { control: { type: 'select' }, options: ['sm', 'md', 'lg', 'xl'] },
     branding_show_logo: { control: { type: 'boolean' } },
-    branding_show_slogan: { control: { type: 'boolean' } }
+    branding_show_slogan: { control: { type: 'boolean' } },
+    site_logo: { control: { type: 'text' } },
+    site_name: { control: { type: 'text' } },
+    site_slogan: { control: { type: 'text' } }
   }
 } %}
 
   {% story header with {
     name: 'Header (sm)',
-    args: {
-      branding_layout: 'horizontal',
-      branding_size: 'sm',
-      branding_show_logo: true,
-      branding_show_slogan: false
-    }
+    description: 'Versión compacta para header. Logo y nombre sin eslogan.',
+    args: { branding_layout: 'horizontal', branding_size: 'sm', branding_show_logo: true, branding_show_slogan: false, site_logo: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo.svg', site_name: 'xacobe.net', site_slogan: 'Diseño & desarrollo web' }
   } %}
-    {{ include('icosaedrico:branding', {
-      branding_layout: branding_layout,
-      branding_size: branding_size,
-      branding_show_logo: branding_show_logo,
-      branding_show_slogan: branding_show_slogan,
-      site_logo: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo.svg',
-      site_name: 'xacobe.net',
-      site_slogan: 'Diseño & desarrollo web',
-    }, with_context = false) }}
+    {{ _self.render(branding_layout, branding_size, branding_show_logo, branding_show_slogan, site_logo, site_name, site_slogan) }}
   {% endstory %}
 
   {% story horizontal with {
     name: 'Horizontal (md)',
-    args: {
-      branding_layout: 'horizontal',
-      branding_size: 'md',
-      branding_show_logo: true,
-      branding_show_slogan: true
-    }
+    tags: ['!autodocs'],
+    description: 'Layout horizontal con logo, nombre y eslogan.',
+    args: { branding_layout: 'horizontal', branding_size: 'md', branding_show_logo: true, branding_show_slogan: true, site_logo: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo.svg', site_name: 'xacobe.net', site_slogan: 'Diseño & desarrollo web' }
   } %}
-    {{ include('icosaedrico:branding', {
-      branding_layout: branding_layout,
-      branding_size: branding_size,
-      branding_show_logo: branding_show_logo,
-      branding_show_slogan: branding_show_slogan,
-      site_logo: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo.svg',
-      site_name: 'xacobe.net',
-      site_slogan: 'Diseño & desarrollo web',
-    }, with_context = false) }}
+    {{ _self.render(branding_layout, branding_size, branding_show_logo, branding_show_slogan, site_logo, site_name, site_slogan) }}
   {% endstory %}
 
   {% story vertical with {
     name: 'Vertical (md)',
-    args: {
-      branding_layout: 'vertical',
-      branding_size: 'md',
-      branding_show_logo: true,
-      branding_show_slogan: true
-    }
+    tags: ['!autodocs'],
+    description: 'Layout vertical con todos los elementos.',
+    args: { branding_layout: 'vertical', branding_size: 'md', branding_show_logo: true, branding_show_slogan: true, site_logo: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo.svg', site_name: 'xacobe.net', site_slogan: 'Diseño & desarrollo web' }
   } %}
-    {{ include('icosaedrico:branding', {
-      branding_layout: branding_layout,
-      branding_size: branding_size,
-      branding_show_logo: branding_show_logo,
-      branding_show_slogan: branding_show_slogan,
-      site_logo: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo.svg',
-      site_name: 'xacobe.net',
-      site_slogan: 'Diseño & desarrollo web',
-    }, with_context = false) }}
+    {{ _self.render(branding_layout, branding_size, branding_show_logo, branding_show_slogan, site_logo, site_name, site_slogan) }}
   {% endstory %}
 
   {% story hero with {
     name: 'Hero frontpage (xl)',
-    args: {
-      branding_layout: 'vertical',
-      branding_size: 'xl',
-      branding_show_logo: true,
-      branding_show_slogan: true
-    }
+    tags: ['!autodocs'],
+    description: 'Versión grande para el hero de la portada.',
+    args: { branding_layout: 'vertical', branding_size: 'xl', branding_show_logo: true, branding_show_slogan: true, site_logo: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo.svg', site_name: 'xacobe.net', site_slogan: 'Diseño & desarrollo web' }
   } %}
-    {{ include('icosaedrico:branding', {
-      branding_layout: branding_layout,
-      branding_size: branding_size,
-      branding_show_logo: branding_show_logo,
-      branding_show_slogan: branding_show_slogan,
-      site_logo: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo.svg',
-      site_name: 'xacobe.net',
-      site_slogan: 'Diseño & desarrollo web',
-    }, with_context = false) }}
+    {{ _self.render(branding_layout, branding_size, branding_show_logo, branding_show_slogan, site_logo, site_name, site_slogan) }}
   {% endstory %}
 
 {% endstories %}

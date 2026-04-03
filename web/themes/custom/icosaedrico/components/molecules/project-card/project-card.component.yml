@@ -1,0 +1,34 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+name: Project Card
+status: stable
+props:
+  type: object
+  required: [title]
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Project name.
+    url:
+      type: string
+      title: Node URL
+      description: Internal URL of the works node.
+    project_url:
+      type: string
+      title: Project URL
+      description: External URL of the live project.
+    project_url_title:
+      type: string
+      title: Project URL label
+      description: Link text for the external URL.
+    tech_icons:
+      type: array
+      title: Tech icons
+      description: "Array of {src, label} objects — one per technology tag."
+slots:
+  screenshot_desktop:
+    title: Screenshot desktop
+    description: Rendered desktop screenshot media field.
+  screenshot_mobile:
+    title: Screenshot mobile
+    description: Rendered mobile screenshot media field.

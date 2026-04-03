@@ -1,0 +1,11 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+name: Footer Doodle
+status: stable
+props:
+  type: object
+  properties:
+    doodle_class:
+      type: string
+      title: CSS Classes
+      description: "Additional modifier classes: illas-cies--xs, illas-cies--lg"
+      default: 'illas-cies'

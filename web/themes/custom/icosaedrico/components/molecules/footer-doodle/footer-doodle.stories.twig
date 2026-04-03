@@ -1,0 +1,33 @@
+{% macro render(doodle_class) %}
+  {{ include('icosaedrico:footer-doodle', {
+    doodle_class: doodle_class
+  }, with_context = false) }}
+{% endmacro %}
+
+{% stories footer_doodle with {
+  title: 'Molecules/Footer Doodle',
+  description: 'Elemento decorativo SVG de las Illas Cíes para el footer.',
+  tags: ['autodocs'],
+  argTypes: {
+    doodle_class: { control: { type: 'text' } }
+  }
+} %}
+
+  {% story default with {
+    name: 'Default',
+    description: 'Tamaño estándar (640px máx).',
+    args: { doodle_class: 'illas-cies' }
+  } %}
+    {{ _self.render(doodle_class) }}
+  {% endstory %}
+
+  {% story compact with {
+    name: 'Compact',
+    tags: ['!autodocs'],
+    description: 'Versión compacta (320px máx).',
+    args: { doodle_class: 'illas-cies illas-cies--xs' }
+  } %}
+    {{ _self.render(doodle_class) }}
+  {% endstory %}
+
+{% endstories %}

@@ -2,7 +2,7 @@
 const preview = {
   parameters: {
     server: {
-      url: `${process.env.STORYBOOK_DRUPAL_URL}/storybook/stories/render`,
+      url: `${process.env.STORYBOOK_DRUPAL_URL || 'https://xacobe.net.ddev.site'}/storybook/stories/render`,
     },
   },
 };

@@ -1,0 +1,65 @@
+{% macro render(show_doodle, site_name, logo_url, logo_alt, copyright_start_year, copyright_end_year) %}
+  {{ include('icosaedrico:site-footer', {
+    show_doodle: show_doodle,
+    site_name: site_name,
+    logo_url: logo_url,
+    logo_alt: logo_alt,
+    copyright_start_year: copyright_start_year,
+    copyright_end_year: copyright_end_year
+  }, with_context = false) }}
+{% endmacro %}
+
+{% stories site_footer with {
+  title: 'Organisms/Site Footer',
+  description: 'Footer completo del sitio. Contiene el doodle decorativo, información de branding (logo y nombre) y copyright. Soporta diferentes configuraciones para mostrar/ocultar elementos según necesidad.',
+  tags: ['autodocs']
+} %}
+
+  {% story complete with { 
+    name: 'Complete Footer', 
+    args: { 
+      show_doodle: true,
+      site_name: 'www.xacobe.net',
+      logo_url: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo_old.png',
+      logo_alt: 'Logo',
+      copyright_start_year: '2006',
+      copyright_end_year: '2026'
+    },
+    description: 'Incluye todos los elementos: doodle, branding y copyright'
+  } %}
+    {{ _self.render(show_doodle, site_name, logo_url, logo_alt, copyright_start_year, copyright_end_year) }}
+  {% endstory %}
+
+  {% story without_doodle with {
+    name: 'Without Doodle',
+    tags: ['!autodocs'],
+    args: { 
+      show_doodle: false,
+      site_name: 'www.xacobe.net',
+      logo_url: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo_old.png',
+      logo_alt: 'Logo',
+      copyright_start_year: '2006',
+      copyright_end_year: '2026'
+    },
+    description: 'Footer sin el doodle decorativo'
+  } %}
+    {{ _self.render(show_doodle, site_name, logo_url, logo_alt, copyright_start_year, copyright_end_year) }}
+  {% endstory %}
+
+  {% story minimal with {
+    name: 'Minimal',
+    tags: ['!autodocs'],
+    args: { 
+      show_doodle: true,
+      site_name: '',
+      logo_url: '',
+      logo_alt: 'Logo',
+      copyright_start_year: '2006',
+      copyright_end_year: '2026'
+    },
+    description: 'Configuración mínima: solo doodle y copyright sin branding'
+  } %}
+    {{ _self.render(show_doodle, site_name, logo_url, logo_alt, copyright_start_year, copyright_end_year) }}
+  {% endstory %}
+
+{% endstories %}

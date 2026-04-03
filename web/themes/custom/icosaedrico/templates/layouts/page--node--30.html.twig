@@ -17,7 +17,17 @@
     {{ page.content }}
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    {{ page.footer }}
-  </footer>
+  {% include 'icosaedrico:site-footer' with {
+    show_doodle: true,
+    site_name: 'www.xacobe.net',
+    logo_url: '/themes/custom/icosaedrico/logo_old.png',
+    logo_alt: 'Logo',
+    copyright_start_year: '2006'
+  } %}
+
+  {% if page.footer %}
+    <div class="footer-region">
+      {{ page.footer }}
+    </div>
+  {% endif %}
 </div>

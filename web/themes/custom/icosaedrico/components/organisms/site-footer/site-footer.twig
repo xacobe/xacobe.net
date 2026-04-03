@@ -1,0 +1,28 @@
+<footer class="site-footer" role="contentinfo">
+  {% if show_doodle %}
+    {{ include('icosaedrico:footer-doodle', {
+      doodle_class: 'illas-cies',
+    }, with_context = false) }}
+  {% endif %}
+
+  <aside class="site-footer__content">
+    {% if site_name or logo_url %}
+      <div class="footer-branding">
+        {% if site_name %}
+          <span class="footer-branding__site-name">{{ site_name }}</span>
+        {% endif %}
+        {% if logo_url %}
+          <div class="footer-branding__logo">
+            <img src="{{ logo_url }}" alt="{{ logo_alt|default('Logo') }}" />
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if copyright_start_year %}
+      <div class="footer-copyright">
+        <span>© {{ copyright_start_year }} - <span class="footer-copyright__year">{{ copyright_end_year }}</span></span>
+      </div>
+    {% endif %}
+  </aside>
+</footer>

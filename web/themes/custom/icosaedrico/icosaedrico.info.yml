@@ -4,6 +4,11 @@ description: 20 caras
 core_version_requirement: ^10 || ^11
 # Defines the base theme
 base theme: stable9
+# Single Directory Components
+component_libraries:
+  icosaedrico:
+    paths:
+      - components
 # Defines libraries group in which we can add CSS/JS.
 libraries:
   - icosaedrico/global-styling

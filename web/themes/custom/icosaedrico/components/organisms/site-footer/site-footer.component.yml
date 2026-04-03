@@ -1,0 +1,42 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+name: Site Footer
+status: stable
+js:
+  - site-footer.js
+props:
+  type: object
+  properties:
+    show_doodle:
+      type: boolean
+      title: Show Doodle
+      description: Whether to display the decorative doodle
+      default: true
+    site_name:
+      type: string
+      title: Site Name
+      description: Name of the website
+      examples:
+        - 'www.xacobe.net'
+    logo_url:
+      type: string
+      title: Logo URL
+      description: URL to the logo image
+      examples:
+        - '/themes/custom/icosaedrico/logo_old.png'
+    logo_alt:
+      type: string
+      title: Logo Alt Text
+      description: Alternative text for the logo image
+      default: 'Logo'
+    copyright_start_year:
+      type: string
+      title: Copyright Start Year
+      description: Year copyright started
+      examples:
+        - '2006'
+    copyright_end_year:
+      type: string
+      title: Copyright End Year
+      description: Current year (will be auto-updated by JS)
+      examples:
+        - '2026'

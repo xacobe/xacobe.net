@@ -1,0 +1,80 @@
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+/* ── Info column ─────────────────────────────────────────── */
+.project-card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+  flex-shrink: 0;
+  width: 30%;
+}
+
+.project-card__title {
+  font-family: var(--font-accent);
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.project-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card__title a:hover {
+  color: var(--color-primary);
+}
+
+/* ── Tech icons ──────────────────────────────────────────── */
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-card__tech-item img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+/* ── External link ───────────────────────────────────────── */
+.project-card__link {
+  font-size: 0.8rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.project-card__link:hover {
+  color: var(--color-primary);
+}
+
+/* ── Screenshots ─────────────────────────────────────────── */
+.project-card__screenshots {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--spacing-4);
+  flex: 1;
+  min-width: 0;
+  width: 70%;
+}
+
+.project-card__screenshot--desktop {
+  width: 66%;
+}
+.project-card__screenshot--mobile {
+  flex-shrink: 0;
+  width: 20%;
+}
