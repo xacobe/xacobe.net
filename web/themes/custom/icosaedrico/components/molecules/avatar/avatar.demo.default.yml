@@ -1,8 +1,0 @@
-name: "Default"
-description: "Avatar de usuario con imagen."
-props:
-  user_name: "Xacobe M. Arostegui"
-  user_picture_url: /themes/custom/icosaedrico/logo.svg
-  user_picture_width: "72"
-  user_picture_height: "72"
-slots: {}

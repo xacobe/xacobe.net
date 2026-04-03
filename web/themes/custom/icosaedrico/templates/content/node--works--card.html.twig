@@ -79,7 +79,15 @@
           <h2{{ title_attributes.addClass('card-title text-center') }}>
             <a href="{{ url }}">{{ label }}</a>
           </h2>
-          {{ content.field_project_tech}}
+{% for item in node.field_project_tech %}
+  {% set term = item.entity %}
+  {% set file = term.field_tech_icon.entity %}
+  {% if file %}
+    <span class="tech tech--icon" title="{{ term.label }}">
+      <img src="{{ file_url(file.uri.value) }}" alt="{{ term.label }}">
+    </span>
+  {% endif %}
+{% endfor %}
         {% endif %}
         {{ title_suffix }}
         {% if node.field_project_url.uri %}

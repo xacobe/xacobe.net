@@ -6,19 +6,36 @@
   "scripts": {
     "build:scss": "node scripts/compile-scss.js",
     "dev": "vite",
-    "build": "npm run build:scss && vite build"
+    "build": "npm run build:scss && vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@chromatic-com/storybook": "^5.1.1",
+    "@fontsource/lobster": "^5.2.8",
+    "@fontsource/open-sans": "^5.2.7",
+    "@fontsource/reem-kufi": "^5.2.11",
+    "@lullabot/storybook-drupal-addon": "^2.0.6",
+    "@storybook/addon-a11y": "^10.3.4",
+    "@storybook/addon-docs": "^10.3.4",
+    "@storybook/addon-vitest": "^10.3.4",
+    "@storybook/html-vite": "^10.3.4",
+    "@vitest/browser-playwright": "^4.1.2",
+    "@vitest/coverage-v8": "^4.1.2",
     "autoprefixer": "^10.4.17",
+    "eslint-plugin-storybook": "^10.3.4",
     "glob": "^10.3.10",
+    "playwright": "^1.59.1",
     "postcss": "^8.4.35",
     "sass": "^1.70.0",
+    "storybook": "^10.3.4",
     "vite": "^5.1.1",
     "vite-plugin-glob": "^0.3.2",
-    "vite-plugin-sass-dts": "^1.3.17"
+    "vite-plugin-sass-dts": "^1.3.17",
+    "vitest": "^4.1.2"
   },
   "dependencies": {
     "simple-icons": "^11.3.0"

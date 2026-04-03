@@ -126,3 +126,5 @@ build/
 !.ddev/web-build/
 !.ddev/db-build/
 !.ddev/commands/
+*storybook.log
+storybook-static

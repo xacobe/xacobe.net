@@ -1,0 +1,29 @@
+{{ attach_library('sdc_styleguide/section.colors') }}
+<div class="styleguide-section styleguide-section--{{ section }}">
+  <h1 class="styleguide-section__title">{{ information.name }}</h1>
+  <div class="styleguide-section__description">
+    {{ information.description }}
+  </div>
+  {%- for color_group, details in information.details.color_groups -%}
+    <section class="styleguide-colors styleguide-colors--{{ color_group }}">
+      <h2 class="styleguide-colors__title">{{ details.name }}</h2>
+      <div class="styleguide-colors__description">{{ details.description }}</div>
+      <div class="styleguide-colors__swatches">
+        {% for color in details.colors %}
+          <div class="styleguide-color-swatch">
+            <h3 class="styleguide-color-swatch__title">{{ color.name }}</h3>
+            <span class="styleguide-color-swatch__color" style="background: {{ color.hex }};"></span>
+            <span class="styleguide-color-swatch__color" style="background: {{ color.hex }}; color: #000;">{{ color.text }}</span>
+            <span class="styleguide-color-swatch__color" style="background: {{ color.hex }}; color: #fff;">{{ color.text }}</span>
+            <div class="styleguide-color-swatch__description">{{ color.description }}</div>
+            <div class="styleguide-color-swatch__codes">
+              <span class="styleguide-color-swatch__code styleguide-color-swatch__code--hex">{{ color.hex }}</span>
+              <span class="styleguide-color-swatch__code styleguide-color-swatch__code--rgb">{{ color.rgb }}</span>
+              <span class="styleguide-color-swatch__code styleguide-color-swatch__code--hsl">{{ color.hsl }}</span>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {%- endfor -%}
+</div>
