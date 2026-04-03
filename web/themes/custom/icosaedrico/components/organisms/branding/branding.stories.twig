@@ -1,0 +1,91 @@
+{% stories branding with {
+  title: 'Organisms/Branding',
+  argTypes: {
+    branding_layout: { control: { type: 'radio' }, options: ['horizontal', 'vertical'] },
+    branding_size: { control: { type: 'select' }, options: ['sm', 'md', 'lg', 'xl'] },
+    branding_show_logo: { control: { type: 'boolean' } },
+    branding_show_slogan: { control: { type: 'boolean' } }
+  }
+} %}
+
+  {% story header with {
+    name: 'Header (sm)',
+    args: {
+      branding_layout: 'horizontal',
+      branding_size: 'sm',
+      branding_show_logo: true,
+      branding_show_slogan: false
+    }
+  } %}
+    {{ include('icosaedrico:branding', {
+      branding_layout: branding_layout,
+      branding_size: branding_size,
+      branding_show_logo: branding_show_logo,
+      branding_show_slogan: branding_show_slogan,
+      site_logo: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo.svg',
+      site_name: 'xacobe.net',
+      site_slogan: 'Diseño & desarrollo web',
+    }, with_context = false) }}
+  {% endstory %}
+
+  {% story horizontal with {
+    name: 'Horizontal (md)',
+    args: {
+      branding_layout: 'horizontal',
+      branding_size: 'md',
+      branding_show_logo: true,
+      branding_show_slogan: true
+    }
+  } %}
+    {{ include('icosaedrico:branding', {
+      branding_layout: branding_layout,
+      branding_size: branding_size,
+      branding_show_logo: branding_show_logo,
+      branding_show_slogan: branding_show_slogan,
+      site_logo: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo.svg',
+      site_name: 'xacobe.net',
+      site_slogan: 'Diseño & desarrollo web',
+    }, with_context = false) }}
+  {% endstory %}
+
+  {% story vertical with {
+    name: 'Vertical (md)',
+    args: {
+      branding_layout: 'vertical',
+      branding_size: 'md',
+      branding_show_logo: true,
+      branding_show_slogan: true
+    }
+  } %}
+    {{ include('icosaedrico:branding', {
+      branding_layout: branding_layout,
+      branding_size: branding_size,
+      branding_show_logo: branding_show_logo,
+      branding_show_slogan: branding_show_slogan,
+      site_logo: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo.svg',
+      site_name: 'xacobe.net',
+      site_slogan: 'Diseño & desarrollo web',
+    }, with_context = false) }}
+  {% endstory %}
+
+  {% story hero with {
+    name: 'Hero frontpage (xl)',
+    args: {
+      branding_layout: 'vertical',
+      branding_size: 'xl',
+      branding_show_logo: true,
+      branding_show_slogan: true
+    }
+  } %}
+    {{ include('icosaedrico:branding', {
+      branding_layout: branding_layout,
+      branding_size: branding_size,
+      branding_show_logo: branding_show_logo,
+      branding_show_slogan: branding_show_slogan,
+      site_logo: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo.svg',
+      site_name: 'xacobe.net',
+      site_slogan: 'Diseño & desarrollo web',
+    }, with_context = false) }}
+  {% endstory %}
+
+{% endstories %}

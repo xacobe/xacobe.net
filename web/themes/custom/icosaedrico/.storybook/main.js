@@ -1,18 +1,14 @@
-/** @type { import('@storybook/html-vite').StorybookConfig } */
+/** @type { import('@storybook/server-webpack5').StorybookConfig } */
 const config = {
   stories: [
     "../components/**/*.mdx",
-    "../components/**/*.stories.@(json|js|jsx|ts|tsx)",
+    "../components/**/*.stories.@(json|yaml|yml)",
   ],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
+    "@storybook/addon-webpack5-compiler-swc",
     "@storybook/addon-a11y",
+    "@storybook/addon-docs",
   ],
-  framework: {
-    name: "@storybook/html-vite",
-    options: {},
-  },
+  framework: "@storybook/server-webpack5",
 };
 export default config;

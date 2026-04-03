@@ -1,0 +1,13 @@
+# Development services — CORS para Storybook local.
+# NO usar en producción.
+# Copia este archivo como development.services.yml
+parameters:
+  storybook.development: true
+  cors.config:
+    enabled: true
+    allowedHeaders: ['*']
+    allowedMethods: ['GET', 'POST', 'OPTIONS']
+    allowedOrigins: ['http://localhost:6006', 'http://localhost:6007', 'https://localhost:6006']
+    exposedHeaders: false
+    maxAge: false
+    supportsCredentials: false

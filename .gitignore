@@ -59,9 +59,11 @@ Thumbs.db
 # =========================
 # Archivos sensibles
 # =========================
-/web/sites/default/settings.php
+# settings.php trackeado — credenciales van en settings.ddev.php (gestionado por DDEV)
 /web/sites/*/*.settings.php
 /web/sites/*/*.services.yml
+# Permitir archivos .example para onboarding
+!/web/sites/*/*.services.yml.example
 
 # =========================
 # Archivos generados
@@ -70,11 +72,12 @@ Thumbs.db
 /web/sites/*/files/styles/
 
 # =========================
-# Configuración local
+# Configuración local (entorno-específica)
 # =========================
 .env
 .env.local
-.env.*
+# Permitir .env.example
+!.env.example
 
 # =========================
 # Node / Frontend
