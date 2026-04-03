@@ -1,43 +1,58 @@
-.branding__title {
-  font-family: "Lobster", sans-serif;
-  font-size: 4.8rem;
+/* ── Branding base ───────────────────────────────────────── */
+.branding {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
 }
-.frontpage {
-  header {
-      .branding {
-        filter: grayscale(1) opacity(.5);
-      }
-      .branding__logo  {
-        display: none;
-      }
 
-      @media (min-width: 1024px) {
-        .branding__logo {
-          display: block;
-        }
-        .branding {
-          filter: grayscale(0) opacity(1);
-        }
-      }
-  }
+/* ── Layout variants ─────────────────────────────────────── */
+.branding--horizontal {
+  flex-direction: row;
 }
-header {
-  .branding__title {
-      font-size: 32px;
-    }
+.branding--vertical {
+  flex-direction: column;
+  text-align: center;
+}
+
+/* ── Logo ────────────────────────────────────────────────── */
+.branding__logo {
+  display: block;
+  flex-shrink: 0;
+}
+.branding__logo img {
+  display: block;
+  width: var(--branding-logo-size, 4rem);
+  height: auto;
+}
+
+/* ── Text block ──────────────────────────────────────────── */
+.branding__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+/* ── Title ───────────────────────────────────────────────── */
+.branding__title {
+  font-family: var(--font-accent);
+  font-size: var(--branding-title-size, 2rem);
+  line-height: 1;
+}
+.branding__title a {
+  color: inherit;
+  text-decoration: none;
 }
 .branding__title--suffix {
   color: orange;
 }
 
+/* ── Slogan ──────────────────────────────────────────────── */
 .branding__slogan {
-  position: relative;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border-block: solid 2px;
-  font-weight: bold;
-  /* width: 100%; */
+  border-block: solid 2px var(--color-text);
+  font-weight: 700;
   text-align: center;
 }
 .branding__slogan--suffix {
@@ -53,11 +68,50 @@ header {
   padding-inline: 0.5rem;
   word-spacing: -2px;
 }
-header .branding__logo {
-  width: 4rem;
+
+/* ── Size modifiers ──────────────────────────────────────── */
+/* sm — compact, for header */
+.branding--sm {
+  --branding-logo-size: 3rem;
+  --branding-title-size: 1.75rem;
 }
 
+/* md — default, general use */
+.branding--md {
+  --branding-logo-size: 4rem;
+  --branding-title-size: 2rem;
+}
+
+/* lg — section headings, sidebar hero */
+.branding--lg {
+  --branding-logo-size: 6rem;
+  --branding-title-size: 3.5rem;
+}
+
+/* xl — frontpage hero */
+.branding--xl {
+  --branding-logo-size: 8rem;
+  --branding-title-size: 4.8rem;
+}
+
+/* ── Frontpage hero ──────────────────────────────────────── */
+.frontpage__hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60dvh;
+  padding-block: var(--spacing-16);
+}
+
+/* ── Header context ──────────────────────────────────────── */
+/* Slogan is always hidden in header */
 header .branding__slogan {
   display: none;
 }
 
+/* ── Header alignment (large screens) ───────────────────── */
+@media (min-width: 1200px) {
+  .branding {
+    margin-inline-start: var(--spacing-4);
+  }
+}

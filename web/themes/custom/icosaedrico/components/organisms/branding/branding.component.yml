@@ -4,24 +4,27 @@ status: experimental
 props:
   type: object
   properties:
-    branding_shape:
+    branding_layout:
       type: string
-      title: Style
-      examples:
+      title: Layout
+      description: Direction of logo and text arrangement.
+      enum:
         - horizontal
         - vertical
-        - square
     branding_size:
       type: string
       title: Size
-      examples:
-        - xl
+      description: Controls logo and title scale.
+      enum:
         - sm
         - md
         - lg
-      branding_direction:
-        - vertical
-        - horizontal
-    branding_slogan_show:
+        - xl
+    branding_show_logo:
+      type: boolean
+      title: Show logo
+      description: Whether to render the site logo image.
+    branding_show_slogan:
       type: boolean
       title: Show slogan
+      description: Whether to render the site slogan.

@@ -1,4 +1,3 @@
 /* web/themes/custom/icosaedrico/css/styles.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Los estilos se cargan directamente desde icosaedrico.libraries.yml */
+/* Este fichero se mantiene vacío — ya no se usa Tailwind */

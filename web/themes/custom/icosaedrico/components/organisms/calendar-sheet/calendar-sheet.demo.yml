@@ -1,0 +1,6 @@
+demos:
+  test:
+    year: "2026"
+    month: "April"
+    day_of_month: "01"
+    day_of_week: "Wednesday"

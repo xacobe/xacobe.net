@@ -79,36 +79,58 @@
 
   /* === Tokens semánticos === */
 
-  /* Tipografía */
+  /* Tipografía — familias */
   --font-display: "Reem Kufi", sans-serif;
   --font-accent: "Lobster", sans-serif;
   --font-body: "Open Sans", sans-serif;
+  --font-ui: "Inter", sans-serif;
+
+  /* Tipografía — escala (base 8, sub-grid 4px para texto) */
+  --fs-h1: 4rem;       /* 64px — Reem Kufi 600 */
+  --fs-h2: 2.5rem;     /* 40px — Lobster 400 */
+  --fs-h3: 1.5rem;     /* 24px — Reem Kufi 700 */
+  --fs-h4: 2rem;       /* 32px — Reem Kufi 400 */
+  --fs-h5: 1.5rem;     /* 24px — Century Gothic 400 */
+  --fs-h6: 1.25rem;    /* 20px — Century Gothic 400 */
+  --fs-subtitle: 1rem; /* 16px — Century Gothic 400 */
+  --fs-body: 1rem;     /* 16px — Open Sans 400 */
+  --fs-body-sm: 1rem;  /* 16px — Open Sans 400 */
+  --fs-button: 0.875rem; /* 14px — Inter 500 */
+  --fs-caption: 0.75rem; /* 12px — Century Gothic 400 */
+  --fs-overline: 0.625rem; /* 10px — Inter 500 */
 
   /* Texto */
   --color-text: var(--black-950);
   --color-text-muted: var(--black-500);
   --color-text-subtle: var(--black-400);
+  --color-text-on-dark: var(--black-100); /* #e2e1df — texto sobre fondo oscuro */
 
   /* Superficies */
   --color-surface: #ffffff;
   --color-surface-raised: var(--black-50);
   --color-surface-overlay: var(--black-100);
+  --color-surface-dark: var(--black-950); /* #262322 — fondo oscuro principal */
+
 
   /* Bordes */
   --color-border: var(--black-200);
   --color-border-strong: var(--black-400);
   --border-2: 2px;
 
-  /* Primario (rojo) */
-  --color-primary: var(--red-700);
-  --color-primary-hover: var(--red-600);
-  --color-primary-foreground: var(--black-50);
+  /* Primario (rojo — extraído de Templates) */
+  --color-primary: var(--red-700);        /* #d90c0c — botones, acción principal */
+  --color-primary-hover: #e63636;        /* hover — aclara al rojo de marca */
+  --color-primary-active: var(--red-800); /* #a70d0d — pressed */
+  --color-primary-foreground: #ffffff;
 
   /* Secundario */
   --color-secondary-foreground: var(--black-400);
   --color-secondary-border: var(--black-400);
   --color-secondary-surface: #ffffff;
   --color-secondary-surface-hover: var(--black-50);
+
+  /* Logo */
+  --color-logo-stroke: #431c1c; /* marrón oscuro — trazo del icosaedro */
 
   /* Estados de feedback */
   --color-success: #16a339;
@@ -119,6 +141,27 @@
   --color-error-bg: #ffdfdf;
   --color-info: #1878a2;
   --color-info-bg: #d3f2fa;
+
+  /* Espaciado — escala base-8 */
+  --spacing-1:  0.25rem;  /*   4px */
+  --spacing-2:  0.5rem;   /*   8px */
+  --spacing-4:  1rem;     /*  16px */
+  --spacing-6:  1.5rem;   /*  24px */
+  --spacing-8:  2rem;     /*  32px */
+  --spacing-10: 2.5rem;   /*  40px */
+  --spacing-12: 3rem;     /*  48px */
+  --spacing-16: 4rem;     /*  64px */
+  --spacing-20: 5rem;     /*  80px */
+  --spacing-24: 6rem;     /*  96px */
+  --spacing-32: 8rem;     /* 128px */
+
+  /* Breakpoints — containers */
+  --container-xxs: 320px;
+  --container-xs:  576px;
+  --container-sm:  768px;
+  --container-md:  992px;
+  --container-lg:  1200px;
+  --container-xl:  1440px;
 
   /* Radios y sombras */
   --radius-sm: 0.25rem;

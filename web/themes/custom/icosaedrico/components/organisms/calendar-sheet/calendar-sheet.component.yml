@@ -8,20 +8,19 @@ props:
     year:
       type: string
       title: Year
-      # @todo Add examples here.
-      examples: []
+      examples: ["2024", "2025"]
+
     month:
       type: string
       title: Month
-      # @todo Add examples here.
-      examples: []
+      examples: ["January", "March"]
+
     day_of_month:
       type: string
       title: Day of month
-      # @todo Add examples here.
-      examples: []
+      examples: ["01", "15", "31"]
+
     day_of_week:
       type: string
       title: Day of week
-      # @todo Add examples here.
-      examples: []
+      examples: ["Monday", "Friday"]

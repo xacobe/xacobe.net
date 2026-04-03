@@ -68,6 +68,16 @@ function icosaedrico_preprocess_menu_local_task(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_page().
+ */
+function icosaedrico_preprocess_page(&$variables) {
+  $variables['site_logo'] = theme_get_setting('logo.url');
+  $site_config = \Drupal::config('system.site');
+  $variables['site_name'] = $site_config->get('name');
+  $variables['site_slogan'] = $site_config->get('slogan');
+}
+
+/**
  * Implements hook_preprocess_HOOK() for block templates.
  */
 function icosaedrico_preprocess_block(&$variables) {

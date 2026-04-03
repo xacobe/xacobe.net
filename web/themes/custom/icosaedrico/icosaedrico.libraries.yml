@@ -3,9 +3,11 @@ global-styling:
   css:
     theme:
       css/base/normalize.css: {}
-      css/output.css: {}
       css/base/tokens.css: {}
       css/base/base.css: {}
+      css/utilities/layout.css: {}
+      css/utilities/spacing.css: {}
+      css/utilities/typography.css: {}
       css/components/buttons.css: {}
       css/components/forms.css: {}
       css/modules/modules.css: {}

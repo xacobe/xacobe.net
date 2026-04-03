@@ -1,11 +1,121 @@
 /*
  * Typography utilities
- * Escala tipográfica, alineación y transformaciones de texto.
- * Pendiente: escala de tamaños y familias validadas con el Figma.
- *
- * Los tokens de fuente (--font-display, --font-accent, --font-body)
- * están definidos en tokens.css
- *
- * Las clases .ff-*, .fs-*, .display-* y headings base
- * están en css/base/base.css
+ * Tamaños, familias, pesos, alineación y transformaciones.
+ * Derivadas de los tokens --fs-* y --font-* de tokens.css.
  */
+
+/* ── Font family ─────────────────────────────────────────── */
+.ff-display  { font-family: var(--font-display); }   /* Reem Kufi */
+.ff-accent   { font-family: var(--font-accent); }    /* Lobster */
+.ff-body     { font-family: var(--font-body); }      /* Open Sans */
+.ff-ui       { font-family: var(--font-ui); }        /* Inter */
+
+/* ── Font size (usa tokens --fs-*) ───────────────────────── */
+.text-h1       { font-size: var(--fs-h1); }
+.text-h2       { font-size: var(--fs-h2); }
+.text-h3       { font-size: var(--fs-h3); }
+.text-h4       { font-size: var(--fs-h4); }
+.text-h5       { font-size: var(--fs-h5); }
+.text-h6       { font-size: var(--fs-h6); }
+.text-subtitle { font-size: var(--fs-subtitle); }
+.text-body     { font-size: var(--fs-body); }
+.text-sm       { font-size: var(--fs-button); }      /* 14px */
+.text-xs       { font-size: var(--fs-caption); }     /* 12px */
+.text-xl       { font-size: var(--fs-h6); }          /* 20px */
+
+/* ── Font weight ─────────────────────────────────────────── */
+.font-normal   { font-weight: 400; }
+.font-medium   { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold     { font-weight: 700; }
+
+/* ── Line height ─────────────────────────────────────────── */
+.leading-tight  { line-height: 1.25; }
+.leading-snug   { line-height: 1.375; }
+.leading-normal { line-height: 1.5; }
+.leading-relaxed{ line-height: 1.625; }
+
+/* ── Text align ──────────────────────────────────────────── */
+.text-left   { text-align: start; }
+.text-center { text-align: center; }
+.text-right  { text-align: end; }
+
+/* ── Text transform ──────────────────────────────────────── */
+.uppercase  { text-transform: uppercase; }
+.lowercase  { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+/* ── Text color (usa tokens --color-text-*) ──────────────── */
+.text-default { color: var(--color-text); }
+.text-muted   { color: var(--color-text-muted); }
+.text-subtle  { color: var(--color-text-subtle); }
+.text-primary { color: var(--color-primary); }
+.text-info    { color: var(--color-info); }
+.text-success { color: var(--color-success); }
+.text-warning { color: var(--color-warning); }
+.text-error   { color: var(--color-error); }
+
+/* Alias para compatibilidad con clases Tailwind existentes */
+.text-black-500 { color: var(--black-500); }
+.text-black-950 { color: var(--black-950); }
+
+/* ── Branding custom ─────────────────────────────────────── */
+.text-25xl { font-size: 25rem; }   /* Logo gigante en portada */
+
+/* ── Prose (contenido editorial) ─────────────────────────── */
+.prose,
+.prose-slate {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.75;
+  color: var(--color-text);
+  max-width: 65ch;
+}
+.prose h1, .prose h2, .prose h3,
+.prose h4, .prose h5, .prose h6 {
+  font-family: var(--font-display);
+  color: var(--color-text);
+  line-height: 1.25;
+}
+.prose p   { margin-block: var(--spacing-4); }
+.prose a   { color: var(--color-primary); text-underline-offset: 3px; }
+.prose a:hover { color: var(--color-primary-hover); }
+.prose ul, .prose ol { padding-inline-start: var(--spacing-6); margin-block: var(--spacing-4); }
+.prose li  { margin-block: var(--spacing-1); }
+.prose blockquote {
+  border-inline-start: 4px solid var(--color-primary);
+  padding-inline-start: var(--spacing-4);
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-block: var(--spacing-6);
+}
+.prose code {
+  font-size: var(--fs-button);
+  background: var(--color-surface-overlay);
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-sm);
+}
+.prose pre {
+  background: var(--color-surface-overlay);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+}
+
+/* ── Accessibility ───────────────────────────────────────── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.focusable:focus,
+.focusable:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
