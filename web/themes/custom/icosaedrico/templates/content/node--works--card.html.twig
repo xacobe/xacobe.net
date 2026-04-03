@@ -1,9 +1,10 @@
 {%- set tech_icons = [] -%}
 {%- for item in node.field_project_tech -%}
   {%- set term = item.entity -%}
-  {%- set file = term.field_tech_icon.entity -%}
-  {%- if file -%}
-    {%- set tech_icons = tech_icons|merge([{ src: file_url(file.uri.value), label: term.label }]) -%}
+  {%- set icon_name = term.field_tech_icon.value -%}
+  {%- if icon_name -%}
+    {%- set icon_src = base_path ~ active_theme_path() ~ '/img/icons/' ~ icon_name ~ '.svg' -%}
+    {%- set tech_icons = tech_icons|merge([{ src: icon_src, label: term.label }]) -%}
   {%- endif -%}
 {%- endfor -%}
 
