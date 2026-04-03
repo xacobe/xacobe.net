@@ -98,13 +98,15 @@
 
     {# Byline #}
     {% if display_submitted %}
+      {%- set author = node.uid.entity -%}
+      {%- set author_picture_entity = author.user_picture.entity -%}
       <div {{ author_attributes.addClass('article__byline') }}>
-        <div class="article__author">
-          {{ author_picture }}
-          <div>
-            <span class="article__author-name">{{ author_name }}</span>
-          </div>
-        </div>
+        {{ include('icosaedrico:avatar', {
+          user_name: author.name.value,
+          user_picture_width: "40",
+          user_picture_height: "40",
+          user_picture_url: author_picture_entity ? file_url(author_picture_entity.uri.value) : null,
+        }, with_context = false) }}
         <div class="prose-meta">
           <time>{{ node.getCreatedTime|format_date('medium') }}</time>
         </div>
@@ -119,11 +121,6 @@
 
   <footer class="article__footer">
     {{ content.field_tags }}
-    {% embed 'icosaedrico:avatar' with {
-      avatar_name: node.uid.entity.name.value,
-    } %}
-      {% block card_media %}{% endblock %}
-    {% endembed %}
     {{ metadata }}
   </footer>
 

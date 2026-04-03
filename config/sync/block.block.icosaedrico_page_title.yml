@@ -11,7 +11,7 @@ _core:
 id: icosaedrico_page_title
 theme: icosaedrico
 region: content
-weight: -5
+weight: -3
 provider: null
 plugin: page_title_block
 settings:
@@ -24,4 +24,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "<front>\r\n/blog/*"
+    pages: "<front>\r\n/blog/*\r\n"
