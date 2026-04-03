@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title, Description, Primary, Controls } from '@storybook/addon-docs/blocks';
+import { Title, Description, Primary, ArgTypes } from '@storybook/addon-docs/blocks';
 
 export function DocsPage() {
   return (
@@ -7,7 +7,7 @@ export function DocsPage() {
       <Title />
       <Description />
       <Primary />
-      <Controls />
+      <ArgTypes />
     </>
   );
 }

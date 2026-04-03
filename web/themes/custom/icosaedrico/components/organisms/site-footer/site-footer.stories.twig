@@ -12,7 +12,65 @@
 {% stories site_footer with {
   title: 'Organisms/Site Footer',
   description: 'Footer completo del sitio. Contiene el doodle decorativo, información de branding (logo y nombre) y copyright. Soporta diferentes configuraciones para mostrar/ocultar elementos según necesidad.',
-  tags: ['autodocs']
+  tags: ['autodocs'],
+  args: {
+    show_doodle: true,
+    site_name: 'www.xacobe.net',
+    logo_url: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo_old.png',
+    logo_alt: 'Logo',
+    copyright_start_year: '2006',
+    copyright_end_year: '2026'
+  },
+  argTypes: {
+    show_doodle: {
+      description: 'Muestra u oculta el doodle decorativo de las Illas Cíes.',
+      control: { type: 'boolean' },
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'true' }
+      }
+    },
+    site_name: {
+      description: 'Nombre del sitio mostrado en el branding del footer.',
+      control: { type: 'text' },
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '-' }
+      }
+    },
+    logo_url: {
+      description: 'URL de la imagen del logo.',
+      control: { type: 'text' },
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '-' }
+      }
+    },
+    logo_alt: {
+      description: 'Texto alternativo para la imagen del logo.',
+      control: { type: 'text' },
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'Logo' }
+      }
+    },
+    copyright_start_year: {
+      description: 'Año de inicio del copyright.',
+      control: { type: 'text' },
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '-' }
+      }
+    },
+    copyright_end_year: {
+      description: 'Año final del copyright (actualizado automáticamente por JS).',
+      control: { type: 'text' },
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '-' }
+      }
+    }
+  }
 } %}
 
   {% story complete with {

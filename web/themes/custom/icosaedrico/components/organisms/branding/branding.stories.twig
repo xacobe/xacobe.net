@@ -14,14 +14,74 @@
   title: 'Organisms/Branding',
   description: 'Logo, nombre y eslogan del sitio. Soporta layouts horizontal/vertical y tamaños sm, md, lg, xl.',
   tags: ['autodocs'],
+  args: {
+    branding_layout: 'horizontal',
+    branding_size: 'md',
+    branding_show_logo: true,
+    branding_show_slogan: true,
+    site_logo: 'http://xacobe.net.ddev.site/themes/custom/icosaedrico/logo.svg',
+    site_name: 'xacobe.net',
+    site_slogan: 'Diseño & desarrollo web'
+  },
   argTypes: {
-    branding_layout: { control: { type: 'radio' }, options: ['horizontal', 'vertical'] },
-    branding_size: { control: { type: 'select' }, options: ['sm', 'md', 'lg', 'xl'] },
-    branding_show_logo: { control: { type: 'boolean' } },
-    branding_show_slogan: { control: { type: 'boolean' } },
-    site_logo: { control: { type: 'text' } },
-    site_name: { control: { type: 'text' } },
-    site_slogan: { control: { type: 'text' } }
+    branding_layout: {
+      description: 'Disposición del logo y el texto: horizontal (lado a lado) o vertical (apilados).',
+      control: { type: 'radio' },
+      options: ['horizontal', 'vertical'],
+      table: {
+        type: { summary: 'horizontal | vertical' },
+        defaultValue: { summary: 'horizontal' }
+      }
+    },
+    branding_size: {
+      description: 'Escala del logo y el título del sitio.',
+      control: { type: 'select' },
+      options: ['sm', 'md', 'lg', 'xl'],
+      table: {
+        type: { summary: 'sm | md | lg | xl' },
+        defaultValue: { summary: 'md' }
+      }
+    },
+    branding_show_logo: {
+      description: 'Muestra u oculta la imagen del logo.',
+      control: { type: 'boolean' },
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'true' }
+      }
+    },
+    branding_show_slogan: {
+      description: 'Muestra u oculta el eslogan del sitio.',
+      control: { type: 'boolean' },
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'true' }
+      }
+    },
+    site_logo: {
+      description: 'URL de la imagen del logo.',
+      control: { type: 'text' },
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '-' }
+      }
+    },
+    site_name: {
+      description: 'Nombre del sitio.',
+      control: { type: 'text' },
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '-' }
+      }
+    },
+    site_slogan: {
+      description: 'Eslogan del sitio.',
+      control: { type: 'text' },
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '-' }
+      }
+    }
   }
 } %}
 

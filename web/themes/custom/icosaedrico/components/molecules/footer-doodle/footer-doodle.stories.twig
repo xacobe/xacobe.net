@@ -8,8 +8,18 @@
   title: 'Molecules/Footer Doodle',
   description: 'Elemento decorativo SVG de las Illas Cíes para el footer.',
   tags: ['autodocs'],
+  args: {
+    doodle_class: 'illas-cies'
+  },
   argTypes: {
-    doodle_class: { control: { type: 'text' } }
+    doodle_class: {
+      description: 'Clases CSS del SVG. Modificadores disponibles: illas-cies--xs (320px máx.), illas-cies--lg (ancho completo).',
+      control: { type: 'text' },
+      table: {
+        type: { summary: 'illas-cies | illas-cies--xs | illas-cies--lg' },
+        defaultValue: { summary: 'illas-cies' }
+      }
+    }
   }
 } %}
 
