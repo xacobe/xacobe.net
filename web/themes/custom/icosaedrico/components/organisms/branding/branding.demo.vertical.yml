@@ -1,0 +1,11 @@
+name: "Vertical (hero portada)"
+description: "Branding en formato vertical grande para la portada."
+props:
+  branding_layout: vertical
+  branding_size: xl
+  branding_show_logo: true
+  branding_show_slogan: true
+  site_logo: /themes/custom/icosaedrico/logo.svg
+  site_name: xacobe.net
+  site_slogan: Diseño & desarrollo web
+slots: {}

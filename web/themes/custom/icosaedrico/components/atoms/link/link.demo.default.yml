@@ -1,0 +1,8 @@
+name: "Default"
+description: "Enlace de texto con href."
+props:
+  href: "#"
+  text: Ver el proyecto
+  target: "_self"
+slots:
+  link_content: "Ver el proyecto"

@@ -1,0 +1,8 @@
+name: "Info"
+description: "Alerta informativa."
+props:
+  alert_title: "Información"
+  alert_description: "Este es un mensaje informativo para el usuario."
+  alert_type: info
+  alert_icon: info-circle
+slots: {}

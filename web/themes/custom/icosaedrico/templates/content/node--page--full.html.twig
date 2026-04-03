@@ -96,19 +96,4 @@
       {{ content }}
     </div>
 
-  <footer class="capitalize mt-2 text-center max-w-max">
-    {% if not teaser %}
-      {# {{ author_picture }} #}
-      {% set user_picture_entity = node.uid.entity.user_picture.entity %}
-      {% set user_picture_url = user_picture_entity ? file_url(user_picture_entity.fileuri) : null %}
-
-      {% include "icosaedrico:avatar" with {
-        user_name: node.uid.entity.name.value,
-        user_picture_url: user_picture_url,
-        user_picture_width: '72',
-        user_picture_height: '72',
-      } %}
-    {% endif %}
-    {{ metadata }}
-  </footer>
 </section>

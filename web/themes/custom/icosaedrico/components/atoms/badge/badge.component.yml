@@ -32,6 +32,7 @@ props:
         - warning-content
         - error-content
       enum:
+        - ""
         - neutral
         - primary
         - secondary
@@ -42,15 +43,6 @@ props:
         - success
         - warning
         - error
-        - neutral-content
-        - primary-content
-        - secondary-content
-        - accent-content
-        - ghost-content
-        - info-content
-        - success-content
-        - warning-content
-        - error-content
     badge_outline:
       type: boolean
       title: Outline
@@ -59,26 +51,18 @@ props:
         - false
     badge_size:
       type: string
-      title: Bagde size
-      examples:
-        - lg
-        - md
-        - sm
-        - xs
+      title: Badge size
       enum:
+        - ""
         - lg
         - md
         - sm
         - xs
     badge_text_size:
       type: string
-      title: Bagde text size
-      examples:
-        - lg
-        - md
-        - sm
-        - xs
+      title: Badge text size
       enum:
+        - ""
         - lg
         - md
         - sm

@@ -1,0 +1,11 @@
+name: "Primary"
+description: "Badge de color primario."
+props:
+  badge_text: Nuevo
+  badge_color: primary
+  badge_size: md
+  badge_text_size: ""
+  badge_icon: ""
+  badge_href: "#"
+  badge_outline: false
+slots: {}

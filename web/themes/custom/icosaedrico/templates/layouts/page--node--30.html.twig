@@ -14,18 +14,7 @@
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>
-
-    <section class="frontpage__hero">
-      {% include "icosaedrico:branding" with {
-        branding_layout: "vertical",
-        branding_size: "xl",
-        branding_show_logo: true,
-        branding_show_slogan: true,
-      } %}
-    </section>
-
     {{ page.content }}
-
   </main>
 
   <footer class="site-footer" role="contentinfo">

@@ -1,0 +1,17 @@
+name: "Default"
+description: "Teaser de entrada de blog con imagen a la derecha."
+props:
+  title: "Cómo construir un sistema de diseño con Drupal SDC"
+  url: "#"
+  tags: ""
+  tag_url: ""
+  classes: ""
+  button_text: "Leer más"
+  button_url: "#"
+  image_position: right
+  responsive: true
+  clicky: false
+slots:
+  media: '<img src="https://placehold.co/600x400" alt="Imagen del post" style="width:100%;height:auto;">'
+  content: '<p>Una introducción práctica al uso de Single Directory Components en Drupal 10 para construir un sistema de diseño escalable y mantenible.</p>'
+  date: '<time datetime="2026-04-03">3 de abril de 2026</time>'

@@ -1,0 +1,8 @@
+name: "Error"
+description: "Alerta de error."
+props:
+  alert_title: "Ha ocurrido un error"
+  alert_description: "No se ha podido completar la operación. Inténtalo de nuevo."
+  alert_type: error
+  alert_icon: exclamation-triangle
+slots: {}

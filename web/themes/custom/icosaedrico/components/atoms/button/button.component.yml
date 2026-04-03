@@ -12,23 +12,14 @@ props:
       type: string
       title: Title
       description: The title for the button
-      examples:
-        - Press
-        - Submit now
     button_href:
       type: string
       title: Link
       description: The link for the button
-      examples:
-        - https://drupal.org
-        - https://www.xacobe.net
     button_target:
       type: string
       title: Target
       description: The target for the button
-      examples:
-        - _blank
-        - _self
     button_tag:
       type: string
       title: Tag
@@ -37,25 +28,10 @@ props:
       examples:
         - a
         - button
-        - input-button
-        - input-submit
-        - input-radio
-        - input-checkbox
-        - input-reset
     button_color:
       type: string
       title: Color
       description: The color for the button
-      examples:
-        - primary
-        - secondary
-        - accent
-        - ghost
-        - link
-        - info
-        - success
-        - warning
-        - error
     button_icon:
       type: string
       title: Icon Type
@@ -73,12 +49,8 @@ props:
     button_size:
       type: string
       title: Button size
-      examples:
-        - block
-        - lg
-        - sm
-        - xs
       enum:
+        - ""
         - block
         - lg
         - sm
@@ -88,17 +60,15 @@ props:
       type: string
       title: Button disable
       description: If the button is disable and how, with classes or attributes
-      examples:
-        - class
-        - attribute
       enum:
+        - ""
         - class
         - attribute
     button_shape:
       type: string
-      title: button_shape
+      title: Button shape
       description: Geometrical shape of the button
-      examples:
+      enum:
+        - ""
         - square
         - circle
-

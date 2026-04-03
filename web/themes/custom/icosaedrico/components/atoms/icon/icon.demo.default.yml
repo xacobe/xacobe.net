@@ -1,0 +1,13 @@
+name: "Default"
+description: "Icono de Bootstrap Icons."
+props:
+  icon_name: star-fill
+  icon_svg_size: "24"
+  icon_svg_fill: currentColor
+  icon_svg_classes: ""
+  icon_svg_stroke: ""
+  icon_svg_stroke_width: ""
+  icon_svg_viewbox: "0 0 16 16"
+  icon_href: ""
+  icon_href_classes: ""
+slots: {}

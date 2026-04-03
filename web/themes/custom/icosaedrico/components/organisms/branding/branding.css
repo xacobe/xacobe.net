@@ -21,7 +21,7 @@
 }
 .branding__logo img {
   display: block;
-  width: var(--branding-logo-size, 4rem);
+  width: 4rem; /* md default */
   height: auto;
 }
 
@@ -35,7 +35,7 @@
 /* ── Title ───────────────────────────────────────────────── */
 .branding__title {
   font-family: var(--font-accent);
-  font-size: var(--branding-title-size, 2rem);
+  font-size: 2rem; /* md default */
   line-height: 1;
 }
 .branding__title a {
@@ -70,29 +70,21 @@
 }
 
 /* ── Size modifiers ──────────────────────────────────────── */
-/* sm — compact, for header */
-.branding--sm {
-  --branding-logo-size: 3rem;
-  --branding-title-size: 1.75rem;
-}
+/* sm — compact */
+.branding--sm .branding__logo img { width: 3rem; }
+.branding--sm .branding__title    { font-size: 1.75rem; }
 
-/* md — default, general use */
-.branding--md {
-  --branding-logo-size: 4rem;
-  --branding-title-size: 2rem;
-}
+/* md — general use (same as default, explicit) */
+.branding--md .branding__logo img { width: 4rem; }
+.branding--md .branding__title    { font-size: 2rem; }
 
-/* lg — section headings, sidebar hero */
-.branding--lg {
-  --branding-logo-size: 6rem;
-  --branding-title-size: 3.5rem;
-}
+/* lg — medium large */
+.branding--lg .branding__logo img { width: 6rem; }
+.branding--lg .branding__title    { font-size: 3.5rem; }
 
 /* xl — frontpage hero */
-.branding--xl {
-  --branding-logo-size: 8rem;
-  --branding-title-size: 4.8rem;
-}
+.branding--xl .branding__logo img { width: 8rem; }
+.branding--xl .branding__title    { font-size: 4.8rem; }
 
 /* ── Frontpage hero ──────────────────────────────────────── */
 .frontpage__hero {

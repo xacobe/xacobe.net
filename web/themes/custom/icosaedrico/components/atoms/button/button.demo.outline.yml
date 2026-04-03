@@ -1,0 +1,16 @@
+name: "Outline"
+description: "Botón con borde, sin fondo."
+props:
+  button_tag: a
+  button_text: Ver más
+  button_href: "#"
+  button_target: "_self"
+  button_color: primary
+  button_icon: ""
+  button_icon_size: ""
+  button_size: ""
+  button_disable: ""
+  button_shape: ""
+  button_outline: true
+  button_glass: false
+slots: {}

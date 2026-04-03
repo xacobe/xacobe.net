@@ -12,7 +12,7 @@ props:
       type: string
       title: Heading tag
       examples: ["h1", "h2", "h3", "h4", "h5"]
-      enum: ["h1", "h2", "h3", "h4", "h5"]
+      enum: ["", "h1", "h2", "h3", "h4", "h5"]
     heading_classes:
       type: string
       title: Heading classes
@@ -26,5 +26,6 @@ props:
       type: string
       title: Link target
       enum:
+        - ""
         - _blank
         - _self

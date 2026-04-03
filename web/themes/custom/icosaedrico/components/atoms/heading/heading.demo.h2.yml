@@ -1,0 +1,10 @@
+name: "H2"
+description: "Encabezado de segundo nivel."
+props:
+  heading_title: "Sección destacada"
+  heading_tag: h2
+  heading_classes: ""
+  heading_attributes: {}
+  heading_href: ""
+  heading_href_target: ""
+slots: {}

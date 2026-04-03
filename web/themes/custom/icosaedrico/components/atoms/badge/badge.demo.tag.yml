@@ -1,0 +1,11 @@
+name: "Tag"
+description: "Badge estilo etiqueta de categoría."
+props:
+  badge_text: Drupal
+  badge_color: tag
+  badge_size: sm
+  badge_text_size: ""
+  badge_icon: ""
+  badge_href: "#"
+  badge_outline: false
+slots: {}

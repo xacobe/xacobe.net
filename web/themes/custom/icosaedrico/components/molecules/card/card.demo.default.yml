@@ -1,0 +1,7 @@
+name: "Default"
+description: "Card con imagen y contenido."
+props:
+  title: "Proyecto de ejemplo"
+slots:
+  card_media: '<img src="https://placehold.co/400x300" alt="Imagen de ejemplo" style="width:100%;height:auto;">'
+  card_content: '<h3>Título del proyecto</h3><p>Descripción breve del proyecto desarrollado con Drupal y tecnologías web modernas.</p>'
