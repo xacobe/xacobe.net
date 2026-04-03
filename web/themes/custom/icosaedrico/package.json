@@ -32,6 +32,8 @@
     "http-proxy-middleware": "^3.0.5",
     "playwright": "^1.59.1",
     "postcss": "^8.4.35",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "sass": "^1.70.0",
     "storybook": "^10.3.4",
     "vite": "^5.1.1",
