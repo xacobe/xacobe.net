@@ -15,5 +15,6 @@ global-styling:
       css/modules/article.css: {}
       css/modules/devices.css: {}
       css/modules/cv.css: {}
+      css/modules/photo-grid.css: {}
   js:
     js/index.js: {}

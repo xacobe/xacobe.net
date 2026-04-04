@@ -23,11 +23,17 @@
 }  
 .page-title--prose {
   font-family: var(--font-prose-headline);
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.02em;
   color: var(--color-text);
   margin-block: 0 1.5rem;
   text-transform: none;
+}
+h1.page-title--prose {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+h2.page-title--prose {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  text-align: left;
 }
