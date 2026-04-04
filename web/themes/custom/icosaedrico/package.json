@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "npm run build:scss && vite build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build-storybook:static": "node scripts/snapshot-stories.mjs && STORYBOOK_STATIC=true storybook build"
   },
   "keywords": [],
   "author": "",

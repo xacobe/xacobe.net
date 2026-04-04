@@ -21,6 +21,12 @@ function extractComponentHtml(fullHtml) {
 }
 
 async function fetchStoryHtml(url, path, params, storyContext) {
+  // Static mode: serve pre-rendered HTML snapshots (no Drupal server needed).
+  if (process.env.STORYBOOK_STATIC === 'true') {
+    const res = await fetch(`/renders/${storyContext.id}.html`);
+    return res.text();
+  }
+
   const fetchUrl = new URL(`${url}/${path}`);
   fetchUrl.search = new URLSearchParams({
     ...storyContext.globals,

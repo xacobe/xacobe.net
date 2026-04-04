@@ -16,6 +16,7 @@ const config = {
     },
   ],
   framework: "@storybook/server-webpack5",
+  staticDirs: [{ from: '../.storybook/renders', to: '/renders' }],
   webpackFinal: async (config) => {
     const drupalUrl = process.env.STORYBOOK_DRUPAL_URL || 'https://xacobe.net.ddev.site';
     config.devServer = {
