@@ -34,7 +34,7 @@
     <div class="project-card__screenshot project-card__screenshot--desktop">
       <div class="device-wrapper">
         <div class="device" data-device="Macbook" data-orientation="portrait" data-color="black">
-          <div class="screen">{{ slots.screenshot_desktop }}</div>
+          <div class="screen">{% block screenshot_desktop %}{% endblock %}</div>
           <div class="button"></div>
         </div>
       </div>
@@ -43,7 +43,7 @@
     <div class="project-card__screenshot project-card__screenshot--mobile">
       <div class="device-wrapper">
         <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
-          <div class="screen">{{ slots.screenshot_mobile }}</div>
+          <div class="screen">{% block screenshot_mobile %}{% endblock %}</div>
           <div class="button"></div>
         </div>
       </div>

@@ -1,0 +1,54 @@
+{% macro render(year, month, day_of_month, day_of_week) %}
+  {{ include('icosaedrico:calendar-sheet', {
+    year: year,
+    month: month,
+    day_of_month: day_of_month,
+    day_of_week: day_of_week,
+  }, with_context = false) }}
+{% endmacro %}
+
+{% stories calendar_sheet with {
+  title: 'Molecules/Calendar Sheet',
+  description: 'Hoja de calendario de escritorio con mes, día de la semana, día del mes y año.',
+  tags: ['autodocs'],
+  args: {
+    year: '2026',
+    month: 'Abril',
+    day_of_month: '4',
+    day_of_week: 'Viernes',
+  },
+  argTypes: {
+    year: {
+      description: 'Año.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: '2026' } }
+    },
+    month: {
+      description: 'Nombre del mes.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' } }
+    },
+    day_of_month: {
+      description: 'Número del día.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' } }
+    },
+    day_of_week: {
+      description: 'Nombre del día de la semana.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' } }
+    }
+  }
+} %}
+
+  {% story default with {
+    name: 'Default',
+    description: 'Hoja de calendario con la fecha actual.',
+    args: { year: '2026', month: 'Abril', day_of_month: '4', day_of_week: 'Viernes' }
+  } %}
+    <div style="padding:1.5rem;display:inline-flex;">
+      {{ _self.render(year, month, day_of_month, day_of_week) }}
+    </div>
+  {% endstory %}
+
+{% endstories %}

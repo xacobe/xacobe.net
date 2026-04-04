@@ -16,5 +16,20 @@ const config = {
     },
   ],
   framework: "@storybook/server-webpack5",
+  webpackFinal: async (config) => {
+    const drupalUrl = process.env.STORYBOOK_DRUPAL_URL || 'https://xacobe.net.ddev.site';
+    config.devServer = {
+      ...(config.devServer || {}),
+      proxy: [
+        {
+          context: ['/themes', '/sites', '/core', '/modules'],
+          target: drupalUrl,
+          changeOrigin: true,
+          secure: false,
+        },
+      ],
+    };
+    return config;
+  },
 };
 export default config;

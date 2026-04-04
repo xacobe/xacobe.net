@@ -1,32 +1,22 @@
 {% set wrapper_classes = [
-  "dropdown",
-  position_x ? "dropdown-"~ position_x,
-  position_y ? "dropdown-"~ position_y,
-  hover ? "dropdown-hover",
-] %}
-
-{% set content_classes = [
-  "dropdown-content",
+  'dropdown',
+  position_x ? 'dropdown-' ~ position_x,
+  position_y ? 'dropdown-' ~ position_y,
+  hover ? 'dropdown-hover',
 ] %}
 
 {% if details_tag %}
-  <details class="dropdown dropdown-end">
-    <summary class="m-1 btn btn-ghost">{{ title }}</summary>
-  {% else %}
-    <div {{ attributes.addClass(wrapper_classes) }}>
-      <div tabindex="0" role="button" class="btn btn-sm m-1">{{ title }}</div>
-{% endif %}
-
-  <ul{{ attributes.removeClass('inline').addClass(content_classes) }}>
-    {%- for items in links -%}
-      <li{{ items.attributes }}>
-          {{ items.link }}
-      </li>
-    {%- endfor -%}
-  </ul>
-
-{% if details_tag %}
-    </details>
-  {% else %}
-    </div>
+  <details {{ attributes.addClass(wrapper_classes) }}>
+    <summary class="btn btn-sm btn-ghost">{{ title }}</summary>
+    <ul class="dropdown-content">
+      {{ slots.dropdown_content }}
+    </ul>
+  </details>
+{% else %}
+  <div {{ attributes.addClass(wrapper_classes) }}>
+    <div tabindex="0" role="button" class="btn btn-sm btn-ghost">{{ title }}</div>
+    <ul class="dropdown-content">
+      {{ slots.dropdown_content }}
+    </ul>
+  </div>
 {% endif %}

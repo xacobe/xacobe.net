@@ -1,0 +1,121 @@
+{% set links_idioma %}
+  <li><a href="#">Español</a></li>
+  <li><a href="#">English</a></li>
+  <li><a href="#">Galego</a></li>
+{% endset %}
+
+{% set links_menu %}
+  <li><a href="#">Inicio</a></li>
+  <li><a href="#">Blog</a></li>
+  <li><a href="#">Proyectos</a></li>
+  <li><a href="#">Contacto</a></li>
+{% endset %}
+
+{% macro render(title, position_x, position_y, hover, details_tag, content) %}
+  {{ include('icosaedrico:dropdown', {
+    title: title,
+    position_x: position_x,
+    position_y: position_y,
+    hover: hover,
+    details_tag: details_tag,
+    slots: { dropdown_content: content },
+  }, with_context = false) }}
+{% endmacro %}
+
+{% stories dropdown with {
+  title: 'Molecules/Dropdown',
+  description: 'Menú desplegable reutilizable. Variante `details_tag` usa el elemento nativo `<details>`/`<summary>` (sin JS). La variante div se abre con `:focus-within`.',
+  tags: ['autodocs'],
+  args: {
+    title: 'Idioma',
+    position_x: 'right',
+    position_y: '',
+    hover: false,
+    details_tag: false,
+  },
+  argTypes: {
+    title: {
+      description: 'Texto del botón trigger.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' } }
+    },
+    position_x: {
+      description: 'Alineación horizontal del panel.',
+      control: { type: 'radio' },
+      options: ['', 'left', 'right'],
+      table: { type: { summary: 'left | right' }, defaultValue: { summary: '-' } }
+    },
+    position_y: {
+      description: 'Apertura hacia arriba o abajo.',
+      control: { type: 'radio' },
+      options: ['', 'top', 'bottom'],
+      table: { type: { summary: 'top | bottom' }, defaultValue: { summary: '-' } }
+    },
+    hover: {
+      description: 'Abrir al pasar el cursor en lugar de al hacer clic.',
+      control: { type: 'boolean' },
+      table: { type: { summary: 'boolean' }, defaultValue: { summary: 'false' } }
+    },
+    details_tag: {
+      description: 'Usar `<details>`/`<summary>` nativo en lugar de `<div>`.',
+      control: { type: 'boolean' },
+      table: { type: { summary: 'boolean' }, defaultValue: { summary: 'false' } }
+    }
+  }
+} %}
+
+  {% story default with {
+    name: 'Default (div)',
+    description: 'Dropdown con div. Haz clic en el botón para abrir.',
+    args: { title: 'Idioma', position_x: 'right', position_y: '', hover: false, details_tag: false }
+  } %}
+    <div style="padding:1.5rem;min-height:12rem;display:flex;align-items:flex-start;justify-content:flex-end;">
+      {{ _self.render(title, position_x, position_y, hover, details_tag, links_idioma) }}
+    </div>
+  {% endstory %}
+
+  {% story details with {
+    name: 'Details (nativo)',
+    tags: ['!autodocs'],
+    description: 'Variante `<details>`/`<summary>`. Sin JS, comportamiento nativo del navegador.',
+    args: { title: 'Idioma', position_x: 'right', position_y: '', hover: false, details_tag: true }
+  } %}
+    <div style="padding:1.5rem;min-height:12rem;display:flex;align-items:flex-start;justify-content:flex-end;">
+      {{ _self.render(title, position_x, position_y, hover, details_tag, links_idioma) }}
+    </div>
+  {% endstory %}
+
+  {% story hover with {
+    name: 'Hover',
+    tags: ['!autodocs'],
+    description: 'Se abre al pasar el cursor.',
+    args: { title: 'Menú', position_x: '', position_y: '', hover: true, details_tag: false }
+  } %}
+    <div style="padding:1.5rem;min-height:12rem;display:flex;align-items:flex-start;">
+      {{ _self.render(title, position_x, position_y, hover, details_tag, links_menu) }}
+    </div>
+  {% endstory %}
+
+  {% story gallery with {
+    name: 'Gallery',
+    description: 'Variantes div y details una junto a la otra.',
+    parameters: { docs: { canvas: { sourceState: 'none' } } }
+  } %}
+    {% set d = 'icosaedrico:dropdown' %}
+    <div style="padding:1.5rem;min-height:14rem;display:flex;align-items:flex-start;gap:2rem;">
+      <div>
+        <p style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Div (focus)</p>
+        {{ include(d, { title: 'Idioma', position_x: 'left', slots: { dropdown_content: links_idioma } }, with_context = false) }}
+      </div>
+      <div>
+        <p style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Details (nativo)</p>
+        {{ include(d, { title: 'Idioma', details_tag: true, position_x: 'left', slots: { dropdown_content: links_idioma } }, with_context = false) }}
+      </div>
+      <div>
+        <p style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Hover</p>
+        {{ include(d, { title: 'Menú', hover: true, slots: { dropdown_content: links_menu } }, with_context = false) }}
+      </div>
+    </div>
+  {% endstory %}
+
+{% endstories %}

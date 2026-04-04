@@ -1,0 +1,66 @@
+{% set crumbs_deep = [
+  { url: '/', text: 'Inicio' },
+  { url: '/blog', text: 'Blog' },
+  { url: '', text: 'El arte de leer despacio' },
+] %}
+
+{% set crumbs_short = [
+  { url: '/', text: 'Inicio' },
+  { url: '', text: 'Proyectos' },
+] %}
+
+{% macro render(breadcrumb) %}
+  {{ include('icosaedrico:breadcrumb', {
+    breadcrumb: breadcrumb,
+  }, with_context = false) }}
+{% endmacro %}
+
+{% stories breadcrumb with {
+  title: 'Molecules/Breadcrumb',
+  description: 'Ruta de navegación. El primer ítem siempre se renderiza como icono casa. El último sin enlace (página actual). Requiere al menos 2 ítems para mostrarse.',
+  tags: ['autodocs'],
+  args: {
+    breadcrumb: [
+      { url: '/', text: 'Inicio' },
+      { url: '/blog', text: 'Blog' },
+      { url: '', text: 'El arte de leer despacio' },
+    ],
+  },
+  argTypes: {
+    breadcrumb: {
+      description: 'Array de `{ url, text }`. `url` vacía en el último ítem indica página actual (sin enlace).',
+      control: { type: 'object' },
+      table: { type: { summary: 'Array<{ url: string, text: string }>' } }
+    }
+  }
+} %}
+
+  {% story default with {
+    name: 'Default',
+    description: 'Tres niveles: inicio → sección → página actual.',
+    args: {
+      breadcrumb: [
+        { url: '/', text: 'Inicio' },
+        { url: '/blog', text: 'Blog' },
+        { url: '', text: 'El arte de leer despacio' },
+      ]
+    }
+  } %}
+    {{ _self.render(breadcrumb) }}
+  {% endstory %}
+
+  {% story short with {
+    name: 'Dos niveles',
+    tags: ['!autodocs'],
+    description: 'Mínimo funcional: inicio → página actual.',
+    args: {
+      breadcrumb: [
+        { url: '/', text: 'Inicio' },
+        { url: '', text: 'Proyectos' },
+      ]
+    }
+  } %}
+    {{ _self.render(breadcrumb) }}
+  {% endstory %}
+
+{% endstories %}
