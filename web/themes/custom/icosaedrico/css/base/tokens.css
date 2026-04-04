@@ -1,5 +1,9 @@
 :root {
-  /* Red Colors */
+
+  /**
+   * @tokens Color Rojo
+   * @presenter Color
+   */
   --red-50: #fff1f1;
   --red-100: #ffdfdf;
   --red-200: #ffc4c4;
@@ -12,7 +16,10 @@
   --red-900: #8a1212;
   --red-950: #4b0404;
 
-  /* Orange Colors */
+  /**
+   * @tokens Color Naranja
+   * @presenter Color
+   */
   --orange-50: #fffbea;
   --orange-100: #fff2c5;
   --orange-200: #ffe685;
@@ -25,7 +32,10 @@
   --orange-900: #7c310b;
   --orange-950: #481700;
 
-  /* Green Colors */
+  /**
+   * @tokens Color Verde
+   * @presenter Color
+   */
   --green-50: #f0fdf2;
   --green-100: #dcfce3;
   --green-200: #bbf7c9;
@@ -38,7 +48,10 @@
   --green-900: #145326;
   --green-950: #052e11;
 
-  /* Blue Colors */
+  /**
+   * @tokens Color Azul
+   * @presenter Color
+   */
   --blue-50: #eefafd;
   --blue-100: #d3f2fa;
   --blue-200: #ade5f4;
@@ -51,7 +64,10 @@
   --blue-900: #1d445c;
   --blue-950: #0e2c3e;
 
-  /* Purple Colors */
+  /**
+   * @tokens Color Purpura
+   * @presenter Color
+   */
   --purple-50: #fff4ff;
   --purple-100: #fee7ff;
   --purple-200: #fdceff;
@@ -64,7 +80,10 @@
   --purple-900: #78176f;
   --purple-950: #51014a;
 
-  /* Black Colors */
+  /**
+   * @tokens Grises
+   * @presenter Color
+   */
   --black-50: #f4f3f2;
   --black-100: #e2e1df;
   --black-200: #c7c4c1;
@@ -77,71 +96,94 @@
   --black-900: #443f3f;
   --black-950: #262322;
 
-  /* === Tokens semánticos === */
+  /* ================================================================
+     Tokens semanticos
+     ================================================================ */
 
-  /* Tipografía — familias */
+  /**
+   * @tokens Tipografia Familias
+   * @presenter FontFamily
+   */
   --font-display: "Reem Kufi", sans-serif;
   --font-accent: "Lobster", sans-serif;
   --font-body: "Open Sans", sans-serif;
   --font-ui: "Inter", sans-serif;
-
-  /* Tipografía — prose (blog, lectura larga) */
   --font-prose-headline: "Newsreader", Georgia, "Times New Roman", serif;
   --font-prose-body: "Noto Serif", Georgia, "Times New Roman", serif;
 
-  /* Colores — superficie papel */
-  --color-paper: #fbf9f4;
-  --color-paper-container: #f5f4ed;
-  --color-prose-accent: var(--black-600); /* muted — para detalles editoriales */
+  /**
+   * @tokens Tipografia Escala
+   * @presenter FontSize
+   */
+  --fs-h1: 4rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 1.5rem;
+  --fs-h4: 2rem;
+  --fs-h5: 1.5rem;
+  --fs-h6: 1.25rem;
+  --fs-subtitle: 1rem;
+  --fs-body: 1rem;
+  --fs-body-sm: 1rem;
+  --fs-button: 0.875rem;
+  --fs-caption: 0.75rem;
+  --fs-overline: 0.625rem;
 
-  /* Tipografía — escala (base 8, sub-grid 4px para texto) */
-  --fs-h1: 4rem;       /* 64px — Reem Kufi 600 */
-  --fs-h2: 2.5rem;     /* 40px — Lobster 400 */
-  --fs-h3: 1.5rem;     /* 24px — Reem Kufi 700 */
-  --fs-h4: 2rem;       /* 32px — Reem Kufi 400 */
-  --fs-h5: 1.5rem;     /* 24px — Century Gothic 400 */
-  --fs-h6: 1.25rem;    /* 20px — Century Gothic 400 */
-  --fs-subtitle: 1rem; /* 16px — Century Gothic 400 */
-  --fs-body: 1rem;     /* 16px — Open Sans 400 */
-  --fs-body-sm: 1rem;  /* 16px — Open Sans 400 */
-  --fs-button: 0.875rem; /* 14px — Inter 500 */
-  --fs-caption: 0.75rem; /* 12px — Century Gothic 400 */
-  --fs-overline: 0.625rem; /* 10px — Inter 500 */
-
-  /* Texto */
+  /**
+   * @tokens Color Texto
+   * @presenter Color
+   */
   --color-text: var(--black-950);
   --color-text-muted: var(--black-500);
   --color-text-subtle: var(--black-400);
-  --color-text-on-dark: var(--black-100); /* #e2e1df — texto sobre fondo oscuro */
+  --color-text-on-dark: var(--black-100);
 
-  /* Superficies */
+  /**
+   * @tokens Color Superficies
+   * @presenter Color
+   */
   --color-surface: #ffffff;
   --color-surface-raised: var(--black-50);
   --color-surface-overlay: var(--black-100);
-  --color-surface-dark: var(--black-950); /* #262322 — fondo oscuro principal */
+  --color-surface-dark: var(--black-950);
+  --color-paper: #fbf9f4;
+  --color-paper-container: #f5f4ed;
 
-
-  /* Bordes */
+  /**
+   * @tokens Color Bordes
+   * @presenter Color
+   */
   --color-border: var(--black-200);
   --color-border-strong: var(--black-400);
-  --border-2: 2px;
 
-  /* Primario (rojo — extraído de Templates) */
-  --color-primary: var(--red-700);        /* #d90c0c — botones, acción principal */
-  --color-primary-hover: #e63636;        /* hover — aclara al rojo de marca */
-  --color-primary-active: var(--red-800); /* #a70d0d — pressed */
+  /**
+   * @tokens Color Primario
+   * @presenter Color
+   */
+  --color-primary: var(--red-700);
+  --color-primary-hover: #e63636;
+  --color-primary-active: var(--red-800);
   --color-primary-foreground: #ffffff;
+  --color-logo-stroke: #431c1c;
 
-  /* Secundario */
+  /**
+   * @tokens Color Secundario
+   * @presenter Color
+   */
   --color-secondary-foreground: var(--black-400);
   --color-secondary-border: var(--black-400);
   --color-secondary-surface: #ffffff;
   --color-secondary-surface-hover: var(--black-50);
 
-  /* Logo */
-  --color-logo-stroke: #431c1c; /* marrón oscuro — trazo del icosaedro */
+  /**
+   * @tokens Color Prose
+   * @presenter Color
+   */
+  --color-prose-accent: var(--black-600);
 
-  /* Estados de feedback */
+  /**
+   * @tokens Color Estado
+   * @presenter Color
+   */
   --color-success: #16a339;
   --color-success-bg: #dcfce3;
   --color-warning: #bb4d02;
@@ -151,20 +193,23 @@
   --color-info: #1878a2;
   --color-info-bg: #d3f2fa;
 
-  /* Espaciado — escala base-8 */
-  --spacing-1:  0.25rem;  /*   4px */
-  --spacing-2:  0.5rem;   /*   8px */
-  --spacing-4:  1rem;     /*  16px */
-  --spacing-6:  1.5rem;   /*  24px */
-  --spacing-8:  2rem;     /*  32px */
-  --spacing-10: 2.5rem;   /*  40px */
-  --spacing-12: 3rem;     /*  48px */
-  --spacing-16: 4rem;     /*  64px */
-  --spacing-20: 5rem;     /*  80px */
-  --spacing-24: 6rem;     /*  96px */
-  --spacing-32: 8rem;     /* 128px */
+  /**
+   * @tokens Espaciado
+   * @presenter Spacing
+   */
+  --spacing-1:  0.25rem;
+  --spacing-2:  0.5rem;
+  --spacing-4:  1rem;
+  --spacing-6:  1.5rem;
+  --spacing-8:  2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
 
-  /* Breakpoints — containers */
+  /* Breakpoints — sin presenter */
   --container-xxs: 320px;
   --container-xs:  576px;
   --container-sm:  768px;
@@ -172,11 +217,22 @@
   --container-lg:  1200px;
   --container-xl:  1440px;
 
-  /* Radios y sombras */
+  /**
+   * @tokens Border Radius
+   * @presenter BorderRadius
+   */
   --radius-sm: 0.25rem;
   --radius-md: 0.375rem;
   --radius-lg: 0.5rem;
   --radius-full: 9999px;
+
+  /**
+   * @tokens Sombras
+   * @presenter Shadow
+   */
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+
+  /* Constantes de borde */
+  --border-2: 2px;
 }
