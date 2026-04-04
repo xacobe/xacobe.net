@@ -6,7 +6,7 @@
 
 {% set title_tag = title_tag|default('h1') %}
 
-{% if title_type == 'article' %}
+{% if title_type == 'prose' %}
   <{{ title_tag }}{% if attributes %} {{ attributes }}{% endif %} class="{{ classes|join(' ')|trim }}">
     {{ title }}
   </{{ title_tag }}>

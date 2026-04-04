@@ -26,10 +26,10 @@ props:
     title_type:
       type: string
       title: Type
-      description: Variante estructural del título. 'article' omite el divider decorativo.
+      description: Variante estructural del título. 'prose' omite el divider decorativo y aplica tipografía editorial.
       enum:
         - ""
-        - article
+        - prose
     title_classes:
       type: string
       title: Additional Classes

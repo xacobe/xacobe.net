@@ -30,10 +30,10 @@
       table: { type: { summary: 'h1 | h2 | h3 | h4 | h5 | h6' }, defaultValue: { summary: 'h1' } }
     },
     title_type: {
-      description: 'Variante estructural. `article` omite el divider decorativo y aplica tipografía editorial.',
+      description: 'Variante estructural. `prose` omite el divider decorativo y aplica tipografía editorial.',
       control: { type: 'radio' },
-      options: ['', 'article'],
-      table: { type: { summary: 'article' }, defaultValue: { summary: '-' } }
+      options: ['', 'prose'],
+      table: { type: { summary: 'prose' }, defaultValue: { summary: '-' } }
     },
     title_classes: {
       description: 'Clases CSS adicionales.',
@@ -70,10 +70,10 @@
   {% endstory %}
 
   {% story article_title with {
-    name: 'Article (sin divider)',
+    name: 'Prose (sin divider)',
     tags: ['!autodocs'],
-    description: 'Variante editorial para artículos del blog. Sin divisores, tipografía serif de gran tamaño.',
-    args: { title: 'The Art of Slow Reading', title_tag: 'h1', title_type: 'article', title_classes: '' }
+    description: 'Variante editorial para contenido de lectura larga. Sin divisores, tipografía serif de gran tamaño.',
+    args: { title: 'The Art of Slow Reading', title_tag: 'h1', title_type: 'prose', title_classes: '' }
   } %}
     {{ _self.render(title, title_tag, title_type, title_classes) }}
   {% endstory %}
