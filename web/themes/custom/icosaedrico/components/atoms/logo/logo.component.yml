@@ -1,12 +1,35 @@
-'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json'
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
 name: Logo
+description: Logo del sitio con enlace a la portada.
 status: stable
-description: Site logo
+
 props:
   type: object
+  required: [logo_src]
   properties:
-    style:
+    logo_src:
       type: string
-      title: style
-      # @todo Add examples here.
-      examples: []
+      title: Image URL
+      description: URL de la imagen del logo.
+    logo_alt:
+      type: string
+      title: Alt text
+      description: Texto alternativo de la imagen.
+      default: Home
+    logo_href:
+      type: string
+      title: Link URL
+      description: URL de destino del enlace. Omitir para renderizar sin enlace.
+    logo_size:
+      type: string
+      title: Size
+      description: Tamaño del logo.
+      enum:
+        - ""
+        - sm
+        - md
+        - lg
+        - xl
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes

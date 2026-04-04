@@ -1,0 +1,124 @@
+{% macro render(badge_text, badge_color, badge_outline, badge_size, badge_href) %}
+  {{ include('icosaedrico:badge', {
+    badge_text: badge_text,
+    badge_color: badge_color,
+    badge_outline: badge_outline,
+    badge_size: badge_size,
+    badge_href: badge_href,
+  }, with_context = false) }}
+{% endmacro %}
+
+{% stories badge with {
+  title: 'Atoms/Badge',
+  description: 'Etiqueta compacta para categorías, estados o contadores.',
+  tags: ['autodocs'],
+  args: {
+    badge_text: 'Badge',
+    badge_color: 'primary',
+    badge_outline: false,
+    badge_size: '',
+    badge_href: '#',
+  },
+  argTypes: {
+    badge_text: {
+      description: 'Texto del badge.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: 'Badge' } }
+    },
+    badge_color: {
+      description: 'Variante de color.',
+      control: { type: 'select' },
+      options: ['', 'primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error', 'ghost', 'tag'],
+      table: { type: { summary: 'primary | secondary | ...' }, defaultValue: { summary: '-' } }
+    },
+    badge_outline: {
+      description: 'Variante con borde y fondo transparente.',
+      control: { type: 'boolean' },
+      table: { type: { summary: 'boolean' }, defaultValue: { summary: 'false' } }
+    },
+    badge_size: {
+      description: 'Tamaño del badge.',
+      control: { type: 'select' },
+      options: ['', 'lg', 'md', 'sm', 'xs'],
+      table: { type: { summary: 'lg | md | sm | xs' }, defaultValue: { summary: '-' } }
+    },
+    badge_href: {
+      description: 'URL del enlace.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: '#' } }
+    }
+  }
+} %}
+
+  {% story default with {
+    name: 'Default',
+    description: 'Badge con color primario.',
+    args: { badge_text: 'Nuevo', badge_color: 'primary' }
+  } %}
+    {{ _self.render(badge_text, badge_color, badge_outline, badge_size, badge_href) }}
+  {% endstory %}
+
+  {% story outline with {
+    name: 'Outline',
+    tags: ['!autodocs'],
+    description: 'Variante con borde y fondo transparente.',
+    args: { badge_text: 'Destacado', badge_color: 'primary', badge_outline: true }
+  } %}
+    {{ _self.render(badge_text, badge_color, badge_outline, badge_size, badge_href) }}
+  {% endstory %}
+
+  {% story sizes with {
+    name: 'Sizes',
+    tags: ['!autodocs'],
+    description: 'Comparativa de tamaños.',
+    args: { badge_text: 'Badge', badge_color: 'primary', badge_size: 'lg' }
+  } %}
+    {{ _self.render(badge_text, badge_color, badge_outline, badge_size, badge_href) }}
+  {% endstory %}
+
+  {% story gallery with {
+    name: 'Gallery',
+    description: 'Todas las variantes de color.',
+    parameters: { docs: { canvas: { sourceState: 'none' } } }
+  } %}
+    {% set b = 'icosaedrico:badge' %}
+    <div style="display:flex;flex-direction:column;gap:2rem;padding:1.5rem;">
+
+      <div>
+        <p style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Colores</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;">
+          {{ include(b, { badge_text: 'Primary',   badge_color: 'primary',   badge_href: '#' }, with_context = false) }}
+          {{ include(b, { badge_text: 'Secondary', badge_color: 'secondary', badge_href: '#' }, with_context = false) }}
+          {{ include(b, { badge_text: 'Neutral',   badge_color: 'neutral',   badge_href: '#' }, with_context = false) }}
+          {{ include(b, { badge_text: 'Info',      badge_color: 'info',      badge_href: '#' }, with_context = false) }}
+          {{ include(b, { badge_text: 'Success',   badge_color: 'success',   badge_href: '#' }, with_context = false) }}
+          {{ include(b, { badge_text: 'Warning',   badge_color: 'warning',   badge_href: '#' }, with_context = false) }}
+          {{ include(b, { badge_text: 'Error',     badge_color: 'error',     badge_href: '#' }, with_context = false) }}
+          {{ include(b, { badge_text: 'Tag',       badge_color: 'tag',       badge_href: '#' }, with_context = false) }}
+        </div>
+      </div>
+
+      <div>
+        <p style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Outline</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;">
+          {{ include(b, { badge_text: 'Primary',   badge_color: 'primary',   badge_outline: true, badge_href: '#' }, with_context = false) }}
+          {{ include(b, { badge_text: 'Secondary', badge_color: 'secondary', badge_outline: true, badge_href: '#' }, with_context = false) }}
+          {{ include(b, { badge_text: 'Success',   badge_color: 'success',   badge_outline: true, badge_href: '#' }, with_context = false) }}
+          {{ include(b, { badge_text: 'Error',     badge_color: 'error',     badge_outline: true, badge_href: '#' }, with_context = false) }}
+        </div>
+      </div>
+
+      <div>
+        <p style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Tamaños</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;">
+          {{ include(b, { badge_text: 'Large',   badge_color: 'primary', badge_size: 'lg', badge_href: '#' }, with_context = false) }}
+          {{ include(b, { badge_text: 'Default', badge_color: 'primary',                   badge_href: '#' }, with_context = false) }}
+          {{ include(b, { badge_text: 'Small',   badge_color: 'primary', badge_size: 'sm', badge_href: '#' }, with_context = false) }}
+          {{ include(b, { badge_text: 'XSmall',  badge_color: 'primary', badge_size: 'xs', badge_href: '#' }, with_context = false) }}
+        </div>
+      </div>
+
+    </div>
+  {% endstory %}
+
+{% endstories %}

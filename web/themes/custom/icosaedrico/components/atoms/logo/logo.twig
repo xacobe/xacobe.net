@@ -1,6 +1,14 @@
-<div {{ attributes }}>
-  {# Keep the outer div whenever possible it is a nice way to ensure the presence of "attributes" #}
-  {% block example_block %}
-    The contents of the example block
-  {% endblock %}
-</div>
+{% set classes = [
+  'logo',
+  logo_size ? 'logo--' ~ logo_size,
+] %}
+
+{% if logo_href %}
+  <a href="{{ logo_href }}" {% if attributes %}{{ attributes.addClass(classes) }}{% else %}class="{{ classes|join(' ')|trim }}"{% endif %} rel="home">
+    <img src="{{ logo_src }}" alt="{{ logo_alt|default('Home') }}">
+  </a>
+{% else %}
+  <div {% if attributes %}{{ attributes.addClass(classes) }}{% else %}class="{{ classes|join(' ')|trim }}"{% endif %}>
+    <img src="{{ logo_src }}" alt="{{ logo_alt|default('Home') }}">
+  </div>
+{% endif %}

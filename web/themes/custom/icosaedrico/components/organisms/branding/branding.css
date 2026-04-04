@@ -14,16 +14,6 @@
   text-align: center;
 }
 
-/* ── Logo ────────────────────────────────────────────────── */
-.branding__logo {
-  display: block;
-  flex-shrink: 0;
-}
-.branding__logo img {
-  display: block;
-  width: 4rem; /* md default */
-  height: auto;
-}
 
 /* ── Text block ──────────────────────────────────────────── */
 .branding__text {
@@ -71,20 +61,10 @@
 
 /* ── Size modifiers ──────────────────────────────────────── */
 /* sm — compact */
-.branding--sm .branding__logo img { width: 3rem; }
-.branding--sm .branding__title    { font-size: 1.75rem; }
-
-/* md — general use (same as default, explicit) */
-.branding--md .branding__logo img { width: 4rem; }
-.branding--md .branding__title    { font-size: 2rem; }
-
-/* lg — medium large */
-.branding--lg .branding__logo img { width: 6rem; }
-.branding--lg .branding__title    { font-size: 3.5rem; }
-
-/* xl — frontpage hero */
-.branding--xl .branding__logo img { width: 8rem; }
-.branding--xl .branding__title    { font-size: 4.8rem; }
+.branding--sm .branding__title { font-size: 1.75rem; }
+.branding--md .branding__title { font-size: 2rem; }
+.branding--lg .branding__title { font-size: 3.5rem; }
+.branding--xl .branding__title { font-size: 4.8rem; }
 
 /* ── Frontpage hero ──────────────────────────────────────── */
 .frontpage__hero {

@@ -1,0 +1,83 @@
+{% macro render(icon_name, icon_svg_size, icon_svg_fill) %}
+  {{ include('icosaedrico:icon', {
+    icon_name: icon_name,
+    icon_svg_size: icon_svg_size,
+    icon_svg_fill: icon_svg_fill,
+  }, with_context = false) }}
+{% endmacro %}
+
+{% stories icon with {
+  title: 'Atoms/Icon',
+  description: 'Icono SVG inline del set Bootstrap Icons.',
+  tags: ['autodocs'],
+  args: {
+    icon_name: 'star',
+    icon_svg_size: '24',
+    icon_svg_fill: 'currentColor',
+  },
+  argTypes: {
+    icon_name: {
+      description: 'Nombre del icono Bootstrap (sin extensión .svg).',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: 'star' } }
+    },
+    icon_svg_size: {
+      description: 'Ancho y alto en píxeles, sin unidad.',
+      control: { type: 'select' },
+      options: ['16', '20', '24', '32', '48'],
+      table: { type: { summary: 'string' }, defaultValue: { summary: '16' } }
+    },
+    icon_svg_fill: {
+      description: 'Color de relleno. Acepta cualquier valor CSS.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: 'currentColor' } }
+    }
+  }
+} %}
+
+  {% story default with {
+    name: 'Default',
+    description: 'Icono a tamaño estándar con color heredado.',
+    args: { icon_name: 'star', icon_svg_size: '24', icon_svg_fill: 'currentColor' }
+  } %}
+    <div style="padding:1.5rem;display:inline-flex;">
+      {{ _self.render(icon_name, icon_svg_size, icon_svg_fill) }}
+    </div>
+  {% endstory %}
+
+  {% story sizes with {
+    name: 'Sizes',
+    tags: ['!autodocs'],
+    description: 'Comparativa de tamaños: 16, 24, 32, 48px.',
+    args: { icon_name: 'heart', icon_svg_size: '48', icon_svg_fill: 'currentColor' }
+  } %}
+    <div style="padding:1.5rem;display:inline-flex;">
+      {{ _self.render(icon_name, icon_svg_size, icon_svg_fill) }}
+    </div>
+  {% endstory %}
+
+  {% story gallery with {
+    name: 'Gallery',
+    description: 'Selección de iconos de uso frecuente.',
+    parameters: { docs: { canvas: { sourceState: 'none' } } }
+  } %}
+    {% set i = 'icosaedrico:icon' %}
+    {% set common_icons = [
+      'house', 'person', 'envelope', 'search', 'gear',
+      'bell', 'bookmark', 'calendar', 'clock', 'check',
+      'heart', 'star', 'eye', 'pencil', 'trash',
+      'plus', 'x', 'arrow-left', 'arrow-right', 'chevron-down',
+      'tag', 'lock', 'unlock', 'download', 'upload',
+      'share', 'link', 'image', 'file', 'folder',
+    ] %}
+    <div style="display:flex;flex-wrap:wrap;gap:1.5rem;padding:1.5rem;align-items:center;">
+      {% for name in common_icons %}
+        <div style="display:flex;flex-direction:column;align-items:center;gap:.5rem;width:4rem;">
+          {{ include(i, { icon_name: name, icon_svg_size: '24' }, with_context = false) }}
+          <code style="font-size:.6rem;color:#666;text-align:center;word-break:break-all;">{{ name }}</code>
+        </div>
+      {% endfor %}
+    </div>
+  {% endstory %}
+
+{% endstories %}

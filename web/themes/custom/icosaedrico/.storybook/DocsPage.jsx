@@ -1,4 +1,3 @@
-import React from 'react';
 import { Title, Description, Primary, ArgTypes, Stories } from '@storybook/addon-docs/blocks';
 
 export function DocsPage() {
@@ -6,9 +5,9 @@ export function DocsPage() {
     <>
       <Title />
       <Description />
-      <Primary sourceState="hidden" />
+      <Primary />
       <ArgTypes />
-      <Stories includePrimary={false} sourceState="hidden" />
+      <Stories includePrimary={false} />
     </>
   );
 }

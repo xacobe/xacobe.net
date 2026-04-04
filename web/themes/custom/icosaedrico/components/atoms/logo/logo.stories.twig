@@ -1,0 +1,86 @@
+{% macro render(logo_src, logo_alt, logo_href, logo_size) %}
+  {{ include('icosaedrico:logo', {
+    logo_src: logo_src,
+    logo_alt: logo_alt,
+    logo_href: logo_href,
+    logo_size: logo_size,
+  }, with_context = false) }}
+{% endmacro %}
+
+{% stories logo with {
+  title: 'Atoms/Logo',
+  description: 'Logo del sitio con enlace. Usado dentro del componente Branding.',
+  tags: ['autodocs'],
+  args: {
+    logo_src: '/themes/custom/icosaedrico/logo.svg',
+    logo_alt: 'Icosaedrico',
+    logo_href: '#',
+    logo_size: 'md',
+  },
+  argTypes: {
+    logo_src: {
+      description: 'URL de la imagen.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' } }
+    },
+    logo_alt: {
+      description: 'Texto alternativo.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: 'Home' } }
+    },
+    logo_href: {
+      description: 'URL de destino. Sin valor renderiza sin enlace.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: '-' } }
+    },
+    logo_size: {
+      description: 'Tamaño del logo.',
+      control: { type: 'radio' },
+      options: ['sm', 'md', 'lg', 'xl'],
+      table: { type: { summary: 'sm | md | lg | xl' }, defaultValue: { summary: 'md' } }
+    }
+  }
+} %}
+
+  {% story default with {
+    name: 'Default',
+    description: 'Logo a tamaño estándar con enlace.',
+    args: { logo_src: '/themes/custom/icosaedrico/logo.svg', logo_alt: 'Icosaedrico', logo_href: '#', logo_size: 'md' }
+  } %}
+    <div style="padding:1.5rem;">
+      {{ _self.render(logo_src, logo_alt, logo_href, logo_size) }}
+    </div>
+  {% endstory %}
+
+  {% story no_link with {
+    name: 'Sin enlace',
+    tags: ['!autodocs'],
+    description: 'Logo sin wrapper de enlace.',
+    args: { logo_src: '/themes/custom/icosaedrico/logo.svg', logo_alt: 'Icosaedrico', logo_href: '', logo_size: 'md' }
+  } %}
+    <div style="padding:1.5rem;">
+      {{ _self.render(logo_src, logo_alt, logo_href, logo_size) }}
+    </div>
+  {% endstory %}
+
+  {% story gallery with {
+    name: 'Gallery',
+    description: 'Comparativa de tamaños.',
+    parameters: { docs: { canvas: { sourceState: 'none' } } }
+  } %}
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:2rem;padding:1.5rem;">
+      {% for size in ['sm', 'md', 'lg', 'xl'] %}
+        <div style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+          {{ include('icosaedrico:logo', {
+            logo_src: '/themes/custom/icosaedrico/logo.svg',
+            logo_alt: 'Icosaedrico',
+            logo_href: '#',
+            logo_size: size,
+          }, with_context = false) }}
+          <code style="font-size:.65rem;color:#666;">{{ size }}</code>
+        </div>
+      {% endfor %}
+    </div>
+  {% endstory %}
+
+{% endstories %}

@@ -1,3 +1,15 @@
-[data-component-id="icosaedrico:logo"] {
-  /* @todo Add your styles here. */
+.logo {
+  display: block;
+  flex-shrink: 0;
 }
+
+.logo img {
+  display: block;
+  width: 4rem; /* md — default */
+  height: auto;
+}
+
+.logo--sm img { width: 3rem; }
+.logo--md img { width: 4rem; }
+.logo--lg img { width: 6rem; }
+.logo--xl img { width: 8rem; }

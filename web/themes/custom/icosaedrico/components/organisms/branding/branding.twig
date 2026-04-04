@@ -12,9 +12,12 @@
   {{ title_suffix }}
   {% block content %}
   {% if site_logo and branding_show_logo != false %}
-    <a href="{{ path('<front>') }}" class="branding__logo" rel="home">
-      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high" />
-    </a>
+    {{ include('icosaedrico:logo', {
+      logo_src: site_logo,
+      logo_alt: 'Home'|t,
+      logo_href: path('<front>'),
+      logo_size: branding_size,
+    }, with_context = false) }}
   {% endif %}
   <div class="branding__text">
     {% if site_name %}

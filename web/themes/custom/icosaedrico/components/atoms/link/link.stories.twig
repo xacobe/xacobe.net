@@ -1,0 +1,73 @@
+{% stories link with {
+  title: 'Atoms/Link',
+  description: 'Enlace semántico. Usa la clase `link` para heredar el color y el subrayado del tema.',
+  tags: ['autodocs'],
+  args: {
+    href: '#',
+    text: 'Leer más',
+    target: '_self',
+  },
+  argTypes: {
+    href: {
+      description: 'URL de destino.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: '#' } }
+    },
+    text: {
+      description: 'Texto del enlace.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: 'Leer más' } }
+    },
+    target: {
+      description: 'Comportamiento de apertura.',
+      control: { type: 'radio' },
+      options: ['_self', '_blank'],
+      table: { type: { summary: '_self | _blank' }, defaultValue: { summary: '_self' } }
+    }
+  }
+} %}
+
+  {% story default with {
+    name: 'Default',
+    description: 'Enlace interno.',
+    args: { href: '#', text: 'Leer más', target: '_self' }
+  } %}
+    <div style="padding:1.5rem;">
+      <a href="{{ href }}" target="{{ target }}" class="link">{{ text }}</a>
+    </div>
+  {% endstory %}
+
+  {% story external with {
+    name: 'External',
+    tags: ['!autodocs'],
+    description: 'Enlace externo que abre en nueva pestaña.',
+    args: { href: 'https://example.com', text: 'Visitar sitio', target: '_blank' }
+  } %}
+    <a href="{{ href }}" target="{{ target }}" class="link">{{ text }}</a>
+  {% endstory %}
+
+  {% story gallery with {
+    name: 'Gallery',
+    description: 'Enlace en distintos contextos tipográficos.',
+    parameters: { docs: { canvas: { sourceState: 'none' } } }
+  } %}
+    <div style="display:flex;flex-direction:column;gap:1.5rem;padding:1.5rem;max-width:40rem;">
+
+      <div>
+        <p style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Inline en párrafo</p>
+        <p>La tipografía editorial tiene una larga historia. <a href="#" class="link">Leer más sobre diseño tipográfico</a> en nuestra sección de recursos.</p>
+      </div>
+
+      <div>
+        <p style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Standalone</p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;">
+          <a href="#" class="link">Ver proyecto</a>
+          <a href="#" target="_blank" class="link">Sitio externo ↗</a>
+          <a href="#" class="link">Descargar PDF</a>
+        </div>
+      </div>
+
+    </div>
+  {% endstory %}
+
+{% endstories %}

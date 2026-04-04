@@ -1,0 +1,86 @@
+{% macro render(heading_title, heading_tag, heading_classes, heading_href, heading_href_target) %}
+  {{ include('icosaedrico:heading', {
+    heading_title: heading_title,
+    heading_tag: heading_tag,
+    heading_classes: heading_classes,
+    heading_href: heading_href,
+    heading_href_target: heading_href_target,
+  }, with_context = false) }}
+{% endmacro %}
+
+{% stories heading with {
+  title: 'Atoms/Heading',
+  description: 'Etiqueta de cabecera semántica (h1–h5) con soporte opcional de enlace.',
+  tags: ['autodocs'],
+  args: {
+    heading_title: 'Título de sección',
+    heading_tag: 'h2',
+    heading_classes: '',
+    heading_href: '',
+    heading_href_target: '',
+  },
+  argTypes: {
+    heading_title: {
+      description: 'Texto del encabezado.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' } }
+    },
+    heading_tag: {
+      description: 'Etiqueta HTML semántica.',
+      control: { type: 'radio' },
+      options: ['h1', 'h2', 'h3', 'h4', 'h5'],
+      table: { type: { summary: 'h1 | h2 | h3 | h4 | h5' }, defaultValue: { summary: 'h2' } }
+    },
+    heading_classes: {
+      description: 'Clases CSS adicionales.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: '-' } }
+    },
+    heading_href: {
+      description: 'URL opcional. Si se indica, el texto se envuelve en un enlace.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: '-' } }
+    },
+    heading_href_target: {
+      description: 'Target del enlace.',
+      control: { type: 'radio' },
+      options: ['', '_self', '_blank'],
+      table: { type: { summary: '_self | _blank' }, defaultValue: { summary: '-' } }
+    }
+  }
+} %}
+
+  {% story default with {
+    name: 'Default',
+    description: 'Encabezado h2 estándar sin enlace.',
+    args: { heading_title: 'Título de sección', heading_tag: 'h2', heading_classes: '', heading_href: '', heading_href_target: '' }
+  } %}
+    {{ _self.render(heading_title, heading_tag, heading_classes, heading_href, heading_href_target) }}
+  {% endstory %}
+
+  {% story with_link with {
+    name: 'Con enlace',
+    tags: ['!autodocs'],
+    description: 'El texto del encabezado actúa como enlace.',
+    args: { heading_title: 'Ir a la sección', heading_tag: 'h3', heading_classes: '', heading_href: '#', heading_href_target: '_self' }
+  } %}
+    {{ _self.render(heading_title, heading_tag, heading_classes, heading_href, heading_href_target) }}
+  {% endstory %}
+
+  {% story gallery with {
+    name: 'Gallery',
+    description: 'Todos los niveles de encabezado (h1–h5).',
+    parameters: { docs: { canvas: { sourceState: 'none' } } }
+  } %}
+    <div style="padding:1.5rem;display:flex;flex-direction:column;gap:1rem;">
+      {% for level in ['h1', 'h2', 'h3', 'h4', 'h5'] %}
+        {{ include('icosaedrico:heading', {
+          heading_title: level ~ ' — Ejemplo de encabezado',
+          heading_tag: level,
+          heading_classes: '',
+        }, with_context = false) }}
+      {% endfor %}
+    </div>
+  {% endstory %}
+
+{% endstories %}
