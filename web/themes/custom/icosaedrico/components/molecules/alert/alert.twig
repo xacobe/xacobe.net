@@ -1,6 +1,21 @@
-{% include "icosaedrico:icon" with {
-  icon_name: alert_icon,
-  icon_svg_size: "48"
-} only %}
-<p>{{ alert_title }}</p>
-<p>{{ alert_description }}</p>
+{% set alert_classes = [
+  'alert',
+  alert_type ? 'alert-' ~ alert_type,
+] %}
+
+<div {{ attributes.addClass(alert_classes|safe_join(' ')) }}>
+  {% if alert_icon %}
+    {{ include('icosaedrico:icon', {
+      icon_name: alert_icon,
+      icon_svg_size: '24',
+    }, with_context = false) }}
+  {% endif %}
+  <div class="alert__body">
+    {% if alert_title %}
+      <p class="alert__title">{{ alert_title }}</p>
+    {% endif %}
+    {% if alert_description %}
+      <p class="alert__description">{{ alert_description }}</p>
+    {% endif %}
+  </div>
+</div>

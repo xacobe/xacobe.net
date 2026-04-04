@@ -1,0 +1,113 @@
+{% macro render(alert_title, alert_description, alert_type, alert_icon) %}
+  {{ include('icosaedrico:alert', {
+    alert_title: alert_title,
+    alert_description: alert_description,
+    alert_type: alert_type,
+    alert_icon: alert_icon,
+  }, with_context = false) }}
+{% endmacro %}
+
+{% stories alert with {
+  title: 'Molecules/Alert',
+  description: 'Mensaje de alerta contextual con icono, título y descripción. Variantes: info, success, warning, error.',
+  tags: ['autodocs'],
+  args: {
+    alert_title: 'Título del aviso',
+    alert_description: 'Descripción adicional del mensaje.',
+    alert_type: 'info',
+    alert_icon: 'info-circle',
+  },
+  argTypes: {
+    alert_title: {
+      description: 'Texto del título.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' } }
+    },
+    alert_description: {
+      description: 'Descripción secundaria opcional.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' } }
+    },
+    alert_type: {
+      description: 'Variante semántica. Define el color y el rol del mensaje.',
+      control: { type: 'radio' },
+      options: ['info', 'success', 'warning', 'error'],
+      table: { type: { summary: 'info | success | warning | error' }, defaultValue: { summary: 'info' } }
+    },
+    alert_icon: {
+      description: 'Nombre del icono Bootstrap (sin extensión). Opcional.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: '-' } }
+    }
+  }
+} %}
+
+  {% story info with {
+    name: 'Info',
+    description: 'Mensaje informativo.',
+    args: { alert_title: 'Información', alert_description: 'Esta acción puede tardar unos segundos.', alert_type: 'info', alert_icon: 'info-circle' }
+  } %}
+    <div style="padding:1.5rem;max-width:32rem;">
+      {{ _self.render(alert_title, alert_description, alert_type, alert_icon) }}
+    </div>
+  {% endstory %}
+
+  {% story success with {
+    name: 'Success',
+    tags: ['!autodocs'],
+    description: 'Confirmación de éxito.',
+    args: { alert_title: 'Guardado', alert_description: 'Los cambios se han guardado correctamente.', alert_type: 'success', alert_icon: 'check-circle' }
+  } %}
+    <div style="padding:1.5rem;max-width:32rem;">
+      {{ _self.render(alert_title, alert_description, alert_type, alert_icon) }}
+    </div>
+  {% endstory %}
+
+  {% story warning with {
+    name: 'Warning',
+    tags: ['!autodocs'],
+    description: 'Aviso de precaución.',
+    args: { alert_title: 'Atención', alert_description: 'Este cambio no se puede deshacer.', alert_type: 'warning', alert_icon: 'exclamation-triangle' }
+  } %}
+    <div style="padding:1.5rem;max-width:32rem;">
+      {{ _self.render(alert_title, alert_description, alert_type, alert_icon) }}
+    </div>
+  {% endstory %}
+
+  {% story error with {
+    name: 'Error',
+    tags: ['!autodocs'],
+    description: 'Mensaje de error.',
+    args: { alert_title: 'Error', alert_description: 'No se ha podido completar la operación.', alert_type: 'error', alert_icon: 'x-circle' }
+  } %}
+    <div style="padding:1.5rem;max-width:32rem;">
+      {{ _self.render(alert_title, alert_description, alert_type, alert_icon) }}
+    </div>
+  {% endstory %}
+
+  {% story no_icon with {
+    name: 'Sin icono',
+    tags: ['!autodocs'],
+    description: 'Alerta sin icono, solo texto.',
+    args: { alert_title: 'Aviso', alert_description: 'Recuerda guardar los cambios antes de salir.', alert_type: 'warning', alert_icon: '' }
+  } %}
+    <div style="padding:1.5rem;max-width:32rem;">
+      {{ _self.render(alert_title, alert_description, alert_type, alert_icon) }}
+    </div>
+  {% endstory %}
+
+  {% story gallery with {
+    name: 'Gallery',
+    description: 'Las cuatro variantes en una vista.',
+    parameters: { docs: { canvas: { sourceState: 'none' } } }
+  } %}
+    {% set a = 'icosaedrico:alert' %}
+    <div style="display:flex;flex-direction:column;gap:1rem;padding:1.5rem;max-width:36rem;">
+      {{ include(a, { alert_title: 'Información',  alert_description: 'Mensaje informativo.',         alert_type: 'info',    alert_icon: 'info-circle' },         with_context = false) }}
+      {{ include(a, { alert_title: 'Éxito',        alert_description: 'Operación completada.',        alert_type: 'success', alert_icon: 'check-circle' },        with_context = false) }}
+      {{ include(a, { alert_title: 'Advertencia',  alert_description: 'Revisa antes de continuar.',  alert_type: 'warning', alert_icon: 'exclamation-triangle' }, with_context = false) }}
+      {{ include(a, { alert_title: 'Error',        alert_description: 'Algo ha fallado.',             alert_type: 'error',   alert_icon: 'x-circle' },            with_context = false) }}
+    </div>
+  {% endstory %}
+
+{% endstories %}

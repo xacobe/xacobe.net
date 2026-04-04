@@ -1,0 +1,86 @@
+{% set placeholder_img = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2272%22 height=%2272%22 viewBox=%220 0 72 72%22%3E%3Ccircle cx=%2236%22 cy=%2236%22 r=%2236%22 fill=%22%23e2e8f0%22/%3E%3Ccircle cx=%2236%22 cy=%2228%22 r=%2212%22 fill=%22%2394a3b8%22/%3E%3Cellipse cx=%2236%22 cy=%2256%22 rx=%2218%22 ry=%2212%22 fill=%22%2394a3b8%22/%3E%3C/svg%3E' %}
+
+{% macro render(user_name, user_picture_url, user_picture_width, user_picture_height) %}
+  {{ include('icosaedrico:avatar', {
+    user_name: user_name,
+    user_picture_url: user_picture_url,
+    user_picture_width: user_picture_width,
+    user_picture_height: user_picture_height,
+  }, with_context = false) }}
+{% endmacro %}
+
+{% stories avatar with {
+  title: 'Molecules/Avatar',
+  description: 'Imagen de perfil de usuario con nombre. Soporta imagen opcional.',
+  tags: ['autodocs'],
+  args: {
+    user_name: 'Xacobe',
+    user_picture_url: '',
+    user_picture_width: '72',
+    user_picture_height: '72',
+  },
+  argTypes: {
+    user_name: {
+      description: 'Nombre visible del usuario.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' } }
+    },
+    user_picture_url: {
+      description: 'URL de la imagen de perfil. Sin valor no se renderiza la imagen.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: '-' } }
+    },
+    user_picture_width: {
+      description: 'Ancho en píxeles.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: '72' } }
+    },
+    user_picture_height: {
+      description: 'Alto en píxeles.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: '72' } }
+    }
+  }
+} %}
+
+  {% story with_picture with {
+    name: 'Con imagen',
+    description: 'Avatar con imagen de perfil y nombre.',
+    args: { user_name: 'Xacobe', user_picture_url: placeholder_img, user_picture_width: '72', user_picture_height: '72' }
+  } %}
+    <div style="padding:1.5rem;display:inline-flex;">
+      {{ _self.render(user_name, user_picture_url, user_picture_width, user_picture_height) }}
+    </div>
+  {% endstory %}
+
+  {% story no_picture with {
+    name: 'Sin imagen',
+    tags: ['!autodocs'],
+    description: 'Solo nombre, sin imagen de perfil.',
+    args: { user_name: 'Xacobe', user_picture_url: '', user_picture_width: '72', user_picture_height: '72' }
+  } %}
+    <div style="padding:1.5rem;display:inline-flex;">
+      {{ _self.render(user_name, user_picture_url, user_picture_width, user_picture_height) }}
+    </div>
+  {% endstory %}
+
+  {% story gallery with {
+    name: 'Gallery',
+    description: 'Avatar con y sin imagen.',
+    parameters: { docs: { canvas: { sourceState: 'none' } } }
+  } %}
+    {% set a = 'icosaedrico:avatar' %}
+    {% set img = placeholder_img %}
+    <div style="display:flex;align-items:flex-start;gap:2rem;padding:1.5rem;">
+      <div>
+        <p style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Con imagen</p>
+        {{ include(a, { user_name: 'Xacobe', user_picture_url: img, user_picture_width: '72', user_picture_height: '72' }, with_context = false) }}
+      </div>
+      <div>
+        <p style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;">Sin imagen</p>
+        {{ include(a, { user_name: 'Xacobe', user_picture_url: '' }, with_context = false) }}
+      </div>
+    </div>
+  {% endstory %}
+
+{% endstories %}
