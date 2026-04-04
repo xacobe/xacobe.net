@@ -91,7 +91,8 @@
   {% story primary with {
     name: 'Primary',
     description: 'Botón principal de acción.',
-    args: { button_text: 'Ver proyecto', button_tag: 'a', button_href: '#', button_color: 'primary' }
+    args: { button_text: 'Ver proyecto', button_tag: 'a', button_href: '#', button_color: 'primary' },
+    parameters: { docs: { source: { code: "{{ include('icosaedrico:button', {\n  button_text: 'Ver proyecto',\n  button_tag: 'a',\n  button_href: '#',\n  button_color: 'primary',\n}, with_context = false) }}" } } }
   } %}
     {{ _self.render(button_text, button_tag, button_href, button_color, button_size, button_outline, button_glass, button_shape, button_disable, button_icon) }}
   {% endstory %}
@@ -100,7 +101,8 @@
     name: 'Secondary',
     tags: ['!autodocs'],
     description: 'Botón secundario.',
-    args: { button_text: 'Cancelar', button_tag: 'button', button_href: '', button_color: 'secondary' }
+    args: { button_text: 'Cancelar', button_tag: 'button', button_href: '', button_color: 'secondary' },
+    parameters: { docs: { source: { code: "{{ include('icosaedrico:button', {\n  button_text: 'Cancelar',\n  button_tag: 'button',\n  button_color: 'secondary',\n}, with_context = false) }}" } } }
   } %}
     {{ _self.render(button_text, button_tag, button_href, button_color, button_size, button_outline, button_glass, button_shape, button_disable, button_icon) }}
   {% endstory %}
@@ -109,7 +111,8 @@
     name: 'Outline',
     tags: ['!autodocs'],
     description: 'Variante con borde y fondo transparente.',
-    args: { button_text: 'Saber más', button_tag: 'a', button_href: '#', button_color: 'primary', button_outline: true }
+    args: { button_text: 'Saber más', button_tag: 'a', button_href: '#', button_color: 'primary', button_outline: true },
+    parameters: { docs: { source: { code: "{{ include('icosaedrico:button', {\n  button_text: 'Saber más',\n  button_tag: 'a',\n  button_href: '#',\n  button_color: 'primary',\n  button_outline: true,\n}, with_context = false) }}" } } }
   } %}
     {{ _self.render(button_text, button_tag, button_href, button_color, button_size, button_outline, button_glass, button_shape, button_disable, button_icon) }}
   {% endstory %}
@@ -118,7 +121,8 @@
     name: 'Sizes',
     tags: ['!autodocs'],
     description: 'Comparativa de tamaños: lg, default, sm, xs.',
-    args: { button_text: 'Botón lg', button_tag: 'a', button_href: '#', button_color: 'primary', button_size: 'lg' }
+    args: { button_text: 'Botón lg', button_tag: 'a', button_href: '#', button_color: 'primary', button_size: 'lg' },
+    parameters: { docs: { source: { code: "{{ include('icosaedrico:button', {\n  button_text: 'Botón',\n  button_tag: 'a',\n  button_href: '#',\n  button_color: 'primary',\n  button_size: 'lg', {# lg | sm | xs #}\n}, with_context = false) }}" } } }
   } %}
     {{ _self.render(button_text, button_tag, button_href, button_color, button_size, button_outline, button_glass, button_shape, button_disable, button_icon) }}
   {% endstory %}
@@ -127,9 +131,57 @@
     name: 'Disabled',
     tags: ['!autodocs'],
     description: 'Botón desactivado mediante clase CSS.',
-    args: { button_text: 'No disponible', button_tag: 'button', button_href: '', button_color: 'primary', button_disable: 'class' }
+    args: { button_text: 'No disponible', button_tag: 'button', button_href: '', button_color: 'primary', button_disable: 'class' },
+    parameters: { docs: { source: { code: "{{ include('icosaedrico:button', {\n  button_text: 'No disponible',\n  button_tag: 'button',\n  button_color: 'primary',\n  button_disable: 'class', {# class | attribute #}\n}, with_context = false) }}" } } }
   } %}
     {{ _self.render(button_text, button_tag, button_href, button_color, button_size, button_outline, button_glass, button_shape, button_disable, button_icon) }}
+  {% endstory %}
+
+  {% story gallery with {
+    name: 'Gallery',
+    description: 'Todas las variantes del componente botón en una sola vista.',
+    parameters: { docs: { canvas: { sourceState: 'none' } } },
+  } %}
+    {% set btn = 'icosaedrico:button' %}
+
+    <div style="display: flex; flex-direction: column; gap: 2rem; padding: 1.5rem;">
+
+      <div>
+        <p style="font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .75rem;">Colores</p>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: .75rem;">
+          {{ include(btn, { button_text: 'Primary', button_tag: 'a', button_href: '#', button_color: 'primary' }, with_context = false) }}
+          {{ include(btn, { button_text: 'Secondary', button_tag: 'a', button_href: '#', button_color: 'secondary' }, with_context = false) }}
+          {{ include(btn, { button_text: 'Link', button_tag: 'a', button_href: '#', button_color: 'link' }, with_context = false) }}
+        </div>
+      </div>
+
+      <div>
+        <p style="font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .75rem;">Outline</p>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: .75rem;">
+          {{ include(btn, { button_text: 'Primary', button_tag: 'a', button_href: '#', button_color: 'primary', button_outline: true }, with_context = false) }}
+          {{ include(btn, { button_text: 'Secondary', button_tag: 'a', button_href: '#', button_color: 'secondary', button_outline: true }, with_context = false) }}
+        </div>
+      </div>
+
+      <div>
+        <p style="font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .75rem;">Tamaños</p>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: .75rem;">
+          {{ include(btn, { button_text: 'Large', button_tag: 'a', button_href: '#', button_color: 'primary', button_size: 'lg' }, with_context = false) }}
+          {{ include(btn, { button_text: 'Default', button_tag: 'a', button_href: '#', button_color: 'primary' }, with_context = false) }}
+          {{ include(btn, { button_text: 'Small', button_tag: 'a', button_href: '#', button_color: 'primary', button_size: 'sm' }, with_context = false) }}
+          {{ include(btn, { button_text: 'XSmall', button_tag: 'a', button_href: '#', button_color: 'primary', button_size: 'xs' }, with_context = false) }}
+        </div>
+      </div>
+
+      <div>
+        <p style="font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .75rem;">Disabled</p>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: .75rem;">
+          {{ include(btn, { button_text: 'Via clase', button_tag: 'button', button_color: 'primary', button_disable: 'class' }, with_context = false) }}
+          {{ include(btn, { button_text: 'Via atributo', button_tag: 'button', button_color: 'primary', button_disable: 'attribute' }, with_context = false) }}
+        </div>
+      </div>
+
+    </div>
   {% endstory %}
 
 {% endstories %}

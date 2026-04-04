@@ -1,15 +1,11 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 import { DesignTokenDocBlock } from 'storybook-design-token/doc-blocks';
 
-<Meta title="Tokens/Colores" />
+<Meta title="Tokens/Primitives/Colores" />
 
-# Colores
+# Colores primitivos
 
-## Primario
-
-<DesignTokenDocBlock viewType="card" showSearch={false} categoryName="Color Primario" />
-
-## Paleta cromática
+Paletas de color base. No usar directamente en componentes — referenciar via tokens semánticos.
 
 <DesignTokenDocBlock viewType="card" showSearch={false} categoryName="Color Rojo" />
 <DesignTokenDocBlock viewType="card" showSearch={false} categoryName="Color Naranja" />
@@ -17,12 +13,3 @@ import { DesignTokenDocBlock } from 'storybook-design-token/doc-blocks';
 <DesignTokenDocBlock viewType="card" showSearch={false} categoryName="Color Azul" />
 <DesignTokenDocBlock viewType="card" showSearch={false} categoryName="Color Purpura" />
 <DesignTokenDocBlock viewType="card" showSearch={false} categoryName="Grises" />
-
-## Semánticos
-
-<DesignTokenDocBlock viewType="table" categoryName="Color Texto" />
-<DesignTokenDocBlock viewType="table" categoryName="Color Superficies" />
-<DesignTokenDocBlock viewType="table" categoryName="Color Bordes" />
-<DesignTokenDocBlock viewType="table" categoryName="Color Secundario" />
-<DesignTokenDocBlock viewType="table" categoryName="Color Prose" />
-<DesignTokenDocBlock viewType="table" categoryName="Color Estado" />
