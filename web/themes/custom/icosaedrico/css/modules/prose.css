@@ -53,18 +53,6 @@
   color: var(--black-300);
 }
 
-/* Título principal */
-.article__title {
-  font-family: var(--font-prose-headline);
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  color: var(--color-text);
-  margin-block: 0 1.5rem;
-  text-transform: none;
-}
-
 /* Subtítulo / deck */
 .article__deck {
   font-family: var(--font-prose-headline);

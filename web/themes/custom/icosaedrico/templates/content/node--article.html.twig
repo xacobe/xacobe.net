@@ -82,13 +82,11 @@
 
     {# Título #}
     {{ title_prefix }}
-    {% if label and not page %}
-      <h2 class="article__title" {{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
-    {% else %}
-      <h1 class="article__title" {{ title_attributes }}>{{ label }}</h1>
-    {% endif %}
+    {{ include('icosaedrico:title', {
+      title: label,
+      title_tag: page ? 'h1' : 'h2',
+      title_type: 'article',
+    }, with_context = false) }}
     {{ title_suffix }}
 
     {# Deck / subtítulo (resumen del campo body) #}

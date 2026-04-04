@@ -15,9 +15,19 @@
   background-color: var(--color-border);
   flex-shrink: 0;
 }
-
+.page-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}  
 .page-title--article {
-  .page-title {
-    text-transform: none;
-  }
+  font-family: var(--font-prose-headline);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-block: 0 1.5rem;
+  text-transform: none;
 }

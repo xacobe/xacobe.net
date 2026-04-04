@@ -1,0 +1,81 @@
+{% macro render(title, title_tag, title_type, title_classes) %}
+  {{ include('icosaedrico:title', {
+    title: title,
+    title_tag: title_tag,
+    title_type: title_type,
+    title_classes: title_classes,
+  }, with_context = false) }}
+{% endmacro %}
+
+{% stories title with {
+  title: 'Atoms/Title',
+  description: 'Título de página con diseño decorativo con divisores horizontales a ambos lados.',
+  tags: ['autodocs'],
+  args: {
+    title: 'Mi Título',
+    title_tag: 'h1',
+    title_type: '',
+    title_classes: '',
+  },
+  argTypes: {
+    title: {
+      description: 'Texto del título.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: 'Mi Título' } }
+    },
+    title_tag: {
+      description: 'Etiqueta HTML semántica a utilizar.',
+      control: { type: 'radio' },
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+      table: { type: { summary: 'h1 | h2 | h3 | h4 | h5 | h6' }, defaultValue: { summary: 'h1' } }
+    },
+    title_type: {
+      description: 'Variante estructural. `article` omite el divider decorativo y aplica tipografía editorial.',
+      control: { type: 'radio' },
+      options: ['', 'article'],
+      table: { type: { summary: 'article' }, defaultValue: { summary: '-' } }
+    },
+    title_classes: {
+      description: 'Clases CSS adicionales.',
+      control: { type: 'text' },
+      table: { type: { summary: 'string' }, defaultValue: { summary: '-' } }
+    }
+  }
+} %}
+
+  {% story h1 with {
+    name: 'H1 (Heading 1)',
+    description: 'Título principal de nivel 1 con divisores decorativos.',
+    args: { title: 'Portada del Proyecto', title_tag: 'h1', title_type: '', title_classes: '' }
+  } %}
+    {{ _self.render(title, title_tag, title_type, title_classes) }}
+  {% endstory %}
+
+  {% story h2 with {
+    name: 'H2 (Heading 2)',
+    tags: ['!autodocs'],
+    description: 'Título de segundo nivel.',
+    args: { title: 'Sección Principal', title_tag: 'h2', title_type: '', title_classes: '' }
+  } %}
+    {{ _self.render(title, title_tag, title_type, title_classes) }}
+  {% endstory %}
+
+  {% story h3 with {
+    name: 'H3 (Heading 3)',
+    tags: ['!autodocs'],
+    description: 'Título de tercer nivel.',
+    args: { title: 'Subsección', title_tag: 'h3', title_type: '', title_classes: '' }
+  } %}
+    {{ _self.render(title, title_tag, title_type, title_classes) }}
+  {% endstory %}
+
+  {% story article_title with {
+    name: 'Article (sin divider)',
+    tags: ['!autodocs'],
+    description: 'Variante editorial para artículos del blog. Sin divisores, tipografía serif de gran tamaño.',
+    args: { title: 'The Art of Slow Reading', title_tag: 'h1', title_type: 'article', title_classes: '' }
+  } %}
+    {{ _self.render(title, title_tag, title_type, title_classes) }}
+  {% endstory %}
+
+{% endstories %}

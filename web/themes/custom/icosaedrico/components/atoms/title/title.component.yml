@@ -1,14 +1,39 @@
-'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json'
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
 name: Title
+description: Título de página con diseño decorativo con divisores.
 status: experimental
 
 props:
   type: object
+  required: [title]
   properties:
-    icon_name:
+    title:
       type: string
-      title: Name
-      description: The name of the icon and the file
+      title: Title
+      description: The title text to display.
+    title_tag:
+      type: string
+      title: Heading Tag
+      description: HTML heading tag to use.
+      default: h1
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+    title_type:
+      type: string
+      title: Type
+      description: Variante estructural del título. 'article' omite el divider decorativo.
+      enum:
+        - ""
+        - article
+    title_classes:
+      type: string
+      title: Additional Classes
+      description: Additional CSS classes to apply to the title.
     attributes:
       type: Drupal\Core\Template\Attribute
       title: Attributes

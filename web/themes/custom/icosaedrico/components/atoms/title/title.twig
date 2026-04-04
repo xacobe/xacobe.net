@@ -1,25 +1,22 @@
 {% set classes = [
   "page-title",
-  "ff-reem-kufi",
-  "uppercase",
-  "font-bold",
-  "text-center",
+  title_type ? "page-title--" ~ title_type,
+  title_classes,
 ] %}
 
-  {% block title_block %}
-    {{ title_prefix }}
-{% if title %}
-  <div class="flex w-full flex-col border-opacity-50">
-  <div class="divider">
-    {% include "icosaedrico:heading" with {
-  heading_title: title,
-  heading_attributes: title_attributes,
-  heading_tag: "h1",
-  heading_classes: classes|join(' '),
-} %}
+{% set title_tag = title_tag|default('h1') %}
 
+{% if title_type == 'article' %}
+  <{{ title_tag }}{% if attributes %} {{ attributes }}{% endif %} class="{{ classes|join(' ')|trim }}">
+    {{ title }}
+  </{{ title_tag }}>
+{% else %}
+  <div class="flex w-full flex-col border-opacity-50">
+    <div class="divider">
+      <{{ title_tag }}{% if attributes %} {{ attributes }}{% endif %} class="{{ classes|join(' ')|trim }}">
+        {{ title }}
+      </{{ title_tag }}>
+    </div>
   </div>
-</div>
 {% endif %}
-{{ title_suffix }}
-  {% endblock %}
+
